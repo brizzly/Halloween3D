@@ -1,0 +1,172 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: projet_vc6 - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "D:\DOCUME~1\BRIZZL~1.UNI\LOCALS~1\Temp\RSP34.tmp" with contents
+[
+/nologo /MT /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /FR"temp_obj/" /Fp"temp_obj/projet_vc6.pch" /YX /Fo"temp_obj/" /Fd"temp_obj/" /FD /c 
+"D:\Halloween\source\engine999\alloween.cpp"
+"D:\Halloween\source\engine999\bspfile.cpp"
+"D:\Halloween\source\engine999\bsptree.cpp"
+"D:\Halloween\source\engine999\camera.cpp"
+"D:\Halloween\source\engine999\collision.cpp"
+"D:\Halloween\source\engine999\console.cpp"
+"D:\Halloween\source\engine999\demo.cpp"
+"D:\Halloween\source\engine999\display.cpp"
+"D:\Halloween\source\engine999\dsound.cpp"
+"D:\Halloween\source\engine999\ellipsoide.cpp"
+"D:\Halloween\source\engine999\enveffect.cpp"
+"D:\Halloween\source\engine999\filesys.cpp"
+"D:\Halloween\source\engine999\frustrum.cpp"
+"D:\Halloween\source\engine999\game.cpp"
+"D:\Halloween\source\engine999\gameover.cpp"
+"D:\Halloween\source\engine999\halloween.cpp"
+"D:\Halloween\source\engine999\image.cpp"
+"D:\Halloween\source\engine999\imageloader_win.cpp"
+"D:\Halloween\source\engine999\input_win.cpp"
+"D:\Halloween\source\engine999\interface.cpp"
+"D:\Halloween\source\engine999\jpeg.cpp"
+"D:\Halloween\source\engine999\libbass.cpp"
+"D:\Halloween\source\engine999\liste.cpp"
+"D:\Halloween\source\engine999\maths.cpp"
+"D:\Halloween\source\engine999\menu.cpp"
+"D:\Halloween\source\engine999\menu_init.cpp"
+"D:\Halloween\source\engine999\menu_sel.cpp"
+"D:\Halloween\source\engine999\monster.cpp"
+"D:\Halloween\source\engine999\mskmodel.cpp"
+"D:\Halloween\source\engine999\net_client.cpp"
+"D:\Halloween\source\engine999\net_common.cpp"
+"D:\Halloween\source\engine999\net_dcomp.cpp"
+"D:\Halloween\source\engine999\net_server.cpp"
+"D:\Halloween\source\engine999\objet.cpp"
+"D:\Halloween\source\engine999\objet_proc.cpp"
+"D:\Halloween\source\engine999\opengl.cpp"
+"D:\Halloween\source\engine999\physic.cpp"
+"D:\Halloween\source\engine999\player.cpp"
+"D:\Halloween\source\engine999\script.cpp"
+"D:\Halloween\source\engine999\shader.cpp"
+"D:\Halloween\source\engine999\sorting.cpp"
+"D:\Halloween\source\engine999\story.cpp"
+"D:\Halloween\source\engine999\textdraw.cpp"
+"D:\Halloween\source\engine999\tga.cpp"
+"D:\Halloween\source\engine999\timer.cpp"
+]
+Creating command line "cl.exe @D:\DOCUME~1\BRIZZL~1.UNI\LOCALS~1\Temp\RSP34.tmp" 
+Creating temporary file "D:\DOCUME~1\BRIZZL~1.UNI\LOCALS~1\Temp\RSP35.tmp" with contents
+[
+opengl32.lib glu32.lib openplay.lib dxguid.lib dinput.lib bass.lib winmm.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /incremental:no /pdb:"../../../Halloween999.pdb" /machine:I386 /out:"../../../Halloween999.exe" 
+.\temp_obj\alloween.obj
+.\temp_obj\bspfile.obj
+.\temp_obj\bsptree.obj
+.\temp_obj\camera.obj
+.\temp_obj\collision.obj
+.\temp_obj\console.obj
+.\temp_obj\demo.obj
+.\temp_obj\display.obj
+.\temp_obj\dsound.obj
+.\temp_obj\ellipsoide.obj
+.\temp_obj\enveffect.obj
+.\temp_obj\filesys.obj
+.\temp_obj\frustrum.obj
+.\temp_obj\game.obj
+.\temp_obj\gameover.obj
+.\temp_obj\halloween.obj
+.\temp_obj\image.obj
+.\temp_obj\imageloader_win.obj
+.\temp_obj\input_win.obj
+.\temp_obj\interface.obj
+.\temp_obj\jpeg.obj
+.\temp_obj\libbass.obj
+.\temp_obj\liste.obj
+.\temp_obj\maths.obj
+.\temp_obj\menu.obj
+.\temp_obj\menu_init.obj
+.\temp_obj\menu_sel.obj
+.\temp_obj\monster.obj
+.\temp_obj\mskmodel.obj
+.\temp_obj\net_client.obj
+.\temp_obj\net_common.obj
+.\temp_obj\net_dcomp.obj
+.\temp_obj\net_server.obj
+.\temp_obj\objet.obj
+.\temp_obj\objet_proc.obj
+.\temp_obj\opengl.obj
+.\temp_obj\physic.obj
+.\temp_obj\player.obj
+.\temp_obj\script.obj
+.\temp_obj\shader.obj
+.\temp_obj\sorting.obj
+.\temp_obj\story.obj
+.\temp_obj\textdraw.obj
+.\temp_obj\tga.obj
+.\temp_obj\timer.obj
+..\misc\coldet.lib
+]
+Creating command line "link.exe @D:\DOCUME~1\BRIZZL~1.UNI\LOCALS~1\Temp\RSP35.tmp"
+<h3>Output Window</h3>
+Compiling...
+Error spawning cl.exe
+Creating temporary file "D:\DOCUME~1\BRIZZL~1.UNI\LOCALS~1\Temp\RSP36.tmp" with contents
+[
+/nologo /o"../../../projet_vc6.bsc" 
+.\temp_obj\alloween.sbr
+.\temp_obj\bspfile.sbr
+.\temp_obj\bsptree.sbr
+.\temp_obj\camera.sbr
+.\temp_obj\collision.sbr
+.\temp_obj\console.sbr
+.\temp_obj\demo.sbr
+.\temp_obj\display.sbr
+.\temp_obj\dsound.sbr
+.\temp_obj\ellipsoide.sbr
+.\temp_obj\enveffect.sbr
+.\temp_obj\filesys.sbr
+.\temp_obj\frustrum.sbr
+.\temp_obj\game.sbr
+.\temp_obj\gameover.sbr
+.\temp_obj\halloween.sbr
+.\temp_obj\image.sbr
+.\temp_obj\imageloader_win.sbr
+.\temp_obj\input_win.sbr
+.\temp_obj\interface.sbr
+.\temp_obj\jpeg.sbr
+.\temp_obj\libbass.sbr
+.\temp_obj\liste.sbr
+.\temp_obj\maths.sbr
+.\temp_obj\menu.sbr
+.\temp_obj\menu_init.sbr
+.\temp_obj\menu_sel.sbr
+.\temp_obj\monster.sbr
+.\temp_obj\mskmodel.sbr
+.\temp_obj\net_client.sbr
+.\temp_obj\net_common.sbr
+.\temp_obj\net_dcomp.sbr
+.\temp_obj\net_server.sbr
+.\temp_obj\objet.sbr
+.\temp_obj\objet_proc.sbr
+.\temp_obj\opengl.sbr
+.\temp_obj\physic.sbr
+.\temp_obj\player.sbr
+.\temp_obj\script.sbr
+.\temp_obj\shader.sbr
+.\temp_obj\sorting.sbr
+.\temp_obj\story.sbr
+.\temp_obj\textdraw.sbr
+.\temp_obj\tga.sbr
+.\temp_obj\timer.sbr]
+Creating command line "bscmake.exe @D:\DOCUME~1\BRIZZL~1.UNI\LOCALS~1\Temp\RSP36.tmp"
+Creating browse info file...
+Error spawning bscmake.exe
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+Halloween999.exe - 1 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

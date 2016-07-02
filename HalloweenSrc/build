@@ -1,0 +1,6 @@
+./clean_tmp
+
+gcc -I/usr/include/SDL/ -I/usr/include -c alloween.c loadjpeg_linux.c bspfile.c camera.c halloween_linux.c player.c physic.c collision.c maths.c ellipsoide.c console.c bsptree.c opengl.c demo.c display.c enveffect.c filesys.c frustrum.c game.c gameover.c image.c input.c interface.c jpeg.c libsound_linux.c liste.c menu.c menu_init.c menu_sel.c monster.c mskmodel.c objet_proc.c script.c shader.c sorting.c textdraw.c tga.c timer.c objet.c net_temp_linux.c
+
+g++ -L/usr/X11R6/lib/ -o alloween.o loadjpeg_linux.o bspfile.o camera.o halloween_linux.o player.o physic.o collision.o maths.o ellipsoide.o console.o bsptree.o opengl.o demo.o display.o enveffect.o filesys.o frustrum.o game.o gameover.o image.o input.o interface.o jpeg.o libsound_linux.o liste.o menu.o menu_init.o menu_sel.o monster.o mskmodel.o objet_proc.o script.o shader.o sorting.o textdraw.o tga.o timer.o objet.o net_temp_linux.o -L/usr/X11R6/lib -lGL -lGLU -ljpeg -lm `sdl-config --cflags --libs` -lSDL_mixer -o  ../Hallow999
+
