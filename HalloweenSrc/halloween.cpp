@@ -1083,10 +1083,10 @@ void sys_end()
 
 	if(gIsMultiplayer)
 	{
-		if(gIsServer)
-			sv_Destroy();
-		else
-			cl_Destroy();
+		//if(gIsServer)
+			//sv_Destroy();
+		//else
+			//cl_Destroy();
 	}
 
 	IN_UnInit();

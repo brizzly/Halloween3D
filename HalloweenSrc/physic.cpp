@@ -106,7 +106,7 @@ pEntity Gravity(pEntity CreatureEnt, float factor)
 							{
 								// le serveur s'est suicidé, -1 au score
 								gSV_score--;
-								net_SendServerScores();
+								//net_SendServerScores();
 							}
 						}
 						else
@@ -706,11 +706,11 @@ void Launch(pEntity CreatureEnt, int id, float Speed)
 		{
 			if(gIsServer)
 			{
-				net_NetLaunchEnt(id, CreatureEnt->entity_id, anim.Pos, anim.Rot, ProjectileStartVel, true);
+				//net_NetLaunchEnt(id, CreatureEnt->entity_id, anim.Pos, anim.Rot, ProjectileStartVel, true);
 			}
 			else
 			{
-				net_NetLaunchEnt(id, CreatureEnt->entity_id, anim.Pos, anim.Rot, ProjectileStartVel, false);
+				//net_NetLaunchEnt(id, CreatureEnt->entity_id, anim.Pos, anim.Rot, ProjectileStartVel, false);
 				break;
 			}
 		}
@@ -810,11 +810,11 @@ void Launch(pEntity CreatureEnt, int id, float Speed)
 		{
 			if(gIsServer)
 			{
-				net_NetLaunchEnt(id, CreatureEnt->entity_id, anim.Pos, anim.Rot, ProjectileStartVel, true);
+				//net_NetLaunchEnt(id, CreatureEnt->entity_id, anim.Pos, anim.Rot, ProjectileStartVel, true);
 			}
 			else
 			{
-				net_NetLaunchEnt(id, CreatureEnt->entity_id, anim.Pos, anim.Rot, ProjectileStartVel, false);
+				//net_NetLaunchEnt(id, CreatureEnt->entity_id, anim.Pos, anim.Rot, ProjectileStartVel, false);
 				break;
 			}
 		}

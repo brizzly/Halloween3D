@@ -891,8 +891,8 @@ void QuitGame()
 {
 	char	path[255];
 
-	if(gIsMultiplayer)
-		net_UnInit();
+	//if(gIsMultiplayer)
+		//net_UnInit();
 
 	sprintf(path,"%s%s",SYSDIR,CONFIG);
 	cons_SaveConfig(path);
@@ -1118,7 +1118,7 @@ hBool GameProcess()
 		//Story_Intro();
 		if(gIsMultiplayer)
 		{
-			net_LagometerProcess();
+			//net_LagometerProcess();
 			if(gMultiCLleftgame)
 			{
 				gMultiCLleftgame = false;
@@ -1160,7 +1160,7 @@ hBool GameProcess()
 			m_ConsPrint("Le client a reçu les entitees dans la map en cours du serveur\n");		
 			m_ConsPrint("client envoi une demande de point d'apparition\n");
 #ifdef H_WINDOWS // hack
-			cl_Send("erf", PacketType_AskSpawnPos, true, true);
+			//cl_Send("erf", PacketType_AskSpawnPos, true, true);
 #endif
 			ProgramState = PS_LOADCLIENT;
 			break;			
@@ -1181,7 +1181,7 @@ hBool GameProcess()
 
 			m_ConsPrint("client envoi une demande des entitees au serveur\n");
 #ifdef H_WINDOWS // hack
-			cl_Send("ptdr", PacketType_AskEntities, true, true);
+			//cl_Send("ptdr", PacketType_AskEntities, true, true);
 #endif
 
 			ProgramState = PS_LOADENT;
@@ -1219,7 +1219,7 @@ hBool GameProcess()
 			if(gIsServer)
 			{
 				game_CameraViewInit();
-				sv_Create();
+				//sv_Create();
 				//sv_BeginHost("TEST");
 				gConnectedPlayer = 0;
 				gMultiSV_clentid = -1;
@@ -1227,14 +1227,14 @@ hBool GameProcess()
 				gMenu_InitFirstSel = false;
 				g_LoadMultiMap();
 
-				net_Init();
+				//net_Init();
 			}
 			else
 			{
 				menu_DisplayDefaultMap();
 				g_DispCenterString(28, 3, "Connecting to.. %s", net_ip.string);
 				gl_SwapBuffer();
-
+				/*
 				if(!cl_Create())
 				{
 					game_Init();
@@ -1261,7 +1261,7 @@ hBool GameProcess()
 	#ifdef H_WINDOWS // HACK
 					net_Init();
 	#endif
-				}
+				}*/
 			}
 		}
 		break;

@@ -38,10 +38,10 @@
 #include "libbass.h"
 #include "dsound.h"
 #include "imageloader_win.h"
-#include "net_client.h"
-#include "net_server.h"
-#include "net_dcomp.h"
-#include "net_common.h"
+//#include "net_client.h"
+//#include "net_server.h"
+//#include "net_dcomp.h"
+//#include "net_common.h"
 #endif
 
 
@@ -391,7 +391,7 @@ extern	int	game_heart;
 extern	int	ProgramState;
 extern	int	NextProgramState;
 extern	int	saved_ProgramState;
-extern	MOUSEINPUT	MouseInput;
+extern	hMOUSEINPUT	MouseInput;
 extern	int	game_NbMaps;
 extern	int	game_fleches;
 extern	double	gTimeStart;

@@ -92,7 +92,7 @@ void t_TimerProcess()
 			{
 				if(gIsMultiplayer)
 				{
-					net_DispPodium();
+					//net_DispPodium();
 				}
 				else
 				{

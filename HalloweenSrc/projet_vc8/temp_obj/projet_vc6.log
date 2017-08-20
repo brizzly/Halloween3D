@@ -1,0 +1,17 @@
+﻿  timer.cpp
+  player.cpp
+c:\users\julien\documents\github\halloween3d\halloweensrc\collision2.h(2): fatal error C1083: Impossible d'ouvrir le fichier include : 'coldet\src\coldet.h' : No such file or directory
+  monster.cpp
+  menu.cpp
+c:\users\julien\documents\github\halloween3d\halloweensrc\menu.cpp(414): warning C4244: '=' : conversion de 'float' en 'int', perte possible de données
+c:\users\julien\documents\github\halloween3d\halloweensrc\menu.cpp(416): warning C4244: '=' : conversion de 'float' en 'int', perte possible de données
+c:\users\julien\documents\github\halloween3d\halloweensrc\menu.cpp(1188): warning C4101: 'p' : variable locale non référencée
+c:\users\julien\documents\github\halloween3d\halloweensrc\menu.cpp(1303): warning C4101: 'p' : variable locale non référencée
+c:\users\julien\documents\github\halloween3d\halloweensrc\menu.cpp(1353): warning C4101: 'p' : variable locale non référencée
+  input_win.cpp
+  halloween.cpp
+c:\users\julien\documents\github\halloween3d\halloweensrc\halloween.cpp(745): warning C4244: '=' : conversion de 'int' en 'float', perte possible de données
+c:\users\julien\documents\github\halloween3d\halloweensrc\halloween.cpp(746): warning C4244: '=' : conversion de 'int' en 'float', perte possible de données
+  bspfile.cpp
+c:\users\julien\documents\github\halloween3d\halloweensrc\collision2.h(2): fatal error C1083: Impossible d'ouvrir le fichier include : 'coldet\src\coldet.h' : No such file or directory
+  Génération de code en cours...

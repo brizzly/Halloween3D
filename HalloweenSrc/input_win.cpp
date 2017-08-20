@@ -17,7 +17,7 @@ hBool	gPlayerCrouch=false;
 float	gPlayerCrouchStep=0;
 hBool	gPlayerRun=false;
 
-MOUSEINPUT	MouseInput;
+hMOUSEINPUT	MouseInput;
 
 #ifdef H_WINDOWS
 #define	DIRECTINPUT_VERSION 0x500
@@ -283,7 +283,7 @@ void IN_UnInit()
 	}
 }
 
-hBool di_IsKeyActivated(int id, MOUSEINPUT Mouse)
+hBool di_IsKeyActivated(int id, hMOUSEINPUT Mouse)
 {
 	if(id<0 || id>258)
 		return false;
@@ -316,7 +316,7 @@ hBool di_IsKeyActivated(int id, MOUSEINPUT Mouse)
 	return false;
 }
 
-void m_UpdateCursor(MOUSEINPUT Mouse, float *pCursor_x, float *pCursor_y)
+void m_UpdateCursor(hMOUSEINPUT Mouse, float *pCursor_x, float *pCursor_y)
 {
 	*pCursor_x += Mouse.offset_X * 5.0f;
 	*pCursor_y -= Mouse.offset_Y * 5.0f;
@@ -332,7 +332,7 @@ void m_UpdateCursor(MOUSEINPUT Mouse, float *pCursor_x, float *pCursor_y)
 		*pCursor_y=480.0f;
 }
 
-void m_ProcessInputs(MOUSEINPUT Mouse)
+void m_ProcessInputs(hMOUSEINPUT Mouse)
 {
 	pEntity		PlayerEnt;
 
@@ -606,7 +606,7 @@ void m_ProcessInputs(MOUSEINPUT Mouse)
 	}
 }
 
-void IN_PlayerInputMove(MOUSEINPUT *Mouse, pEntity PlayerEnt)
+void IN_PlayerInputMove(hMOUSEINPUT *Mouse, pEntity PlayerEnt)
 {
 	pEntity		ClientEnt;
 	hBool		CL_IsWalk;
@@ -807,14 +807,14 @@ void IN_PlayerInputMove(MOUSEINPUT *Mouse, pEntity PlayerEnt)
 		{
 			if(CL_accelerate)
 			{
-				net_SendVectorState(o_FindEntity(MORBAK), 0);
+				//net_SendVectorState(o_FindEntity(MORBAK), 0);
 			}
 		}
 		else
 		{
 			if(!CL_accelerate)
 			{
-				net_SendVectorState(o_FindEntity(MORBAK), 1);
+				//net_SendVectorState(o_FindEntity(MORBAK), 1);
 			}
 		}
 	}
@@ -1032,7 +1032,7 @@ hBool IN_IsMousePressed(unsigned short mbutton)
 	return false;
 }
 
-void IN_GetMouse(MOUSEINPUT *Mouse)
+void IN_GetMouse(hMOUSEINPUT *Mouse)
 {
 	if(gIsServer && net_dedicated.value)
 		return;
@@ -1066,7 +1066,7 @@ void IN_GetMouse(MOUSEINPUT *Mouse)
 		Mouse->button_B = false;
 }
 
-void m_ReadInputs(MOUSEINPUT *Mouse)
+void m_ReadInputs(hMOUSEINPUT *Mouse)
 {
 	pEntity	PlayerEnt;
 	
@@ -1079,7 +1079,7 @@ void m_ReadInputs(MOUSEINPUT *Mouse)
 	{
 		if(gIsMultiplayer && gMultiPodium)
 		{
-			net_StopMultiplayer();
+			//net_StopMultiplayer();
 			return;
 		}
 

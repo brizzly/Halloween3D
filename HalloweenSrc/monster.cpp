@@ -35,7 +35,7 @@ pEntity monster_Die(pEntity MonsterEnt, Model *model, hBool OkGoreF)
 		{
 			gSV_score++;
 		}
-		net_SendServerScores();
+		//net_SendServerScores();
 	}
 
 	// HACK

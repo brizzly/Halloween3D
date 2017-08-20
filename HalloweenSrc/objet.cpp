@@ -840,7 +840,7 @@ hBool o_AddEntityToList(int id, int parent_id, ANIMENTITY anim, hBool PlayerHold
 		{
 			if(pNewEntity->entity_id == EXPLOSION)
 			{
-				net_NetLaunchEnt(pNewEntity->entity_id, parent_id, anim.Pos, anim.Rot, anim.Siz_Vel, true);
+				//net_NetLaunchEnt(pNewEntity->entity_id, parent_id, anim.Pos, anim.Rot, anim.Siz_Vel, true);
 			}
 		}
 	}
@@ -1020,7 +1020,7 @@ void o_RemoveEntityFromList(pEntity remove)
 		{
 			if(remove->entity_id == BOMBE || remove->entity_id == FLECHE)
 			{
-				net_RemoveClientEnt(remove);
+				//net_RemoveClientEnt(remove);
 			}
 		}
 	}

@@ -29,7 +29,7 @@ typedef struct MouseInputTag
 	float	offset_X;
 	float	offset_Y;
 
-}	MOUSEINPUT;
+}	hMOUSEINPUT;
 
 
 #define		K_BACKSPACE		0x0E
@@ -179,18 +179,18 @@ hBool	IN_IsPressed(unsigned short keyCode);
 void	IN_HideMouse();
 void	IN_ShowMouse();
 hBool	IN_IsMousePressed(unsigned short mbutton);
-void	IN_GetMouse(MOUSEINPUT *Mouse);
+void	IN_GetMouse(hMOUSEINPUT *Mouse);
 int	IN_GetIdKey();
-void	IN_PlayerInputMove(MOUSEINPUT *Mouse, pEntity PlayerEnt);
+void	IN_PlayerInputMove(hMOUSEINPUT *Mouse, pEntity PlayerEnt);
 char 	*IN_GetKeyChar(int IdScannedKey);
 char 	*IN_GetKeyStringName(int IdScannedKey);
 void 	IN_WarpMouse();
-void	IN_Process(MOUSEINPUT Mouse, pEntity PlayerEnt);
+void	IN_Process(hMOUSEINPUT Mouse, pEntity PlayerEnt);
 
-hBool	di_IsKeyActivated(int id, MOUSEINPUT Mouse);
+hBool	di_IsKeyActivated(int id, hMOUSEINPUT Mouse);
 
-void	m_UpdateCursor(MOUSEINPUT Mouse, float *pCursor_x, float *pCursor_y);
-void	m_ReadInputs(MOUSEINPUT *Mouse);
+void	m_UpdateCursor(hMOUSEINPUT Mouse, float *pCursor_x, float *pCursor_y);
+void	m_ReadInputs(hMOUSEINPUT *Mouse);
 int	ReadKey();
 
 

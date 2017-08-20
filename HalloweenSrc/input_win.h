@@ -16,7 +16,7 @@ typedef struct MouseInputTag
 	float	offset_X;
 	float	offset_Y;
 
-}	MOUSEINPUT;
+}	hMOUSEINPUT;
 
 
 #ifdef H_WINDOWS
@@ -76,15 +76,15 @@ hBool					IN_Init(HINSTANCE hInstance);
 void					IN_UnInit();
 void					IN_WarpMouse();
 
-void					m_UpdateCursor(MOUSEINPUT Mouse, float *pCursor_x, float *pCursor_y);
-void					m_ProcessInputs(MOUSEINPUT Mouse);
-void					m_ReadInputs(MOUSEINPUT *Mouse);
+void					m_UpdateCursor(hMOUSEINPUT Mouse, float *pCursor_x, float *pCursor_y);
+void					m_ProcessInputs(hMOUSEINPUT Mouse);
+void					m_ReadInputs(hMOUSEINPUT *Mouse);
 int						ReadKey();
 hBool					ReacquireInput();
 hBool					UnacquireInput();
 
 int						di_GetIdKey();
-hBool					di_IsKeyActivated(int id, MOUSEINPUT Mouse);
+hBool					di_IsKeyActivated(int id, hMOUSEINPUT Mouse);
 void					DI_ReadKeyboard();
 void					DI_ReadMouse();
 void					DI_ReacquireMouse();

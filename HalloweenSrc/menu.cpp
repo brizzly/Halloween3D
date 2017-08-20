@@ -77,7 +77,7 @@ void menu_ClickedA_PAUSED()
 		// HACK
 		if(gIsMultiplayer)
 		{
-			net_StopMultiplayer();
+			//net_StopMultiplayer();
 			terminator.value = 0;	// HACK : ra3 style mutliplayer mode termine!
 		}
 

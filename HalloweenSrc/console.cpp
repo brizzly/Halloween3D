@@ -612,11 +612,11 @@ void m_ConsoleFindCommand(char *cmdtext)
 #ifdef H_WINDOWS // hack
 			if(gIsServer)
 			{
-				sv_Send(&cmdtext[str], PacketType_ServerSay, true);
+				//sv_Send(&cmdtext[str], PacketType_ServerSay, true);
 			}
 			else
 			{
-				cl_Send(&cmdtext[str], PacketType_ClientSay, true, false);
+				//cl_Send(&cmdtext[str], PacketType_ClientSay, true, false);
 			}
 #endif
 		}

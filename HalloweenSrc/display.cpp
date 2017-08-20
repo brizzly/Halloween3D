@@ -273,7 +273,7 @@ void disp_World()
 		
 		if(gIsMultiplayer)
 		{
-			net_DispNetInfos();
+			//net_DispNetInfos();
 		}
 
 		WorldColorR = s_WorldColorR;
