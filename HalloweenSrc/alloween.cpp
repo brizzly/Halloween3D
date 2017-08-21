@@ -537,8 +537,8 @@ extern	short	gConnectedPlayer;
 extern	short	gMultiMapPlayed;
 extern	hBool	gMultiConnected;
 extern	hBool	gClientAskProtocol;
-extern	char	gNetBitKeys;
-extern	char	gNetBitKeys_back;
+//extern	char	gNetBitKeys;
+//extern	char	gNetBitKeys_back;
 extern	hBool	gMultiClientReady;
 extern	short	gMultiNbEntsMax;
 extern	short	gMultiNbEnts;
@@ -549,8 +549,8 @@ extern	hBool	gMultiCLleftgame;
 extern	hBool	gMouseClipped;
 extern	uint	gSV_FrameID;
 extern	uint	gCL_FrameID;
-extern	int	gSV_score;
-extern	int	gCL_score;
+//extern	int	gSV_score;
+//extern	int	gCL_score;
 extern	hBool	gMultiPodium;
 
 

@@ -54,7 +54,7 @@ END
 
 // Icon with lowest ID value placed first to ensure application icon
 // remains consistent on all systems.
-IDI_ICON1               ICON                    "D:\\Halloween\\source\\engine999\\misc\\h1.2_icon.ico"
+IDI_ICON1               ICON                    "h1.2_icon.ico"
 #endif    // French (France) resources
 /////////////////////////////////////////////////////////////////////////////
 

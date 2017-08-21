@@ -25,6 +25,7 @@ pEntity monster_Die(pEntity MonsterEnt, Model *model, hBool OkGoreF)
 		return NULL;
 
 	// HACK
+	/*
 	if(gIsMultiplayer && gIsServer && gConnectedPlayer > 1)
 	{
 		if(!gMultiPodium && MonsterEnt->entity_id == DEPLA)
@@ -47,6 +48,7 @@ pEntity monster_Die(pEntity MonsterEnt, Model *model, hBool OkGoreF)
 		//MonsterEnt->IsChanged_Animation = true;
 		return MonsterEnt;
 	}
+	*/
 
 	if(gAllGoalCleared)
 	{

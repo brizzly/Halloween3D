@@ -21,7 +21,7 @@ typedef struct MouseInputTag
 
 #ifdef H_WINDOWS
 
-#define	DIRECTINPUT_VERSION 0x500
+#define	DIRECTINPUT_VERSION 0x800 // 0x500
 
 #include <windows.h>
 #include <dinput.h>

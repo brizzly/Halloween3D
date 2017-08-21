@@ -127,15 +127,15 @@ void PlayerHurt(pEntity Entity, int dammage)
 			// le client s'est suicidé, -1 au score
 			if(!gMultiPodium && gConnectedPlayer > 1)
 			{
-				gCL_score--;
-				net_SendServerScores();
+				//gCL_score--;
+				//net_SendServerScores();
 			}
 
 			PlayerResetStartPos(MORBAK);
 			Entity->health = 100;
 		}
 
-		net_SendClientHurt(Entity->health);
+		//net_SendClientHurt(Entity->health);
 		return;
 	}
 
@@ -300,8 +300,8 @@ void EnnemyDammage(pEntity PlayerEnt)
 	if(!gMultiPodium && gIsMultiplayer && gIsServer && ProgramState == PS_DIE)
 	{
 		// le serveur s'est fait butté
-		gCL_score++;
-		net_SendServerScores();
+		//gCL_score++;
+		//net_SendServerScores();
 	}
 }
 

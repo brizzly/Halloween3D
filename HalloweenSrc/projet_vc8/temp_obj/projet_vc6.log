@@ -1,17 +1,7 @@
-﻿  timer.cpp
-  player.cpp
-c:\users\julien\documents\github\halloween3d\halloweensrc\collision2.h(2): fatal error C1083: Impossible d'ouvrir le fichier include : 'coldet\src\coldet.h' : No such file or directory
-  monster.cpp
-  menu.cpp
-c:\users\julien\documents\github\halloween3d\halloweensrc\menu.cpp(414): warning C4244: '=' : conversion de 'float' en 'int', perte possible de données
-c:\users\julien\documents\github\halloween3d\halloweensrc\menu.cpp(416): warning C4244: '=' : conversion de 'float' en 'int', perte possible de données
-c:\users\julien\documents\github\halloween3d\halloweensrc\menu.cpp(1188): warning C4101: 'p' : variable locale non référencée
-c:\users\julien\documents\github\halloween3d\halloweensrc\menu.cpp(1303): warning C4101: 'p' : variable locale non référencée
-c:\users\julien\documents\github\halloween3d\halloweensrc\menu.cpp(1353): warning C4101: 'p' : variable locale non référencée
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(373,5): warning MSB8004: Le répertoire Output ne se termine pas par une barre oblique finale. Cette instance de build ajoutera une barre oblique, comme requis, pour permettre l'évaluation correcte du répertoire Output.
   input_win.cpp
-  halloween.cpp
-c:\users\julien\documents\github\halloween3d\halloweensrc\halloween.cpp(745): warning C4244: '=' : conversion de 'int' en 'float', perte possible de données
-c:\users\julien\documents\github\halloween3d\halloweensrc\halloween.cpp(746): warning C4244: '=' : conversion de 'int' en 'float', perte possible de données
-  bspfile.cpp
-c:\users\julien\documents\github\halloween3d\halloweensrc\collision2.h(2): fatal error C1083: Impossible d'ouvrir le fichier include : 'coldet\src\coldet.h' : No such file or directory
-  Génération de code en cours...
+c:\users\julien\documents\github\halloween3d\halloweensrc\input_win.cpp(616): warning C4101: 'ClientEnt' : variable locale non référencée
+C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(1198,5): warning MSB8012: TargetPath(C:\Users\julien\Documents\GitHub\Halloween3D\HalloweenSrc\projet_vc8\.\Halloween.exe) ne correspond pas à la valeur de la propriété OutputFile (C:\Users\julien\Documents\GitHub\Halloween3D\HalloweenSrc\projet_vc8\Halloween999.exe) de Linker. Cela peut entraîner une génération incorrecte de votre projet. Pour corriger ce problème, vérifiez que les valeurs des propriétés $(OutDir), $(TargetName) et $(TargetExt) correspondent à la valeur spécifiée dans %(Link.OutputFile).
+C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(1200,5): warning MSB8012: TargetName(Halloween) ne correspond pas à la valeur de la propriété OutputFile (Halloween999) de Linker. Cela peut entraîner une génération incorrecte de votre projet. Pour corriger ce problème, vérifiez que les valeurs des propriétés $(OutDir), $(TargetName) et $(TargetExt) correspondent à la valeur spécifiée dans %(Link.OutputFile).
+  projet_vc6.vcxproj -> C:\Users\julien\Documents\GitHub\Halloween3D\HalloweenSrc\projet_vc8\.\Halloween.exe
+  projet_vc6.vcxproj -> .\../Halloween999.pdb (Full PDB)

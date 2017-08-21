@@ -20,7 +20,7 @@ hBool	gPlayerRun=false;
 hMOUSEINPUT	MouseInput;
 
 #ifdef H_WINDOWS
-#define	DIRECTINPUT_VERSION 0x500
+//#define	DIRECTINPUT_VERSION 0x800 // 0x500
 
 #include <windows.h>
 #include <dinput.h>
@@ -43,8 +43,13 @@ int						gGameIdKeys[MAX_GAMEKEY+4];
 
 hBool IN_Init(HINSTANCE hInstance)
 {
-	if( DirectInputCreate(hInstance,DIRECTINPUT_VERSION,&lpdi,NULL) < 0)
+	//if( DirectInputCreate(hInstance,DIRECTINPUT_VERSION,&lpdi,NULL) < 0)
+	//	return false;
+
+	if (DirectInput8Create(GetModuleHandle(nullptr), DIRECTINPUT_VERSION,
+		IID_IDirectInput8, (VOID**)&lpdi, nullptr) < 0)
 		return false;
+
 
 	lpdi->CreateDevice(GUID_SysKeyboard, &lpdiKeyboard, NULL);
 	lpdi->CreateDevice(GUID_SysMouse, &lpdiMouse, NULL);
@@ -618,7 +623,7 @@ void IN_PlayerInputMove(hMOUSEINPUT *Mouse, pEntity PlayerEnt)
 	CL_accelerate = false; // hack ?
 	gPlayerWalk = false;
 	CL_IsWalk = false;
-
+/*
 	// ACTIVATE CLIENT JUMP ON THE SERVER
 	if(gIsMultiplayer && gIsServer)
 	{
@@ -637,7 +642,7 @@ void IN_PlayerInputMove(hMOUSEINPUT *Mouse, pEntity PlayerEnt)
 			}
 		}
 	}
-
+*/
 	// met a zero le vecteur acceleration des entitee joueurs
 	if(!gIsMultiplayer || gIsServer)
 	{
@@ -653,7 +658,7 @@ void IN_PlayerInputMove(hMOUSEINPUT *Mouse, pEntity PlayerEnt)
 		phy_ResetVelocity(PERSO);
 		phy_ResetVelocity(MORBAK);
 	}
-
+/*
 	// CLIENT FORWARD
 	if(gIsMultiplayer && gIsServer)
 	{
@@ -675,12 +680,14 @@ void IN_PlayerInputMove(hMOUSEINPUT *Mouse, pEntity PlayerEnt)
 			}
 		}
 	}
+	*/
+
 	// SINGLEPLAYER/HOST FORWARD
 	if(player_view.value && di_IsKeyActivated(gGameIdKeys[0],*Mouse))
 	{
 		if(gIsMultiplayer && !gIsServer)
 		{
-			gNetBitKeys = gNetBitKeys | (char)(0x01 << 7);
+		//	gNetBitKeys = gNetBitKeys | (char)(0x01 << 7);
 			CL_IsWalk = true;
 		}
 		else
@@ -689,7 +696,7 @@ void IN_PlayerInputMove(hMOUSEINPUT *Mouse, pEntity PlayerEnt)
 			gPlayerWalk = true;
 		}
 	}
-
+/*
 	// CLIENT BACKWARD
 	if(gIsMultiplayer && gIsServer)
 	{
@@ -711,12 +718,14 @@ void IN_PlayerInputMove(hMOUSEINPUT *Mouse, pEntity PlayerEnt)
 			}
 		}
 	}
+	*/
+
 	// SINGLEPLAYER/HOST BACKWARD
 	if(player_view.value && di_IsKeyActivated(gGameIdKeys[1],*Mouse))
 	{
 		if(gIsMultiplayer && !gIsServer)
 		{
-			gNetBitKeys = gNetBitKeys | (char)(0x01 << 6);
+	//		gNetBitKeys = gNetBitKeys | (char)(0x01 << 6);
 			CL_IsWalk = true;
 		}
 		else
@@ -725,7 +734,7 @@ void IN_PlayerInputMove(hMOUSEINPUT *Mouse, pEntity PlayerEnt)
 			gPlayerWalk = true;
 		}
 	}
-
+/*
 	// CLIENT STRAFELEFT
 	if(gIsMultiplayer && gIsServer)
 	{
@@ -747,12 +756,14 @@ void IN_PlayerInputMove(hMOUSEINPUT *Mouse, pEntity PlayerEnt)
 			}
 		}		
 	}
+	*/
+
 	// SINGLEPLAYER/HOST STRAFELEFT
 	if(player_view.value && di_IsKeyActivated(gGameIdKeys[2],*Mouse))
 	{
 		if(gIsMultiplayer && !gIsServer)
 		{
-			gNetBitKeys = gNetBitKeys | (char)(0x01 << 5);
+	//		gNetBitKeys = gNetBitKeys | (char)(0x01 << 5);
 			CL_IsWalk = true;
 		}
 		else
@@ -762,6 +773,7 @@ void IN_PlayerInputMove(hMOUSEINPUT *Mouse, pEntity PlayerEnt)
 		}
 	}
 
+	/*
 	// CLIENT STRAFERIGHT
 	if(gIsMultiplayer && gIsServer)
 	{
@@ -783,12 +795,14 @@ void IN_PlayerInputMove(hMOUSEINPUT *Mouse, pEntity PlayerEnt)
 			}
 		}
 	}
+	*/
+
 	// SINGLEPLAYER/HOST STRAFERIGHT
 	if(player_view.value && di_IsKeyActivated(gGameIdKeys[3],*Mouse))
 	{
 		if(gIsMultiplayer && !gIsServer)
 		{
-			gNetBitKeys = gNetBitKeys | (char)(0x01 << 4);
+	//		gNetBitKeys = gNetBitKeys | (char)(0x01 << 4);
 			CL_IsWalk = true;
 		}
 		else
@@ -798,7 +812,7 @@ void IN_PlayerInputMove(hMOUSEINPUT *Mouse, pEntity PlayerEnt)
 		}
 	}
 
-
+/*
 	// le vecteur acceleration du joueur client sur le serveur s'est arreter il faut avertir le client
 	// pour une meilleur interpolation du client
 	if(gIsMultiplayer && gIsServer)
@@ -870,8 +884,7 @@ void IN_PlayerInputMove(hMOUSEINPUT *Mouse, pEntity PlayerEnt)
 			}
 		}
 	}
-
-
+*/
 
 	if(IsConsoleActive)
 		goto no_bobroll;

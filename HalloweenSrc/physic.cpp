@@ -105,7 +105,7 @@ pEntity Gravity(pEntity CreatureEnt, float factor)
 							if(!gMultiPodium && gIsMultiplayer && gIsServer && ProgramState == PS_DIE && gConnectedPlayer > 1)
 							{
 								// le serveur s'est suicidé, -1 au score
-								gSV_score--;
+								//gSV_score--;
 								//net_SendServerScores();
 							}
 						}
