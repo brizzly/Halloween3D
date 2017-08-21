@@ -1,0 +1,19 @@
+;=====================================
+;	Bonus Map 2
+;	(C) 2001 Jadeware
+;	Script file - by sunhp
+;=====================================
+
+actionbrush 1
+{
+	ActivationDist 100
+	scale (100,100,100) [0 1]	
+
+	ifAction ( PERSO )
+	{
+		DispText "Bonus Map 2"
+		DispText "Hit a maximum number of 3-pointers to complete the level"
+		scale (100,100,100) [0 1]	
+	}
+}
+

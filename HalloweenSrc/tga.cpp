@@ -226,7 +226,7 @@ int tga_Load(char *name, int id, int picmip, hBool map_tex)
 #ifdef H_MAC
 		s = fopen(KMiscTools::makeFilePath(fullname), "r+bt");
 #else
-		s = fopen(fullname, "r+bt");
+		s = fopen(fullname, "r+b"); // r+bt
 #endif
 
 		if(!s)

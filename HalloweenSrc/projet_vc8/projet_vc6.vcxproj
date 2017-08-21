@@ -44,16 +44,18 @@
     <_ProjectFileVersion>15.0.26730.3</_ProjectFileVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>.</OutDir>
+    <OutDir>./</OutDir>
     <IntDir>.\temp_obj\</IntDir>
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\Users\julien\Documents\GitHub\Halloween3D\HalloweenSrc\coldet;C:\Users\julien\Documents\GitHub\Halloween3D\HalloweenSrc\misc;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\julien\Documents\GitHub\Halloween3D\HalloweenSrc\misc;$(LibraryPath)</LibraryPath>
+    <IncludePath>../coldet/;../misc/;$(IncludePath)</IncludePath>
+    <LibraryPath>../misc/;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>.\../../..\</OutDir>
+    <OutDir>./</OutDir>
     <IntDir>.\temp_obj\</IntDir>
     <LinkIncremental>false</LinkIncremental>
+    <IncludePath>../coldet/;../misc/;$(IncludePath)</IncludePath>
+    <LibraryPath>../misc/;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
@@ -85,7 +87,7 @@
     </ResourceCompile>
     <Link>
       <AdditionalDependencies>opengl32.lib;glu32.lib;dxguid.lib;dinput8.lib;bass.lib;winmm.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>Halloween999.exe</OutputFile>
+      <OutputFile>Halloween.exe</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <IgnoreSpecificDefaultLibraries>libc.lib;libcmt.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -128,12 +130,13 @@
       <Culture>0x0409</Culture>
     </ResourceCompile>
     <Link>
-      <AdditionalDependencies>opengl32.lib;glu32.lib;openplay.lib;dxguid.lib;dinput.lib;bass.lib;winmm.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>../../../Halloween2006.exe</OutputFile>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;dxguid.lib;dinput8.lib;bass.lib;winmm.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>Halloween2017.exe</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <ProgramDatabaseFile>.\../../../Halloween999.pdb</ProgramDatabaseFile>
       <SubSystem>Windows</SubSystem>
       <TargetMachine>MachineX86</TargetMachine>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>

@@ -1,0 +1,210 @@
+;=====================================
+;	H1m3 Map
+;	(C) 2001 Jadeware
+;	Script file enorme (C) N3wG
+;=====================================
+
+actionbrush 2
+{
+	ActivationDist 70
+
+	scale (100,100,95) [0 1]
+	ifAction ( PERSO )
+	{
+		PlaySound 20
+		scale (105,100,95) [0 600]
+		move (-40,0,0) [0 600]
+
+		scale (100,100,100) [2600 3200]
+		move (40,0,0) [2600 3200]
+		reset [3200]	
+	}
+}
+
+actionbrush 3
+{
+	ActivationDist 50
+
+	scale (100,100,95) [0 1]
+	ifAction ( PERSO )
+	{
+		PlaySound 20
+		scale (105,100,95) [0 600]
+		move (40,0,0) [0 600]
+
+		scale (100,100,100) [2600 3200]
+		move (-40,0,0) [2600 3200]
+		reset [3200]	
+	}
+}
+
+actionbrush 4
+{
+	ActivationDist 70
+
+	scale (100,100,95) [0 1]
+	ifAction ( PERSO )
+	{
+		PlaySound 20
+		scale (105,100,95) [0 600]
+		move (40,0,0) [0 600]
+
+		scale (100,100,100) [2600 3200]
+		move (-40,0,0) [2600 3200]
+		reset [3200]	
+	}
+}
+
+actionbrush 5
+{
+	ActivationDist 70
+
+	scale (100,100,95) [0 1]
+	ifAction ( PERSO )
+	{
+		PlaySound 20
+		scale (105,100,95) [0 600]
+		move (-40,0,0) [0 600]
+
+		scale (100,100,100) [2600 3200]
+		move (40,0,0) [2600 3200]
+		reset [3200]	
+	}
+}
+
+actionbrush 6
+{
+	ActivationDist 70
+
+	scale (100,100,95) [0 1]
+	ifAction ( PERSO )
+	{
+		PlaySound 20
+		scale (105,100,95) [0 600]
+		move (40,0,0) [0 600]
+
+		scale (100,100,100) [2600 3200]
+		move (-40,0,0) [2600 3200]
+		reset [3200]	
+	}
+}
+
+actionbrush 7
+{
+	ActivationDist 70
+
+	scale (100,100,95) [0 1]
+	ifAction ( PERSO )
+	{
+		PlaySound 20
+		scale (105,100,95) [0 600]
+		move (-40,0,0) [0 600]
+
+		scale (100,100,100) [2600 3200]
+		move (40,0,0) [2600 3200]
+		reset [3200]	
+	}
+}
+
+actionbrush 8
+{
+	ActivationDist 70
+
+	scale (100,100,95) [0 1]
+	ifAction ( PERSO )
+	{
+		PlaySound 20
+		scale (105,100,95) [0 600]
+		move (-40,0,0) [0 600]
+
+		scale (100,100,100) [2600 3200]
+		move (40,0,0) [2600 3200]
+		reset [3200]	
+	}
+}
+
+actionbrush 9
+{
+	ActivationDist 70
+
+	scale (100,100,95) [0 1]
+	ifAction ( PERSO )
+	{
+		PlaySound 20
+		scale (105,100,95) [0 600]
+		move (40,0,0) [0 600]
+
+		scale (100,100,100) [2600 3200]
+		move (-40,0,0) [2600 3200]
+		reset [3200]	
+	}
+}
+
+actionbrush 10					
+{
+	ActivationDist 60
+	scale (100,100,120) [0 1]
+	
+
+	ifAction ( PERSO )
+	{
+		DispText "Use Block"
+	}	
+
+	ifAction ( ACTIONKEY )
+	{ 
+		DispText "You found a secret"
+		Launchactionbrush 11
+		move (0,0,-5) [0 1000]
+		reset [1000]
+	
+	}	
+}
+
+actionbrush 11						
+{
+	scale (100,102,90) [0 1]
+	ActivationDist 60
+
+
+
+	ifAction ( WAITACTION )
+	{
+		move (0,80,0) [0 800]
+		
+	}
+}
+
+actionbrush 12
+{
+	ActivationDist 70
+
+	scale (100,100,95) [0 1]
+	ifAction ( PERSO )
+	{
+		PlaySound 20
+		scale (105,100,95) [0 600]
+		move (0,0,-40) [0 600]
+
+		scale (100,100,100) [2600 3200]
+		move (0,0,40) [2600 3200]
+		reset [3200]	
+	}
+}
+
+actionbrush 13
+{
+	ActivationDist 70
+
+	scale (100,100,95) [0 1]
+	ifAction ( PERSO )
+	{
+		PlaySound 20
+		scale (105,100,95) [0 600]
+		move (0,0,40) [0 600]
+
+		scale (100,100,100) [2600 3200]
+		move (0,0,-40) [2600 3200]
+		reset [3200]	
+	}
+}

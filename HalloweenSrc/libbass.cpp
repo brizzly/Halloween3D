@@ -7,10 +7,12 @@ HSTREAM		gHstream = 0;
 
 hBool lb_Init(HWND hwnd)
 {
-	if(BASS_GetVersion()!=MAKELONG(2,0))
-		return false;
+	long ver = BASS_GetVersion();
+//	if(ver!=MAKELONG(2,0))
+//		return false;
 
-	if(!BASS_Init(1,44100,BASS_DEVICE_3D,hwnd,NULL))
+	//if(!BASS_Init(1, 44100, BASS_DEVICE_3D, hwnd, NULL))
+	if(!BASS_Init(-1,44100,BASS_DEVICE_3D,hwnd, NULL))
 		return false;
 
 	BASS_Set3DFactors(0.00001f,0.015f,0);
@@ -81,8 +83,13 @@ void lb_PlaySound(int SoundID, int volume)
 			freq = -1;
 		}
 	}
-	if(gSoundObjet[SoundID].bass_sample)
-		BASS_SamplePlayEx(gSoundObjet[SoundID].bass_sample,0,freq,volume,-101,-1);
+	if (gSoundObjet[SoundID].bass_sample) {
+		
+		HCHANNEL channel = BASS_SampleGetChannel(gSoundObjet[SoundID].bass_sample, false);
+		BASS_ChannelPlay(channel, true);
+
+	//	BASS_SamplePlayEx(gSoundObjet[SoundID].bass_sample, 0, freq, volume, -101, -1);
+	}
 }
 
 vect_t lb_Set3Dpos(vect_t pos)
@@ -133,7 +140,17 @@ void lb_PlaySound3D(int SoundID, vect_t pos, int volume)
 	{
 		volume = 0;
 	}
-	gSoundObjet[SoundID].channel3D[sound_pos] = BASS_SamplePlay3D(gSoundObjet[SoundID].bass_sample,&gSoundObjet[SoundID].bass_3Dpos,NULL,NULL);
+
+	HCHANNEL channel = BASS_SampleGetChannel(gSoundObjet[SoundID].bass_sample, false);
+	//BASS_ChannelSet3DAttributes(channel,
+	//	&gSoundObjet[SoundID].bass_3Dpos
+	BASS_ChannelSet3DPosition(channel,
+		&gSoundObjet[SoundID].bass_3Dpos,
+		NULL, NULL);
+	BASS_ChannelPlay(channel, true);
+
+
+//	gSoundObjet[SoundID].channel3D[sound_pos] = BASS_SamplePlay3D(gSoundObjet[SoundID].bass_sample,&gSoundObjet[SoundID].bass_3Dpos,NULL,NULL);
 	
 	if(gCheatMode_son)
 	{
@@ -150,7 +167,11 @@ void lb_PlaySound3D(int SoundID, vect_t pos, int volume)
 			freq = -1;
 		}
 	}
-	BASS_ChannelSetAttributes(gSoundObjet[SoundID].channel3D[sound_pos],freq,0/*volume*/,-101);
+	//BASS_ChannelSetAttributes(gSoundObjet[SoundID].channel3D[sound_pos],freq,0/*volume*/,-101);
+
+	BASS_ChannelSetAttribute(gSoundObjet[SoundID].channel3D[sound_pos],
+		BASS_ATTRIB_FREQ,
+		(float)freq);
 }
 
 void lb_StopChannel3D(int idsound, int idchan)
@@ -253,7 +274,12 @@ void lb_UpdateSound3D(int volume)
 			gSoundObjet[SoundID].bass_3Dpos.y = pos.Y;
 			gSoundObjet[SoundID].bass_3Dpos.z = pos.Z;
 			BASS_ChannelSet3DPosition(gSoundObjet[SoundID].channel3D[sound_pos],&gSoundObjet[SoundID].bass_3Dpos,NULL,NULL);
-			BASS_ChannelSetAttributes(gSoundObjet[SoundID].channel3D[sound_pos],-1,volume,-101);
+			//BASS_ChannelSetAttributes(gSoundObjet[SoundID].channel3D[sound_pos],-1,volume,-101);
+
+			BASS_ChannelSetAttribute(gSoundObjet[SoundID].channel3D[sound_pos],
+				BASS_ATTRIB_VOL,
+				(float)volume);
+
 		}
 	}
 	if(apply)
@@ -295,7 +321,8 @@ hBool lb_PlayMP3(char *name, int volume)
 	gHstream = BASS_StreamCreateFile(false,name,0,0,BASS_STREAM_AUTOFREE);
 	if(gHstream)
 	{
-		BASS_StreamPlay(gHstream,0,0);
+		BASS_ChannelPlay(gHstream, true);
+		//BASS_StreamPlay(gHstream,0,0);
 		lb_SetChannelVol(volume);
 		return true;
 	}
@@ -329,8 +356,12 @@ void lb_UpdateMP3()
 
 void lb_SetChannelVol(int volume)
 {
-	if(gHstream)
-		BASS_ChannelSetAttributes(gHstream,-1,volume,-101);
+	if (gHstream) {
+		//BASS_ChannelSetAttributes(gHstream, -1, volume, -101);
+		BASS_ChannelSetAttribute(gHstream,
+			BASS_ATTRIB_VOL,
+			(float)volume);
+	}
 }
 
 
