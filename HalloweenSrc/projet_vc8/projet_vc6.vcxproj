@@ -131,7 +131,7 @@
     </ResourceCompile>
     <Link>
       <AdditionalDependencies>opengl32.lib;glu32.lib;dxguid.lib;dinput8.lib;bass.lib;winmm.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>Halloween2017.exe</OutputFile>
+      <OutputFile>Halloween.exe</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <ProgramDatabaseFile>.\../../../Halloween999.pdb</ProgramDatabaseFile>
       <SubSystem>Windows</SubSystem>

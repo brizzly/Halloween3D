@@ -942,7 +942,7 @@ BOOL sys_setVID()
 	if(gIsServer && net_dedicated.value)
 		return true;
 
-	sys_CreateWindow(NAME,ScreenX[(int)videomode.value],ScreenY[(int)videomode.value],(int)colordepth.value);
+	sys_CreateWindow(NAME,ScreenX[(int)(videomode.value)],ScreenY[(int)(videomode.value)],(int)(colordepth.value));
 
 	if(!sys_CreateGL(ScreenX[(int)videomode.value],ScreenY[(int)videomode.value],(int)colordepth.value))
 	{
