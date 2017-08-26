@@ -106,6 +106,8 @@ static int		ScreenY[] = { 384, 480, 600, 768, 864, 960, 1200 };
 #include <sys/dir.h>
 #include <sys/file.h>
 
+#include <GLUT/glut.h>
+
 #endif
 
 

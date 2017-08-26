@@ -210,6 +210,7 @@ hBool sys_CreateGL(int width, int height, int bits)
 											true,
 											NAME);	
 	}
+	
 	return res;
 #endif
 
@@ -647,9 +648,54 @@ bool sys_GameEvent()
 	#endif
 }
 
+const GLfloat EDGE = 50.0;
+const GLfloat SQR3 = sqrt(3);
+const GLfloat SQR6 = sqrt(6);
+
+void display()
+{
+	/*
+	GLfloat vertices[4][3] = { {0.0, 0.0, 0.0}, {EDGE, 0.0, 0.0}, {EDGE/2, EDGE*SQR3/2, 0.0}, {EDGE/2, EDGE*SQR3/6, EDGE*SQR6/3} };
+	GLfloat colors[4][3] = { {1.0, 1.0, 0.5}, {0.5, 1.0, 0.5}, {0.5, 0.8, 0.5}, {0.5, 0.5, 1.0} };
+	
+	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+	
+	glBegin(GL_TRIANGLES);
+	//divide_triangle(vertices, colors);
+	glEnd();
+	glFlush();
+	*/
+	
+	if(GameProcess())
+	{
+	//	break;
+	}
+	if(sys_GameEvent() == false)
+	{
+		GameProcess();
+//		break;
+	}
+	gl_SwapBuffer();
+	ds_PlayBuffer();
+	
+}
+
 int main(int argc, char **argv)
 {
 	m_ConsPrint("main()\n");
+	
+#ifdef H_MAC
+	glutInit(&argc, argv);
+	glutInitDisplayMode(GLUT_RGB | GLUT_SINGLE | GLUT_DEPTH);
+#endif
+
+	glutInitWindowSize(500, 500*SQR3/2);
+	//glutInitWindowPosition(0, 0);
+	glutCreateWindow("GLUT Program");
+	
+	glutDisplayFunc(display);
+	
+	
 	
 	#ifdef H_LINUX
         SDL_Init(SDL_INIT_TIMER);
@@ -710,7 +756,9 @@ int main(int argc, char **argv)
 //	delete fenetre;
 //	fenetre = NULL;
 
-
+	glutMainLoop();
+	
+	/*
 	while(1)
 	{
 		if(GameProcess())
@@ -725,7 +773,8 @@ int main(int argc, char **argv)
 		gl_SwapBuffer();
 		ds_PlayBuffer();
 	}
-
+*/
+	
 ending:
 
 	sys_end();

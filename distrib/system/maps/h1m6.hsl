@@ -1,0 +1,133 @@
+;=====================================
+;	H1m6 Map
+;	(C) 2001 Jadeware
+;	Script file - by N3wG
+;=====================================
+
+actionbrush 1
+{
+	ActivationDist 50
+	
+	ifAction ( PERSO )
+	{
+		PlaySound 20
+		move (0,60,0) [0 600]	
+		move (0,-60,0) [2600 3200]
+		reset [3200]
+		
+	}
+}
+
+actionbrush 2
+{
+	ActivationDist 50
+	
+	ifAction ( PERSO )
+	{
+		PlaySound 20
+		move (0,60,0) [0 600]	
+		move (0,-60,0) [2600 3200]
+		reset [3200]
+		
+	}
+}
+
+actionbrush 3
+{
+	ActivationDist 50
+	
+
+	ifAction ( PERSO )
+	{
+		PlaySound 20
+		move (0,60,0) [0 600]	
+		move (0,-60,0) [2600 3200]
+		reset [3200]
+		
+	}
+}
+
+actionbrush 4
+{
+	ActivationDist 50
+	scale (100,102,90) [0 1]
+
+	ifAction ( PERSO )
+	{
+		PlaySound 20
+		move (0,60,0) [0 600]	
+		move (0,-60,0) [2600 3200]
+		reset [3200]
+		
+	}
+}
+
+
+actionbrush 5
+{
+	ActivationDist 50
+	scale (100,102,90) [0 1]
+
+	ifAction ( PERSO )
+	{
+		PlaySound 20
+		move (0,60,0) [0 600]	
+		move (0,-60,0) [2600 3200]
+		reset [3200]
+		
+	}
+}
+
+actionbrush 6
+{
+	ActivationDist 50
+	
+
+	ifAction ( PERSO )
+	{
+		PlaySound 20
+		move (0,60,0) [0 600]	
+		move (0,-60,0) [2600 3200]
+		reset [3200]
+		
+	}
+}
+
+
+actionbrush 7
+{
+	ActivationDist 50
+	
+
+	ifAction ( PERSO )
+	{
+		PlaySound 20
+		move (0,60,0) [0 600]	
+		move (0,-60,0) [2600 3200]
+		reset [3200]
+		
+	}
+}
+
+actionbrush 8
+{
+	ActivationDist 40
+	
+	ifAction ( FLECHE )
+	{
+		Launchactionbrush 9
+		move (51,0,0) [0 500]
+	}
+}
+
+actionbrush 9
+{
+	ActivationDist 40
+	scale (100,100,100) [0 1]
+
+	ifAction ( WAITACTION )
+	{
+		move (0,100,0) [1500 5500]
+		DispText "You found a secret!"
+	}
+}

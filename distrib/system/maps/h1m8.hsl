@@ -1,0 +1,223 @@
+actionbrush 1
+{
+	scale (100,130,70) [0 1]
+	ActivationDist 60
+
+	ifAction ( PERSO )
+	{
+		PlaySound 20
+		move (0,120,0) [0 2000]
+		move (0,-120,0) [4000 5000]
+		reset [5000]
+	}
+}
+
+actionbrush 2
+{
+	scale (100,130,70) [0 1]
+	ActivationDist 60
+
+	ifAction ( PERSO )
+	{
+		PlaySound 20
+		move (0,120,0) [0 2000]
+		move (0,-120,0) [4000 5000]
+		reset [5000]
+	}
+}
+
+actionbrush 3
+{
+	scale (70,130,100) [0 1]
+	ActivationDist 60
+
+	ifAction ( PERSO )
+	{
+		PlaySound 20
+		move (0,120,0) [500 2000]
+		move (0,-120,0) [4000 5000]
+		reset [5000]
+	}
+}
+
+actionbrush 4
+{
+	scale (70,130,100) [0 1]
+	ActivationDist 60
+
+	ifAction ( PERSO )
+	{
+		PlaySound 20
+		move (0,120,0) [0 2000]
+		move (0,-120,0) [4000 5000]
+		reset [5000]
+	}
+}
+
+actionbrush 5
+{
+	scale (70,130,100) [0 1]
+	ActivationDist 80
+
+	ifAction ( PERSO )
+	{
+		PlaySound 20
+		move (0,120,0) [0 2000]
+		move (0,-120,0) [4000 5000]
+		reset [5000]
+	}
+}
+
+actionbrush 6
+{
+	scale (100,130,70) [0 1]
+	ActivationDist 80
+
+	ifAction ( PERSO )
+	{
+		PlaySound 20
+		move (0,120,0) [0 2000]
+		move (0,-120,0) [4000 5000]
+		reset [5000]
+	}
+}
+
+actionbrush 7
+{
+	scale (100,130,70) [0 1]
+	ActivationDist 80
+
+	ifAction ( PERSO )
+	{
+		PlaySound 20
+		move (0,120,0) [0 2000]
+		move (0,-120,0) [4000 5000]
+		reset [5000]
+	}
+}
+
+actionbrush 8
+{
+	scale (100,100,100) [0 1]
+	ActivationDist 45
+
+	ifAction ( PERSO )
+	{
+		PlaySound 20
+		move (0,-120,0) [1000 5000]
+		move (0,120,0) [8000 12000]
+		reset [12000]
+	}
+}
+
+actionbrush 9
+{
+	scale (100,100,100) [0 1]
+	ActivationDist 45
+
+	ifAction ( PERSO )
+	{
+		PlaySound 20
+		move (0,-120,0) [1000 5000]
+		move (0,120,0) [8000 12000]
+		reset [12000]
+	}
+}
+
+actionbrush 10
+{
+	scale (100,100,100) [0 1]
+	ActivationDist 45
+
+	ifAction ( PERSO )
+	{
+		PlaySound 20
+		move (0,-120,0) [1000 5000]
+		move (0,120,0) [8000 12000]
+		reset [12000]
+	}
+}
+
+actionbrush 11
+{
+	scale (100,100,100) [0 1]
+	ActivationDist 45
+
+	ifAction ( PERSO )
+	{
+		PlaySound 20
+		move (0,-120,0) [1000 5000]
+		move (0,120,0) [8000 12000]
+		reset [12000]
+	}
+}
+
+actionbrush 12
+{
+	scale (100,100,100) [0 1]
+	ActivationDist 45
+
+	ifAction ( PERSO )
+	{
+		PlaySound 20
+		move (0,-120,0) [1000 5000]
+		move (0,120,0) [8000 12000]
+		reset [12000]
+	}
+}
+
+actionbrush 13
+{
+	scale (100,130,70) [0 1]
+	ActivationDist 60
+
+	ifAction ( PERSO )
+	{
+		PlaySound 20
+		move (0,120,0) [0 2000]
+		move (0,-120,0) [4000 5000]
+		reset [5000]
+	}
+}
+
+actionbrush 14
+{
+	scale (100,130,70) [0 1]
+	ActivationDist 60
+
+	ifAction ( PERSO )
+	{
+		PlaySound 20
+		move (0,120,0) [0 2000]
+		move (0,-120,0) [4000 5000]
+		reset [5000]
+	}
+}
+
+actionbrush 15
+{
+	scale (70,130,100) [0 1]
+	ActivationDist 60
+
+	ifAction ( PERSO )
+	{
+		PlaySound 20
+		move (0,120,0) [0 2000]
+		move (0,-120,0) [4000 5000]
+		reset [5000]
+	}
+}
+
+actionbrush 16
+{
+	scale (100,100,70) [0 1]
+	ActivationDist 60
+
+	ifAction ( PERSO )
+	{
+		PlaySound 20
+		move (0,120,0) [0 2000]
+		move (0,-120,0) [4000 5000]
+		reset [5000]
+	}
+}

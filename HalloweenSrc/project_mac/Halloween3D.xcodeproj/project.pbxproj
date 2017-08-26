@@ -149,7 +149,6 @@
 /* Begin PBXFileReference section */
 		F91973B81F51C430008553A0 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		F91973BA1F51C794008553A0 /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = System/Library/Frameworks/ApplicationServices.framework; sourceTree = SDKROOT; };
-		F91973BC1F51C988008553A0 /* libbass.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libbass.a; path = ../misc/libbass.a; sourceTree = "<group>"; };
 		F91973DD1F51CCE1008553A0 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		F91973DF1F51CCEB008553A0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		F91973E11F51CCF2008553A0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -318,6 +317,9 @@
 		F99009841F51D5B9007F7D1B /* CAXException.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CAXException.cpp; sourceTree = "<group>"; };
 		F99009851F51D5B9007F7D1B /* CAXException.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAXException.h; sourceTree = "<group>"; };
 		F99009B21F51D6FA007F7D1B /* CAComponentDescription.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CAComponentDescription.cpp; sourceTree = "<group>"; };
+		F99009B51F51D8D3007F7D1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		F99009B71F51DB82007F7D1B /* assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = assets.xcassets; sourceTree = "<group>"; };
+		F99009B81F51E53B007F7D1B /* halloween_icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = halloween_icon.icns; path = ../misc/halloween_icon.icns; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -345,6 +347,9 @@
 		F98EDB831F518C2D009A518F = {
 			isa = PBXGroup;
 			children = (
+				F99009B71F51DB82007F7D1B /* assets.xcassets */,
+				F99009B81F51E53B007F7D1B /* halloween_icon.icns */,
+				F99009B51F51D8D3007F7D1B /* Info.plist */,
 				F99009121F51D5B9007F7D1B /* PublicUtility */,
 				F990087F1F51D4E5007F7D1B /* DDHidLib */,
 				F99008021F51CE7D007F7D1B /* iptk_osx */,
@@ -372,7 +377,6 @@
 				F91973E11F51CCF2008553A0 /* Foundation.framework */,
 				F91973DF1F51CCEB008553A0 /* QuartzCore.framework */,
 				F91973DD1F51CCE1008553A0 /* Cocoa.framework */,
-				F91973BC1F51C988008553A0 /* libbass.a */,
 				F91973BA1F51C794008553A0 /* ApplicationServices.framework */,
 				F91973B81F51C430008553A0 /* GLKit.framework */,
 				F98EDB991F518C79009A518F /* GLUT.framework */,
@@ -820,7 +824,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx;
+				SDKROOT = macosx10.13;
 			};
 			name = Debug;
 		};
@@ -868,7 +872,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = macosx;
+				SDKROOT = macosx10.13;
 			};
 			name = Release;
 		};
@@ -881,6 +885,7 @@
 					../,
 					../misc/,
 				);
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -895,6 +900,7 @@
 					../,
 					../misc/,
 				);
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
