@@ -6,6 +6,7 @@
 #include "bspfile.h"
 
 #include "KSound.h"
+#include "KMusic.h"
 //#include "SDL_mixer.h"
 
 

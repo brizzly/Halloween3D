@@ -63,6 +63,7 @@ hBool	gCheatMode_monsterbomb = false;
 hBool	gCheatMode_son = false;
 hBool	gWelcomeToHalloween = true;
 hBool	gGameEnded;
+hBool	gIsDemo = false;
 
 hBool	gLoad3Dstuff = false;
 float	gCatchedTime;

@@ -50,7 +50,7 @@ enum
 	BLOOD,
 	MORBAKBODY,
 	SPINE,
-	STOP,
+	STOP2,
 	SKYDOME2
 };
 

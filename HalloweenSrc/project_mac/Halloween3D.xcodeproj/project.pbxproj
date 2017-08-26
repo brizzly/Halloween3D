@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		F91973B91F51C430008553A0 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91973B81F51C430008553A0 /* GLKit.framework */; };
 		F91973BB1F51C795008553A0 /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91973BA1F51C794008553A0 /* ApplicationServices.framework */; };
+		F91973DE1F51CCE1008553A0 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91973DD1F51CCE1008553A0 /* Cocoa.framework */; };
+		F91973E01F51CCEB008553A0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91973DF1F51CCEB008553A0 /* QuartzCore.framework */; };
+		F91973E21F51CCF2008553A0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91973E11F51CCF2008553A0 /* Foundation.framework */; };
+		F91973E41F51CCFB008553A0 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91973E31F51CCFB008553A0 /* AudioToolbox.framework */; };
+		F91973E61F51CD00008553A0 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91973E51F51CD00008553A0 /* OpenAL.framework */; };
+		F91973E81F51CD05008553A0 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91973E71F51CD05008553A0 /* IOKit.framework */; };
+		F91973EA1F51CD15008553A0 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91973E91F51CD15008553A0 /* AppKit.framework */; };
 		F98EDB981F518C73009A518F /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F98EDB971F518C73009A518F /* OpenGL.framework */; };
 		F98EDB9A1F518C79009A518F /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F98EDB991F518C79009A518F /* GLUT.framework */; };
 		F98EDB9C1F518CC3009A518F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDB9B1F518CC3009A518F /* main.cpp */; };
@@ -188,6 +195,42 @@
 		F91973B81F51C430008553A0 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		F91973BA1F51C794008553A0 /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = System/Library/Frameworks/ApplicationServices.framework; sourceTree = SDKROOT; };
 		F91973BC1F51C988008553A0 /* libbass.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libbass.a; path = ../misc/libbass.a; sourceTree = "<group>"; };
+		F91973BF1F51CBC4008553A0 /* GLTextureHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GLTextureHelper.h; sourceTree = "<group>"; };
+		F91973C01F51CBC4008553A0 /* KBatch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KBatch.h; sourceTree = "<group>"; };
+		F91973C11F51CBC4008553A0 /* KGraphic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KGraphic.h; sourceTree = "<group>"; };
+		F91973C21F51CBC4008553A0 /* KGraphicGL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KGraphicGL.h; sourceTree = "<group>"; };
+		F91973C31F51CBC4008553A0 /* KGraphicGLLandscape.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KGraphicGLLandscape.h; sourceTree = "<group>"; };
+		F91973C41F51CBC4008553A0 /* KInput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KInput.h; sourceTree = "<group>"; };
+		F91973C51F51CBC4008553A0 /* KJoypad.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KJoypad.h; sourceTree = "<group>"; };
+		F91973C61F51CBC4008553A0 /* KLogFile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KLogFile.h; sourceTree = "<group>"; };
+		F91973C71F51CBC4008553A0 /* KMiscTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KMiscTools.h; sourceTree = "<group>"; };
+		F91973C81F51CBC4008553A0 /* KMusic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KMusic.h; sourceTree = "<group>"; };
+		F91973C91F51CBC4008553A0 /* KPTK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KPTK.h; sourceTree = "<group>"; };
+		F91973CA1F51CBC4008553A0 /* KSound.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KSound.h; sourceTree = "<group>"; };
+		F91973CB1F51CBC4008553A0 /* KSpline.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KSpline.h; sourceTree = "<group>"; };
+		F91973CC1F51CBC4008553A0 /* KWeb.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KWeb.h; sourceTree = "<group>"; };
+		F91973CD1F51CBC4008553A0 /* KWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KWindow.h; sourceTree = "<group>"; };
+		F91973CF1F51CBC4008553A0 /* GLTextureHelper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = GLTextureHelper.mm; sourceTree = "<group>"; };
+		F91973D01F51CBC4008553A0 /* KBatchGL.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = KBatchGL.cpp; sourceTree = "<group>"; };
+		F91973D11F51CBC4008553A0 /* KGraphicGL.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = KGraphicGL.cpp; sourceTree = "<group>"; };
+		F91973D21F51CBC4008553A0 /* KGraphicGLLandscape.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = KGraphicGLLandscape.cpp; sourceTree = "<group>"; };
+		F91973D31F51CBC4008553A0 /* KInput.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = KInput.mm; sourceTree = "<group>"; };
+		F91973D41F51CBC4008553A0 /* KJoypad.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = KJoypad.mm; sourceTree = "<group>"; };
+		F91973D51F51CBC4008553A0 /* KLogFile.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = KLogFile.cpp; sourceTree = "<group>"; };
+		F91973D61F51CBC4008553A0 /* KMiscTools.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = KMiscTools.mm; sourceTree = "<group>"; };
+		F91973D71F51CBC4008553A0 /* KMusic.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = KMusic.mm; sourceTree = "<group>"; };
+		F91973D81F51CBC4008553A0 /* KPTK.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = KPTK.cpp; sourceTree = "<group>"; };
+		F91973D91F51CBC4008553A0 /* KSound.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = KSound.mm; sourceTree = "<group>"; };
+		F91973DA1F51CBC4008553A0 /* KSpline.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = KSpline.cpp; sourceTree = "<group>"; };
+		F91973DB1F51CBC4008553A0 /* KWeb.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = KWeb.mm; sourceTree = "<group>"; };
+		F91973DC1F51CBC4008553A0 /* KWindow.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = KWindow.mm; sourceTree = "<group>"; };
+		F91973DD1F51CCE1008553A0 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		F91973DF1F51CCEB008553A0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		F91973E11F51CCF2008553A0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F91973E31F51CCFB008553A0 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		F91973E51F51CD00008553A0 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
+		F91973E71F51CD05008553A0 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		F91973E91F51CD15008553A0 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		F98EDB8C1F518C2D009A518F /* Halloween3D */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Halloween3D; sourceTree = BUILT_PRODUCTS_DIR; };
 		F98EDB971F518C73009A518F /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		F98EDB991F518C79009A518F /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
@@ -268,35 +311,6 @@
 		F98EDC9A1F518DBF009A518F /* enveffect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = enveffect.h; path = ../../enveffect.h; sourceTree = "<group>"; };
 		F98EDC9B1F518DBF009A518F /* demo.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = demo.cpp; path = ../../demo.cpp; sourceTree = "<group>"; };
 		F98EDC9E1F518DBF009A518F /* liste.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = liste.cpp; path = ../../liste.cpp; sourceTree = "<group>"; };
-		F98EDCD41F518E8B009A518F /* GLTextureHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GLTextureHelper.h; sourceTree = "<group>"; };
-		F98EDCD51F518E8B009A518F /* KBatch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KBatch.h; sourceTree = "<group>"; };
-		F98EDCD61F518E8B009A518F /* KGraphic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KGraphic.h; sourceTree = "<group>"; };
-		F98EDCD71F518E8B009A518F /* KGraphicGL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KGraphicGL.h; sourceTree = "<group>"; };
-		F98EDCD81F518E8B009A518F /* KGraphicGLLandscape.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KGraphicGLLandscape.h; sourceTree = "<group>"; };
-		F98EDCD91F518E8B009A518F /* KInput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KInput.h; sourceTree = "<group>"; };
-		F98EDCDA1F518E8B009A518F /* KJoypad.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KJoypad.h; sourceTree = "<group>"; };
-		F98EDCDB1F518E8B009A518F /* KLogFile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KLogFile.h; sourceTree = "<group>"; };
-		F98EDCDC1F518E8B009A518F /* KMiscTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KMiscTools.h; sourceTree = "<group>"; };
-		F98EDCDD1F518E8B009A518F /* KMusic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KMusic.h; sourceTree = "<group>"; };
-		F98EDCDE1F518E8B009A518F /* KPTK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KPTK.h; sourceTree = "<group>"; };
-		F98EDCDF1F518E8B009A518F /* KSound.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KSound.h; sourceTree = "<group>"; };
-		F98EDCE01F518E8B009A518F /* KSpline.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KSpline.h; sourceTree = "<group>"; };
-		F98EDCE11F518E8B009A518F /* KWeb.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KWeb.h; sourceTree = "<group>"; };
-		F98EDCE21F518E8B009A518F /* KWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KWindow.h; sourceTree = "<group>"; };
-		F98EDCE41F518E8B009A518F /* GLTextureHelper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = GLTextureHelper.mm; sourceTree = "<group>"; };
-		F98EDCE51F518E8B009A518F /* KBatchGL.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = KBatchGL.cpp; sourceTree = "<group>"; };
-		F98EDCE61F518E8B009A518F /* KGraphicGL.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = KGraphicGL.cpp; sourceTree = "<group>"; };
-		F98EDCE71F518E8B009A518F /* KGraphicGLLandscape.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = KGraphicGLLandscape.cpp; sourceTree = "<group>"; };
-		F98EDCE81F518E8B009A518F /* KInput.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = KInput.mm; sourceTree = "<group>"; };
-		F98EDCE91F518E8B009A518F /* KJoypad.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = KJoypad.mm; sourceTree = "<group>"; };
-		F98EDCEA1F518E8B009A518F /* KLogFile.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = KLogFile.cpp; sourceTree = "<group>"; };
-		F98EDCEB1F518E8B009A518F /* KMiscTools.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = KMiscTools.mm; sourceTree = "<group>"; };
-		F98EDCEC1F518E8B009A518F /* KMusic.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = KMusic.mm; sourceTree = "<group>"; };
-		F98EDCED1F518E8B009A518F /* KPTK.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = KPTK.cpp; sourceTree = "<group>"; };
-		F98EDCEE1F518E8B009A518F /* KSound.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = KSound.mm; sourceTree = "<group>"; };
-		F98EDCEF1F518E8B009A518F /* KSpline.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = KSpline.cpp; sourceTree = "<group>"; };
-		F98EDCF01F518E8B009A518F /* KWeb.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = KWeb.mm; sourceTree = "<group>"; };
-		F98EDCF11F518E8B009A518F /* KWindow.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = KWindow.mm; sourceTree = "<group>"; };
 		F98EDCF21F518F15009A518F /* halloween_linux.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = halloween_linux.cpp; path = ../../halloween_linux.cpp; sourceTree = "<group>"; };
 		F98EDCF31F518F15009A518F /* halloween_linux.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = halloween_linux.h; path = ../../halloween_linux.h; sourceTree = "<group>"; };
 		F98EDCF51F518F42009A518F /* libsound_linux.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = libsound_linux.h; path = ../../libsound_linux.h; sourceTree = "<group>"; };
@@ -313,6 +327,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F91973EA1F51CD15008553A0 /* AppKit.framework in Frameworks */,
+				F91973E81F51CD05008553A0 /* IOKit.framework in Frameworks */,
+				F91973E61F51CD00008553A0 /* OpenAL.framework in Frameworks */,
+				F91973E41F51CCFB008553A0 /* AudioToolbox.framework in Frameworks */,
+				F91973E21F51CCF2008553A0 /* Foundation.framework in Frameworks */,
+				F91973E01F51CCEB008553A0 /* QuartzCore.framework in Frameworks */,
+				F91973DE1F51CCE1008553A0 /* Cocoa.framework in Frameworks */,
 				F91973BB1F51C795008553A0 /* ApplicationServices.framework in Frameworks */,
 				F91973B91F51C430008553A0 /* GLKit.framework in Frameworks */,
 				F98EDB9A1F518C79009A518F /* GLUT.framework in Frameworks */,
@@ -447,6 +468,58 @@
 			path = PublicUtility;
 			sourceTree = "<group>";
 		};
+		F91973BD1F51CBC4008553A0 /* iptk_osx */ = {
+			isa = PBXGroup;
+			children = (
+				F91973BE1F51CBC4008553A0 /* Headers */,
+				F91973CE1F51CBC4008553A0 /* Sources */,
+			);
+			path = iptk_osx;
+			sourceTree = "<group>";
+		};
+		F91973BE1F51CBC4008553A0 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				F91973BF1F51CBC4008553A0 /* GLTextureHelper.h */,
+				F91973C01F51CBC4008553A0 /* KBatch.h */,
+				F91973C11F51CBC4008553A0 /* KGraphic.h */,
+				F91973C21F51CBC4008553A0 /* KGraphicGL.h */,
+				F91973C31F51CBC4008553A0 /* KGraphicGLLandscape.h */,
+				F91973C41F51CBC4008553A0 /* KInput.h */,
+				F91973C51F51CBC4008553A0 /* KJoypad.h */,
+				F91973C61F51CBC4008553A0 /* KLogFile.h */,
+				F91973C71F51CBC4008553A0 /* KMiscTools.h */,
+				F91973C81F51CBC4008553A0 /* KMusic.h */,
+				F91973C91F51CBC4008553A0 /* KPTK.h */,
+				F91973CA1F51CBC4008553A0 /* KSound.h */,
+				F91973CB1F51CBC4008553A0 /* KSpline.h */,
+				F91973CC1F51CBC4008553A0 /* KWeb.h */,
+				F91973CD1F51CBC4008553A0 /* KWindow.h */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
+		F91973CE1F51CBC4008553A0 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				F91973CF1F51CBC4008553A0 /* GLTextureHelper.mm */,
+				F91973D01F51CBC4008553A0 /* KBatchGL.cpp */,
+				F91973D11F51CBC4008553A0 /* KGraphicGL.cpp */,
+				F91973D21F51CBC4008553A0 /* KGraphicGLLandscape.cpp */,
+				F91973D31F51CBC4008553A0 /* KInput.mm */,
+				F91973D41F51CBC4008553A0 /* KJoypad.mm */,
+				F91973D51F51CBC4008553A0 /* KLogFile.cpp */,
+				F91973D61F51CBC4008553A0 /* KMiscTools.mm */,
+				F91973D71F51CBC4008553A0 /* KMusic.mm */,
+				F91973D81F51CBC4008553A0 /* KPTK.cpp */,
+				F91973D91F51CBC4008553A0 /* KSound.mm */,
+				F91973DA1F51CBC4008553A0 /* KSpline.cpp */,
+				F91973DB1F51CBC4008553A0 /* KWeb.mm */,
+				F91973DC1F51CBC4008553A0 /* KWindow.mm */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
 		F98EDB831F518C2D009A518F = {
 			isa = PBXGroup;
 			children = (
@@ -467,6 +540,13 @@
 		F98EDB961F518C73009A518F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F91973E91F51CD15008553A0 /* AppKit.framework */,
+				F91973E71F51CD05008553A0 /* IOKit.framework */,
+				F91973E51F51CD00008553A0 /* OpenAL.framework */,
+				F91973E31F51CCFB008553A0 /* AudioToolbox.framework */,
+				F91973E11F51CCF2008553A0 /* Foundation.framework */,
+				F91973DF1F51CCEB008553A0 /* QuartzCore.framework */,
+				F91973DD1F51CCE1008553A0 /* Cocoa.framework */,
 				F91973BC1F51C988008553A0 /* libbass.a */,
 				F91973BA1F51C794008553A0 /* ApplicationServices.framework */,
 				F91973B81F51C430008553A0 /* GLKit.framework */,
@@ -479,8 +559,8 @@
 		F98EDB9D1F518CE6009A518F /* Halloween */ = {
 			isa = PBXGroup;
 			children = (
+				F91973BD1F51CBC4008553A0 /* iptk_osx */,
 				F91973421F51C03C008553A0 /* PublicUtility */,
-				F98EDCD21F518E8B009A518F /* iptk_osx */,
 				F98EDB9B1F518CC3009A518F /* main.cpp */,
 				F98EDCFE1F51B7B6009A518F /* constantes.h */,
 				F98EDBE61F518DBA009A518F /* alloween.cpp */,
@@ -569,58 +649,6 @@
 				F98EDBB41F518DB2009A518F /* timer.h */,
 			);
 			path = Halloween;
-			sourceTree = "<group>";
-		};
-		F98EDCD21F518E8B009A518F /* iptk_osx */ = {
-			isa = PBXGroup;
-			children = (
-				F98EDCD31F518E8B009A518F /* Headers */,
-				F98EDCE31F518E8B009A518F /* Sources */,
-			);
-			path = iptk_osx;
-			sourceTree = "<group>";
-		};
-		F98EDCD31F518E8B009A518F /* Headers */ = {
-			isa = PBXGroup;
-			children = (
-				F98EDCD41F518E8B009A518F /* GLTextureHelper.h */,
-				F98EDCD51F518E8B009A518F /* KBatch.h */,
-				F98EDCD61F518E8B009A518F /* KGraphic.h */,
-				F98EDCD71F518E8B009A518F /* KGraphicGL.h */,
-				F98EDCD81F518E8B009A518F /* KGraphicGLLandscape.h */,
-				F98EDCD91F518E8B009A518F /* KInput.h */,
-				F98EDCDA1F518E8B009A518F /* KJoypad.h */,
-				F98EDCDB1F518E8B009A518F /* KLogFile.h */,
-				F98EDCDC1F518E8B009A518F /* KMiscTools.h */,
-				F98EDCDD1F518E8B009A518F /* KMusic.h */,
-				F98EDCDE1F518E8B009A518F /* KPTK.h */,
-				F98EDCDF1F518E8B009A518F /* KSound.h */,
-				F98EDCE01F518E8B009A518F /* KSpline.h */,
-				F98EDCE11F518E8B009A518F /* KWeb.h */,
-				F98EDCE21F518E8B009A518F /* KWindow.h */,
-			);
-			path = Headers;
-			sourceTree = "<group>";
-		};
-		F98EDCE31F518E8B009A518F /* Sources */ = {
-			isa = PBXGroup;
-			children = (
-				F98EDCE41F518E8B009A518F /* GLTextureHelper.mm */,
-				F98EDCE51F518E8B009A518F /* KBatchGL.cpp */,
-				F98EDCE61F518E8B009A518F /* KGraphicGL.cpp */,
-				F98EDCE71F518E8B009A518F /* KGraphicGLLandscape.cpp */,
-				F98EDCE81F518E8B009A518F /* KInput.mm */,
-				F98EDCE91F518E8B009A518F /* KJoypad.mm */,
-				F98EDCEA1F518E8B009A518F /* KLogFile.cpp */,
-				F98EDCEB1F518E8B009A518F /* KMiscTools.mm */,
-				F98EDCEC1F518E8B009A518F /* KMusic.mm */,
-				F98EDCED1F518E8B009A518F /* KPTK.cpp */,
-				F98EDCEE1F518E8B009A518F /* KSound.mm */,
-				F98EDCEF1F518E8B009A518F /* KSpline.cpp */,
-				F98EDCF01F518E8B009A518F /* KWeb.mm */,
-				F98EDCF11F518E8B009A518F /* KWindow.mm */,
-			);
-			path = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

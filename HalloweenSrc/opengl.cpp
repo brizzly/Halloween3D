@@ -1,5 +1,5 @@
 
-#include "alloween.cpp"
+#include "alloween.h"
 
 #ifdef H_WIN
 #include "misc/Glext.h"

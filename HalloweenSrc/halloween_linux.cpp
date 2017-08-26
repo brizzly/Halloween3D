@@ -5,6 +5,7 @@
 #ifdef H_MAC
 #include <Carbon/Carbon.h>
 #include <ApplicationServices/ApplicationServices.h>
+#include "KMiscTools.h"
 #endif
 
 
@@ -648,6 +649,8 @@ bool sys_GameEvent()
 
 int main(int argc, char **argv)
 {
+	m_ConsPrint("main()\n");
+	
 	#ifdef H_LINUX
         SDL_Init(SDL_INIT_TIMER);
 	#endif

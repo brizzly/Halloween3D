@@ -101,6 +101,7 @@ static int		ScreenY[] = { 384, 480, 600, 768, 864, 960, 1200 };
 #include "KWindow.h"
 #include "KGraphic.h"
 #include "KSound.h"
+#include "KMusic.h"
 #include "KMiscTools.h"
 #include <sys/dir.h>
 #include <sys/file.h>
