@@ -1,5 +1,0 @@
-﻿  halloween.cpp
-c:\users\julien\documents\halloween3d\halloweensrc\halloween.cpp(745): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-c:\users\julien\documents\halloween3d\halloweensrc\halloween.cpp(746): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-  projet_vc6.vcxproj -> C:\Users\julien\Documents\Halloween3D\HalloweenSrc\projet_vc8\./Halloween.exe
-  projet_vc6.vcxproj -> .\../Halloween999.pdb (Full PDB)
