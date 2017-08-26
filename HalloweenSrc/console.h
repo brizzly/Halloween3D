@@ -143,10 +143,10 @@ typedef struct cmd_function_s
 
 typedef struct cvar_s
 {
-	char	name[255];
-	char	string[255];
-//	char	*name;
-//	char	*string;
+//	char	name[255];
+//	char	string[255];
+	char	*name;
+	char	*string;
 	float	value;
 	struct	cvar_s *next;
 
