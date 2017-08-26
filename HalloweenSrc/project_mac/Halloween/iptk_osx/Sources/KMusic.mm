@@ -318,6 +318,29 @@ void KMusic::setVolume(int volume)
 }
 
 
+bool KMusic::isMusicEnded()
+{
+	if(audioPlayer == NULL) {
+		return false;
+	}
+	if(_started == false) {
+		return false;
+	}
+	//printf("audio %d %f / %f\n", (int)audioPlayer.playing, audioPlayer.currentTime, audioPlayer.duration);
+	
+	//if(audioPlayer.playing && audioPlayer.currentTime >= audioPlayer.duration) {
+	if(audioPlayer.playing == false && audioPlayer.currentTime == 0 && audioPlayer.duration > 0)
+	{
+		if(audioPlayer.numberOfLoops == -1) {
+			return false;
+		}
+		stopMusic();
+		return true;
+	}
+	return false;
+}
+
+
 
 
 double PrepareFileAU (CAAudioUnit &au, CAStreamBasicDescription &fileFormat, AudioFileID audioFile)

@@ -1,13 +1,14 @@
 
 #include "alloween.h"
 #include "KSound.h"
+#include "KMusic.h"
 
 
 
 int		gNb_Sounds;
 SNDOBJ	gSoundObjet[MAX_SAMPLE];
 int		gNbTrack;
-KSound *gMusic = NULL;
+KMusic *gMusic = NULL;
 
 
 
@@ -430,7 +431,7 @@ void lb_PlaySound3D(int SoundID, vect_t pos, int volume)
         //int		sound_pos;
 	//int		freq;
 	float		dist;
-	int		channel;
+	//int		channel;
 	float		newvol;
 	//vect_t	v1
         vect_t		v2;
@@ -633,7 +634,7 @@ void lb_StopMusic()
 {
 	if(gMusic)
 	{
-		gMusic->stopStream();
+		gMusic->stopMusic();
 	}
 
 //	if(gHstream && BASS_ChannelIsActive(gHstream) == BASS_ACTIVE_PLAYING)
@@ -648,25 +649,24 @@ hBool lb_PlayMP3(char *name, int volume)
 	
 	lb_StopMusic();
 	
-	gMusic = new KSound;
+	gMusic = new KMusic;
 
 	// load the MUSIC file  to play as music
 	p = KMiscTools::makeFilePath( name );
-	gMusic->loadStream( p );
-	if(!gMusic)
+	
+	if(!gMusic->playMusic(p))
 	{
 		delete gMusic;
 		gMusic = NULL;
    		return false;
 	}
 	
-	gMusic->playStream( false );
 	return true;
 }
 
 void lb_UpdateMP3()
 {
-	if(gMusic && gMusic->isPlaying() == false )	// gHstream && BASS_ChannelIsActive(gHstream) == BASS_ACTIVE_STOPPED)
+	if(gMusic && gMusic->isMusicEnded() == true )	// gHstream && BASS_ChannelIsActive(gHstream) == BASS_ACTIVE_STOPPED)
 	{
 		m_ConsPrint("stream music loop\n");
 		if(gNbTrack >= 8 && gNbTrack <= 11)

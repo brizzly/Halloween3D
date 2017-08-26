@@ -1,6 +1,6 @@
 
 #include "alloween.cpp"
-#include "collision2.h"
+//#include "collision2.h"
 
 
 Face_t		*PolyList=NULL;

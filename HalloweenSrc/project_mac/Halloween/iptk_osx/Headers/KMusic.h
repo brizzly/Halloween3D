@@ -51,6 +51,7 @@ public:
 	void pauseMusic();
 	void resumeMusic();
 	void setVolume(int volume);
+	bool isMusicEnded();
 	
 };
 

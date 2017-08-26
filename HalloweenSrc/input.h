@@ -190,6 +190,7 @@ void	IN_Process(hMOUSEINPUT Mouse, pEntity PlayerEnt);
 hBool	di_IsKeyActivated(int id, hMOUSEINPUT Mouse);
 
 void	m_UpdateCursor(hMOUSEINPUT Mouse, float *pCursor_x, float *pCursor_y);
+void	m_ProcessInputs(hMOUSEINPUT Mouse);
 void	m_ReadInputs(hMOUSEINPUT *Mouse);
 int	ReadKey();
 

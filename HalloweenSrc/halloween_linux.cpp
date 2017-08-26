@@ -534,7 +534,7 @@ bool sys_GameEvent()
 	
 	IN_ReadMouse();
 	IN_ReadKeyboard();
-	if(KWindow::isQuit() == true)
+	if(fenetre->isQuit() == true)
 		return false;
 	if(ProgramState == PS_QUIT)
 		return false;
@@ -653,7 +653,7 @@ int main(int argc, char **argv)
 	#endif
 	
 	#ifdef H_MAC
-		KMiscTools::initMiscTools();
+		KMiscTools::initMiscTools(GAMEVERSION_LITE);
 	#endif
 
 	memset(ErrorMessage,0,255);

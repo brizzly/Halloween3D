@@ -239,6 +239,17 @@ bool KInput::getLeftButtonState()
 	return _btPressed;
 }
 
+bool KInput::getRightButtonState()
+{
+	return false;
+}
+
+bool KInput::getMiddleButtonState()
+{
+	return false;
+}
+
+
 // iphone specific events calls
 
 float KInput::getAccelerationX()

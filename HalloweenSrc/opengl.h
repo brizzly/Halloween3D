@@ -40,8 +40,9 @@ hBool	gl_initMultitexture();
 
 
 
-int	gl_InitGL();
+int		gl_InitGL();
 void	gl_ClearScreen();
+void 	gl_Perspective( GLdouble fovY, GLdouble aspect, GLdouble zNear, GLdouble zFar );
 void 	gl_ReSizeGLScene(int Width, int Height);
 void	gl_ChangeFOV(float fov);
 void	gl_SwapBuffer();

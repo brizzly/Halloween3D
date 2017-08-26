@@ -926,6 +926,18 @@ int gl_InitGL()
 	return true;								
 }
 
+void gl_Perspective( GLdouble fovY, GLdouble aspect, GLdouble zNear, GLdouble zFar )
+{
+	const GLdouble pi = 3.1415926535897932384626433832795;
+	GLdouble fW, fH;
+	
+	//fH = tan( (fovY / 2) / 180 * pi ) * zNear;
+	fH = tan( fovY / 360 * pi ) * zNear;
+	fW = fH * aspect;
+	
+	glFrustum( -fW, fW, -fH, fH, zNear, zFar );
+}
+
 void gl_ReSizeGLScene(int Width, int Height)
 {
 	if(Height == 0)
@@ -933,7 +945,7 @@ void gl_ReSizeGLScene(int Width, int Height)
 	glViewport(0, 0, Width, Height);
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
-	gluPerspective(45.0f,(GLfloat)Width/(GLfloat)Height,0.1f,100.0f);
+	gl_Perspective(45.0f,(GLfloat)Width/(GLfloat)Height,0.1f,100.0f);
 	glMatrixMode(GL_MODELVIEW);
 }
 
@@ -1006,7 +1018,7 @@ void gl_SwapBuffer()
 	SwapBuffers(hDC);
 #else
 	//SDL_GL_SwapBuffers();
-	KWindow::flipBackBuffer();
+	//KWindow::flipBackBuffer();
 #endif
 
 //#ifdef H_LINUX
@@ -1019,14 +1031,16 @@ void gl_SwapBuffer()
 
 void gl_LoadSurfaceTexture(byte *surf, uint sformat, uint scolor_format1, uint scolor_format2, int w, int h, int id)
 {
-        GLuint	tid;
+	GLuint	tid;
     
-        tid = (GLuint)id;
+	tid = (GLuint)id;
 	glGenTextures(1, &tid);
 	glBindTexture(GL_TEXTURE_2D, tid);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_NEAREST);
-	gluBuild2DMipmaps(GL_TEXTURE_2D, scolor_format1, w, h, scolor_format2, sformat, surf);
+	//gluBuild2DMipmaps(GL_TEXTURE_2D, scolor_format1, w, h, scolor_format2, sformat, surf);
+	glTexImage2D( GL_TEXTURE_2D,0, scolor_format1, w, h, 0, scolor_format2, sformat, surf );
+
 	s_free(surf);
 }
 

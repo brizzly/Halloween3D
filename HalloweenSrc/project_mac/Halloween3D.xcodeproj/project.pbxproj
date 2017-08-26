@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F91973B91F51C430008553A0 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91973B81F51C430008553A0 /* GLKit.framework */; };
+		F91973BB1F51C795008553A0 /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91973BA1F51C794008553A0 /* ApplicationServices.framework */; };
 		F98EDB981F518C73009A518F /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F98EDB971F518C73009A518F /* OpenGL.framework */; };
 		F98EDB9A1F518C79009A518F /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F98EDB991F518C79009A518F /* GLUT.framework */; };
 		F98EDB9C1F518CC3009A518F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDB9B1F518CC3009A518F /* main.cpp */; };
@@ -19,19 +21,14 @@
 		F98EDCA61F518DBF009A518F /* monster.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBAD1F518DB2009A518F /* monster.cpp */; };
 		F98EDCA71F518DBF009A518F /* bsptree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBAF1F518DB2009A518F /* bsptree.cpp */; };
 		F98EDCAA1F518DBF009A518F /* tga.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBB51F518DB2009A518F /* tga.cpp */; };
-		F98EDCAB1F518DBF009A518F /* net_client.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBB61F518DB2009A518F /* net_client.cpp */; };
 		F98EDCAC1F518DBF009A518F /* script.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBB81F518DB3009A518F /* script.cpp */; };
 		F98EDCAD1F518DBF009A518F /* game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBBD1F518DB3009A518F /* game.cpp */; };
 		F98EDCAE1F518DBF009A518F /* objet_proc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBBE1F518DB3009A518F /* objet_proc.cpp */; };
 		F98EDCAF1F518DBF009A518F /* frustrum.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBC11F518DB4009A518F /* frustrum.cpp */; };
 		F98EDCB01F518DBF009A518F /* camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBC21F518DB4009A518F /* camera.cpp */; };
-		F98EDCB11F518DBF009A518F /* net_common.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBC31F518DB4009A518F /* net_common.cpp */; };
-		F98EDCB21F518DBF009A518F /* libbass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBC41F518DB5009A518F /* libbass.cpp */; };
 		F98EDCB31F518DBF009A518F /* player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBC81F518DB5009A518F /* player.cpp */; };
 		F98EDCB41F518DBF009A518F /* jpeg.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBC91F518DB6009A518F /* jpeg.cpp */; };
 		F98EDCB61F518DBF009A518F /* textdraw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBCF1F518DB6009A518F /* textdraw.cpp */; };
-		F98EDCB71F518DBF009A518F /* collision2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBD01F518DB7009A518F /* collision2.cpp */; };
-		F98EDCB81F518DBF009A518F /* dsound.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBD21F518DB7009A518F /* dsound.cpp */; };
 		F98EDCB91F518DBF009A518F /* sorting.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBD61F518DB7009A518F /* sorting.cpp */; };
 		F98EDCBA1F518DBF009A518F /* filesys.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBD71F518DB8009A518F /* filesys.cpp */; };
 		F98EDCBB1F518DBF009A518F /* image.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBD81F518DB8009A518F /* image.cpp */; };
@@ -48,11 +45,9 @@
 		F98EDCC61F518DBF009A518F /* enveffect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBF01F518DBB009A518F /* enveffect.cpp */; };
 		F98EDCC81F518DBF009A518F /* opengl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBF41F518DBC009A518F /* opengl.cpp */; };
 		F98EDCC91F518DBF009A518F /* collision.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBF51F518DBC009A518F /* collision.cpp */; };
-		F98EDCCA1F518DBF009A518F /* net_server.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBFA1F518DBC009A518F /* net_server.cpp */; };
 		F98EDCCC1F518DBF009A518F /* input.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBFF1F518DBD009A518F /* input.cpp */; };
 		F98EDCCD1F518DBF009A518F /* interface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDC001F518DBD009A518F /* interface.cpp */; };
 		F98EDCCE1F518DBF009A518F /* demo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDC9B1F518DBF009A518F /* demo.cpp */; };
-		F98EDCCF1F518DBF009A518F /* net_dcomp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDC9C1F518DBF009A518F /* net_dcomp.cpp */; };
 		F98EDCD11F518DBF009A518F /* liste.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDC9E1F518DBF009A518F /* liste.cpp */; };
 		F98EDCF41F518F16009A518F /* halloween_linux.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDCF21F518F15009A518F /* halloween_linux.cpp */; };
 		F98EDCF91F518F43009A518F /* loadjpeg_linux.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDCF71F518F43009A518F /* loadjpeg_linux.cpp */; };
@@ -73,14 +68,132 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F91973431F51C03C008553A0 /* AUOutputBL.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AUOutputBL.cpp; sourceTree = "<group>"; };
+		F91973441F51C03C008553A0 /* AUOutputBL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AUOutputBL.h; sourceTree = "<group>"; };
+		F91973451F51C03C008553A0 /* AUParamInfo.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AUParamInfo.cpp; sourceTree = "<group>"; };
+		F91973461F51C03C008553A0 /* AUParamInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AUParamInfo.h; sourceTree = "<group>"; };
+		F91973471F51C03C008553A0 /* CAAtomic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAAtomic.h; sourceTree = "<group>"; };
+		F91973481F51C03C008553A0 /* CAAtomicStack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAAtomicStack.h; sourceTree = "<group>"; };
+		F91973491F51C03C008553A0 /* CAAudioBufferList.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CAAudioBufferList.cpp; sourceTree = "<group>"; };
+		F919734A1F51C03C008553A0 /* CAAudioBufferList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAAudioBufferList.h; sourceTree = "<group>"; };
+		F919734B1F51C03C008553A0 /* CAAudioChannelLayout.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CAAudioChannelLayout.cpp; sourceTree = "<group>"; };
+		F919734C1F51C03C008553A0 /* CAAudioChannelLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAAudioChannelLayout.h; sourceTree = "<group>"; };
+		F919734D1F51C03C008553A0 /* CAAudioChannelLayoutObject.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CAAudioChannelLayoutObject.cpp; sourceTree = "<group>"; };
+		F919734E1F51C03C008553A0 /* CAAudioFileFormats.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CAAudioFileFormats.cpp; sourceTree = "<group>"; };
+		F919734F1F51C03C008553A0 /* CAAudioFileFormats.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAAudioFileFormats.h; sourceTree = "<group>"; };
+		F91973501F51C03C008553A0 /* CAAudioTimeStamp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CAAudioTimeStamp.cpp; sourceTree = "<group>"; };
+		F91973511F51C03C008553A0 /* CAAudioTimeStamp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAAudioTimeStamp.h; sourceTree = "<group>"; };
+		F91973521F51C03C008553A0 /* CAAudioUnit.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CAAudioUnit.cpp; sourceTree = "<group>"; };
+		F91973531F51C03C008553A0 /* CAAudioUnit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAAudioUnit.h; sourceTree = "<group>"; };
+		F91973541F51C03C008553A0 /* CAAudioUnitOutputCapturer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAAudioUnitOutputCapturer.h; sourceTree = "<group>"; };
+		F91973551F51C03C008553A0 /* CAAudioValueRange.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CAAudioValueRange.cpp; sourceTree = "<group>"; };
+		F91973561F51C03C008553A0 /* CAAudioValueRange.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAAudioValueRange.h; sourceTree = "<group>"; };
+		F91973571F51C03C008553A0 /* CAAUMIDIMap.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CAAUMIDIMap.cpp; sourceTree = "<group>"; };
+		F91973581F51C03C008553A0 /* CAAUMIDIMap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAAUMIDIMap.h; sourceTree = "<group>"; };
+		F91973591F51C03C008553A0 /* CAAUMIDIMapManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CAAUMIDIMapManager.cpp; sourceTree = "<group>"; };
+		F919735A1F51C03C008553A0 /* CAAUMIDIMapManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAAUMIDIMapManager.h; sourceTree = "<group>"; };
+		F919735B1F51C03C008553A0 /* CAAUParameter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CAAUParameter.cpp; sourceTree = "<group>"; };
+		F919735C1F51C03C008553A0 /* CAAUParameter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAAUParameter.h; sourceTree = "<group>"; };
+		F919735D1F51C03C008553A0 /* CAAUProcessor.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CAAUProcessor.cpp; sourceTree = "<group>"; };
+		F919735E1F51C03C008553A0 /* CAAUProcessor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAAUProcessor.h; sourceTree = "<group>"; };
+		F919735F1F51C03C008553A0 /* CAAutoDisposer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAAutoDisposer.h; sourceTree = "<group>"; };
+		F91973601F51C03C008553A0 /* CABitOperations.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CABitOperations.h; sourceTree = "<group>"; };
+		F91973611F51C03C008553A0 /* CABool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CABool.h; sourceTree = "<group>"; };
+		F91973621F51C03C008553A0 /* CABufferList.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CABufferList.cpp; sourceTree = "<group>"; };
+		F91973631F51C03C008553A0 /* CABufferList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CABufferList.h; sourceTree = "<group>"; };
+		F91973641F51C03C008553A0 /* CABundleLocker.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CABundleLocker.cpp; sourceTree = "<group>"; };
+		F91973651F51C03C008553A0 /* CABundleLocker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CABundleLocker.h; sourceTree = "<group>"; };
+		F91973661F51C03C008553A0 /* CAByteOrder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAByteOrder.h; sourceTree = "<group>"; };
+		F91973671F51C03C008553A0 /* CACFArray.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CACFArray.cpp; sourceTree = "<group>"; };
+		F91973681F51C03C008553A0 /* CACFArray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CACFArray.h; sourceTree = "<group>"; };
+		F91973691F51C03C008553A0 /* CACFData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CACFData.h; sourceTree = "<group>"; };
+		F919736A1F51C03C008553A0 /* CACFDictionary.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CACFDictionary.cpp; sourceTree = "<group>"; };
+		F919736B1F51C03C008553A0 /* CACFDictionary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CACFDictionary.h; sourceTree = "<group>"; };
+		F919736C1F51C03C008553A0 /* CACFDistributedNotification.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CACFDistributedNotification.cpp; sourceTree = "<group>"; };
+		F919736D1F51C03C008553A0 /* CACFDistributedNotification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CACFDistributedNotification.h; sourceTree = "<group>"; };
+		F919736E1F51C03C008553A0 /* CACFMachPort.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CACFMachPort.cpp; sourceTree = "<group>"; };
+		F919736F1F51C03C008553A0 /* CACFMachPort.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CACFMachPort.h; sourceTree = "<group>"; };
+		F91973701F51C03C008553A0 /* CACFMessagePort.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CACFMessagePort.cpp; sourceTree = "<group>"; };
+		F91973711F51C03C008553A0 /* CACFMessagePort.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CACFMessagePort.h; sourceTree = "<group>"; };
+		F91973721F51C03C008553A0 /* CACFNumber.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CACFNumber.cpp; sourceTree = "<group>"; };
+		F91973731F51C03C008553A0 /* CACFNumber.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CACFNumber.h; sourceTree = "<group>"; };
+		F91973741F51C03C008553A0 /* CACFObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CACFObject.h; sourceTree = "<group>"; };
+		F91973751F51C03C008553A0 /* CACFPlugIn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CACFPlugIn.h; sourceTree = "<group>"; };
+		F91973761F51C03C008553A0 /* CACFPreferences.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CACFPreferences.cpp; sourceTree = "<group>"; };
+		F91973771F51C03C008553A0 /* CACFPreferences.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CACFPreferences.h; sourceTree = "<group>"; };
+		F91973781F51C03C008553A0 /* CACFString.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CACFString.cpp; sourceTree = "<group>"; };
+		F91973791F51C03C008553A0 /* CACFString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CACFString.h; sourceTree = "<group>"; };
+		F919737A1F51C03C008553A0 /* CAComponent.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CAComponent.cpp; sourceTree = "<group>"; };
+		F919737B1F51C03C008553A0 /* CAComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAComponent.h; sourceTree = "<group>"; };
+		F919737C1F51C03C008553A0 /* CAComponentDescription.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CAComponentDescription.cpp; sourceTree = "<group>"; };
+		F919737D1F51C03C008553A0 /* CAComponentDescription.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAComponentDescription.h; sourceTree = "<group>"; };
+		F919737E1F51C03C008553A0 /* CADebugger.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CADebugger.cpp; sourceTree = "<group>"; };
+		F919737F1F51C03C008553A0 /* CADebugger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CADebugger.h; sourceTree = "<group>"; };
+		F91973801F51C03C008553A0 /* CADebugMacros.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CADebugMacros.cpp; sourceTree = "<group>"; };
+		F91973811F51C03C008553A0 /* CADebugMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CADebugMacros.h; sourceTree = "<group>"; };
+		F91973821F51C03C008553A0 /* CADebugPrintf.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CADebugPrintf.cpp; sourceTree = "<group>"; };
+		F91973831F51C03C008553A0 /* CADebugPrintf.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CADebugPrintf.h; sourceTree = "<group>"; };
+		F91973841F51C03C008553A0 /* CAException.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAException.h; sourceTree = "<group>"; };
+		F91973851F51C03C008553A0 /* CAExtAudioFile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAExtAudioFile.h; sourceTree = "<group>"; };
+		F91973861F51C03C008553A0 /* CAFilePathUtils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CAFilePathUtils.cpp; sourceTree = "<group>"; };
+		F91973871F51C03C008553A0 /* CAFilePathUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAFilePathUtils.h; sourceTree = "<group>"; };
+		F91973881F51C03C008553A0 /* CAGuard.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CAGuard.cpp; sourceTree = "<group>"; };
+		F91973891F51C03C008553A0 /* CAGuard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAGuard.h; sourceTree = "<group>"; };
+		F919738A1F51C03C008553A0 /* CAHALAudioDevice.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CAHALAudioDevice.cpp; sourceTree = "<group>"; };
+		F919738B1F51C03C008553A0 /* CAHALAudioDevice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAHALAudioDevice.h; sourceTree = "<group>"; };
+		F919738C1F51C03C008553A0 /* CAHALAudioObject.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CAHALAudioObject.cpp; sourceTree = "<group>"; };
+		F919738D1F51C03C008553A0 /* CAHALAudioObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAHALAudioObject.h; sourceTree = "<group>"; };
+		F919738E1F51C03C008553A0 /* CAHALAudioStream.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CAHALAudioStream.cpp; sourceTree = "<group>"; };
+		F919738F1F51C03C008553A0 /* CAHALAudioStream.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAHALAudioStream.h; sourceTree = "<group>"; };
+		F91973901F51C03C008553A0 /* CAHALAudioSystemObject.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CAHALAudioSystemObject.cpp; sourceTree = "<group>"; };
+		F91973911F51C03C008553A0 /* CAHALAudioSystemObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAHALAudioSystemObject.h; sourceTree = "<group>"; };
+		F91973921F51C03C008553A0 /* CAHostTimeBase.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CAHostTimeBase.cpp; sourceTree = "<group>"; };
+		F91973931F51C03C008553A0 /* CAHostTimeBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAHostTimeBase.h; sourceTree = "<group>"; };
+		F91973941F51C03C008553A0 /* CALogMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CALogMacros.h; sourceTree = "<group>"; };
+		F91973951F51C03C008553A0 /* CAMath.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAMath.h; sourceTree = "<group>"; };
+		F91973961F51C03C008553A0 /* CAMixMap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAMixMap.h; sourceTree = "<group>"; };
+		F91973971F51C03C008553A0 /* CAMutex.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CAMutex.cpp; sourceTree = "<group>"; };
+		F91973981F51C03C008553A0 /* CAMutex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAMutex.h; sourceTree = "<group>"; };
+		F91973991F51C03C008553A0 /* CAPersistence.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CAPersistence.cpp; sourceTree = "<group>"; };
+		F919739A1F51C03C008553A0 /* CAProcess.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CAProcess.cpp; sourceTree = "<group>"; };
+		F919739B1F51C03C008553A0 /* CAProcess.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAProcess.h; sourceTree = "<group>"; };
+		F919739C1F51C03C008553A0 /* CAPropertyAddress.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAPropertyAddress.h; sourceTree = "<group>"; };
+		F919739D1F51C03C008553A0 /* CAPThread.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CAPThread.cpp; sourceTree = "<group>"; };
+		F919739E1F51C03C008553A0 /* CAPThread.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAPThread.h; sourceTree = "<group>"; };
+		F919739F1F51C03C008553A0 /* CAReferenceCounted.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAReferenceCounted.h; sourceTree = "<group>"; };
+		F91973A01F51C03C008553A0 /* CARingBuffer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CARingBuffer.cpp; sourceTree = "<group>"; };
+		F91973A11F51C03C008553A0 /* CARingBuffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CARingBuffer.h; sourceTree = "<group>"; };
+		F91973A21F51C03C008553A0 /* CASettingsStorage.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CASettingsStorage.cpp; sourceTree = "<group>"; };
+		F91973A31F51C03C008553A0 /* CASettingsStorage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CASettingsStorage.h; sourceTree = "<group>"; };
+		F91973A41F51C03C008553A0 /* CASharedLibrary.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CASharedLibrary.cpp; sourceTree = "<group>"; };
+		F91973A51F51C03C008553A0 /* CASharedLibrary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CASharedLibrary.h; sourceTree = "<group>"; };
+		F91973A61F51C03C008553A0 /* CASpectralProcessor.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CASpectralProcessor.cpp; sourceTree = "<group>"; };
+		F91973A71F51C03C008553A0 /* CASpectralProcessor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CASpectralProcessor.h; sourceTree = "<group>"; };
+		F91973A81F51C03C008553A0 /* CAStreamBasicDescription.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CAStreamBasicDescription.cpp; sourceTree = "<group>"; };
+		F91973A91F51C03C008553A0 /* CAStreamBasicDescription.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAStreamBasicDescription.h; sourceTree = "<group>"; };
+		F91973AA1F51C03C008553A0 /* CAStreamRangedDescription.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CAStreamRangedDescription.cpp; sourceTree = "<group>"; };
+		F91973AB1F51C03C008553A0 /* CAStreamRangedDescription.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAStreamRangedDescription.h; sourceTree = "<group>"; };
+		F91973AC1F51C03C008553A0 /* CAThreadSafeList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAThreadSafeList.h; sourceTree = "<group>"; };
+		F91973AD1F51C03C008553A0 /* CATink.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CATink.h; sourceTree = "<group>"; };
+		F91973AE1F51C03C008553A0 /* CATokenMap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CATokenMap.h; sourceTree = "<group>"; };
+		F91973AF1F51C03C008553A0 /* CAVectorUnit.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CAVectorUnit.cpp; sourceTree = "<group>"; };
+		F91973B01F51C03C008553A0 /* CAVectorUnit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAVectorUnit.h; sourceTree = "<group>"; };
+		F91973B11F51C03C008553A0 /* CAVectorUnitTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAVectorUnitTypes.h; sourceTree = "<group>"; };
+		F91973B21F51C03C008553A0 /* CAVolumeCurve.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CAVolumeCurve.cpp; sourceTree = "<group>"; };
+		F91973B31F51C03C008553A0 /* CAVolumeCurve.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAVolumeCurve.h; sourceTree = "<group>"; };
+		F91973B41F51C03C008553A0 /* CAXException.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CAXException.cpp; sourceTree = "<group>"; };
+		F91973B51F51C03C008553A0 /* CAXException.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAXException.h; sourceTree = "<group>"; };
+		F91973B61F51C03C008553A0 /* MatrixMixerVolumes.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MatrixMixerVolumes.cpp; sourceTree = "<group>"; };
+		F91973B71F51C03C008553A0 /* MatrixMixerVolumes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MatrixMixerVolumes.h; sourceTree = "<group>"; };
+		F91973B81F51C430008553A0 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		F91973BA1F51C794008553A0 /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = System/Library/Frameworks/ApplicationServices.framework; sourceTree = SDKROOT; };
+		F91973BC1F51C988008553A0 /* libbass.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libbass.a; path = ../misc/libbass.a; sourceTree = "<group>"; };
 		F98EDB8C1F518C2D009A518F /* Halloween3D */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Halloween3D; sourceTree = BUILT_PRODUCTS_DIR; };
 		F98EDB971F518C73009A518F /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		F98EDB991F518C79009A518F /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
 		F98EDB9B1F518CC3009A518F /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = Halloween/main.cpp; sourceTree = SOURCE_ROOT; };
 		F98EDBA11F518DB1009A518F /* shader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = shader.cpp; path = ../../shader.cpp; sourceTree = "<group>"; };
-		F98EDBA21F518DB1009A518F /* collision2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = collision2.h; path = ../../collision2.h; sourceTree = "<group>"; };
 		F98EDBA31F518DB1009A518F /* menu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = menu.h; path = ../../menu.h; sourceTree = "<group>"; };
-		F98EDBA41F518DB1009A518F /* dsound.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = dsound.h; path = ../../dsound.h; sourceTree = "<group>"; };
 		F98EDBA51F518DB1009A518F /* menu_init.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = menu_init.cpp; path = ../../menu_init.cpp; sourceTree = "<group>"; };
 		F98EDBA61F518DB1009A518F /* console.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = console.cpp; path = ../../console.cpp; sourceTree = "<group>"; };
 		F98EDBA71F518DB1009A518F /* sorting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = sorting.h; path = ../../sorting.h; sourceTree = "<group>"; };
@@ -94,8 +207,6 @@
 		F98EDBB01F518DB2009A518F /* script.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = script.h; path = ../../script.h; sourceTree = "<group>"; };
 		F98EDBB41F518DB2009A518F /* timer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = timer.h; path = ../../timer.h; sourceTree = "<group>"; };
 		F98EDBB51F518DB2009A518F /* tga.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = tga.cpp; path = ../../tga.cpp; sourceTree = "<group>"; };
-		F98EDBB61F518DB2009A518F /* net_client.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = net_client.cpp; path = ../../net_client.cpp; sourceTree = "<group>"; };
-		F98EDBB71F518DB2009A518F /* net_server.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = net_server.h; path = ../../net_server.h; sourceTree = "<group>"; };
 		F98EDBB81F518DB3009A518F /* script.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = script.cpp; path = ../../script.cpp; sourceTree = "<group>"; };
 		F98EDBB91F518DB3009A518F /* bsptree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = bsptree.h; path = ../../bsptree.h; sourceTree = "<group>"; };
 		F98EDBBA1F518DB3009A518F /* maths.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = maths.h; path = ../../maths.h; sourceTree = "<group>"; };
@@ -103,11 +214,8 @@
 		F98EDBBD1F518DB3009A518F /* game.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = game.cpp; path = ../../game.cpp; sourceTree = "<group>"; };
 		F98EDBBE1F518DB3009A518F /* objet_proc.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = objet_proc.cpp; path = ../../objet_proc.cpp; sourceTree = "<group>"; };
 		F98EDBBF1F518DB4009A518F /* physic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = physic.h; path = ../../physic.h; sourceTree = "<group>"; };
-		F98EDBC01F518DB4009A518F /* net_dcomp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = net_dcomp.h; path = ../../net_dcomp.h; sourceTree = "<group>"; };
 		F98EDBC11F518DB4009A518F /* frustrum.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = frustrum.cpp; path = ../../frustrum.cpp; sourceTree = "<group>"; };
 		F98EDBC21F518DB4009A518F /* camera.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = camera.cpp; path = ../../camera.cpp; sourceTree = "<group>"; };
-		F98EDBC31F518DB4009A518F /* net_common.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = net_common.cpp; path = ../../net_common.cpp; sourceTree = "<group>"; };
-		F98EDBC41F518DB5009A518F /* libbass.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = libbass.cpp; path = ../../libbass.cpp; sourceTree = "<group>"; };
 		F98EDBC51F518DB5009A518F /* console.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = console.h; path = ../../console.h; sourceTree = "<group>"; };
 		F98EDBC61F518DB5009A518F /* opengl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = opengl.h; path = ../../opengl.h; sourceTree = "<group>"; };
 		F98EDBC81F518DB5009A518F /* player.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = player.cpp; path = ../../player.cpp; sourceTree = "<group>"; };
@@ -116,9 +224,7 @@
 		F98EDBCB1F518DB6009A518F /* interface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = interface.h; path = ../../interface.h; sourceTree = "<group>"; };
 		F98EDBCC1F518DB6009A518F /* resource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = resource.h; path = ../../resource.h; sourceTree = "<group>"; };
 		F98EDBCF1F518DB6009A518F /* textdraw.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = textdraw.cpp; path = ../../textdraw.cpp; sourceTree = "<group>"; };
-		F98EDBD01F518DB7009A518F /* collision2.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = collision2.cpp; path = ../../collision2.cpp; sourceTree = "<group>"; };
 		F98EDBD11F518DB7009A518F /* input.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = input.h; path = ../../input.h; sourceTree = "<group>"; };
-		F98EDBD21F518DB7009A518F /* dsound.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = dsound.cpp; path = ../../dsound.cpp; sourceTree = "<group>"; };
 		F98EDBD31F518DB7009A518F /* frustrum.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = frustrum.h; path = ../../frustrum.h; sourceTree = "<group>"; };
 		F98EDBD41F518DB7009A518F /* display.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = display.h; path = ../../display.h; sourceTree = "<group>"; };
 		F98EDBD51F518DB7009A518F /* bspfile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = bspfile.h; path = ../../bspfile.h; sourceTree = "<group>"; };
@@ -126,7 +232,6 @@
 		F98EDBD71F518DB8009A518F /* filesys.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = filesys.cpp; path = ../../filesys.cpp; sourceTree = "<group>"; };
 		F98EDBD81F518DB8009A518F /* image.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = image.cpp; path = ../../image.cpp; sourceTree = "<group>"; };
 		F98EDBD91F518DB8009A518F /* objet.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = objet.cpp; path = ../../objet.cpp; sourceTree = "<group>"; };
-		F98EDBDA1F518DB8009A518F /* net_common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = net_common.h; path = ../../net_common.h; sourceTree = "<group>"; };
 		F98EDBDB1F518DB8009A518F /* bspfile.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = bspfile.cpp; path = ../../bspfile.cpp; sourceTree = "<group>"; };
 		F98EDBDC1F518DB8009A518F /* menu_init.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = menu_init.h; path = ../../menu_init.h; sourceTree = "<group>"; };
 		F98EDBDD1F518DB8009A518F /* filesys.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = filesys.h; path = ../../filesys.h; sourceTree = "<group>"; };
@@ -134,7 +239,6 @@
 		F98EDBDF1F518DB9009A518F /* image.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = image.h; path = ../../image.h; sourceTree = "<group>"; };
 		F98EDBE01F518DB9009A518F /* gameover.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = gameover.cpp; path = ../../gameover.cpp; sourceTree = "<group>"; };
 		F98EDBE11F518DB9009A518F /* menu_sel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = menu_sel.h; path = ../../menu_sel.h; sourceTree = "<group>"; };
-		F98EDBE21F518DB9009A518F /* net_client.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = net_client.h; path = ../../net_client.h; sourceTree = "<group>"; };
 		F98EDBE31F518DB9009A518F /* maths.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = maths.cpp; path = ../../maths.cpp; sourceTree = "<group>"; };
 		F98EDBE41F518DB9009A518F /* story.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = story.h; path = ../../story.h; sourceTree = "<group>"; };
 		F98EDBE51F518DBA009A518F /* mskmodel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = mskmodel.h; path = ../../mskmodel.h; sourceTree = "<group>"; };
@@ -153,9 +257,7 @@
 		F98EDBF41F518DBC009A518F /* opengl.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = opengl.cpp; path = ../../opengl.cpp; sourceTree = "<group>"; };
 		F98EDBF51F518DBC009A518F /* collision.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = collision.cpp; path = ../../collision.cpp; sourceTree = "<group>"; };
 		F98EDBF61F518DBC009A518F /* collision.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = collision.h; path = ../../collision.h; sourceTree = "<group>"; };
-		F98EDBF81F518DBC009A518F /* libbass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = libbass.h; path = ../../libbass.h; sourceTree = "<group>"; };
 		F98EDBF91F518DBC009A518F /* gameover.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = gameover.h; path = ../../gameover.h; sourceTree = "<group>"; };
-		F98EDBFA1F518DBC009A518F /* net_server.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = net_server.cpp; path = ../../net_server.cpp; sourceTree = "<group>"; };
 		F98EDBFB1F518DBD009A518F /* camera.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = camera.h; path = ../../camera.h; sourceTree = "<group>"; };
 		F98EDBFD1F518DBD009A518F /* textdraw.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = textdraw.h; path = ../../textdraw.h; sourceTree = "<group>"; };
 		F98EDBFE1F518DBD009A518F /* demo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = demo.h; path = ../../demo.h; sourceTree = "<group>"; };
@@ -165,7 +267,6 @@
 		F98EDC761F518DBE009A518F /* objet_proc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = objet_proc.h; path = ../../objet_proc.h; sourceTree = "<group>"; };
 		F98EDC9A1F518DBF009A518F /* enveffect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = enveffect.h; path = ../../enveffect.h; sourceTree = "<group>"; };
 		F98EDC9B1F518DBF009A518F /* demo.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = demo.cpp; path = ../../demo.cpp; sourceTree = "<group>"; };
-		F98EDC9C1F518DBF009A518F /* net_dcomp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = net_dcomp.cpp; path = ../../net_dcomp.cpp; sourceTree = "<group>"; };
 		F98EDC9E1F518DBF009A518F /* liste.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = liste.cpp; path = ../../liste.cpp; sourceTree = "<group>"; };
 		F98EDCD41F518E8B009A518F /* GLTextureHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GLTextureHelper.h; sourceTree = "<group>"; };
 		F98EDCD51F518E8B009A518F /* KBatch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KBatch.h; sourceTree = "<group>"; };
@@ -212,6 +313,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F91973BB1F51C795008553A0 /* ApplicationServices.framework in Frameworks */,
+				F91973B91F51C430008553A0 /* GLKit.framework in Frameworks */,
 				F98EDB9A1F518C79009A518F /* GLUT.framework in Frameworks */,
 				F98EDB981F518C73009A518F /* OpenGL.framework in Frameworks */,
 			);
@@ -220,6 +323,130 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F91973421F51C03C008553A0 /* PublicUtility */ = {
+			isa = PBXGroup;
+			children = (
+				F91973431F51C03C008553A0 /* AUOutputBL.cpp */,
+				F91973441F51C03C008553A0 /* AUOutputBL.h */,
+				F91973451F51C03C008553A0 /* AUParamInfo.cpp */,
+				F91973461F51C03C008553A0 /* AUParamInfo.h */,
+				F91973471F51C03C008553A0 /* CAAtomic.h */,
+				F91973481F51C03C008553A0 /* CAAtomicStack.h */,
+				F91973491F51C03C008553A0 /* CAAudioBufferList.cpp */,
+				F919734A1F51C03C008553A0 /* CAAudioBufferList.h */,
+				F919734B1F51C03C008553A0 /* CAAudioChannelLayout.cpp */,
+				F919734C1F51C03C008553A0 /* CAAudioChannelLayout.h */,
+				F919734D1F51C03C008553A0 /* CAAudioChannelLayoutObject.cpp */,
+				F919734E1F51C03C008553A0 /* CAAudioFileFormats.cpp */,
+				F919734F1F51C03C008553A0 /* CAAudioFileFormats.h */,
+				F91973501F51C03C008553A0 /* CAAudioTimeStamp.cpp */,
+				F91973511F51C03C008553A0 /* CAAudioTimeStamp.h */,
+				F91973521F51C03C008553A0 /* CAAudioUnit.cpp */,
+				F91973531F51C03C008553A0 /* CAAudioUnit.h */,
+				F91973541F51C03C008553A0 /* CAAudioUnitOutputCapturer.h */,
+				F91973551F51C03C008553A0 /* CAAudioValueRange.cpp */,
+				F91973561F51C03C008553A0 /* CAAudioValueRange.h */,
+				F91973571F51C03C008553A0 /* CAAUMIDIMap.cpp */,
+				F91973581F51C03C008553A0 /* CAAUMIDIMap.h */,
+				F91973591F51C03C008553A0 /* CAAUMIDIMapManager.cpp */,
+				F919735A1F51C03C008553A0 /* CAAUMIDIMapManager.h */,
+				F919735B1F51C03C008553A0 /* CAAUParameter.cpp */,
+				F919735C1F51C03C008553A0 /* CAAUParameter.h */,
+				F919735D1F51C03C008553A0 /* CAAUProcessor.cpp */,
+				F919735E1F51C03C008553A0 /* CAAUProcessor.h */,
+				F919735F1F51C03C008553A0 /* CAAutoDisposer.h */,
+				F91973601F51C03C008553A0 /* CABitOperations.h */,
+				F91973611F51C03C008553A0 /* CABool.h */,
+				F91973621F51C03C008553A0 /* CABufferList.cpp */,
+				F91973631F51C03C008553A0 /* CABufferList.h */,
+				F91973641F51C03C008553A0 /* CABundleLocker.cpp */,
+				F91973651F51C03C008553A0 /* CABundleLocker.h */,
+				F91973661F51C03C008553A0 /* CAByteOrder.h */,
+				F91973671F51C03C008553A0 /* CACFArray.cpp */,
+				F91973681F51C03C008553A0 /* CACFArray.h */,
+				F91973691F51C03C008553A0 /* CACFData.h */,
+				F919736A1F51C03C008553A0 /* CACFDictionary.cpp */,
+				F919736B1F51C03C008553A0 /* CACFDictionary.h */,
+				F919736C1F51C03C008553A0 /* CACFDistributedNotification.cpp */,
+				F919736D1F51C03C008553A0 /* CACFDistributedNotification.h */,
+				F919736E1F51C03C008553A0 /* CACFMachPort.cpp */,
+				F919736F1F51C03C008553A0 /* CACFMachPort.h */,
+				F91973701F51C03C008553A0 /* CACFMessagePort.cpp */,
+				F91973711F51C03C008553A0 /* CACFMessagePort.h */,
+				F91973721F51C03C008553A0 /* CACFNumber.cpp */,
+				F91973731F51C03C008553A0 /* CACFNumber.h */,
+				F91973741F51C03C008553A0 /* CACFObject.h */,
+				F91973751F51C03C008553A0 /* CACFPlugIn.h */,
+				F91973761F51C03C008553A0 /* CACFPreferences.cpp */,
+				F91973771F51C03C008553A0 /* CACFPreferences.h */,
+				F91973781F51C03C008553A0 /* CACFString.cpp */,
+				F91973791F51C03C008553A0 /* CACFString.h */,
+				F919737A1F51C03C008553A0 /* CAComponent.cpp */,
+				F919737B1F51C03C008553A0 /* CAComponent.h */,
+				F919737C1F51C03C008553A0 /* CAComponentDescription.cpp */,
+				F919737D1F51C03C008553A0 /* CAComponentDescription.h */,
+				F919737E1F51C03C008553A0 /* CADebugger.cpp */,
+				F919737F1F51C03C008553A0 /* CADebugger.h */,
+				F91973801F51C03C008553A0 /* CADebugMacros.cpp */,
+				F91973811F51C03C008553A0 /* CADebugMacros.h */,
+				F91973821F51C03C008553A0 /* CADebugPrintf.cpp */,
+				F91973831F51C03C008553A0 /* CADebugPrintf.h */,
+				F91973841F51C03C008553A0 /* CAException.h */,
+				F91973851F51C03C008553A0 /* CAExtAudioFile.h */,
+				F91973861F51C03C008553A0 /* CAFilePathUtils.cpp */,
+				F91973871F51C03C008553A0 /* CAFilePathUtils.h */,
+				F91973881F51C03C008553A0 /* CAGuard.cpp */,
+				F91973891F51C03C008553A0 /* CAGuard.h */,
+				F919738A1F51C03C008553A0 /* CAHALAudioDevice.cpp */,
+				F919738B1F51C03C008553A0 /* CAHALAudioDevice.h */,
+				F919738C1F51C03C008553A0 /* CAHALAudioObject.cpp */,
+				F919738D1F51C03C008553A0 /* CAHALAudioObject.h */,
+				F919738E1F51C03C008553A0 /* CAHALAudioStream.cpp */,
+				F919738F1F51C03C008553A0 /* CAHALAudioStream.h */,
+				F91973901F51C03C008553A0 /* CAHALAudioSystemObject.cpp */,
+				F91973911F51C03C008553A0 /* CAHALAudioSystemObject.h */,
+				F91973921F51C03C008553A0 /* CAHostTimeBase.cpp */,
+				F91973931F51C03C008553A0 /* CAHostTimeBase.h */,
+				F91973941F51C03C008553A0 /* CALogMacros.h */,
+				F91973951F51C03C008553A0 /* CAMath.h */,
+				F91973961F51C03C008553A0 /* CAMixMap.h */,
+				F91973971F51C03C008553A0 /* CAMutex.cpp */,
+				F91973981F51C03C008553A0 /* CAMutex.h */,
+				F91973991F51C03C008553A0 /* CAPersistence.cpp */,
+				F919739A1F51C03C008553A0 /* CAProcess.cpp */,
+				F919739B1F51C03C008553A0 /* CAProcess.h */,
+				F919739C1F51C03C008553A0 /* CAPropertyAddress.h */,
+				F919739D1F51C03C008553A0 /* CAPThread.cpp */,
+				F919739E1F51C03C008553A0 /* CAPThread.h */,
+				F919739F1F51C03C008553A0 /* CAReferenceCounted.h */,
+				F91973A01F51C03C008553A0 /* CARingBuffer.cpp */,
+				F91973A11F51C03C008553A0 /* CARingBuffer.h */,
+				F91973A21F51C03C008553A0 /* CASettingsStorage.cpp */,
+				F91973A31F51C03C008553A0 /* CASettingsStorage.h */,
+				F91973A41F51C03C008553A0 /* CASharedLibrary.cpp */,
+				F91973A51F51C03C008553A0 /* CASharedLibrary.h */,
+				F91973A61F51C03C008553A0 /* CASpectralProcessor.cpp */,
+				F91973A71F51C03C008553A0 /* CASpectralProcessor.h */,
+				F91973A81F51C03C008553A0 /* CAStreamBasicDescription.cpp */,
+				F91973A91F51C03C008553A0 /* CAStreamBasicDescription.h */,
+				F91973AA1F51C03C008553A0 /* CAStreamRangedDescription.cpp */,
+				F91973AB1F51C03C008553A0 /* CAStreamRangedDescription.h */,
+				F91973AC1F51C03C008553A0 /* CAThreadSafeList.h */,
+				F91973AD1F51C03C008553A0 /* CATink.h */,
+				F91973AE1F51C03C008553A0 /* CATokenMap.h */,
+				F91973AF1F51C03C008553A0 /* CAVectorUnit.cpp */,
+				F91973B01F51C03C008553A0 /* CAVectorUnit.h */,
+				F91973B11F51C03C008553A0 /* CAVectorUnitTypes.h */,
+				F91973B21F51C03C008553A0 /* CAVolumeCurve.cpp */,
+				F91973B31F51C03C008553A0 /* CAVolumeCurve.h */,
+				F91973B41F51C03C008553A0 /* CAXException.cpp */,
+				F91973B51F51C03C008553A0 /* CAXException.h */,
+				F91973B61F51C03C008553A0 /* MatrixMixerVolumes.cpp */,
+				F91973B71F51C03C008553A0 /* MatrixMixerVolumes.h */,
+			);
+			path = PublicUtility;
+			sourceTree = "<group>";
+		};
 		F98EDB831F518C2D009A518F = {
 			isa = PBXGroup;
 			children = (
@@ -240,6 +467,9 @@
 		F98EDB961F518C73009A518F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F91973BC1F51C988008553A0 /* libbass.a */,
+				F91973BA1F51C794008553A0 /* ApplicationServices.framework */,
+				F91973B81F51C430008553A0 /* GLKit.framework */,
 				F98EDB991F518C79009A518F /* GLUT.framework */,
 				F98EDB971F518C73009A518F /* OpenGL.framework */,
 			);
@@ -249,6 +479,7 @@
 		F98EDB9D1F518CE6009A518F /* Halloween */ = {
 			isa = PBXGroup;
 			children = (
+				F91973421F51C03C008553A0 /* PublicUtility */,
 				F98EDCD21F518E8B009A518F /* iptk_osx */,
 				F98EDB9B1F518CC3009A518F /* main.cpp */,
 				F98EDCFE1F51B7B6009A518F /* constantes.h */,
@@ -270,8 +501,6 @@
 				F98EDBFB1F518DBD009A518F /* camera.h */,
 				F98EDBF51F518DBC009A518F /* collision.cpp */,
 				F98EDBF61F518DBC009A518F /* collision.h */,
-				F98EDBD01F518DB7009A518F /* collision2.cpp */,
-				F98EDBA21F518DB1009A518F /* collision2.h */,
 				F98EDBA61F518DB1009A518F /* console.cpp */,
 				F98EDBC51F518DB5009A518F /* console.h */,
 				F98EDC9B1F518DBF009A518F /* demo.cpp */,
@@ -279,8 +508,6 @@
 				F98EDBE81F518DBA009A518F /* dirlib.h */,
 				F98EDBAC1F518DB2009A518F /* display.cpp */,
 				F98EDBD41F518DB7009A518F /* display.h */,
-				F98EDBD21F518DB7009A518F /* dsound.cpp */,
-				F98EDBA41F518DB1009A518F /* dsound.h */,
 				F98EDBED1F518DBB009A518F /* ellipsoide.cpp */,
 				F98EDBBB1F518DB3009A518F /* ellipsoide.h */,
 				F98EDBF01F518DBB009A518F /* enveffect.cpp */,
@@ -301,8 +528,6 @@
 				F98EDBCB1F518DB6009A518F /* interface.h */,
 				F98EDBC91F518DB6009A518F /* jpeg.cpp */,
 				F98EDC011F518DBE009A518F /* jpeg.h */,
-				F98EDBC41F518DB5009A518F /* libbass.cpp */,
-				F98EDBF81F518DBC009A518F /* libbass.h */,
 				F98EDC9E1F518DBF009A518F /* liste.cpp */,
 				F98EDBF21F518DBB009A518F /* liste.h */,
 				F98EDBE31F518DB9009A518F /* maths.cpp */,
@@ -317,14 +542,6 @@
 				F98EDBF31F518DBB009A518F /* monster.h */,
 				F98EDBE91F518DBA009A518F /* mskmodel.cpp */,
 				F98EDBE51F518DBA009A518F /* mskmodel.h */,
-				F98EDBB61F518DB2009A518F /* net_client.cpp */,
-				F98EDBE21F518DB9009A518F /* net_client.h */,
-				F98EDBC31F518DB4009A518F /* net_common.cpp */,
-				F98EDBDA1F518DB8009A518F /* net_common.h */,
-				F98EDC9C1F518DBF009A518F /* net_dcomp.cpp */,
-				F98EDBC01F518DB4009A518F /* net_dcomp.h */,
-				F98EDBFA1F518DBC009A518F /* net_server.cpp */,
-				F98EDBB71F518DB2009A518F /* net_server.h */,
 				F98EDBBE1F518DB3009A518F /* objet_proc.cpp */,
 				F98EDC761F518DBE009A518F /* objet_proc.h */,
 				F98EDBD91F518DB8009A518F /* objet.cpp */,
@@ -479,18 +696,13 @@
 				F98EDCB41F518DBF009A518F /* jpeg.cpp in Sources */,
 				F98EDCCE1F518DBF009A518F /* demo.cpp in Sources */,
 				F98EDCB31F518DBF009A518F /* player.cpp in Sources */,
-				F98EDCCA1F518DBF009A518F /* net_server.cpp in Sources */,
 				F98EDCAD1F518DBF009A518F /* game.cpp in Sources */,
 				F98EDCC41F518DBF009A518F /* ellipsoide.cpp in Sources */,
 				F98EDCC51F518DBF009A518F /* menu_sel.cpp in Sources */,
 				F98EDCC81F518DBF009A518F /* opengl.cpp in Sources */,
-				F98EDCB81F518DBF009A518F /* dsound.cpp in Sources */,
-				F98EDCB71F518DBF009A518F /* collision2.cpp in Sources */,
 				F98EDCA61F518DBF009A518F /* monster.cpp in Sources */,
 				F98EDCAC1F518DBF009A518F /* script.cpp in Sources */,
 				F98EDCB91F518DBF009A518F /* sorting.cpp in Sources */,
-				F98EDCAB1F518DBF009A518F /* net_client.cpp in Sources */,
-				F98EDCB11F518DBF009A518F /* net_common.cpp in Sources */,
 				F98EDCC21F518DBF009A518F /* timer.cpp in Sources */,
 				F98EDCBB1F518DBF009A518F /* image.cpp in Sources */,
 				F98EDCA51F518DBF009A518F /* display.cpp in Sources */,
@@ -501,9 +713,7 @@
 				F98EDCC01F518DBF009A518F /* alloween.cpp in Sources */,
 				F98EDC9F1F518DBF009A518F /* shader.cpp in Sources */,
 				F98EDCBA1F518DBF009A518F /* filesys.cpp in Sources */,
-				F98EDCCF1F518DBF009A518F /* net_dcomp.cpp in Sources */,
 				F98EDCAE1F518DBF009A518F /* objet_proc.cpp in Sources */,
-				F98EDCB21F518DBF009A518F /* libbass.cpp in Sources */,
 				F98EDCB01F518DBF009A518F /* camera.cpp in Sources */,
 				F98EDCF41F518F16009A518F /* halloween_linux.cpp in Sources */,
 				F98EDB9C1F518CC3009A518F /* main.cpp in Sources */,
@@ -626,6 +836,11 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6CZ5X85785;
+				HEADER_SEARCH_PATHS = (
+					../,
+					../misc/,
+				);
+				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -635,6 +850,11 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6CZ5X85785;
+				HEADER_SEARCH_PATHS = (
+					../,
+					../misc/,
+				);
+				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

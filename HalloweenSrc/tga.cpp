@@ -39,7 +39,7 @@ unsigned char *getRGBA(FILE *s, int size, int picmip)
 	if (rgba == NULL)
 		return NULL;
 
-	bread = fread(rgba, sizeof(unsigned char), RealSize, s); 
+	bread = fread(rgba, sizeof(unsigned char), RealSize, s);
 	
 	if (bread != RealSize)
 	{

@@ -197,6 +197,8 @@ public:
 	static int		getMouseX();
 	static int		getMouseY();		
 	static bool		getLeftButtonState();
+	static	bool	getRightButtonState();
+	static	bool	getMiddleButtonState();
 	
 	// iPhone specific 
 	static float	getAccelerationX();

@@ -27,7 +27,7 @@ float		gPlayerCrouchStep = 0;
 hBool		gPlayerRun=false;
 hBool		gClientJumpKey;
 KEYSINPUT	KeysInput[K_MAXKEYS+4];
-MOUSEINPUT	MouseInput;
+hMOUSEINPUT	MouseInput;
 dword		Touche;
 int		gGameIdKeys[MAX_GAMEKEY+4];
 hBool		IsMouseCursor = true;
@@ -180,7 +180,7 @@ hBool IN_Init()
 		return true;
 		
 #ifdef H_MAC
-	KInput::initInput(fenetre->getWindowHandle());
+	KInput::initInput(fenetre->getWindowWidth(), fenetre->getWindowHeight());
 #endif
 
 #ifdef H_LINUX
@@ -521,7 +521,7 @@ void IN_MouseGetOffet(int x, int y, int relx, int rely)
         }
 }
 
-void IN_GetMouse(MOUSEINPUT *Mouse)
+void IN_GetMouse(hMOUSEINPUT *Mouse)
 {
 	if(gIsServer && net_dedicated.value)
 		return;
@@ -689,7 +689,7 @@ int ReadKey()
 	return 0;
 }
 
-hBool di_IsKeyActivated(int id, MOUSEINPUT Mouse)
+hBool di_IsKeyActivated(int id, hMOUSEINPUT Mouse)
 {
 	if(id<0 || id>258)
 		return false;
@@ -776,7 +776,7 @@ char *IN_GetKeyStringName(int IdScannedKey)
 
 
 
-void m_UpdateCursor(MOUSEINPUT Mouse, float *pCursor_x, float *pCursor_y)
+void m_UpdateCursor(hMOUSEINPUT Mouse, float *pCursor_x, float *pCursor_y)
 {
 	*pCursor_x = MouseX;
 	*pCursor_y = MouseY;
@@ -792,7 +792,7 @@ void m_UpdateCursor(MOUSEINPUT Mouse, float *pCursor_x, float *pCursor_y)
 		*pCursor_y=480.0f;
 }
 
-void IN_Process(MOUSEINPUT Mouse, pEntity PlayerEnt)
+void IN_Process(hMOUSEINPUT Mouse, pEntity PlayerEnt)
 {
 	if(gIsServer && net_dedicated.value)
 		return;
@@ -1071,7 +1071,7 @@ void IN_Process(MOUSEINPUT Mouse, pEntity PlayerEnt)
 						if(!gClientJumpKey)
 						{
 							gClientJumpKey = true;
-							gNetBitKeys = gNetBitKeys | (char)(0x01 << 3);
+							//gNetBitKeys = gNetBitKeys | (char)(0x01 << 3);
 						}
 					}
 					else
@@ -1087,7 +1087,12 @@ void IN_Process(MOUSEINPUT Mouse, pEntity PlayerEnt)
 	}
 }
 
-void m_ReadInputs(MOUSEINPUT *Mouse)
+void m_ProcessInputs(hMOUSEINPUT Mouse)
+{
+	
+}
+
+void m_ReadInputs(hMOUSEINPUT *Mouse)
 {
 	pEntity	PlayerEnt;
 	
@@ -1310,7 +1315,7 @@ no_input_move:;
 	}
 }
 
-void IN_PlayerInputMove(MOUSEINPUT *Mouse, pEntity PlayerEnt)
+void IN_PlayerInputMove(hMOUSEINPUT *Mouse, pEntity PlayerEnt)
 {
 	pEntity		ClientEnt;
 	hBool		CL_IsWalk;
@@ -1323,6 +1328,7 @@ void IN_PlayerInputMove(MOUSEINPUT *Mouse, pEntity PlayerEnt)
 	gPlayerWalk = false;
 	CL_IsWalk = false;
 
+	/*
 	// ACTIVATE CLIENT JUMP ON THE SERVER
 	if(gIsMultiplayer && gIsServer)
 	{
@@ -1341,7 +1347,8 @@ void IN_PlayerInputMove(MOUSEINPUT *Mouse, pEntity PlayerEnt)
 			}
 		}
 	}
-
+	 */
+	
 	// met a zero le vecteur acceleration des entitee joueurs
 	if(!gIsMultiplayer || gIsServer)
 	{
@@ -1359,6 +1366,7 @@ void IN_PlayerInputMove(MOUSEINPUT *Mouse, pEntity PlayerEnt)
 	}
 
 	// CLIENT FORWARD
+	/*
 	if(gIsMultiplayer && gIsServer)
 	{
 		if(gNetBitKeys & (0x01 << 7))
@@ -1378,13 +1386,14 @@ void IN_PlayerInputMove(MOUSEINPUT *Mouse, pEntity PlayerEnt)
 				ply_Movedir(MORBAK, DIR_FORWARD);	// HACK
 			}
 		}
-	}
+	}*/
+	
 	// SINGLEPLAYER/HOST FORWARD
 	if(player_view.value && di_IsKeyActivated(gGameIdKeys[0],*Mouse))
 	{
 		if(gIsMultiplayer && !gIsServer)
 		{
-			gNetBitKeys = gNetBitKeys | (char)(0x01 << 7);
+			//gNetBitKeys = gNetBitKeys | (char)(0x01 << 7);
 			CL_IsWalk = true;
 		}
 		else
@@ -1395,6 +1404,7 @@ void IN_PlayerInputMove(MOUSEINPUT *Mouse, pEntity PlayerEnt)
 	}
 
 	// CLIENT BACKWARD
+	/*
 	if(gIsMultiplayer && gIsServer)
 	{
 		if(gNetBitKeys & (0x01 << 6))
@@ -1414,13 +1424,14 @@ void IN_PlayerInputMove(MOUSEINPUT *Mouse, pEntity PlayerEnt)
 				ply_Movedir(MORBAK, DIR_BACKWARD);
 			}
 		}
-	}
+	}*/
+	
 	// SINGLEPLAYER/HOST BACKWARD
 	if(player_view.value && di_IsKeyActivated(gGameIdKeys[1],*Mouse))
 	{
 		if(gIsMultiplayer && !gIsServer)
 		{
-			gNetBitKeys = gNetBitKeys | (char)(0x01 << 6);
+			//gNetBitKeys = gNetBitKeys | (char)(0x01 << 6);
 			CL_IsWalk = true;
 		}
 		else
@@ -1431,6 +1442,7 @@ void IN_PlayerInputMove(MOUSEINPUT *Mouse, pEntity PlayerEnt)
 	}
 
 	// CLIENT STRAFELEFT
+	/*
 	if(gIsMultiplayer && gIsServer)
 	{
 		if(gNetBitKeys & (0x01 << 5))
@@ -1450,13 +1462,14 @@ void IN_PlayerInputMove(MOUSEINPUT *Mouse, pEntity PlayerEnt)
 				ply_Movedir(MORBAK, DIR_STRAFLEFT);
 			}
 		}		
-	}
+	}*/
+	
 	// SINGLEPLAYER/HOST STRAFELEFT
 	if(player_view.value && di_IsKeyActivated(gGameIdKeys[2],*Mouse))
 	{
 		if(gIsMultiplayer && !gIsServer)
 		{
-			gNetBitKeys = gNetBitKeys | (char)(0x01 << 5);
+			//gNetBitKeys = gNetBitKeys | (char)(0x01 << 5);
 			CL_IsWalk = true;
 		}
 		else
@@ -1467,6 +1480,7 @@ void IN_PlayerInputMove(MOUSEINPUT *Mouse, pEntity PlayerEnt)
 	}
 
 	// CLIENT STRAFERIGHT
+	/*
 	if(gIsMultiplayer && gIsServer)
 	{
 		if(gNetBitKeys & (0x01 << 4))
@@ -1487,12 +1501,14 @@ void IN_PlayerInputMove(MOUSEINPUT *Mouse, pEntity PlayerEnt)
 			}
 		}
 	}
+	 */
+	
 	// SINGLEPLAYER/HOST STRAFERIGHT
 	if(player_view.value && di_IsKeyActivated(gGameIdKeys[3],*Mouse))
 	{
 		if(gIsMultiplayer && !gIsServer)
 		{
-			gNetBitKeys = gNetBitKeys | (char)(0x01 << 4);
+			//gNetBitKeys = gNetBitKeys | (char)(0x01 << 4);
 			CL_IsWalk = true;
 		}
 		else
@@ -1529,7 +1545,7 @@ void IN_PlayerInputMove(MOUSEINPUT *Mouse, pEntity PlayerEnt)
 		{
 			pEntity	ClientEnt;
 
-			gNetBitKeys_back = 0;
+			//gNetBitKeys_back = 0;
 			ClientEnt = o_FindEntity(MORBAK);
 			if(ClientEnt)
 			if(ClientEnt->net_SendNewAnim == false)

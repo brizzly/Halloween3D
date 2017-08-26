@@ -6,6 +6,8 @@
 #include <io.h>
 #endif
 
+#ifdef H_MAC
+#endif
 
 
 #ifdef H_LINUX
@@ -35,7 +37,8 @@ struct Ptrtag
 void fs_launchURL(char *url)
 {
 #ifdef H_MAC
-//    #include <InternetConfig.h>
+	/*
+    //#include <InternetConfig.h>
     
     long start, end;
     int len;
@@ -51,7 +54,7 @@ void fs_launchURL(char *url)
         end = len;
         ICLaunchURL(anInstance, NULL, url, len, &start, &end );
         ICStop(anInstance);
-    }
+    }*/
 #endif
 
 #ifdef H_WINDOWS
