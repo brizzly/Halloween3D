@@ -1,4 +1,4 @@
-#include "alloween.cpp"
+#include "alloween.h"
 
 
 Plan_t	gFrustrumPlanes[6];

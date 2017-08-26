@@ -1,6 +1,6 @@
 
 //#include "halloween_linux.h"
-#include "alloween.cpp"
+#include "alloween.h"
 
 #ifdef H_MAC
 #include <Carbon/Carbon.h>

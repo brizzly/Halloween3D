@@ -3,6 +3,7 @@
 #define OBJET_INCLUDED
 
 #include "alloween.h"
+#import "bspfile.h"
 
 enum
 {

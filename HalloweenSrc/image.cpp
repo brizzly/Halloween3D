@@ -1,4 +1,4 @@
-#include "alloween.cpp"
+#include "alloween.h"
 
 #ifdef H_LINUX
 //#include <sys/types.h>

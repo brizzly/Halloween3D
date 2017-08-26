@@ -2,6 +2,7 @@
 #ifndef BSPFILE_INCLUDED
 #define BSPFILE_INCLUDED
 
+#include "constantes.h"
 #include "alloween.h"
 
 

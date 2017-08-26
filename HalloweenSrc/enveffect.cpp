@@ -1,4 +1,4 @@
-#include "alloween.cpp"
+#include "alloween.h"
 
 
 PARTICULE	ParticuleTab[MAX_PARTSLOT];

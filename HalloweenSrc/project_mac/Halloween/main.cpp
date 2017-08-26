@@ -7,7 +7,7 @@
 //
 
 #include <iostream>
-
+#include "alloween.h"
 
 /* Use the following line on a Windows machine:
  #include <GL/glut.h>

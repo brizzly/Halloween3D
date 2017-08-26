@@ -2,7 +2,7 @@
 #define INPUT_INCLUDED
 
 #include "alloween.h"
-
+#include "objet.h"
 
 #ifdef H_MAC
 #define		K_MAXKEYS	93

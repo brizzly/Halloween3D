@@ -1,4 +1,4 @@
-#include "alloween.cpp"
+#include "alloween.h"
 
 
 void shader_Skydome(pFace Face)
