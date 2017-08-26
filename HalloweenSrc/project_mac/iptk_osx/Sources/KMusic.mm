@@ -39,6 +39,7 @@ KMusic::KMusic()
 {
 	theGraph = NULL;
 	audioFile = NULL;
+	_started = false;
 }
 
 KMusic::~KMusic()
@@ -273,11 +274,15 @@ bool KMusic::playMusic(char * filename)
 	else 
 		[audioPlayer play];		
 	 */
+	
+	_started = true;
 	return true;
 }
 
 void KMusic::stopMusic()
 {
+	_started = false;
+	
 	if(theGraph && audioFile)
 	{
 		// lets clean up
@@ -306,7 +311,7 @@ void KMusic::pauseMusic()
 void KMusic::resumeMusic()
 {
 	if(audioPlayer) {
-		[audioPlayer play];
+//		[audioPlayer play];
 	}
 }
 
@@ -326,6 +331,7 @@ bool KMusic::isMusicEnded()
 	if(_started == false) {
 		return false;
 	}
+	/*
 	//printf("audio %d %f / %f\n", (int)audioPlayer.playing, audioPlayer.currentTime, audioPlayer.duration);
 	
 	//if(audioPlayer.playing && audioPlayer.currentTime >= audioPlayer.duration) {
@@ -336,7 +342,7 @@ bool KMusic::isMusicEnded()
 		}
 		stopMusic();
 		return true;
-	}
+	}*/
 	return false;
 }
 

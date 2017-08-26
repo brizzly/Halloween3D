@@ -76,7 +76,7 @@ AudioFileID KSound::openAudioFile(char *filename)
 #if TARGET_OS_IPHONE
 	OSStatus result = AudioFileOpenURL(fileURL, kAudioFileReadPermission, 0, &outAFID);
 #else
-	OSStatus result = AudioFileOpenURL(fileURL, fsRdPerm, 0, &outAFID);
+	OSStatus result = AudioFileOpenURL(fileURL, kAudioFileReadPermission/*fsRdPerm*/, 0, &outAFID);
 #endif
 	
 	//ptro

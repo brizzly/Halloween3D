@@ -131,7 +131,7 @@ const char * KMiscTools::findSystemFolderType(int folderType, int domain)
     err = FSFindFolder(domain, folderType, kCreateFolder, &folder);
     if (err == noErr) {
         url = CFURLCreateFromFSRef(kCFAllocatorDefault, &folder);
-        result = [(NSURL *)url path];
+		result = [(__bridge NSURL *)url path];
     }
 	const char* cString = [result cStringUsingEncoding:NSASCIIStringEncoding]; 
     return cString;

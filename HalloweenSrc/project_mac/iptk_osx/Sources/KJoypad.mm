@@ -36,7 +36,7 @@ float analog_y;
 
 - (void)dealloc
 {
-	[super dealloc];
+	//[super dealloc];
 }
 
 
@@ -145,11 +145,11 @@ void gamepadAction(void* inContext, IOReturn inResult, void* inSender, IOHIDValu
 
 //	NSMutableDictionary* criterion = [[NSMutableDictionary alloc] init];
 	
-	
+/*
 	[criterion setObject: [NSNumber numberWithInt: kHIDPage_GenericDesktop] forKey: (NSString*)CFSTR(kIOHIDDeviceUsagePageKey)];
 	[criterion setObject: [NSNumber numberWithInt: kHIDUsage_GD_GamePad] forKey: (NSString*)CFSTR(kIOHIDDeviceUsageKey)];
 	IOHIDManagerSetDeviceMatching(hidManager,  (__bridge CFDictionaryRef)criterion);
-	
+*/
 	IOHIDManagerRegisterDeviceMatchingCallback(hidManager, gamepadWasAdded, (void*)self);
 	IOHIDManagerRegisterDeviceRemovalCallback(hidManager, gamepadWasRemoved, (void*)self);
 
@@ -244,8 +244,9 @@ void gamepadAction(void* inContext, IOReturn inResult, void* inSender, IOHIDValu
 {
 	if (mJoysticks != theJoysticks)
 	{
-		[mJoysticks release];
-		mJoysticks = [theJoysticks retain];
+		//[mJoysticks release];
+		//mJoysticks = [theJoysticks retain];
+		mJoysticks = theJoysticks;
 	}
 }
 

@@ -36,6 +36,8 @@ private:
 
 	AUGraph			theGraph;
 	AudioFileID		audioFile;
+	
+	bool 			_started;
 
 
 public:

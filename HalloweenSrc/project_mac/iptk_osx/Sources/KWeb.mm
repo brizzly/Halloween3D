@@ -25,6 +25,8 @@
 #include "Foundation/Foundation.h"
 //#import <UIKit/UIKit.h>
 //#import <Cocoa/Cocoa.h>
+#include <AppKit/NSWorkspace.h>
+
 
 
 
@@ -190,7 +192,7 @@ char * KWeb::readAsyncResponse()
 		return 0;
 	}
 	char * resp = (char *)[respString UTF8String];
-	[myConnection release];
+	//[myConnection release];
 	myConnection = nil;
 	return resp;
 }
@@ -220,7 +222,7 @@ char * KWeb::callURL( char	*paramURL , bool 	asynchronous )
 			_dataBufferSize=bufferSize;
 			return _dataBuffer;
 		}
-		[request release]; // Correction PTRO		
+		//[request release]; // Correction PTRO		
 	}
 
 	return 0;

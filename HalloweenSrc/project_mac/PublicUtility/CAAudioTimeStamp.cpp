@@ -54,7 +54,7 @@
 //	CAAudioTimeStamp
 //=============================================================================
 
-const AudioTimeStamp	CAAudioTimeStamp::kZero = { 0.0, 0, 0.0, 0, { 0, 0, 0, 0, 0, 0, 0, 0, 0 }, 0, 0 };
+const AudioTimeStamp	CAAudioTimeStamp::kZero = { 0.0, 0, 0.0, 0, { 0, 0, 0, kSMPTETimeType24, 0, 0, 0, 0, 0 }, 0, 0 };
 
 bool	operator<(const AudioTimeStamp& x, const AudioTimeStamp& y)
 {

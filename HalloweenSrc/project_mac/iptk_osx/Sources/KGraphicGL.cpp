@@ -232,12 +232,14 @@ void KGraphicGL::drawLine( short x1,short y1 , short x2 , short y2 , float r , f
 	//	GenericBlit( x1 , y1 , x2 , y2 , destX , destY , flipx , flipy ) ;
 	
 //	short dx1,dy1,dx2,dy2 ;
+	GLshort w = _screenY-y1;
+	GLshort h = _screenY-y2;
 	GLshort	lineCoords[]=
 	{
-		 x1 ,
-		 _screenY-y1   ,
-		x2 ,
-		_screenY-y2  
+		x1,
+		 w,
+		x2,
+		h  
 	};
 	GLfloat	fading[]=
 	{
