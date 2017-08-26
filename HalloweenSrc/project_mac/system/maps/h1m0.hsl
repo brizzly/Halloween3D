@@ -1,0 +1,233 @@
+;====================================
+;	h1m0 - script
+;	(C) Jadeware 2001
+;====================================
+
+
+; ============= plateforme du debut a gauche ====================
+
+actionbrush 17
+{
+	scale (100,100,100) [0 1]
+	move (0,0,-140) [0 2500]
+	move (0,0,140) [3500 6000]
+	reset [7000]
+}
+
+
+; ============== portes au centre de la map ==============
+
+actionbrush 1
+{
+	scale (100,102,97) [0 1]
+	ActivationDist 45
+
+	ifAction ( PERSO )
+	{
+		PlaySound 20
+		move (0,90,0) [0 1000]
+		move (0,-90,0) [3000 4000]
+		reset [4100]
+	}
+}
+
+actionbrush 2
+{
+	scale (97,102,100) [0 1]
+	ActivationDist 45
+
+	ifAction ( PERSO )
+	{
+		PlaySound 20
+		move (0,90,0) [0 1000]
+		move (0,-90,0) [3000 4000]
+		reset [4100]
+	}
+}
+
+actionbrush 3
+{
+	scale (97,102,100) [0 1]
+	ActivationDist 45
+
+	ifAction ( PERSO )
+	{
+		PlaySound 20
+		move (0,90,0) [0 1000]
+		move (0,-90,0) [3000 4000]
+		reset [4100]
+	}
+}
+
+
+; ============== Borne d'informations ==============
+
+actionbrush 18
+{
+	ActivationDist 100
+
+	ifAction ( PERSO )
+	{
+		scale (100,100,100) [0 1]
+		DispText " "
+                DispText "Once you have picked up the red flask"
+		DispText "hit the action key to perform a power jump"
+	}
+}
+
+actionbrush 4
+{
+	ActivationDist 150
+
+	ifAction ( PERSO )
+	{
+		scale (100,100,100) [0 1]
+		DispText " "
+                DispText "Several letters have been hidden around the level."
+                DispText "Pick up the appropriate letters to spell out HALLOWEEN"
+		DispText "in order to complete your first objective"
+	}
+}
+
+actionbrush 5
+{
+	ActivationDist 100
+
+	ifAction ( PERSO )
+	{
+		scale (100,100,100) [0 1]
+		DispText " "
+                DispText "Go left to test yourself at some tricky jumping."
+                DispText "Go right to enter the crouch/jump room"
+	}
+}
+
+actionbrush 6
+{
+	ActivationDist 100
+
+	ifAction ( PERSO )
+	{
+		scale (100,100,100) [0 1]
+		DispText " "
+                DispText "Shoot the center of the targets"
+                DispText "To finish the level"
+	}
+}
+
+actionbrush 7
+{
+	ActivationDist 100
+
+	ifAction ( PERSO )
+	{
+		scale (100,100,100) [0 1]
+		DispText " "
+                DispText "Now, crouch under this wall"
+	}
+}
+
+actionbrush 16
+{
+	ActivationDist 100
+
+	ifAction ( PERSO )
+	{
+		scale (100,100,100) [0 1]
+                DispText "Now, jump on this wall"
+	}
+}
+
+
+; ============== cibles + portes du stand de tir ==============
+
+actionbrush 8
+{
+	ifAction ( WAITACTION )
+	{
+		move (0,90,0) [2000 5000]	; La porte s'ouvre
+	}
+}
+
+actionbrush 10
+{
+	ifAction ( WAITACTION )
+	{
+		move (0,90,0) [2000 5000]	; La porte s'ouvre
+	}
+}
+
+actionbrush 11
+{
+	ifAction ( WAITACTION )
+	{
+		move (0,90,0) [2000 5000]	; La porte s'ouvre
+	}
+}
+
+actionbrush 12
+{
+	ifAction ( WAITACTION )
+	{
+		move (0,90,0) [2000 5000]	; La porte s'ouvre
+	}
+}
+
+
+actionbrush 9
+{
+	ActivationDist 10
+	scale (100,100,100) [0 1]
+
+
+	ifAction ( FLECHE )			; on attend qu'une fleche vienne frapper la cible
+	{
+		PlaySound 30
+		DispText "Good shot on 1st target!"
+		Launchactionbrush 8
+	}
+}
+
+actionbrush 13
+{
+	ActivationDist 10
+	scale (100,100,100) [0 1]
+
+
+	ifAction ( FLECHE )			; on attend qu'une fleche vienne frapper la cible
+	{
+		PlaySound 30
+		DispText "Good shot on 2nd target!"
+		Launchactionbrush 10
+	}
+}
+
+actionbrush 14
+{
+	ActivationDist 10
+	scale (100,100,100) [0 1]
+
+
+	ifAction ( FLECHE )			; on attend qu'une fleche vienne frapper la cible
+	{
+		PlaySound 30
+		DispText "Good shot on 3th target!"
+		Launchactionbrush 11
+	}
+}
+
+actionbrush 15
+{
+	ActivationDist 10
+	scale (100,100,100) [0 1]
+
+
+	ifAction ( FLECHE )			; on attend qu'une fleche vienne frapper la cible
+	{
+		PlaySound 30
+		DispText "Good shot on 4th target!"
+		Launchactionbrush 12
+	}
+}
+
+

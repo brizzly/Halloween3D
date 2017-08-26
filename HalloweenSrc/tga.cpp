@@ -224,7 +224,7 @@ int tga_Load(char *name, int id, int picmip, hBool map_tex)
 	sprintf(fullname,"%s%s%s",SYSDIR,TEXDIR,name);
 
 #ifdef H_MAC
-		s = fopen(KMiscTools::makeFilePath(fullname), "r+bt");
+		s = fopen(KMiscTools::makeFilePath(fullname), "r+b"); // r+bt
 #else
 		s = fopen(fullname, "r+b"); // r+bt
 #endif

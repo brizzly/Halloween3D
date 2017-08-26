@@ -220,8 +220,11 @@ bool KMusic::playMusic(char * filename)
 {	
 	stopMusic();
 	
+	return false;
+	
 	CFURLRef theURL = CFURLCreateFromFileSystemRepresentation(kCFAllocatorDefault, (UInt8*)filename, strlen(filename), false);
 	
+	printf("KMusic play = %s\n", filename);
 	
 	XThrowIfError (AudioFileOpenURL (theURL, kAudioFileReadPermission, 0, &audioFile), "AudioFileOpenURL");
 	

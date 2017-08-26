@@ -1,0 +1,182 @@
+;=====================================
+;	H1m7 Map
+;	(C) 2002 Jadeware
+;	Script file - by N3wG
+;=====================================
+
+
+
+
+actionbrush 1						; cube central
+{
+	scale (100,102,90) [0 1]
+	ActivationDist 60
+
+
+
+	ifAction ( WAITACTION )
+	{
+		move (0,-120,0) [2000 7000]
+		move (0,120,0) [10000 14000]
+		reset [15000]
+	}
+}
+
+actionbrush 2					;interrupteur cube
+{
+	ActivationDist 40
+	scale (100,100,120) [0 1]
+	
+
+	ifAction ( PERSO )
+	{
+		DispText "Use Block"
+	}	
+
+	ifAction ( ACTIONKEY )
+	{ 
+		DispText "You found a secret"
+		Launchactionbrush 1
+		move (0,0,-5) [0 1000]
+		reset [2000]
+	
+	}	
+}
+
+actionbrush 7					;interrupteur tromblon
+{
+	ActivationDist 40
+	scale (100,100,120) [0 1]
+	move (-4,0,0) [0 100]
+
+	ifAction ( PERSO )
+	{
+		DispText "Use Block"
+	}
+
+	ifAction (ACTIONKEY )
+	{
+		DispText "You found a secret"
+		Launchactionbrush 6
+		
+		move (-4,0,0) [0 1000]
+		reset [2000]
+	
+	}
+}
+
+
+actionbrush 6					;cube tromblon 4
+{
+	
+	scale (100,100,90) [0 1]
+
+	ifAction ( WAITACTION )
+	{
+		move (0,50,0) [1000 5000]
+		move (0,130,0) [9000 13000]
+		move (0,-180,0) [20000 24000]
+		reset [27000]
+	}
+}
+
+actionbrush 8					;sol mobile piece finale
+{
+	ActivationDist 90
+	scale (100,90,100) [0 1]
+	
+	ifAction ( PERSO )
+	{
+		move (0,0,200) [1000 6000]
+		move (0,0,-200) [10000 15000]
+
+		reset [17000]
+	}
+}
+
+
+actionbrush 15				; porte salle haut
+{
+	ActivationDist 70
+	scale (90,100,100) [0 1]
+
+	ifAction ( PERSO )
+	{
+		PlaySound 20
+		move (0,60,0) [1000 3000]	
+		move (0,-60,0) [6000 8000]
+		reset [8000]
+		
+	}
+}
+
+
+
+actionbrush 16					;16 -> 17 = portes cachots
+{
+	ActivationDist 70
+	scale (90,100,100) [0 1]
+
+	ifAction ( PERSO )
+	{
+		PlaySound 20
+		move (0,60,0) [0 1000]	
+		move (0,-60,0) [3000 4000]
+		reset [4100]
+		
+	}
+}
+
+actionbrush 17
+{
+	ActivationDist 70
+	scale (90,100,100) [0 1]
+
+	ifAction ( PERSO )
+	{
+		PlaySound 20
+		move (0,60,0) [0 1000]	
+		move (0,-60,0) [3000 4000]
+		reset [4100]
+		
+	}
+}
+
+
+
+actionbrush 25				; porte finale
+{
+	ActivationDist 120
+
+	ifAction ( PERSO )
+	{
+		ActivationDist 120
+		PlaySound 41
+		DispText "Access Denied"
+	}		
+
+	ifAction ( WAITACTION )
+	{
+		ActivationDist 120
+		PlaySound 7
+		move (0,80,0) [1000 3000]
+	}
+}
+
+actionbrush 14				; interrupteur porte finale
+{	
+	ActivationDist 40
+
+	ifAction ( PERSO )
+	{
+		DispText "Use Block"
+	}	
+
+	ifAction ( ACTIONKEY )
+	{ 
+		DispText "You've opened Morbax's doorway"
+		Launchactionbrush 25
+		move (-5,0,0) [0 1000]	
+	}
+}
+	
