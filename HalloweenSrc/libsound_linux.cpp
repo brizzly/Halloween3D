@@ -161,7 +161,6 @@ hBool ds_LoadSounds()
 	ds_LoadWAVE(FolderPath,"sound9.wav",1,false);	// 84
 	
 
-	
 	ds_AdjustSoundVolumes();
 	ds_AdjustMusicVolumes();
 

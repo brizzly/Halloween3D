@@ -220,7 +220,7 @@ bool KMusic::playMusic(char * filename)
 {	
 	stopMusic();
 	
-	return false;
+	//return false;
 	
 	CFURLRef theURL = CFURLCreateFromFileSystemRepresentation(kCFAllocatorDefault, (UInt8*)filename, strlen(filename), false);
 	

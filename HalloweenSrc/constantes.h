@@ -79,24 +79,20 @@
 #define	STOP_DIST			50.0f
 #define	CATCHED_TIME		2000.0f
 
-#define	TRACK_PRES1			"pres_1.ogg"
-#define	TRACK_PRES2			"pres_2.ogg"
-#define	TRACK_PRES3			"pres_3.ogg"
-#define	TRACK_PRES4			"pres_4.ogg"
-#define	TRACK_0				"Halloween0.ogg"
-#define	TRACK_1				"Halloween1.ogg"
-#define	TRACK_2				"Halloween2.ogg"
-#define	TRACK_3				"Halloween3.ogg"
-#define	TRACK_4				"Halloween4.ogg"
-#define	TRACK_5				"Halloween5.ogg"
-#define	TRACK_6				"Halloween6.ogg"
-#define	TRACK_7				"Halloween7.ogg"
+#define	TRACK_PRES1			"pres_1.mp3"
+#define	TRACK_PRES2			"pres_2.mp3"
+#define	TRACK_PRES3			"pres_3.mp3"
+#define	TRACK_PRES4			"pres_4.mp3"
+#define	TRACK_0				"Halloween0.mp3"
+#define	TRACK_1				"Halloween1.mp3"
+#define	TRACK_2				"Halloween2.mp3"
+#define	TRACK_3				"Halloween3.mp3"
+#define	TRACK_4				"Halloween4.mp3"
+#define	TRACK_5				"Halloween5.mp3"
+#define	TRACK_6				"Halloween6.mp3"
+#define	TRACK_7				"Halloween7.mp3"
 
-#ifdef H_MAC
-#define	TRACK_PB			"partyboy.ogg"
-#else
 #define	TRACK_PB			"partyboy.mp3"
-#endif
 
 #define	VID_INTRO			"system/video/intro.avi"
 #define	VID_OUTRO			"system/video/outro.avi"

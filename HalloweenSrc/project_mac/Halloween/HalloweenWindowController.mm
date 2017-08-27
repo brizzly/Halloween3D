@@ -211,6 +211,12 @@
 }
 */
 
+- (void) mouseUp:(NSEvent *)theEvent
+{
+	NSLog(@"mouseUp");
+	KInput::setScreenReleased();
+}
+
 - (void) mouseDown:(NSEvent *)theEvent
 {
 	NSLog(@"mouseDown");

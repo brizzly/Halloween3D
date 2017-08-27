@@ -226,7 +226,6 @@ static CVReturn MyDisplayLinkCallback(CVDisplayLinkRef displayLink,
 		}
 	}
 	
-	
 //	NSLog(@"mouse mouseMoved %f %f", eyeCenter.x, eyeCenter.y);
 	
 	if(0/*isInFullScreenMode*/)
