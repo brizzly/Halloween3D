@@ -11,6 +11,11 @@ bool _ended = false;
 void initGame()
 {
 	printf("initGame\n");
+	
+	//CGAssociateMouseAndMouseCursorPosition(false);
+	//CGDisplayMoveCursorToPoint (kCGDirectMainDisplay, CGPointZero);
+
+	
 	MACStarter();
 	_init = true;
 }

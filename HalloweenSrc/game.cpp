@@ -1118,7 +1118,7 @@ hBool GameProcess()
 		break;
 
 		case PS_GAME:
-		IN_WarpMouse();
+		//IN_WarpMouse();
 		game_EngineProcess();
 		Story_Process();
 		//Story_Intro();

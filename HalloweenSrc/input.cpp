@@ -208,7 +208,7 @@ hBool IN_Init()
 	msoffsetY = 0;
 	//if(fullscreen.value == true)
 	IN_HideMouse();
-   	//IN_SetCursorPos(320, 240);
+   	IN_SetCursorPos(320, 240);
 	for(i=0 ; i<K_MAXKEYS ; i++)
 	{
 		KeysInput[i].key = 0;
@@ -247,7 +247,7 @@ void IN_SetCursorPos(int x, int y)
 
 void IN_HideMouse()
 {
-	return;
+	//return;
 	
 	
 	if(gIsServer && net_dedicated.value)
@@ -413,6 +413,7 @@ void IN_SetMouseButons(int bstate)
 
 void IN_WarpMouse()
 {
+	IN_SetCursorPos(320, 240);
 	return;
 	
 	// wrap mouse, sauf quand on joue pas, en mode fenetre
@@ -439,54 +440,49 @@ long IN_ReadMouse()
 	float 		msx = (float)(KInput::getMouseX());
 	float 		msy = (float)(KInput::getMouseY());
 	
-	
-	//printf("msx=%f ; msy=%f\n",msx,msy);
-	
 
-	if(ProgramState != PS_GAME)
+	if(0) //ProgramState != PS_GAME)
 	{
-		MouseX = msx;
-		MouseY = msy;
+		// windowed
+//		MouseX = msx;
+//		MouseY = msy;
 
-		if(MouseX > 640) 	MouseX = 640;
-		if(MouseX < 0) 		MouseX = 0;
-		if(MouseY > 480) 	MouseY = 480;
-		if(MouseY < 0) 		MouseY = 0;
+//		if(MouseX > 640) 	MouseX = 640;
+//		if(MouseX < 0) 		MouseX = 0;
+//		if(MouseY > 480) 	MouseY = 480;
+//		if(MouseY < 0) 		MouseY = 0;
 
 		msoffsetX = msx - (float)Last_MouseX;
 		msoffsetY = msy - (float)Last_MouseY;
 		Last_MouseX = (int)msx;
 		Last_MouseY = (int)msy;
 		
+		MouseX += 2.0f * msoffsetX;// * player_rvel.value;
+		MouseY -= 2.0f * msoffsetY;// * player_rvel.value;
+		
 		//printf("msoffsetX=%f ; msoffsetY=%f\n",msoffsetX,msoffsetY);
 	}
 	else
 	{
+		//m_ConsPrint("msx=%f ; msy=%f\n",msx,msy);
+
 		if(Last_MouseX == 666) Last_MouseX = msx;
 		if(Last_MouseY == 666) Last_MouseY = msy;
 		
 		msoffsetX = msx - Last_MouseX;
 		msoffsetY = msy - Last_MouseY;
 		
-		Last_MouseX = msx;
-		Last_MouseY = msy;
+		IN_SetCursorPos(320, 240);
 		
-		MouseX += 2.0f * msx;// * player_rvel.value;
-		MouseY += 2.0f * msy;// * player_rvel.value;
+		//Last_MouseX = 320;
+		//Last_MouseY = 240;
+		//IN_WarpMouse();
 		
+		MouseX += 2.0f * msoffsetX;// * player_rvel.value;
+		MouseY -= 2.0f * msoffsetY;// * player_rvel.value;
 		
-		//IN_SetCursorPos(320, 240);
-		
-		
-	//	float		midX = (float)(ScreenX[(int)videomode.value]/2);
-	//	float		midY = (float)(ScreenY[(int)videomode.value]/2);
+//		m_ConsPrint("msoffsetX=%f ; msoffsetY=%f\n",msx,msy);
 
-	//	msoffsetX = msx - midX;
-	//	msoffsetY = msy - midY;
-
-
-//		IN_SetCursorPos((int)midX, (int)midY);
-		
 	}
 	
 	/*

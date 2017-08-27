@@ -196,13 +196,23 @@ static CVReturn MyDisplayLinkCallback(CVDisplayLinkRef displayLink,
 - (void) mouseMoved:(NSEvent *)theEvent
 {
 	NSPoint eyeCenter;
-	if(0/*_fullscreen == YES*/)
+	
+	eyeCenter = [self convertPoint:[theEvent locationInWindow] fromView:nil];
+
+	NSRect mainDisplayRect = [[NSScreen mainScreen] frame];
+	
+	eyeCenter.y = mainDisplayRect.size.height - eyeCenter.y;
+	
+	
+#if 0
+	if(1/*_fullscreen == YES*/)
 	{
 		eyeCenter = [NSEvent mouseLocation];
 	}
 	else
 	{
 		eyeCenter = [self convertPoint:[theEvent locationInWindow] fromView:nil];
+		
 		//NSLog(@"mouseMoved bounds %f %f %f %f - %f %f", _hitRect.origin.x, _hitRect.origin.y, _hitRect.size.width, _hitRect.size.height, eyeCenter.x, eyeCenter.y);
 		if(eyeCenter.x < _hitRect.origin.x || eyeCenter.x > _hitRect.origin.x+_hitRect.size.width ||
 		   eyeCenter.y < _hitRect.origin.y || eyeCenter.y > _hitRect.origin.y+_hitRect.size.height)
@@ -210,10 +220,13 @@ static CVReturn MyDisplayLinkCallback(CVDisplayLinkRef displayLink,
 			return;
 		}
 	}
+#endif
 	
-//	NSLog(@"mouse mouseMoved %f %f", eyeCenter.x, eyeCenter.y);
 	
-	if(0/*isInFullScreenMode*/)
+	//NSLog(@"mouse mouseMoved %f %f", eyeCenter.x, eyeCenter.y);
+
+#if 0
+	if(1/*isInFullScreenMode*/)
 	{
 		NSRect mainDisplayRect = [[NSScreen mainScreen] frame];
 		int sw = KInput::getScreenWidth();
@@ -227,7 +240,8 @@ static CVReturn MyDisplayLinkCallback(CVDisplayLinkRef displayLink,
 	//KInput::setScreenMoving((int)eyeCenter.x, (int)eyeCenter.y);
 	
 //	NSLog(@"mouse mouseMoved %f %f", eyeCenter.x, eyeCenter.y);
-
+#endif
+	
 	KInput::setMousePos((float)(eyeCenter.x), (float)(eyeCenter.y));
 }
 
