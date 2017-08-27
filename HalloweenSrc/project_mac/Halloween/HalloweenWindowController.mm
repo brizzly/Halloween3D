@@ -24,6 +24,8 @@
 	
 	[self setWindow:_standardWindow];
 	
+	[self goFullscreen];
+	
 	//[self performSelector:@selector(goFullscreen) withObject:nil afterDelay:1];
 }
 
@@ -169,6 +171,7 @@
 	printf("keyDown: %c %d\n", c, (int)c);
 	switch (c)
 	{
+			/*
 			// Handle [ESC] key
 		case 27:
 			if(_fullscreenWindow != nil)
@@ -187,7 +190,7 @@
 				[self goWindow];
 			}
 			return;
-			
+			*/
 			
 		case NSUpArrowFunctionKey:
 			//NSLog(@"NSUpArrowFunctionKey");
@@ -217,9 +220,9 @@
 			KInput::setKeyPressed(K_VK_RETURN);
 			break;
 			
-	//	case 27:
-	//		KInput::setKeyPressed(K_VK_ESCAPE);
-	//		break;
+		case 27:
+			KInput::setKeyPressed(K_VK_ESCAPE);
+		break;
 			
 		case 32:
 			KInput::setKeyPressed(K_VK_SPACE);
