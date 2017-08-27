@@ -887,27 +887,19 @@ int gl_InitGL()
 #ifdef H_MAC
 	GlobalTextureBind = -1;
 	glClearColor(0,0,0,0);
-	glColor3f(WorldColorR,WorldColorG,WorldColorB);
+glColor3f(WorldColorR,WorldColorG,WorldColorB);
 	glClearDepth(1.0);
 	glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
-	glShadeModel(GL_FLAT);
+glShadeModel(GL_FLAT);
 	glBlendFunc(GL_SRC_ALPHA,GL_ONE_MINUS_SRC_ALPHA);
 	glEnable(GL_TEXTURE_2D);
 	glDisable(GL_DEPTH_TEST);
 	glDisable(GL_BLEND);
 	glClear(GL_DEPTH_BUFFER_BIT);
 	glClear(GL_COLOR_BUFFER_BIT);
-	gl_ChangeFOV(fov.value);
+gl_ChangeFOV(fov.value);
 	gMultiTexturing = gl_initMultitexture();
 #else
-	gl_vendor = (const char *) glGetString (GL_VENDOR);
-	m_ConsPrint("GL_VENDOR: %s\n", gl_vendor);
-	gl_renderer = (const char *) glGetString (GL_RENDERER);
-	m_ConsPrint ("GL_RENDERER: %s\n", gl_renderer);
-	gl_version = (const char *) glGetString (GL_VERSION);
-	m_ConsPrint ("GL_VERSION: %s\n", gl_version);
-	gl_extensions = (const char *) glGetString (GL_EXTENSIONS);
-	m_ConsPrint ("GL_EXTENSIONS: %s\n", gl_extensions);
 	GlobalTextureBind = -1;
 	glClearColor(0,0,0,0);
 	glColor3f(WorldColorR,WorldColorG,WorldColorB);
@@ -923,6 +915,16 @@ int gl_InitGL()
 	gl_ChangeFOV(fov.value);
 	gMultiTexturing = gl_initMultitexture();
 #endif
+	
+	gl_vendor = (const char *) glGetString (GL_VENDOR);
+	m_ConsPrint("GL_VENDOR: %s\n", gl_vendor);
+	gl_renderer = (const char *) glGetString (GL_RENDERER);
+	m_ConsPrint ("GL_RENDERER: %s\n", gl_renderer);
+	gl_version = (const char *) glGetString (GL_VERSION);
+	m_ConsPrint ("GL_VERSION: %s\n", gl_version);
+	gl_extensions = (const char *) glGetString (GL_EXTENSIONS);
+	m_ConsPrint ("GL_EXTENSIONS: %s\n", gl_extensions);
+
 	return true;								
 }
 

@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Halloween.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>Halloween3D.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -12,6 +17,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>F92D9D2E1F52495500A37BB2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>F98EDB8B1F518C2D009A518F</key>
 		<dict>
 			<key>primary</key>

@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "iptk_osx/Sources/KMusic.mm"
-            timestampString = "525469706.629306"
+            filePath = "Halloween/GLEssentialsWindowController.m"
+            timestampString = "525486684.786227"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "221"
-            endingLineNumber = "221"
-            landmarkName = "KMusic::playMusic(char * filename)"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "-initWithWindow:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,13 +25,29 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "../tga.cpp"
-            timestampString = "525469714.616496"
+            filePath = "Halloween/GLEssentialsGLView.m"
+            timestampString = "525491773.476587"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "234"
-            endingLineNumber = "234"
-            landmarkName = "tga_Load(char *name, int id, int picmip, hBool map_tex)"
+            startingLineNumber = "239"
+            endingLineNumber = "239"
+            landmarkName = "-dealloc"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../opengl.cpp"
+            timestampString = "525491773.47683"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "928"
+            endingLineNumber = "928"
+            landmarkName = "gl_InitGL()"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>

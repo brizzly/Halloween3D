@@ -2,6 +2,10 @@
 #ifndef HALLOW_HAHA_INC
 #define HALLOW_HAHA_INC
 
+void MACStarter();
+void MACLoop();
+void MACend();
+int main_Alternate(int argc, char **argv);
 
 float 	swapendf32( float floatValue );
 

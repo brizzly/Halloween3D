@@ -1105,6 +1105,9 @@ hBool GameProcess()
 
 	switch(ProgramState)
 	{
+		case PS_DEBUG:
+		break;
+			
 		case PS_ENDSCORE:
 		game_EngineProcess();
 		m_ConsoleProcess();

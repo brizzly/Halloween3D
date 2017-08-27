@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "D97A8492B687A301D26AD871ED730CDC5EFD1151",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "D97A8492B687A301D26AD871ED730CDC5EFD1151" : 9223372036854775807,
+    "EB3AAE7B8BE99FEC8C091B396D9F2890354D95CB" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "D74B7D8D-64A1-4304-A8E9-96DCE66B331E",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "D97A8492B687A301D26AD871ED730CDC5EFD1151" : "3D\/",
+    "EB3AAE7B8BE99FEC8C091B396D9F2890354D95CB" : "jmapp\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Halloween3D",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "HalloweenSrc\/project_mac\/Halloween3D.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/brizzly\/Halloween3D",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D97A8492B687A301D26AD871ED730CDC5EFD1151"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/gitlab.com\/brizzlyy\/jmapp.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "EB3AAE7B8BE99FEC8C091B396D9F2890354D95CB"
+    }
+  ]
+}

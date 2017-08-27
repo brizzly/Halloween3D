@@ -536,8 +536,11 @@ bool sys_GameEvent()
 	
 	IN_ReadMouse();
 	IN_ReadKeyboard();
-	if(fenetre->isQuit() == true)
-		return false;
+	if(fenetre)
+	{
+		if(fenetre->isQuit() == true)
+			return false;
+	}
 	if(ProgramState == PS_QUIT)
 		return false;
 	return true;
@@ -680,10 +683,88 @@ void display()
 	
 }
 
-int main(int argc, char **argv)
+void MACStarter()
+{
+	//main_Alternate(0, NULL);
+	
+	m_ConsPrint("Start game Halloween()\n");
+	
+
+#ifdef H_LINUX
+	SDL_Init(SDL_INIT_TIMER);
+#endif
+	
+#ifdef H_MAC
+	KMiscTools::initMiscTools(GAMEVERSION_LITE);
+#endif
+	
+	memset(ErrorMessage,0,255);
+	
+	WorldColorR = 1;
+	WorldColorG = 1;
+	WorldColorB = 1;
+	
+	if(!m_InitConsole())
+	{
+		game_QuitMessage("m_InitConsole FAILED");
+		//goto ending;
+		return;
+	}
+	
+	key_CheckGame();
+	gIsMultiplayer = false;
+	sys_AntiPirate();
+	if(shareware)
+	{
+	}
+	else
+	{
+	}
+	
+	 if(!sys_setVID())
+	 {
+		 m_ConsPrint("Failed to set the video mode\n");
+		 //goto ending;
+		 return;
+	 }
+	
+	if(!im_Init())
+	{
+		LoadingError("im_Init FAILED!!");
+	}
+	
+//	ProgramState = PS_DEBUG;//PS_LOADING;
+	ProgramState = PS_LOADING;
+}
+
+void MACLoop()
+{
+	if(GameProcess())
+	{
+		MACend();
+		return;
+	}
+	if(sys_GameEvent() == false)
+	{
+		GameProcess();
+		MACend();
+		return;
+	}
+	gl_SwapBuffer();
+	ds_PlayBuffer();
+}
+
+void MACend()
+{
+	sys_end();
+}
+
+
+int main_Alternate(int argc, char **argv)
 {
 	m_ConsPrint("main()\n");
 	
+	/*
 #ifdef H_MAC
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_RGB | GLUT_SINGLE | GLUT_DEPTH);
@@ -694,7 +775,7 @@ int main(int argc, char **argv)
 	glutCreateWindow("GLUT Program");
 	
 	glutDisplayFunc(display);
-	
+	*/
 	
 	
 	#ifdef H_LINUX
@@ -726,13 +807,13 @@ int main(int argc, char **argv)
 	else
 	{
 	}
-
+/*
 	if(!sys_setVID())
 	{
 		m_ConsPrint("Failed to set the video mode\n");
 		goto ending;
 	}
-	
+*/
 	if(!im_Init())
 	{
 		LoadingError("im_Init FAILED!!");
@@ -756,9 +837,9 @@ int main(int argc, char **argv)
 //	delete fenetre;
 //	fenetre = NULL;
 
-	glutMainLoop();
+	//glutMainLoop();
 	
-	/*
+	
 	while(1)
 	{
 		if(GameProcess())
@@ -773,7 +854,7 @@ int main(int argc, char **argv)
 		gl_SwapBuffer();
 		ds_PlayBuffer();
 	}
-*/
+
 	
 ending:
 

@@ -224,16 +224,17 @@ int tga_Load(char *name, int id, int picmip, hBool map_tex)
 	sprintf(fullname,"%s%s%s",SYSDIR,TEXDIR,name);
 
 #ifdef H_MAC
-		s = fopen(KMiscTools::makeFilePath(fullname), "r+b"); // r+bt
+	char * fullpath = KMiscTools::makeFilePath(fullname);
+	s = fopen(fullpath, "r+b"); // r+bt
 #else
-		s = fopen(fullname, "r+b"); // r+bt
+	s = fopen(fullname, "r+b"); // r+bt
 #endif
 
-		if(!s)
-        {
-           	m_ConsPrint("TGA_FILE_NOT_FOUND( %s )\n", fullname);
-			return -1;
-        }
+	if(!s)
+	{
+		m_ConsPrint("TGA_FILE_NOT_FOUND( %s )\n", fullname);
+		return -1;
+	}
 
 	fread(&type, sizeof (char), 3, s);
 	fseek(s, 12, SEEK_SET);

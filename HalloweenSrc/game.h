@@ -19,6 +19,7 @@
 
 enum
 {
+	PS_DEBUG,
 	PS_LOADING,
 	PS_INTRO,
 	PS_LOGO,

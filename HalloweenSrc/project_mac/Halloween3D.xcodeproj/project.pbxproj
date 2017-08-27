@@ -7,158 +7,241 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F91973B91F51C430008553A0 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91973B81F51C430008553A0 /* GLKit.framework */; };
-		F91973BB1F51C795008553A0 /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91973BA1F51C794008553A0 /* ApplicationServices.framework */; };
-		F91973DE1F51CCE1008553A0 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91973DD1F51CCE1008553A0 /* Cocoa.framework */; };
-		F91973E01F51CCEB008553A0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91973DF1F51CCEB008553A0 /* QuartzCore.framework */; };
-		F91973E21F51CCF2008553A0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91973E11F51CCF2008553A0 /* Foundation.framework */; };
-		F91973E41F51CCFB008553A0 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91973E31F51CCFB008553A0 /* AudioToolbox.framework */; };
-		F91973E61F51CD00008553A0 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91973E51F51CD00008553A0 /* OpenAL.framework */; };
-		F91973E81F51CD05008553A0 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91973E71F51CD05008553A0 /* IOKit.framework */; };
-		F91973EA1F51CD15008553A0 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91973E91F51CD15008553A0 /* AppKit.framework */; };
-		F98EDB981F518C73009A518F /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F98EDB971F518C73009A518F /* OpenGL.framework */; };
-		F98EDB9A1F518C79009A518F /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F98EDB991F518C79009A518F /* GLUT.framework */; };
-		F98EDB9C1F518CC3009A518F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDB9B1F518CC3009A518F /* main.cpp */; };
-		F98EDC9F1F518DBF009A518F /* shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBA11F518DB1009A518F /* shader.cpp */; };
-		F98EDCA01F518DBF009A518F /* menu_init.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBA51F518DB1009A518F /* menu_init.cpp */; };
-		F98EDCA11F518DBF009A518F /* console.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBA61F518DB1009A518F /* console.cpp */; };
-		F98EDCA21F518DBF009A518F /* story.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBA81F518DB1009A518F /* story.cpp */; };
-		F98EDCA41F518DBF009A518F /* menu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBAA1F518DB1009A518F /* menu.cpp */; };
-		F98EDCA51F518DBF009A518F /* display.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBAC1F518DB2009A518F /* display.cpp */; };
-		F98EDCA61F518DBF009A518F /* monster.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBAD1F518DB2009A518F /* monster.cpp */; };
-		F98EDCA71F518DBF009A518F /* bsptree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBAF1F518DB2009A518F /* bsptree.cpp */; };
-		F98EDCAA1F518DBF009A518F /* tga.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBB51F518DB2009A518F /* tga.cpp */; };
-		F98EDCAC1F518DBF009A518F /* script.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBB81F518DB3009A518F /* script.cpp */; };
-		F98EDCAD1F518DBF009A518F /* game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBBD1F518DB3009A518F /* game.cpp */; };
-		F98EDCAE1F518DBF009A518F /* objet_proc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBBE1F518DB3009A518F /* objet_proc.cpp */; };
-		F98EDCAF1F518DBF009A518F /* frustrum.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBC11F518DB4009A518F /* frustrum.cpp */; };
-		F98EDCB01F518DBF009A518F /* camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBC21F518DB4009A518F /* camera.cpp */; };
-		F98EDCB31F518DBF009A518F /* player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBC81F518DB5009A518F /* player.cpp */; };
-		F98EDCB41F518DBF009A518F /* jpeg.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBC91F518DB6009A518F /* jpeg.cpp */; };
-		F98EDCB61F518DBF009A518F /* textdraw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBCF1F518DB6009A518F /* textdraw.cpp */; };
-		F98EDCB91F518DBF009A518F /* sorting.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBD61F518DB7009A518F /* sorting.cpp */; };
-		F98EDCBA1F518DBF009A518F /* filesys.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBD71F518DB8009A518F /* filesys.cpp */; };
-		F98EDCBB1F518DBF009A518F /* image.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBD81F518DB8009A518F /* image.cpp */; };
-		F98EDCBC1F518DBF009A518F /* objet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBD91F518DB8009A518F /* objet.cpp */; };
-		F98EDCBD1F518DBF009A518F /* bspfile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBDB1F518DB8009A518F /* bspfile.cpp */; };
-		F98EDCBE1F518DBF009A518F /* gameover.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBE01F518DB9009A518F /* gameover.cpp */; };
-		F98EDCBF1F518DBF009A518F /* maths.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBE31F518DB9009A518F /* maths.cpp */; };
-		F98EDCC01F518DBF009A518F /* alloween.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBE61F518DBA009A518F /* alloween.cpp */; };
-		F98EDCC11F518DBF009A518F /* mskmodel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBE91F518DBA009A518F /* mskmodel.cpp */; };
-		F98EDCC21F518DBF009A518F /* timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBEB1F518DBA009A518F /* timer.cpp */; };
-		F98EDCC31F518DBF009A518F /* physic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBEC1F518DBB009A518F /* physic.cpp */; };
-		F98EDCC41F518DBF009A518F /* ellipsoide.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBED1F518DBB009A518F /* ellipsoide.cpp */; };
-		F98EDCC51F518DBF009A518F /* menu_sel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBEF1F518DBB009A518F /* menu_sel.cpp */; };
-		F98EDCC61F518DBF009A518F /* enveffect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBF01F518DBB009A518F /* enveffect.cpp */; };
-		F98EDCC81F518DBF009A518F /* opengl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBF41F518DBC009A518F /* opengl.cpp */; };
-		F98EDCC91F518DBF009A518F /* collision.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBF51F518DBC009A518F /* collision.cpp */; };
-		F98EDCCC1F518DBF009A518F /* input.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBFF1F518DBD009A518F /* input.cpp */; };
-		F98EDCCD1F518DBF009A518F /* interface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDC001F518DBD009A518F /* interface.cpp */; };
-		F98EDCCE1F518DBF009A518F /* demo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDC9B1F518DBF009A518F /* demo.cpp */; };
-		F98EDCD11F518DBF009A518F /* liste.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDC9E1F518DBF009A518F /* liste.cpp */; };
-		F98EDCF41F518F16009A518F /* halloween_linux.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDCF21F518F15009A518F /* halloween_linux.cpp */; };
-		F98EDCF91F518F43009A518F /* loadjpeg_linux.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDCF71F518F43009A518F /* loadjpeg_linux.cpp */; };
-		F98EDCFA1F518F43009A518F /* libsound_linux.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDCF81F518F43009A518F /* libsound_linux.cpp */; };
-		F98EDCFD1F518F4E009A518F /* net_temp_linux.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDCFC1F518F4D009A518F /* net_temp_linux.cpp */; };
-		F99008231F51CEB8007F7D1B /* GLTextureHelper.h in Sources */ = {isa = PBXBuildFile; fileRef = F99008041F51CE7D007F7D1B /* GLTextureHelper.h */; };
-		F99008241F51CEB8007F7D1B /* KBatch.h in Sources */ = {isa = PBXBuildFile; fileRef = F99008051F51CE7D007F7D1B /* KBatch.h */; };
-		F99008251F51CEB8007F7D1B /* KGraphic.h in Sources */ = {isa = PBXBuildFile; fileRef = F99008061F51CE7D007F7D1B /* KGraphic.h */; };
-		F99008261F51CEB8007F7D1B /* KGraphicGL.h in Sources */ = {isa = PBXBuildFile; fileRef = F99008071F51CE7D007F7D1B /* KGraphicGL.h */; };
-		F99008271F51CEB8007F7D1B /* KGraphicGLLandscape.h in Sources */ = {isa = PBXBuildFile; fileRef = F99008081F51CE7D007F7D1B /* KGraphicGLLandscape.h */; };
-		F99008281F51CEB8007F7D1B /* KInput.h in Sources */ = {isa = PBXBuildFile; fileRef = F99008091F51CE7D007F7D1B /* KInput.h */; };
-		F99008291F51CEB8007F7D1B /* KJoypad.h in Sources */ = {isa = PBXBuildFile; fileRef = F990080A1F51CE7D007F7D1B /* KJoypad.h */; };
-		F990082A1F51CEB8007F7D1B /* KLogFile.h in Sources */ = {isa = PBXBuildFile; fileRef = F990080B1F51CE7D007F7D1B /* KLogFile.h */; };
-		F990082B1F51CEB8007F7D1B /* KMiscTools.h in Sources */ = {isa = PBXBuildFile; fileRef = F990080C1F51CE7D007F7D1B /* KMiscTools.h */; };
-		F990082C1F51CEB8007F7D1B /* KMusic.h in Sources */ = {isa = PBXBuildFile; fileRef = F990080D1F51CE7D007F7D1B /* KMusic.h */; };
-		F990082D1F51CEB8007F7D1B /* KPTK.h in Sources */ = {isa = PBXBuildFile; fileRef = F990080E1F51CE7D007F7D1B /* KPTK.h */; };
-		F990082E1F51CEB8007F7D1B /* KSound.h in Sources */ = {isa = PBXBuildFile; fileRef = F990080F1F51CE7D007F7D1B /* KSound.h */; };
-		F990082F1F51CEB8007F7D1B /* KSpline.h in Sources */ = {isa = PBXBuildFile; fileRef = F99008101F51CE7D007F7D1B /* KSpline.h */; };
-		F99008301F51CEB8007F7D1B /* KWeb.h in Sources */ = {isa = PBXBuildFile; fileRef = F99008111F51CE7D007F7D1B /* KWeb.h */; };
-		F99008311F51CEB8007F7D1B /* KWindow.h in Sources */ = {isa = PBXBuildFile; fileRef = F99008121F51CE7D007F7D1B /* KWindow.h */; };
-		F99008321F51CEB8007F7D1B /* GLTextureHelper.mm in Sources */ = {isa = PBXBuildFile; fileRef = F99008141F51CE7D007F7D1B /* GLTextureHelper.mm */; };
-		F99008331F51CEB8007F7D1B /* KBatchGL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F99008151F51CE7D007F7D1B /* KBatchGL.cpp */; };
-		F99008341F51CEB8007F7D1B /* KGraphicGL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F99008161F51CE7D007F7D1B /* KGraphicGL.cpp */; };
-		F99008351F51CEB8007F7D1B /* KGraphicGLLandscape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F99008171F51CE7D007F7D1B /* KGraphicGLLandscape.cpp */; };
-		F99008361F51CEB8007F7D1B /* KInput.mm in Sources */ = {isa = PBXBuildFile; fileRef = F99008181F51CE7D007F7D1B /* KInput.mm */; };
-		F99008371F51CEB8007F7D1B /* KJoypad.mm in Sources */ = {isa = PBXBuildFile; fileRef = F99008191F51CE7D007F7D1B /* KJoypad.mm */; };
-		F99008381F51CEB8007F7D1B /* KLogFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F990081A1F51CE7D007F7D1B /* KLogFile.cpp */; };
-		F99008391F51CEB8007F7D1B /* KMiscTools.mm in Sources */ = {isa = PBXBuildFile; fileRef = F990081B1F51CE7D007F7D1B /* KMiscTools.mm */; };
-		F990083A1F51CEB8007F7D1B /* KMusic.mm in Sources */ = {isa = PBXBuildFile; fileRef = F990081C1F51CE7D007F7D1B /* KMusic.mm */; };
-		F990083B1F51CEB8007F7D1B /* KPTK.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F990081D1F51CE7D007F7D1B /* KPTK.cpp */; };
-		F990083C1F51CEB8007F7D1B /* KSound.mm in Sources */ = {isa = PBXBuildFile; fileRef = F990081E1F51CE7D007F7D1B /* KSound.mm */; };
-		F990083D1F51CEB8007F7D1B /* KSpline.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F990081F1F51CE7D007F7D1B /* KSpline.cpp */; };
-		F990083E1F51CEB8007F7D1B /* KWeb.mm in Sources */ = {isa = PBXBuildFile; fileRef = F99008201F51CE7D007F7D1B /* KWeb.mm */; };
-		F990083F1F51CEB8007F7D1B /* KWindow.mm in Sources */ = {isa = PBXBuildFile; fileRef = F99008211F51CE7D007F7D1B /* KWindow.mm */; };
-		F99009881F51D6A0007F7D1B /* AUOutputBL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F99009131F51D5B9007F7D1B /* AUOutputBL.cpp */; };
-		F99009891F51D6A0007F7D1B /* AUOutputBL.h in Sources */ = {isa = PBXBuildFile; fileRef = F99009141F51D5B9007F7D1B /* AUOutputBL.h */; };
-		F990098A1F51D6A0007F7D1B /* CAStreamBasicDescription.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F99009781F51D5B9007F7D1B /* CAStreamBasicDescription.cpp */; };
-		F990098B1F51D6A0007F7D1B /* CAStreamBasicDescription.h in Sources */ = {isa = PBXBuildFile; fileRef = F99009791F51D5B9007F7D1B /* CAStreamBasicDescription.h */; };
-		F990098C1F51D6A0007F7D1B /* CAAudioChannelLayout.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F990091B1F51D5B9007F7D1B /* CAAudioChannelLayout.cpp */; };
-		F990098D1F51D6A0007F7D1B /* CAAudioChannelLayout.h in Sources */ = {isa = PBXBuildFile; fileRef = F990091C1F51D5B9007F7D1B /* CAAudioChannelLayout.h */; };
-		F990098E1F51D6A0007F7D1B /* CAAudioChannelLayoutObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F990091D1F51D5B9007F7D1B /* CAAudioChannelLayoutObject.cpp */; };
-		F990098F1F51D6A0007F7D1B /* CAAudioUnit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F99009221F51D5B9007F7D1B /* CAAudioUnit.cpp */; };
-		F99009901F51D6A0007F7D1B /* CAAudioUnit.h in Sources */ = {isa = PBXBuildFile; fileRef = F99009231F51D5B9007F7D1B /* CAAudioUnit.h */; };
-		F99009911F51D6A0007F7D1B /* CAComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F990094A1F51D5B9007F7D1B /* CAComponent.cpp */; };
-		F99009921F51D6A0007F7D1B /* CAComponent.h in Sources */ = {isa = PBXBuildFile; fileRef = F990094B1F51D5B9007F7D1B /* CAComponent.h */; };
-		F99009931F51D6A0007F7D1B /* CAComponentDescription.h in Sources */ = {isa = PBXBuildFile; fileRef = F990094D1F51D5B9007F7D1B /* CAComponentDescription.h */; };
-		F99009941F51D6A0007F7D1B /* CAXException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F99009841F51D5B9007F7D1B /* CAXException.cpp */; };
-		F99009951F51D6A0007F7D1B /* CAXException.h in Sources */ = {isa = PBXBuildFile; fileRef = F99009851F51D5B9007F7D1B /* CAXException.h */; };
-		F99009961F51D6C3007F7D1B /* DDHidAppleRemote.h in Sources */ = {isa = PBXBuildFile; fileRef = F99008801F51D4E5007F7D1B /* DDHidAppleRemote.h */; };
-		F99009971F51D6C3007F7D1B /* DDHidAppleRemote.m in Sources */ = {isa = PBXBuildFile; fileRef = F99008811F51D4E5007F7D1B /* DDHidAppleRemote.m */; };
-		F99009981F51D6C3007F7D1B /* DDHidDevice.h in Sources */ = {isa = PBXBuildFile; fileRef = F99008821F51D4E5007F7D1B /* DDHidDevice.h */; };
-		F99009991F51D6C3007F7D1B /* DDHidDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = F99008831F51D4E5007F7D1B /* DDHidDevice.m */; };
-		F990099A1F51D6C3007F7D1B /* DDHidElement.h in Sources */ = {isa = PBXBuildFile; fileRef = F99008841F51D4E5007F7D1B /* DDHidElement.h */; };
-		F990099B1F51D6C3007F7D1B /* DDHidElement.m in Sources */ = {isa = PBXBuildFile; fileRef = F99008851F51D4E5007F7D1B /* DDHidElement.m */; };
-		F990099C1F51D6C3007F7D1B /* DDHidEvent.h in Sources */ = {isa = PBXBuildFile; fileRef = F99008861F51D4E5007F7D1B /* DDHidEvent.h */; };
-		F990099D1F51D6C3007F7D1B /* DDHidEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = F99008871F51D4E5007F7D1B /* DDHidEvent.m */; };
-		F990099E1F51D6C3007F7D1B /* DDHidJoystick.h in Sources */ = {isa = PBXBuildFile; fileRef = F99008881F51D4E5007F7D1B /* DDHidJoystick.h */; };
-		F990099F1F51D6C3007F7D1B /* DDHidJoystick.m in Sources */ = {isa = PBXBuildFile; fileRef = F99008891F51D4E5007F7D1B /* DDHidJoystick.m */; };
-		F99009A01F51D6C3007F7D1B /* DDHidKeyboard.h in Sources */ = {isa = PBXBuildFile; fileRef = F990088A1F51D4E5007F7D1B /* DDHidKeyboard.h */; };
-		F99009A11F51D6C3007F7D1B /* DDHidKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = F990088B1F51D4E5007F7D1B /* DDHidKeyboard.m */; };
-		F99009A21F51D6C3007F7D1B /* DDHidKeyboardBarcodeScanner.h in Sources */ = {isa = PBXBuildFile; fileRef = F990088C1F51D4E5007F7D1B /* DDHidKeyboardBarcodeScanner.h */; };
-		F99009A31F51D6C3007F7D1B /* DDHidKeyboardBarcodeScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = F990088D1F51D4E5007F7D1B /* DDHidKeyboardBarcodeScanner.m */; };
-		F99009A41F51D6C3007F7D1B /* DDHidLib.h in Sources */ = {isa = PBXBuildFile; fileRef = F990088E1F51D4E5007F7D1B /* DDHidLib.h */; };
-		F99009A51F51D6C3007F7D1B /* DDHidMouse.h in Sources */ = {isa = PBXBuildFile; fileRef = F990088F1F51D4E5007F7D1B /* DDHidMouse.h */; };
-		F99009A61F51D6C3007F7D1B /* DDHidMouse.m in Sources */ = {isa = PBXBuildFile; fileRef = F99008901F51D4E5007F7D1B /* DDHidMouse.m */; };
-		F99009A71F51D6C3007F7D1B /* DDHidQueue.h in Sources */ = {isa = PBXBuildFile; fileRef = F99008911F51D4E5007F7D1B /* DDHidQueue.h */; };
-		F99009A81F51D6C3007F7D1B /* DDHidQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = F99008921F51D4E5007F7D1B /* DDHidQueue.m */; };
-		F99009A91F51D6C3007F7D1B /* DDHidStandardUsages.plist in Sources */ = {isa = PBXBuildFile; fileRef = F99008931F51D4E5007F7D1B /* DDHidStandardUsages.plist */; };
-		F99009AA1F51D6C3007F7D1B /* DDHidUsage.h in Sources */ = {isa = PBXBuildFile; fileRef = F99008941F51D4E5007F7D1B /* DDHidUsage.h */; };
-		F99009AB1F51D6C3007F7D1B /* DDHidUsage.m in Sources */ = {isa = PBXBuildFile; fileRef = F99008951F51D4E5007F7D1B /* DDHidUsage.m */; };
-		F99009AC1F51D6C3007F7D1B /* DDHidUsageTables.h in Sources */ = {isa = PBXBuildFile; fileRef = F99008961F51D4E5007F7D1B /* DDHidUsageTables.h */; };
-		F99009AD1F51D6C3007F7D1B /* DDHidUsageTables.m in Sources */ = {isa = PBXBuildFile; fileRef = F99008971F51D4E5007F7D1B /* DDHidUsageTables.m */; };
-		F99009AE1F51D6C3007F7D1B /* NSDictionary+DDHidExtras.h in Sources */ = {isa = PBXBuildFile; fileRef = F99008981F51D4E5007F7D1B /* NSDictionary+DDHidExtras.h */; };
-		F99009AF1F51D6C3007F7D1B /* NSDictionary+DDHidExtras.m in Sources */ = {isa = PBXBuildFile; fileRef = F99008991F51D4E5007F7D1B /* NSDictionary+DDHidExtras.m */; };
-		F99009B01F51D6C3007F7D1B /* NSXReturnThrowError.h in Sources */ = {isa = PBXBuildFile; fileRef = F990089B1F51D4E5007F7D1B /* NSXReturnThrowError.h */; };
-		F99009B11F51D6C3007F7D1B /* NSXReturnThrowError.m in Sources */ = {isa = PBXBuildFile; fileRef = F990089C1F51D4E5007F7D1B /* NSXReturnThrowError.m */; };
-		F99009B31F51D6FA007F7D1B /* CAComponentDescription.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F99009B21F51D6FA007F7D1B /* CAComponentDescription.cpp */; };
+		F92D9D331F52495500A37BB2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F92D9D321F52495500A37BB2 /* AppDelegate.m */; };
+		F92D9D361F52495500A37BB2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F92D9D351F52495500A37BB2 /* main.m */; };
+		F92D9D441F52496900A37BB2 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F92D9D431F52496900A37BB2 /* OpenGL.framework */; };
+		F92D9D461F52496E00A37BB2 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F92D9D451F52496E00A37BB2 /* GLKit.framework */; };
+		F92D9D481F52497300A37BB2 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F92D9D471F52497300A37BB2 /* GLUT.framework */; };
+		F92D9D4A1F52497B00A37BB2 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F92D9D491F52497B00A37BB2 /* CoreAudio.framework */; };
+		F92D9D531F524B0300A37BB2 /* GLEssentialsFullscreenWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = F92D9D4C1F524B0300A37BB2 /* GLEssentialsFullscreenWindow.m */; };
+		F92D9D541F524B0300A37BB2 /* GLEssentialsGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = F92D9D4E1F524B0300A37BB2 /* GLEssentialsGLView.m */; };
+		F92D9D551F524B0300A37BB2 /* GLEssentialsWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = F92D9D501F524B0300A37BB2 /* GLEssentialsWindowController.m */; };
+		F92D9D561F524B0300A37BB2 /* OpenGLRenderer.mm in Sources */ = {isa = PBXBuildFile; fileRef = F92D9D521F524B0300A37BB2 /* OpenGLRenderer.mm */; };
+		F92D9D581F524B3400A37BB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F92D9D571F524B3400A37BB2 /* Main.storyboard */; };
+		F92D9D651F524B9400A37BB2 /* imageUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = F92D9D5C1F524B9400A37BB2 /* imageUtil.m */; };
+		F92D9D661F524B9400A37BB2 /* matrixUtil.c in Sources */ = {isa = PBXBuildFile; fileRef = F92D9D5D1F524B9400A37BB2 /* matrixUtil.c */; };
+		F92D9D671F524B9400A37BB2 /* modelUtil.c in Sources */ = {isa = PBXBuildFile; fileRef = F92D9D5F1F524B9400A37BB2 /* modelUtil.c */; };
+		F92D9D681F524B9400A37BB2 /* sourceUtil.c in Sources */ = {isa = PBXBuildFile; fileRef = F92D9D611F524B9400A37BB2 /* sourceUtil.c */; };
+		F92D9D691F524B9400A37BB2 /* vectorUtil.c in Sources */ = {isa = PBXBuildFile; fileRef = F92D9D631F524B9400A37BB2 /* vectorUtil.c */; };
+		F92D9D6B1F524CFA00A37BB2 /* halloween_icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = F92D9D6A1F524CFA00A37BB2 /* halloween_icon.icns */; };
+		F92D9D6E1F524DF900A37BB2 /* halloweenbridge.mm in Sources */ = {isa = PBXBuildFile; fileRef = F92D9D6D1F524DF900A37BB2 /* halloweenbridge.mm */; };
+		F92D9D6F1F52542800A37BB2 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDB9B1F518CC3009A518F /* main.cpp */; };
+		F92D9D701F52542800A37BB2 /* constantes.h in Sources */ = {isa = PBXBuildFile; fileRef = F98EDCFE1F51B7B6009A518F /* constantes.h */; };
+		F92D9D711F52542800A37BB2 /* alloween.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBE61F518DBA009A518F /* alloween.cpp */; };
+		F92D9D721F52542800A37BB2 /* alloween.h in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBE71F518DBA009A518F /* alloween.h */; };
+		F92D9D731F52542800A37BB2 /* halloween_linux.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDCF21F518F15009A518F /* halloween_linux.cpp */; };
+		F92D9D741F52542800A37BB2 /* halloween_linux.h in Sources */ = {isa = PBXBuildFile; fileRef = F98EDCF31F518F15009A518F /* halloween_linux.h */; };
+		F92D9D751F52542800A37BB2 /* libsound_linux.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDCF81F518F43009A518F /* libsound_linux.cpp */; };
+		F92D9D761F52542800A37BB2 /* libsound_linux.h in Sources */ = {isa = PBXBuildFile; fileRef = F98EDCF51F518F42009A518F /* libsound_linux.h */; };
+		F92D9D771F52542800A37BB2 /* loadjpeg_linux.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDCF71F518F43009A518F /* loadjpeg_linux.cpp */; };
+		F92D9D781F52542800A37BB2 /* loadjpeg_linux.h in Sources */ = {isa = PBXBuildFile; fileRef = F98EDCF61F518F42009A518F /* loadjpeg_linux.h */; };
+		F92D9D791F52542800A37BB2 /* net_temp_linux.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDCFC1F518F4D009A518F /* net_temp_linux.cpp */; };
+		F92D9D7A1F52542800A37BB2 /* net_temp_linux.h in Sources */ = {isa = PBXBuildFile; fileRef = F98EDCFB1F518F4D009A518F /* net_temp_linux.h */; };
+		F92D9D7B1F52542800A37BB2 /* bspfile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBDB1F518DB8009A518F /* bspfile.cpp */; };
+		F92D9D7C1F52542800A37BB2 /* bspfile.h in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBD51F518DB7009A518F /* bspfile.h */; };
+		F92D9D7D1F52542800A37BB2 /* bsptree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBAF1F518DB2009A518F /* bsptree.cpp */; };
+		F92D9D7E1F52542800A37BB2 /* bsptree.h in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBB91F518DB3009A518F /* bsptree.h */; };
+		F92D9D7F1F52542800A37BB2 /* camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBC21F518DB4009A518F /* camera.cpp */; };
+		F92D9D801F52542800A37BB2 /* camera.h in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBFB1F518DBD009A518F /* camera.h */; };
+		F92D9D811F52542800A37BB2 /* collision.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBF51F518DBC009A518F /* collision.cpp */; };
+		F92D9D821F52542800A37BB2 /* collision.h in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBF61F518DBC009A518F /* collision.h */; };
+		F92D9D831F52542800A37BB2 /* console.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBA61F518DB1009A518F /* console.cpp */; };
+		F92D9D841F52542800A37BB2 /* console.h in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBC51F518DB5009A518F /* console.h */; };
+		F92D9D851F52542800A37BB2 /* demo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDC9B1F518DBF009A518F /* demo.cpp */; };
+		F92D9D861F52542800A37BB2 /* demo.h in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBFE1F518DBD009A518F /* demo.h */; };
+		F92D9D871F52542800A37BB2 /* dirlib.h in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBE81F518DBA009A518F /* dirlib.h */; };
+		F92D9D881F52542800A37BB2 /* display.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBAC1F518DB2009A518F /* display.cpp */; };
+		F92D9D891F52542800A37BB2 /* display.h in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBD41F518DB7009A518F /* display.h */; };
+		F92D9D8A1F52542800A37BB2 /* ellipsoide.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBED1F518DBB009A518F /* ellipsoide.cpp */; };
+		F92D9D8B1F52542800A37BB2 /* ellipsoide.h in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBBB1F518DB3009A518F /* ellipsoide.h */; };
+		F92D9D8C1F52542800A37BB2 /* enveffect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBF01F518DBB009A518F /* enveffect.cpp */; };
+		F92D9D8D1F52542800A37BB2 /* enveffect.h in Sources */ = {isa = PBXBuildFile; fileRef = F98EDC9A1F518DBF009A518F /* enveffect.h */; };
+		F92D9D8E1F52542800A37BB2 /* filesys.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBD71F518DB8009A518F /* filesys.cpp */; };
+		F92D9D8F1F52542800A37BB2 /* filesys.h in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBDD1F518DB8009A518F /* filesys.h */; };
+		F92D9D901F52542800A37BB2 /* frustrum.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBC11F518DB4009A518F /* frustrum.cpp */; };
+		F92D9D911F52542800A37BB2 /* frustrum.h in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBD31F518DB7009A518F /* frustrum.h */; };
+		F92D9D921F52542800A37BB2 /* game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBBD1F518DB3009A518F /* game.cpp */; };
+		F92D9D931F52542800A37BB2 /* game.h in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBEE1F518DBB009A518F /* game.h */; };
+		F92D9D941F52542800A37BB2 /* gameover.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBE01F518DB9009A518F /* gameover.cpp */; };
+		F92D9D951F52542800A37BB2 /* gameover.h in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBF91F518DBC009A518F /* gameover.h */; };
+		F92D9D961F52542800A37BB2 /* image.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBD81F518DB8009A518F /* image.cpp */; };
+		F92D9D971F52542800A37BB2 /* image.h in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBDF1F518DB9009A518F /* image.h */; };
+		F92D9D981F52542800A37BB2 /* input.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBFF1F518DBD009A518F /* input.cpp */; };
+		F92D9D991F52542800A37BB2 /* input.h in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBD11F518DB7009A518F /* input.h */; };
+		F92D9D9A1F52542800A37BB2 /* interface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDC001F518DBD009A518F /* interface.cpp */; };
+		F92D9D9B1F52542800A37BB2 /* interface.h in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBCB1F518DB6009A518F /* interface.h */; };
+		F92D9D9C1F52542800A37BB2 /* jpeg.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBC91F518DB6009A518F /* jpeg.cpp */; };
+		F92D9D9D1F52542800A37BB2 /* jpeg.h in Sources */ = {isa = PBXBuildFile; fileRef = F98EDC011F518DBE009A518F /* jpeg.h */; };
+		F92D9D9E1F52542800A37BB2 /* liste.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDC9E1F518DBF009A518F /* liste.cpp */; };
+		F92D9D9F1F52542800A37BB2 /* liste.h in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBF21F518DBB009A518F /* liste.h */; };
+		F92D9DA01F52542800A37BB2 /* maths.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBE31F518DB9009A518F /* maths.cpp */; };
+		F92D9DA11F52542800A37BB2 /* maths.h in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBBA1F518DB3009A518F /* maths.h */; };
+		F92D9DA21F52542800A37BB2 /* menu_init.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBA51F518DB1009A518F /* menu_init.cpp */; };
+		F92D9DA31F52542800A37BB2 /* menu_init.h in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBDC1F518DB8009A518F /* menu_init.h */; };
+		F92D9DA41F52542800A37BB2 /* menu_sel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBEF1F518DBB009A518F /* menu_sel.cpp */; };
+		F92D9DA51F52542800A37BB2 /* menu_sel.h in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBE11F518DB9009A518F /* menu_sel.h */; };
+		F92D9DA61F52542800A37BB2 /* menu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBAA1F518DB1009A518F /* menu.cpp */; };
+		F92D9DA71F52542800A37BB2 /* menu.h in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBA31F518DB1009A518F /* menu.h */; };
+		F92D9DA81F52542800A37BB2 /* monster.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBAD1F518DB2009A518F /* monster.cpp */; };
+		F92D9DA91F52542800A37BB2 /* monster.h in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBF31F518DBB009A518F /* monster.h */; };
+		F92D9DAA1F52542800A37BB2 /* mskmodel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBE91F518DBA009A518F /* mskmodel.cpp */; };
+		F92D9DAB1F52542800A37BB2 /* mskmodel.h in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBE51F518DBA009A518F /* mskmodel.h */; };
+		F92D9DAC1F52542800A37BB2 /* objet_proc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBBE1F518DB3009A518F /* objet_proc.cpp */; };
+		F92D9DAD1F52542800A37BB2 /* objet_proc.h in Sources */ = {isa = PBXBuildFile; fileRef = F98EDC761F518DBE009A518F /* objet_proc.h */; };
+		F92D9DAE1F52542800A37BB2 /* objet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBD91F518DB8009A518F /* objet.cpp */; };
+		F92D9DAF1F52542800A37BB2 /* objet.h in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBCA1F518DB6009A518F /* objet.h */; };
+		F92D9DB01F52542800A37BB2 /* opengl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBF41F518DBC009A518F /* opengl.cpp */; };
+		F92D9DB11F52542800A37BB2 /* opengl.h in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBC61F518DB5009A518F /* opengl.h */; };
+		F92D9DB21F52542800A37BB2 /* physic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBEC1F518DBB009A518F /* physic.cpp */; };
+		F92D9DB31F52542800A37BB2 /* physic.h in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBBF1F518DB4009A518F /* physic.h */; };
+		F92D9DB41F52542800A37BB2 /* player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBC81F518DB5009A518F /* player.cpp */; };
+		F92D9DB51F52542800A37BB2 /* player.h in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBDE1F518DB9009A518F /* player.h */; };
+		F92D9DB61F52542800A37BB2 /* resource.h in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBCC1F518DB6009A518F /* resource.h */; };
+		F92D9DB71F52542800A37BB2 /* script.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBB81F518DB3009A518F /* script.cpp */; };
+		F92D9DB81F52542800A37BB2 /* script.h in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBB01F518DB2009A518F /* script.h */; };
+		F92D9DB91F52542800A37BB2 /* shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBA11F518DB1009A518F /* shader.cpp */; };
+		F92D9DBA1F52542800A37BB2 /* shader.h in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBAE1F518DB2009A518F /* shader.h */; };
+		F92D9DBB1F52542800A37BB2 /* sorting.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBD61F518DB7009A518F /* sorting.cpp */; };
+		F92D9DBC1F52542800A37BB2 /* sorting.h in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBA71F518DB1009A518F /* sorting.h */; };
+		F92D9DBD1F52542800A37BB2 /* story.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBA81F518DB1009A518F /* story.cpp */; };
+		F92D9DBE1F52542800A37BB2 /* story.h in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBE41F518DB9009A518F /* story.h */; };
+		F92D9DBF1F52542800A37BB2 /* textdraw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBCF1F518DB6009A518F /* textdraw.cpp */; };
+		F92D9DC01F52542800A37BB2 /* textdraw.h in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBFD1F518DBD009A518F /* textdraw.h */; };
+		F92D9DC11F52542800A37BB2 /* tga.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBB51F518DB2009A518F /* tga.cpp */; };
+		F92D9DC21F52542800A37BB2 /* tga.h in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBAB1F518DB2009A518F /* tga.h */; };
+		F92D9DC31F52542800A37BB2 /* timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBEB1F518DBA009A518F /* timer.cpp */; };
+		F92D9DC41F52542800A37BB2 /* timer.h in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBB41F518DB2009A518F /* timer.h */; };
+		F92D9DC51F52544700A37BB2 /* GLTextureHelper.h in Sources */ = {isa = PBXBuildFile; fileRef = F99008041F51CE7D007F7D1B /* GLTextureHelper.h */; };
+		F92D9DC61F52544700A37BB2 /* KBatch.h in Sources */ = {isa = PBXBuildFile; fileRef = F99008051F51CE7D007F7D1B /* KBatch.h */; };
+		F92D9DC71F52544700A37BB2 /* KGraphic.h in Sources */ = {isa = PBXBuildFile; fileRef = F99008061F51CE7D007F7D1B /* KGraphic.h */; };
+		F92D9DC81F52544700A37BB2 /* KGraphicGL.h in Sources */ = {isa = PBXBuildFile; fileRef = F99008071F51CE7D007F7D1B /* KGraphicGL.h */; };
+		F92D9DC91F52544700A37BB2 /* KGraphicGLLandscape.h in Sources */ = {isa = PBXBuildFile; fileRef = F99008081F51CE7D007F7D1B /* KGraphicGLLandscape.h */; };
+		F92D9DCA1F52544700A37BB2 /* KInput.h in Sources */ = {isa = PBXBuildFile; fileRef = F99008091F51CE7D007F7D1B /* KInput.h */; };
+		F92D9DCB1F52544700A37BB2 /* KJoypad.h in Sources */ = {isa = PBXBuildFile; fileRef = F990080A1F51CE7D007F7D1B /* KJoypad.h */; };
+		F92D9DCC1F52544700A37BB2 /* KLogFile.h in Sources */ = {isa = PBXBuildFile; fileRef = F990080B1F51CE7D007F7D1B /* KLogFile.h */; };
+		F92D9DCD1F52544700A37BB2 /* KMiscTools.h in Sources */ = {isa = PBXBuildFile; fileRef = F990080C1F51CE7D007F7D1B /* KMiscTools.h */; };
+		F92D9DCE1F52544700A37BB2 /* KMusic.h in Sources */ = {isa = PBXBuildFile; fileRef = F990080D1F51CE7D007F7D1B /* KMusic.h */; };
+		F92D9DCF1F52544700A37BB2 /* KPTK.h in Sources */ = {isa = PBXBuildFile; fileRef = F990080E1F51CE7D007F7D1B /* KPTK.h */; };
+		F92D9DD01F52544700A37BB2 /* KSound.h in Sources */ = {isa = PBXBuildFile; fileRef = F990080F1F51CE7D007F7D1B /* KSound.h */; };
+		F92D9DD11F52544700A37BB2 /* KSpline.h in Sources */ = {isa = PBXBuildFile; fileRef = F99008101F51CE7D007F7D1B /* KSpline.h */; };
+		F92D9DD21F52544700A37BB2 /* KWeb.h in Sources */ = {isa = PBXBuildFile; fileRef = F99008111F51CE7D007F7D1B /* KWeb.h */; };
+		F92D9DD31F52544700A37BB2 /* KWindow.h in Sources */ = {isa = PBXBuildFile; fileRef = F99008121F51CE7D007F7D1B /* KWindow.h */; };
+		F92D9DD41F52544700A37BB2 /* GLTextureHelper.mm in Sources */ = {isa = PBXBuildFile; fileRef = F99008141F51CE7D007F7D1B /* GLTextureHelper.mm */; };
+		F92D9DD51F52544700A37BB2 /* KBatchGL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F99008151F51CE7D007F7D1B /* KBatchGL.cpp */; };
+		F92D9DD61F52544700A37BB2 /* KGraphicGL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F99008161F51CE7D007F7D1B /* KGraphicGL.cpp */; };
+		F92D9DD71F52544700A37BB2 /* KGraphicGLLandscape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F99008171F51CE7D007F7D1B /* KGraphicGLLandscape.cpp */; };
+		F92D9DD81F52544700A37BB2 /* KInput.mm in Sources */ = {isa = PBXBuildFile; fileRef = F99008181F51CE7D007F7D1B /* KInput.mm */; };
+		F92D9DD91F52544700A37BB2 /* KJoypad.mm in Sources */ = {isa = PBXBuildFile; fileRef = F99008191F51CE7D007F7D1B /* KJoypad.mm */; };
+		F92D9DDA1F52544700A37BB2 /* KLogFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F990081A1F51CE7D007F7D1B /* KLogFile.cpp */; };
+		F92D9DDB1F52544700A37BB2 /* KMiscTools.mm in Sources */ = {isa = PBXBuildFile; fileRef = F990081B1F51CE7D007F7D1B /* KMiscTools.mm */; };
+		F92D9DDC1F52544700A37BB2 /* KMusic.mm in Sources */ = {isa = PBXBuildFile; fileRef = F990081C1F51CE7D007F7D1B /* KMusic.mm */; };
+		F92D9DDD1F52544700A37BB2 /* KPTK.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F990081D1F51CE7D007F7D1B /* KPTK.cpp */; };
+		F92D9DDE1F52544700A37BB2 /* KSound.mm in Sources */ = {isa = PBXBuildFile; fileRef = F990081E1F51CE7D007F7D1B /* KSound.mm */; };
+		F92D9DDF1F52544700A37BB2 /* KSpline.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F990081F1F51CE7D007F7D1B /* KSpline.cpp */; };
+		F92D9DE01F52544700A37BB2 /* KWeb.mm in Sources */ = {isa = PBXBuildFile; fileRef = F99008201F51CE7D007F7D1B /* KWeb.mm */; };
+		F92D9DE11F52544700A37BB2 /* KWindow.mm in Sources */ = {isa = PBXBuildFile; fileRef = F99008211F51CE7D007F7D1B /* KWindow.mm */; };
+		F92D9DE21F52545B00A37BB2 /* AUOutputBL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F99009131F51D5B9007F7D1B /* AUOutputBL.cpp */; };
+		F92D9DE31F52545B00A37BB2 /* AUOutputBL.h in Sources */ = {isa = PBXBuildFile; fileRef = F99009141F51D5B9007F7D1B /* AUOutputBL.h */; };
+		F92D9DE41F52545B00A37BB2 /* CAStreamBasicDescription.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F99009781F51D5B9007F7D1B /* CAStreamBasicDescription.cpp */; };
+		F92D9DE51F52545B00A37BB2 /* CAStreamBasicDescription.h in Sources */ = {isa = PBXBuildFile; fileRef = F99009791F51D5B9007F7D1B /* CAStreamBasicDescription.h */; };
+		F92D9DE61F52545B00A37BB2 /* CAAudioChannelLayout.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F990091B1F51D5B9007F7D1B /* CAAudioChannelLayout.cpp */; };
+		F92D9DE71F52545B00A37BB2 /* CAAudioChannelLayout.h in Sources */ = {isa = PBXBuildFile; fileRef = F990091C1F51D5B9007F7D1B /* CAAudioChannelLayout.h */; };
+		F92D9DE81F52545B00A37BB2 /* CAAudioChannelLayoutObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F990091D1F51D5B9007F7D1B /* CAAudioChannelLayoutObject.cpp */; };
+		F92D9DE91F52545B00A37BB2 /* CAAudioUnit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F99009221F51D5B9007F7D1B /* CAAudioUnit.cpp */; };
+		F92D9DEA1F52545B00A37BB2 /* CAAudioUnit.h in Sources */ = {isa = PBXBuildFile; fileRef = F99009231F51D5B9007F7D1B /* CAAudioUnit.h */; };
+		F92D9DEB1F52545B00A37BB2 /* CAComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F990094A1F51D5B9007F7D1B /* CAComponent.cpp */; };
+		F92D9DEC1F52545B00A37BB2 /* CAComponent.h in Sources */ = {isa = PBXBuildFile; fileRef = F990094B1F51D5B9007F7D1B /* CAComponent.h */; };
+		F92D9DED1F52545B00A37BB2 /* CAComponentDescription.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F99009B21F51D6FA007F7D1B /* CAComponentDescription.cpp */; };
+		F92D9DEE1F52545B00A37BB2 /* CAComponentDescription.h in Sources */ = {isa = PBXBuildFile; fileRef = F990094D1F51D5B9007F7D1B /* CAComponentDescription.h */; };
+		F92D9DEF1F52545B00A37BB2 /* CAXException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F99009841F51D5B9007F7D1B /* CAXException.cpp */; };
+		F92D9DF01F52545B00A37BB2 /* CAXException.h in Sources */ = {isa = PBXBuildFile; fileRef = F99009851F51D5B9007F7D1B /* CAXException.h */; };
+		F92D9DF11F52545B00A37BB2 /* DDHidAppleRemote.h in Sources */ = {isa = PBXBuildFile; fileRef = F99008801F51D4E5007F7D1B /* DDHidAppleRemote.h */; };
+		F92D9DF21F52545B00A37BB2 /* DDHidAppleRemote.m in Sources */ = {isa = PBXBuildFile; fileRef = F99008811F51D4E5007F7D1B /* DDHidAppleRemote.m */; };
+		F92D9DF31F52545B00A37BB2 /* DDHidDevice.h in Sources */ = {isa = PBXBuildFile; fileRef = F99008821F51D4E5007F7D1B /* DDHidDevice.h */; };
+		F92D9DF41F52545B00A37BB2 /* DDHidDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = F99008831F51D4E5007F7D1B /* DDHidDevice.m */; };
+		F92D9DF51F52545B00A37BB2 /* DDHidElement.h in Sources */ = {isa = PBXBuildFile; fileRef = F99008841F51D4E5007F7D1B /* DDHidElement.h */; };
+		F92D9DF61F52545B00A37BB2 /* DDHidElement.m in Sources */ = {isa = PBXBuildFile; fileRef = F99008851F51D4E5007F7D1B /* DDHidElement.m */; };
+		F92D9DF71F52545B00A37BB2 /* DDHidEvent.h in Sources */ = {isa = PBXBuildFile; fileRef = F99008861F51D4E5007F7D1B /* DDHidEvent.h */; };
+		F92D9DF81F52545B00A37BB2 /* DDHidEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = F99008871F51D4E5007F7D1B /* DDHidEvent.m */; };
+		F92D9DF91F52545B00A37BB2 /* DDHidJoystick.h in Sources */ = {isa = PBXBuildFile; fileRef = F99008881F51D4E5007F7D1B /* DDHidJoystick.h */; };
+		F92D9DFA1F52545B00A37BB2 /* DDHidJoystick.m in Sources */ = {isa = PBXBuildFile; fileRef = F99008891F51D4E5007F7D1B /* DDHidJoystick.m */; };
+		F92D9DFB1F52545B00A37BB2 /* DDHidKeyboard.h in Sources */ = {isa = PBXBuildFile; fileRef = F990088A1F51D4E5007F7D1B /* DDHidKeyboard.h */; };
+		F92D9DFC1F52545B00A37BB2 /* DDHidKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = F990088B1F51D4E5007F7D1B /* DDHidKeyboard.m */; };
+		F92D9DFD1F52545B00A37BB2 /* DDHidKeyboardBarcodeScanner.h in Sources */ = {isa = PBXBuildFile; fileRef = F990088C1F51D4E5007F7D1B /* DDHidKeyboardBarcodeScanner.h */; };
+		F92D9DFE1F52545B00A37BB2 /* DDHidKeyboardBarcodeScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = F990088D1F51D4E5007F7D1B /* DDHidKeyboardBarcodeScanner.m */; };
+		F92D9DFF1F52545B00A37BB2 /* DDHidLib.h in Sources */ = {isa = PBXBuildFile; fileRef = F990088E1F51D4E5007F7D1B /* DDHidLib.h */; };
+		F92D9E001F52545B00A37BB2 /* DDHidMouse.h in Sources */ = {isa = PBXBuildFile; fileRef = F990088F1F51D4E5007F7D1B /* DDHidMouse.h */; };
+		F92D9E011F52545B00A37BB2 /* DDHidMouse.m in Sources */ = {isa = PBXBuildFile; fileRef = F99008901F51D4E5007F7D1B /* DDHidMouse.m */; };
+		F92D9E021F52545B00A37BB2 /* DDHidQueue.h in Sources */ = {isa = PBXBuildFile; fileRef = F99008911F51D4E5007F7D1B /* DDHidQueue.h */; };
+		F92D9E031F52545B00A37BB2 /* DDHidQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = F99008921F51D4E5007F7D1B /* DDHidQueue.m */; };
+		F92D9E041F52545B00A37BB2 /* DDHidStandardUsages.plist in Sources */ = {isa = PBXBuildFile; fileRef = F99008931F51D4E5007F7D1B /* DDHidStandardUsages.plist */; };
+		F92D9E051F52545B00A37BB2 /* DDHidUsage.h in Sources */ = {isa = PBXBuildFile; fileRef = F99008941F51D4E5007F7D1B /* DDHidUsage.h */; };
+		F92D9E061F52545B00A37BB2 /* DDHidUsage.m in Sources */ = {isa = PBXBuildFile; fileRef = F99008951F51D4E5007F7D1B /* DDHidUsage.m */; };
+		F92D9E071F52545B00A37BB2 /* DDHidUsageTables.h in Sources */ = {isa = PBXBuildFile; fileRef = F99008961F51D4E5007F7D1B /* DDHidUsageTables.h */; };
+		F92D9E081F52545B00A37BB2 /* DDHidUsageTables.m in Sources */ = {isa = PBXBuildFile; fileRef = F99008971F51D4E5007F7D1B /* DDHidUsageTables.m */; };
+		F92D9E091F52545B00A37BB2 /* NSDictionary+DDHidExtras.h in Sources */ = {isa = PBXBuildFile; fileRef = F99008981F51D4E5007F7D1B /* NSDictionary+DDHidExtras.h */; };
+		F92D9E0A1F52545B00A37BB2 /* NSDictionary+DDHidExtras.m in Sources */ = {isa = PBXBuildFile; fileRef = F99008991F51D4E5007F7D1B /* NSDictionary+DDHidExtras.m */; };
+		F92D9E0B1F52545B00A37BB2 /* NSXReturnThrowError.h in Sources */ = {isa = PBXBuildFile; fileRef = F990089B1F51D4E5007F7D1B /* NSXReturnThrowError.h */; };
+		F92D9E0C1F52545B00A37BB2 /* NSXReturnThrowError.m in Sources */ = {isa = PBXBuildFile; fileRef = F990089C1F51D4E5007F7D1B /* NSXReturnThrowError.m */; };
+		F92D9E0E1F52547500A37BB2 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F92D9E0D1F52547500A37BB2 /* OpenAL.framework */; };
+		F92D9E101F52548200A37BB2 /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F92D9E0F1F52548200A37BB2 /* AudioUnit.framework */; };
+		F92D9E151F5254BF00A37BB2 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F92D9E141F5254BF00A37BB2 /* AppKit.framework */; };
+		F92D9E171F5254C300A37BB2 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F92D9E161F5254C300A37BB2 /* IOKit.framework */; };
+		F92D9E191F5254D900A37BB2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F92D9E181F5254D900A37BB2 /* Foundation.framework */; };
+		F92D9E1D1F5254E600A37BB2 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F92D9E1C1F5254E600A37BB2 /* Cocoa.framework */; };
+		F92D9E1F1F5254EC00A37BB2 /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F92D9E1E1F5254EC00A37BB2 /* ApplicationServices.framework */; };
+		F92D9E201F52552B00A37BB2 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F92D9E111F52548D00A37BB2 /* AudioToolbox.framework */; };
+		F92D9E211F52554E00A37BB2 /* glUtil.h in Sources */ = {isa = PBXBuildFile; fileRef = F92D9D5A1F524B9400A37BB2 /* glUtil.h */; };
+		F92D9E221F52554E00A37BB2 /* imageUtil.h in Sources */ = {isa = PBXBuildFile; fileRef = F92D9D5B1F524B9400A37BB2 /* imageUtil.h */; };
+		F92D9E231F52554E00A37BB2 /* matrixUtil.h in Sources */ = {isa = PBXBuildFile; fileRef = F92D9D5E1F524B9400A37BB2 /* matrixUtil.h */; };
+		F92D9E241F52554E00A37BB2 /* modelUtil.h in Sources */ = {isa = PBXBuildFile; fileRef = F92D9D601F524B9400A37BB2 /* modelUtil.h */; };
+		F92D9E251F52554E00A37BB2 /* sourceUtil.h in Sources */ = {isa = PBXBuildFile; fileRef = F92D9D621F524B9400A37BB2 /* sourceUtil.h */; };
+		F92D9E261F52554E00A37BB2 /* vectorUtil.h in Sources */ = {isa = PBXBuildFile; fileRef = F92D9D641F524B9400A37BB2 /* vectorUtil.h */; };
+		F9A3EA751F5258D900315CAF /* system in Resources */ = {isa = PBXBuildFile; fileRef = F9A3EA741F5258CD00315CAF /* system */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		F98EDB8A1F518C2D009A518F /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 1;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		F91973B81F51C430008553A0 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
-		F91973BA1F51C794008553A0 /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = System/Library/Frameworks/ApplicationServices.framework; sourceTree = SDKROOT; };
-		F91973DD1F51CCE1008553A0 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
-		F91973DF1F51CCEB008553A0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		F91973E11F51CCF2008553A0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		F91973E31F51CCFB008553A0 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		F91973E51F51CD00008553A0 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
-		F91973E71F51CD05008553A0 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
-		F91973E91F51CD15008553A0 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
-		F98EDB8C1F518C2D009A518F /* Halloween3D */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Halloween3D; sourceTree = BUILT_PRODUCTS_DIR; };
-		F98EDB971F518C73009A518F /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
-		F98EDB991F518C79009A518F /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
+		F92D9D2F1F52495500A37BB2 /* Halloween.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Halloween.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F92D9D311F52495500A37BB2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F92D9D321F52495500A37BB2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F92D9D351F52495500A37BB2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F92D9D3F1F52495500A37BB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F92D9D431F52496900A37BB2 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/OpenGL.framework; sourceTree = DEVELOPER_DIR; };
+		F92D9D451F52496E00A37BB2 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/GLKit.framework; sourceTree = DEVELOPER_DIR; };
+		F92D9D471F52497300A37BB2 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/GLUT.framework; sourceTree = DEVELOPER_DIR; };
+		F92D9D491F52497B00A37BB2 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/CoreAudio.framework; sourceTree = DEVELOPER_DIR; };
+		F92D9D4B1F524B0300A37BB2 /* GLEssentialsFullscreenWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLEssentialsFullscreenWindow.h; sourceTree = "<group>"; };
+		F92D9D4C1F524B0300A37BB2 /* GLEssentialsFullscreenWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLEssentialsFullscreenWindow.m; sourceTree = "<group>"; };
+		F92D9D4D1F524B0300A37BB2 /* GLEssentialsGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLEssentialsGLView.h; sourceTree = "<group>"; };
+		F92D9D4E1F524B0300A37BB2 /* GLEssentialsGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLEssentialsGLView.m; sourceTree = "<group>"; };
+		F92D9D4F1F524B0300A37BB2 /* GLEssentialsWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLEssentialsWindowController.h; sourceTree = "<group>"; };
+		F92D9D501F524B0300A37BB2 /* GLEssentialsWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLEssentialsWindowController.m; sourceTree = "<group>"; };
+		F92D9D511F524B0300A37BB2 /* OpenGLRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenGLRenderer.h; sourceTree = "<group>"; };
+		F92D9D521F524B0300A37BB2 /* OpenGLRenderer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenGLRenderer.mm; sourceTree = "<group>"; };
+		F92D9D571F524B3400A37BB2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		F92D9D5A1F524B9400A37BB2 /* glUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glUtil.h; sourceTree = "<group>"; };
+		F92D9D5B1F524B9400A37BB2 /* imageUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imageUtil.h; sourceTree = "<group>"; };
+		F92D9D5C1F524B9400A37BB2 /* imageUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = imageUtil.m; sourceTree = "<group>"; };
+		F92D9D5D1F524B9400A37BB2 /* matrixUtil.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = matrixUtil.c; sourceTree = "<group>"; };
+		F92D9D5E1F524B9400A37BB2 /* matrixUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = matrixUtil.h; sourceTree = "<group>"; };
+		F92D9D5F1F524B9400A37BB2 /* modelUtil.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = modelUtil.c; sourceTree = "<group>"; };
+		F92D9D601F524B9400A37BB2 /* modelUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = modelUtil.h; sourceTree = "<group>"; };
+		F92D9D611F524B9400A37BB2 /* sourceUtil.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sourceUtil.c; sourceTree = "<group>"; };
+		F92D9D621F524B9400A37BB2 /* sourceUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sourceUtil.h; sourceTree = "<group>"; };
+		F92D9D631F524B9400A37BB2 /* vectorUtil.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vectorUtil.c; sourceTree = "<group>"; };
+		F92D9D641F524B9400A37BB2 /* vectorUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vectorUtil.h; sourceTree = "<group>"; };
+		F92D9D6A1F524CFA00A37BB2 /* halloween_icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = halloween_icon.icns; path = ../misc/halloween_icon.icns; sourceTree = "<group>"; };
+		F92D9D6C1F524DF900A37BB2 /* halloweenbridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = halloweenbridge.h; sourceTree = "<group>"; };
+		F92D9D6D1F524DF900A37BB2 /* halloweenbridge.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = halloweenbridge.mm; sourceTree = "<group>"; };
+		F92D9E0D1F52547500A37BB2 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/OpenAL.framework; sourceTree = DEVELOPER_DIR; };
+		F92D9E0F1F52548200A37BB2 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/AudioUnit.framework; sourceTree = DEVELOPER_DIR; };
+		F92D9E111F52548D00A37BB2 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/AudioToolbox.framework; sourceTree = DEVELOPER_DIR; };
+		F92D9E141F5254BF00A37BB2 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/AppKit.framework; sourceTree = DEVELOPER_DIR; };
+		F92D9E161F5254C300A37BB2 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/IOKit.framework; sourceTree = DEVELOPER_DIR; };
+		F92D9E181F5254D900A37BB2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		F92D9E1A1F5254DD00A37BB2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		F92D9E1C1F5254E600A37BB2 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		F92D9E1E1F5254EC00A37BB2 /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/ApplicationServices.framework; sourceTree = DEVELOPER_DIR; };
 		F98EDB9B1F518CC3009A518F /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = Halloween/main.cpp; sourceTree = SOURCE_ROOT; };
 		F98EDBA11F518DB1009A518F /* shader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = shader.cpp; path = ../../shader.cpp; sourceTree = "<group>"; };
 		F98EDBA31F518DB1009A518F /* menu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = menu.h; path = ../../menu.h; sourceTree = "<group>"; };
@@ -320,40 +403,95 @@
 		F99009B51F51D8D3007F7D1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		F99009B71F51DB82007F7D1B /* assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = assets.xcassets; sourceTree = "<group>"; };
 		F99009B81F51E53B007F7D1B /* halloween_icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = halloween_icon.icns; path = ../misc/halloween_icon.icns; sourceTree = "<group>"; };
+		F9A3EA741F5258CD00315CAF /* system */ = {isa = PBXFileReference; lastKnownFileType = folder; name = system; path = ../../../distrib/system; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		F98EDB891F518C2D009A518F /* Frameworks */ = {
+		F92D9D2C1F52495500A37BB2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F91973E41F51CCFB008553A0 /* AudioToolbox.framework in Frameworks */,
-				F91973EA1F51CD15008553A0 /* AppKit.framework in Frameworks */,
-				F91973E81F51CD05008553A0 /* IOKit.framework in Frameworks */,
-				F91973E61F51CD00008553A0 /* OpenAL.framework in Frameworks */,
-				F91973E21F51CCF2008553A0 /* Foundation.framework in Frameworks */,
-				F91973E01F51CCEB008553A0 /* QuartzCore.framework in Frameworks */,
-				F91973DE1F51CCE1008553A0 /* Cocoa.framework in Frameworks */,
-				F91973BB1F51C795008553A0 /* ApplicationServices.framework in Frameworks */,
-				F91973B91F51C430008553A0 /* GLKit.framework in Frameworks */,
-				F98EDB9A1F518C79009A518F /* GLUT.framework in Frameworks */,
-				F98EDB981F518C73009A518F /* OpenGL.framework in Frameworks */,
+				F92D9E201F52552B00A37BB2 /* AudioToolbox.framework in Frameworks */,
+				F92D9E1F1F5254EC00A37BB2 /* ApplicationServices.framework in Frameworks */,
+				F92D9E1D1F5254E600A37BB2 /* Cocoa.framework in Frameworks */,
+				F92D9E191F5254D900A37BB2 /* Foundation.framework in Frameworks */,
+				F92D9E171F5254C300A37BB2 /* IOKit.framework in Frameworks */,
+				F92D9E151F5254BF00A37BB2 /* AppKit.framework in Frameworks */,
+				F92D9E101F52548200A37BB2 /* AudioUnit.framework in Frameworks */,
+				F92D9E0E1F52547500A37BB2 /* OpenAL.framework in Frameworks */,
+				F92D9D4A1F52497B00A37BB2 /* CoreAudio.framework in Frameworks */,
+				F92D9D481F52497300A37BB2 /* GLUT.framework in Frameworks */,
+				F92D9D461F52496E00A37BB2 /* GLKit.framework in Frameworks */,
+				F92D9D441F52496900A37BB2 /* OpenGL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F92D9D301F52495500A37BB2 /* Halloween */ = {
+			isa = PBXGroup;
+			children = (
+				F92D9D311F52495500A37BB2 /* AppDelegate.h */,
+				F92D9D321F52495500A37BB2 /* AppDelegate.m */,
+				F92D9D4B1F524B0300A37BB2 /* GLEssentialsFullscreenWindow.h */,
+				F92D9D4C1F524B0300A37BB2 /* GLEssentialsFullscreenWindow.m */,
+				F92D9D4D1F524B0300A37BB2 /* GLEssentialsGLView.h */,
+				F92D9D4E1F524B0300A37BB2 /* GLEssentialsGLView.m */,
+				F92D9D4F1F524B0300A37BB2 /* GLEssentialsWindowController.h */,
+				F92D9D501F524B0300A37BB2 /* GLEssentialsWindowController.m */,
+				F92D9D511F524B0300A37BB2 /* OpenGLRenderer.h */,
+				F92D9D521F524B0300A37BB2 /* OpenGLRenderer.mm */,
+				F92D9D6C1F524DF900A37BB2 /* halloweenbridge.h */,
+				F92D9D6D1F524DF900A37BB2 /* halloweenbridge.mm */,
+				F92D9D341F52495500A37BB2 /* Supporting Files */,
+			);
+			path = Halloween;
+			sourceTree = "<group>";
+		};
+		F92D9D341F52495500A37BB2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F92D9D351F52495500A37BB2 /* main.m */,
+				F92D9D3F1F52495500A37BB2 /* Info.plist */,
+				F9A3EA741F5258CD00315CAF /* system */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F92D9D591F524B9400A37BB2 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				F92D9D5A1F524B9400A37BB2 /* glUtil.h */,
+				F92D9D5B1F524B9400A37BB2 /* imageUtil.h */,
+				F92D9D5C1F524B9400A37BB2 /* imageUtil.m */,
+				F92D9D5D1F524B9400A37BB2 /* matrixUtil.c */,
+				F92D9D5E1F524B9400A37BB2 /* matrixUtil.h */,
+				F92D9D5F1F524B9400A37BB2 /* modelUtil.c */,
+				F92D9D601F524B9400A37BB2 /* modelUtil.h */,
+				F92D9D611F524B9400A37BB2 /* sourceUtil.c */,
+				F92D9D621F524B9400A37BB2 /* sourceUtil.h */,
+				F92D9D631F524B9400A37BB2 /* vectorUtil.c */,
+				F92D9D641F524B9400A37BB2 /* vectorUtil.h */,
+			);
+			name = Utility;
+			path = ../Utility;
+			sourceTree = "<group>";
+		};
 		F98EDB831F518C2D009A518F = {
 			isa = PBXGroup;
 			children = (
+				F92D9D6A1F524CFA00A37BB2 /* halloween_icon.icns */,
+				F92D9D571F524B3400A37BB2 /* Main.storyboard */,
 				F99009B71F51DB82007F7D1B /* assets.xcassets */,
 				F99009B81F51E53B007F7D1B /* halloween_icon.icns */,
 				F99009B51F51D8D3007F7D1B /* Info.plist */,
+				F92D9D591F524B9400A37BB2 /* Utility */,
 				F99009121F51D5B9007F7D1B /* PublicUtility */,
 				F990087F1F51D4E5007F7D1B /* DDHidLib */,
 				F99008021F51CE7D007F7D1B /* iptk_osx */,
-				F98EDB9D1F518CE6009A518F /* Halloween */,
+				F98EDB9D1F518CE6009A518F /* sources */,
+				F92D9D301F52495500A37BB2 /* Halloween */,
 				F98EDB8D1F518C2D009A518F /* Products */,
 				F98EDB961F518C73009A518F /* Frameworks */,
 			);
@@ -362,7 +500,7 @@
 		F98EDB8D1F518C2D009A518F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F98EDB8C1F518C2D009A518F /* Halloween3D */,
+				F92D9D2F1F52495500A37BB2 /* Halloween.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -370,22 +508,24 @@
 		F98EDB961F518C73009A518F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F91973E91F51CD15008553A0 /* AppKit.framework */,
-				F91973E71F51CD05008553A0 /* IOKit.framework */,
-				F91973E51F51CD00008553A0 /* OpenAL.framework */,
-				F91973E31F51CCFB008553A0 /* AudioToolbox.framework */,
-				F91973E11F51CCF2008553A0 /* Foundation.framework */,
-				F91973DF1F51CCEB008553A0 /* QuartzCore.framework */,
-				F91973DD1F51CCE1008553A0 /* Cocoa.framework */,
-				F91973BA1F51C794008553A0 /* ApplicationServices.framework */,
-				F91973B81F51C430008553A0 /* GLKit.framework */,
-				F98EDB991F518C79009A518F /* GLUT.framework */,
-				F98EDB971F518C73009A518F /* OpenGL.framework */,
+				F92D9E1E1F5254EC00A37BB2 /* ApplicationServices.framework */,
+				F92D9E1C1F5254E600A37BB2 /* Cocoa.framework */,
+				F92D9E1A1F5254DD00A37BB2 /* QuartzCore.framework */,
+				F92D9E181F5254D900A37BB2 /* Foundation.framework */,
+				F92D9E161F5254C300A37BB2 /* IOKit.framework */,
+				F92D9E141F5254BF00A37BB2 /* AppKit.framework */,
+				F92D9E111F52548D00A37BB2 /* AudioToolbox.framework */,
+				F92D9E0F1F52548200A37BB2 /* AudioUnit.framework */,
+				F92D9E0D1F52547500A37BB2 /* OpenAL.framework */,
+				F92D9D491F52497B00A37BB2 /* CoreAudio.framework */,
+				F92D9D471F52497300A37BB2 /* GLUT.framework */,
+				F92D9D451F52496E00A37BB2 /* GLKit.framework */,
+				F92D9D431F52496900A37BB2 /* OpenGL.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		F98EDB9D1F518CE6009A518F /* Halloween */ = {
+		F98EDB9D1F518CE6009A518F /* sources */ = {
 			isa = PBXGroup;
 			children = (
 				F98EDB9B1F518CC3009A518F /* main.cpp */,
@@ -475,6 +615,7 @@
 				F98EDBEB1F518DBA009A518F /* timer.cpp */,
 				F98EDBB41F518DB2009A518F /* timer.h */,
 			);
+			name = sources;
 			path = Halloween;
 			sourceTree = "<group>";
 		};
@@ -599,22 +740,22 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F98EDB8B1F518C2D009A518F /* Halloween3D */ = {
+		F92D9D2E1F52495500A37BB2 /* Halloween */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F98EDB931F518C2D009A518F /* Build configuration list for PBXNativeTarget "Halloween3D" */;
+			buildConfigurationList = F92D9D401F52495500A37BB2 /* Build configuration list for PBXNativeTarget "Halloween" */;
 			buildPhases = (
-				F98EDB881F518C2D009A518F /* Sources */,
-				F98EDB891F518C2D009A518F /* Frameworks */,
-				F98EDB8A1F518C2D009A518F /* CopyFiles */,
+				F92D9D2B1F52495500A37BB2 /* Sources */,
+				F92D9D2C1F52495500A37BB2 /* Frameworks */,
+				F92D9D2D1F52495500A37BB2 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Halloween3D;
-			productName = Halloween3D;
-			productReference = F98EDB8C1F518C2D009A518F /* Halloween3D */;
-			productType = "com.apple.product-type.tool";
+			name = Halloween;
+			productName = Halloween;
+			productReference = F92D9D2F1F52495500A37BB2 /* Halloween.app */;
+			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
@@ -625,8 +766,8 @@
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = Jadegame;
 				TargetAttributes = {
-					F98EDB8B1F518C2D009A518F = {
-						CreatedOnToolsVersion = 9.0;
+					F92D9D2E1F52495500A37BB2 = {
+						CreatedOnToolsVersion = 8.3.3;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -637,142 +778,256 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = F98EDB831F518C2D009A518F;
 			productRefGroup = F98EDB8D1F518C2D009A518F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F98EDB8B1F518C2D009A518F /* Halloween3D */,
+				F92D9D2E1F52495500A37BB2 /* Halloween */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		F92D9D2D1F52495500A37BB2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9A3EA751F5258D900315CAF /* system in Resources */,
+				F92D9D581F524B3400A37BB2 /* Main.storyboard in Resources */,
+				F92D9D6B1F524CFA00A37BB2 /* halloween_icon.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		F98EDB881F518C2D009A518F /* Sources */ = {
+		F92D9D2B1F52495500A37BB2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F99009961F51D6C3007F7D1B /* DDHidAppleRemote.h in Sources */,
-				F99009971F51D6C3007F7D1B /* DDHidAppleRemote.m in Sources */,
-				F99009981F51D6C3007F7D1B /* DDHidDevice.h in Sources */,
-				F99009991F51D6C3007F7D1B /* DDHidDevice.m in Sources */,
-				F990099A1F51D6C3007F7D1B /* DDHidElement.h in Sources */,
-				F990099B1F51D6C3007F7D1B /* DDHidElement.m in Sources */,
-				F990099C1F51D6C3007F7D1B /* DDHidEvent.h in Sources */,
-				F990099D1F51D6C3007F7D1B /* DDHidEvent.m in Sources */,
-				F990099E1F51D6C3007F7D1B /* DDHidJoystick.h in Sources */,
-				F990099F1F51D6C3007F7D1B /* DDHidJoystick.m in Sources */,
-				F99009A01F51D6C3007F7D1B /* DDHidKeyboard.h in Sources */,
-				F99009A11F51D6C3007F7D1B /* DDHidKeyboard.m in Sources */,
-				F99009A21F51D6C3007F7D1B /* DDHidKeyboardBarcodeScanner.h in Sources */,
-				F99009A31F51D6C3007F7D1B /* DDHidKeyboardBarcodeScanner.m in Sources */,
-				F99009A41F51D6C3007F7D1B /* DDHidLib.h in Sources */,
-				F99009A51F51D6C3007F7D1B /* DDHidMouse.h in Sources */,
-				F99009A61F51D6C3007F7D1B /* DDHidMouse.m in Sources */,
-				F99009A71F51D6C3007F7D1B /* DDHidQueue.h in Sources */,
-				F99009A81F51D6C3007F7D1B /* DDHidQueue.m in Sources */,
-				F99009A91F51D6C3007F7D1B /* DDHidStandardUsages.plist in Sources */,
-				F99009AA1F51D6C3007F7D1B /* DDHidUsage.h in Sources */,
-				F99009AB1F51D6C3007F7D1B /* DDHidUsage.m in Sources */,
-				F99009AC1F51D6C3007F7D1B /* DDHidUsageTables.h in Sources */,
-				F99009AD1F51D6C3007F7D1B /* DDHidUsageTables.m in Sources */,
-				F99009AE1F51D6C3007F7D1B /* NSDictionary+DDHidExtras.h in Sources */,
-				F99009AF1F51D6C3007F7D1B /* NSDictionary+DDHidExtras.m in Sources */,
-				F99009B01F51D6C3007F7D1B /* NSXReturnThrowError.h in Sources */,
-				F99009B11F51D6C3007F7D1B /* NSXReturnThrowError.m in Sources */,
-				F99009881F51D6A0007F7D1B /* AUOutputBL.cpp in Sources */,
-				F99009891F51D6A0007F7D1B /* AUOutputBL.h in Sources */,
-				F990098A1F51D6A0007F7D1B /* CAStreamBasicDescription.cpp in Sources */,
-				F990098B1F51D6A0007F7D1B /* CAStreamBasicDescription.h in Sources */,
-				F990098C1F51D6A0007F7D1B /* CAAudioChannelLayout.cpp in Sources */,
-				F990098D1F51D6A0007F7D1B /* CAAudioChannelLayout.h in Sources */,
-				F990098E1F51D6A0007F7D1B /* CAAudioChannelLayoutObject.cpp in Sources */,
-				F990098F1F51D6A0007F7D1B /* CAAudioUnit.cpp in Sources */,
-				F99009901F51D6A0007F7D1B /* CAAudioUnit.h in Sources */,
-				F99009911F51D6A0007F7D1B /* CAComponent.cpp in Sources */,
-				F99009921F51D6A0007F7D1B /* CAComponent.h in Sources */,
-				F99009931F51D6A0007F7D1B /* CAComponentDescription.h in Sources */,
-				F99009941F51D6A0007F7D1B /* CAXException.cpp in Sources */,
-				F99009951F51D6A0007F7D1B /* CAXException.h in Sources */,
-				F99008231F51CEB8007F7D1B /* GLTextureHelper.h in Sources */,
-				F99008241F51CEB8007F7D1B /* KBatch.h in Sources */,
-				F99008251F51CEB8007F7D1B /* KGraphic.h in Sources */,
-				F99008261F51CEB8007F7D1B /* KGraphicGL.h in Sources */,
-				F99008271F51CEB8007F7D1B /* KGraphicGLLandscape.h in Sources */,
-				F99008281F51CEB8007F7D1B /* KInput.h in Sources */,
-				F99008291F51CEB8007F7D1B /* KJoypad.h in Sources */,
-				F990082A1F51CEB8007F7D1B /* KLogFile.h in Sources */,
-				F990082B1F51CEB8007F7D1B /* KMiscTools.h in Sources */,
-				F990082C1F51CEB8007F7D1B /* KMusic.h in Sources */,
-				F990082D1F51CEB8007F7D1B /* KPTK.h in Sources */,
-				F990082E1F51CEB8007F7D1B /* KSound.h in Sources */,
-				F99009B31F51D6FA007F7D1B /* CAComponentDescription.cpp in Sources */,
-				F990082F1F51CEB8007F7D1B /* KSpline.h in Sources */,
-				F99008301F51CEB8007F7D1B /* KWeb.h in Sources */,
-				F99008311F51CEB8007F7D1B /* KWindow.h in Sources */,
-				F99008321F51CEB8007F7D1B /* GLTextureHelper.mm in Sources */,
-				F99008331F51CEB8007F7D1B /* KBatchGL.cpp in Sources */,
-				F99008341F51CEB8007F7D1B /* KGraphicGL.cpp in Sources */,
-				F99008351F51CEB8007F7D1B /* KGraphicGLLandscape.cpp in Sources */,
-				F99008361F51CEB8007F7D1B /* KInput.mm in Sources */,
-				F99008371F51CEB8007F7D1B /* KJoypad.mm in Sources */,
-				F99008381F51CEB8007F7D1B /* KLogFile.cpp in Sources */,
-				F99008391F51CEB8007F7D1B /* KMiscTools.mm in Sources */,
-				F990083A1F51CEB8007F7D1B /* KMusic.mm in Sources */,
-				F990083B1F51CEB8007F7D1B /* KPTK.cpp in Sources */,
-				F990083C1F51CEB8007F7D1B /* KSound.mm in Sources */,
-				F990083D1F51CEB8007F7D1B /* KSpline.cpp in Sources */,
-				F990083E1F51CEB8007F7D1B /* KWeb.mm in Sources */,
-				F990083F1F51CEB8007F7D1B /* KWindow.mm in Sources */,
-				F98EDCAA1F518DBF009A518F /* tga.cpp in Sources */,
-				F98EDCBF1F518DBF009A518F /* maths.cpp in Sources */,
-				F98EDCFA1F518F43009A518F /* libsound_linux.cpp in Sources */,
-				F98EDCFD1F518F4E009A518F /* net_temp_linux.cpp in Sources */,
-				F98EDCCC1F518DBF009A518F /* input.cpp in Sources */,
-				F98EDCC91F518DBF009A518F /* collision.cpp in Sources */,
-				F98EDCF91F518F43009A518F /* loadjpeg_linux.cpp in Sources */,
-				F98EDCBD1F518DBF009A518F /* bspfile.cpp in Sources */,
-				F98EDCC61F518DBF009A518F /* enveffect.cpp in Sources */,
-				F98EDCA41F518DBF009A518F /* menu.cpp in Sources */,
-				F98EDCC31F518DBF009A518F /* physic.cpp in Sources */,
-				F98EDCB61F518DBF009A518F /* textdraw.cpp in Sources */,
-				F98EDCAF1F518DBF009A518F /* frustrum.cpp in Sources */,
-				F98EDCB41F518DBF009A518F /* jpeg.cpp in Sources */,
-				F98EDCCE1F518DBF009A518F /* demo.cpp in Sources */,
-				F98EDCB31F518DBF009A518F /* player.cpp in Sources */,
-				F98EDCAD1F518DBF009A518F /* game.cpp in Sources */,
-				F98EDCC41F518DBF009A518F /* ellipsoide.cpp in Sources */,
-				F98EDCC51F518DBF009A518F /* menu_sel.cpp in Sources */,
-				F98EDCC81F518DBF009A518F /* opengl.cpp in Sources */,
-				F98EDCA61F518DBF009A518F /* monster.cpp in Sources */,
-				F98EDCAC1F518DBF009A518F /* script.cpp in Sources */,
-				F98EDCB91F518DBF009A518F /* sorting.cpp in Sources */,
-				F98EDCC21F518DBF009A518F /* timer.cpp in Sources */,
-				F98EDCBB1F518DBF009A518F /* image.cpp in Sources */,
-				F98EDCA51F518DBF009A518F /* display.cpp in Sources */,
-				F98EDCC11F518DBF009A518F /* mskmodel.cpp in Sources */,
-				F98EDCBC1F518DBF009A518F /* objet.cpp in Sources */,
-				F98EDCA21F518DBF009A518F /* story.cpp in Sources */,
-				F98EDCBE1F518DBF009A518F /* gameover.cpp in Sources */,
-				F98EDCC01F518DBF009A518F /* alloween.cpp in Sources */,
-				F98EDC9F1F518DBF009A518F /* shader.cpp in Sources */,
-				F98EDCBA1F518DBF009A518F /* filesys.cpp in Sources */,
-				F98EDCAE1F518DBF009A518F /* objet_proc.cpp in Sources */,
-				F98EDCB01F518DBF009A518F /* camera.cpp in Sources */,
-				F98EDCF41F518F16009A518F /* halloween_linux.cpp in Sources */,
-				F98EDB9C1F518CC3009A518F /* main.cpp in Sources */,
-				F98EDCA01F518DBF009A518F /* menu_init.cpp in Sources */,
-				F98EDCD11F518DBF009A518F /* liste.cpp in Sources */,
-				F98EDCA11F518DBF009A518F /* console.cpp in Sources */,
-				F98EDCA71F518DBF009A518F /* bsptree.cpp in Sources */,
-				F98EDCCD1F518DBF009A518F /* interface.cpp in Sources */,
+				F92D9E211F52554E00A37BB2 /* glUtil.h in Sources */,
+				F92D9E221F52554E00A37BB2 /* imageUtil.h in Sources */,
+				F92D9E231F52554E00A37BB2 /* matrixUtil.h in Sources */,
+				F92D9E241F52554E00A37BB2 /* modelUtil.h in Sources */,
+				F92D9E251F52554E00A37BB2 /* sourceUtil.h in Sources */,
+				F92D9E261F52554E00A37BB2 /* vectorUtil.h in Sources */,
+				F92D9DE21F52545B00A37BB2 /* AUOutputBL.cpp in Sources */,
+				F92D9DE31F52545B00A37BB2 /* AUOutputBL.h in Sources */,
+				F92D9DE41F52545B00A37BB2 /* CAStreamBasicDescription.cpp in Sources */,
+				F92D9DE51F52545B00A37BB2 /* CAStreamBasicDescription.h in Sources */,
+				F92D9DE61F52545B00A37BB2 /* CAAudioChannelLayout.cpp in Sources */,
+				F92D9DE71F52545B00A37BB2 /* CAAudioChannelLayout.h in Sources */,
+				F92D9DE81F52545B00A37BB2 /* CAAudioChannelLayoutObject.cpp in Sources */,
+				F92D9DE91F52545B00A37BB2 /* CAAudioUnit.cpp in Sources */,
+				F92D9DEA1F52545B00A37BB2 /* CAAudioUnit.h in Sources */,
+				F92D9DEB1F52545B00A37BB2 /* CAComponent.cpp in Sources */,
+				F92D9DEC1F52545B00A37BB2 /* CAComponent.h in Sources */,
+				F92D9DED1F52545B00A37BB2 /* CAComponentDescription.cpp in Sources */,
+				F92D9DEE1F52545B00A37BB2 /* CAComponentDescription.h in Sources */,
+				F92D9DEF1F52545B00A37BB2 /* CAXException.cpp in Sources */,
+				F92D9DF01F52545B00A37BB2 /* CAXException.h in Sources */,
+				F92D9DF11F52545B00A37BB2 /* DDHidAppleRemote.h in Sources */,
+				F92D9DF21F52545B00A37BB2 /* DDHidAppleRemote.m in Sources */,
+				F92D9DF31F52545B00A37BB2 /* DDHidDevice.h in Sources */,
+				F92D9DF41F52545B00A37BB2 /* DDHidDevice.m in Sources */,
+				F92D9DF51F52545B00A37BB2 /* DDHidElement.h in Sources */,
+				F92D9DF61F52545B00A37BB2 /* DDHidElement.m in Sources */,
+				F92D9DF71F52545B00A37BB2 /* DDHidEvent.h in Sources */,
+				F92D9DF81F52545B00A37BB2 /* DDHidEvent.m in Sources */,
+				F92D9DF91F52545B00A37BB2 /* DDHidJoystick.h in Sources */,
+				F92D9DFA1F52545B00A37BB2 /* DDHidJoystick.m in Sources */,
+				F92D9DFB1F52545B00A37BB2 /* DDHidKeyboard.h in Sources */,
+				F92D9DFC1F52545B00A37BB2 /* DDHidKeyboard.m in Sources */,
+				F92D9DFD1F52545B00A37BB2 /* DDHidKeyboardBarcodeScanner.h in Sources */,
+				F92D9DFE1F52545B00A37BB2 /* DDHidKeyboardBarcodeScanner.m in Sources */,
+				F92D9DFF1F52545B00A37BB2 /* DDHidLib.h in Sources */,
+				F92D9E001F52545B00A37BB2 /* DDHidMouse.h in Sources */,
+				F92D9E011F52545B00A37BB2 /* DDHidMouse.m in Sources */,
+				F92D9E021F52545B00A37BB2 /* DDHidQueue.h in Sources */,
+				F92D9E031F52545B00A37BB2 /* DDHidQueue.m in Sources */,
+				F92D9E041F52545B00A37BB2 /* DDHidStandardUsages.plist in Sources */,
+				F92D9E051F52545B00A37BB2 /* DDHidUsage.h in Sources */,
+				F92D9E061F52545B00A37BB2 /* DDHidUsage.m in Sources */,
+				F92D9E071F52545B00A37BB2 /* DDHidUsageTables.h in Sources */,
+				F92D9E081F52545B00A37BB2 /* DDHidUsageTables.m in Sources */,
+				F92D9E091F52545B00A37BB2 /* NSDictionary+DDHidExtras.h in Sources */,
+				F92D9E0A1F52545B00A37BB2 /* NSDictionary+DDHidExtras.m in Sources */,
+				F92D9E0B1F52545B00A37BB2 /* NSXReturnThrowError.h in Sources */,
+				F92D9E0C1F52545B00A37BB2 /* NSXReturnThrowError.m in Sources */,
+				F92D9DC51F52544700A37BB2 /* GLTextureHelper.h in Sources */,
+				F92D9DC61F52544700A37BB2 /* KBatch.h in Sources */,
+				F92D9DC71F52544700A37BB2 /* KGraphic.h in Sources */,
+				F92D9DC81F52544700A37BB2 /* KGraphicGL.h in Sources */,
+				F92D9DC91F52544700A37BB2 /* KGraphicGLLandscape.h in Sources */,
+				F92D9DCA1F52544700A37BB2 /* KInput.h in Sources */,
+				F92D9DCB1F52544700A37BB2 /* KJoypad.h in Sources */,
+				F92D9DCC1F52544700A37BB2 /* KLogFile.h in Sources */,
+				F92D9DCD1F52544700A37BB2 /* KMiscTools.h in Sources */,
+				F92D9DCE1F52544700A37BB2 /* KMusic.h in Sources */,
+				F92D9DCF1F52544700A37BB2 /* KPTK.h in Sources */,
+				F92D9DD01F52544700A37BB2 /* KSound.h in Sources */,
+				F92D9DD11F52544700A37BB2 /* KSpline.h in Sources */,
+				F92D9DD21F52544700A37BB2 /* KWeb.h in Sources */,
+				F92D9DD31F52544700A37BB2 /* KWindow.h in Sources */,
+				F92D9DD41F52544700A37BB2 /* GLTextureHelper.mm in Sources */,
+				F92D9DD51F52544700A37BB2 /* KBatchGL.cpp in Sources */,
+				F92D9DD61F52544700A37BB2 /* KGraphicGL.cpp in Sources */,
+				F92D9DD71F52544700A37BB2 /* KGraphicGLLandscape.cpp in Sources */,
+				F92D9DD81F52544700A37BB2 /* KInput.mm in Sources */,
+				F92D9DD91F52544700A37BB2 /* KJoypad.mm in Sources */,
+				F92D9DDA1F52544700A37BB2 /* KLogFile.cpp in Sources */,
+				F92D9DDB1F52544700A37BB2 /* KMiscTools.mm in Sources */,
+				F92D9DDC1F52544700A37BB2 /* KMusic.mm in Sources */,
+				F92D9DDD1F52544700A37BB2 /* KPTK.cpp in Sources */,
+				F92D9DDE1F52544700A37BB2 /* KSound.mm in Sources */,
+				F92D9DDF1F52544700A37BB2 /* KSpline.cpp in Sources */,
+				F92D9DE01F52544700A37BB2 /* KWeb.mm in Sources */,
+				F92D9DE11F52544700A37BB2 /* KWindow.mm in Sources */,
+				F92D9D6F1F52542800A37BB2 /* main.cpp in Sources */,
+				F92D9D701F52542800A37BB2 /* constantes.h in Sources */,
+				F92D9D711F52542800A37BB2 /* alloween.cpp in Sources */,
+				F92D9D721F52542800A37BB2 /* alloween.h in Sources */,
+				F92D9D731F52542800A37BB2 /* halloween_linux.cpp in Sources */,
+				F92D9D741F52542800A37BB2 /* halloween_linux.h in Sources */,
+				F92D9D751F52542800A37BB2 /* libsound_linux.cpp in Sources */,
+				F92D9D761F52542800A37BB2 /* libsound_linux.h in Sources */,
+				F92D9D771F52542800A37BB2 /* loadjpeg_linux.cpp in Sources */,
+				F92D9D781F52542800A37BB2 /* loadjpeg_linux.h in Sources */,
+				F92D9D791F52542800A37BB2 /* net_temp_linux.cpp in Sources */,
+				F92D9D7A1F52542800A37BB2 /* net_temp_linux.h in Sources */,
+				F92D9D7B1F52542800A37BB2 /* bspfile.cpp in Sources */,
+				F92D9D7C1F52542800A37BB2 /* bspfile.h in Sources */,
+				F92D9D7D1F52542800A37BB2 /* bsptree.cpp in Sources */,
+				F92D9D7E1F52542800A37BB2 /* bsptree.h in Sources */,
+				F92D9D7F1F52542800A37BB2 /* camera.cpp in Sources */,
+				F92D9D801F52542800A37BB2 /* camera.h in Sources */,
+				F92D9D811F52542800A37BB2 /* collision.cpp in Sources */,
+				F92D9D821F52542800A37BB2 /* collision.h in Sources */,
+				F92D9D831F52542800A37BB2 /* console.cpp in Sources */,
+				F92D9D841F52542800A37BB2 /* console.h in Sources */,
+				F92D9D851F52542800A37BB2 /* demo.cpp in Sources */,
+				F92D9D861F52542800A37BB2 /* demo.h in Sources */,
+				F92D9D871F52542800A37BB2 /* dirlib.h in Sources */,
+				F92D9D881F52542800A37BB2 /* display.cpp in Sources */,
+				F92D9D891F52542800A37BB2 /* display.h in Sources */,
+				F92D9D8A1F52542800A37BB2 /* ellipsoide.cpp in Sources */,
+				F92D9D8B1F52542800A37BB2 /* ellipsoide.h in Sources */,
+				F92D9D8C1F52542800A37BB2 /* enveffect.cpp in Sources */,
+				F92D9D8D1F52542800A37BB2 /* enveffect.h in Sources */,
+				F92D9D8E1F52542800A37BB2 /* filesys.cpp in Sources */,
+				F92D9D8F1F52542800A37BB2 /* filesys.h in Sources */,
+				F92D9D901F52542800A37BB2 /* frustrum.cpp in Sources */,
+				F92D9D911F52542800A37BB2 /* frustrum.h in Sources */,
+				F92D9D921F52542800A37BB2 /* game.cpp in Sources */,
+				F92D9D931F52542800A37BB2 /* game.h in Sources */,
+				F92D9D941F52542800A37BB2 /* gameover.cpp in Sources */,
+				F92D9D951F52542800A37BB2 /* gameover.h in Sources */,
+				F92D9D961F52542800A37BB2 /* image.cpp in Sources */,
+				F92D9D971F52542800A37BB2 /* image.h in Sources */,
+				F92D9D981F52542800A37BB2 /* input.cpp in Sources */,
+				F92D9D991F52542800A37BB2 /* input.h in Sources */,
+				F92D9D9A1F52542800A37BB2 /* interface.cpp in Sources */,
+				F92D9D9B1F52542800A37BB2 /* interface.h in Sources */,
+				F92D9D9C1F52542800A37BB2 /* jpeg.cpp in Sources */,
+				F92D9D9D1F52542800A37BB2 /* jpeg.h in Sources */,
+				F92D9D9E1F52542800A37BB2 /* liste.cpp in Sources */,
+				F92D9D9F1F52542800A37BB2 /* liste.h in Sources */,
+				F92D9DA01F52542800A37BB2 /* maths.cpp in Sources */,
+				F92D9DA11F52542800A37BB2 /* maths.h in Sources */,
+				F92D9DA21F52542800A37BB2 /* menu_init.cpp in Sources */,
+				F92D9DA31F52542800A37BB2 /* menu_init.h in Sources */,
+				F92D9DA41F52542800A37BB2 /* menu_sel.cpp in Sources */,
+				F92D9DA51F52542800A37BB2 /* menu_sel.h in Sources */,
+				F92D9DA61F52542800A37BB2 /* menu.cpp in Sources */,
+				F92D9DA71F52542800A37BB2 /* menu.h in Sources */,
+				F92D9DA81F52542800A37BB2 /* monster.cpp in Sources */,
+				F92D9DA91F52542800A37BB2 /* monster.h in Sources */,
+				F92D9DAA1F52542800A37BB2 /* mskmodel.cpp in Sources */,
+				F92D9DAB1F52542800A37BB2 /* mskmodel.h in Sources */,
+				F92D9DAC1F52542800A37BB2 /* objet_proc.cpp in Sources */,
+				F92D9DAD1F52542800A37BB2 /* objet_proc.h in Sources */,
+				F92D9DAE1F52542800A37BB2 /* objet.cpp in Sources */,
+				F92D9DAF1F52542800A37BB2 /* objet.h in Sources */,
+				F92D9DB01F52542800A37BB2 /* opengl.cpp in Sources */,
+				F92D9DB11F52542800A37BB2 /* opengl.h in Sources */,
+				F92D9DB21F52542800A37BB2 /* physic.cpp in Sources */,
+				F92D9DB31F52542800A37BB2 /* physic.h in Sources */,
+				F92D9DB41F52542800A37BB2 /* player.cpp in Sources */,
+				F92D9DB51F52542800A37BB2 /* player.h in Sources */,
+				F92D9DB61F52542800A37BB2 /* resource.h in Sources */,
+				F92D9DB71F52542800A37BB2 /* script.cpp in Sources */,
+				F92D9DB81F52542800A37BB2 /* script.h in Sources */,
+				F92D9DB91F52542800A37BB2 /* shader.cpp in Sources */,
+				F92D9DBA1F52542800A37BB2 /* shader.h in Sources */,
+				F92D9DBB1F52542800A37BB2 /* sorting.cpp in Sources */,
+				F92D9DBC1F52542800A37BB2 /* sorting.h in Sources */,
+				F92D9DBD1F52542800A37BB2 /* story.cpp in Sources */,
+				F92D9DBE1F52542800A37BB2 /* story.h in Sources */,
+				F92D9DBF1F52542800A37BB2 /* textdraw.cpp in Sources */,
+				F92D9DC01F52542800A37BB2 /* textdraw.h in Sources */,
+				F92D9DC11F52542800A37BB2 /* tga.cpp in Sources */,
+				F92D9DC21F52542800A37BB2 /* tga.h in Sources */,
+				F92D9DC31F52542800A37BB2 /* timer.cpp in Sources */,
+				F92D9DC41F52542800A37BB2 /* timer.h in Sources */,
+				F92D9D361F52495500A37BB2 /* main.m in Sources */,
+				F92D9D531F524B0300A37BB2 /* GLEssentialsFullscreenWindow.m in Sources */,
+				F92D9D551F524B0300A37BB2 /* GLEssentialsWindowController.m in Sources */,
+				F92D9D661F524B9400A37BB2 /* matrixUtil.c in Sources */,
+				F92D9D671F524B9400A37BB2 /* modelUtil.c in Sources */,
+				F92D9D691F524B9400A37BB2 /* vectorUtil.c in Sources */,
+				F92D9D331F52495500A37BB2 /* AppDelegate.m in Sources */,
+				F92D9D541F524B0300A37BB2 /* GLEssentialsGLView.m in Sources */,
+				F92D9D561F524B0300A37BB2 /* OpenGLRenderer.mm in Sources */,
+				F92D9D651F524B9400A37BB2 /* imageUtil.m in Sources */,
+				F92D9D6E1F524DF900A37BB2 /* halloweenbridge.mm in Sources */,
+				F92D9D681F524B9400A37BB2 /* sourceUtil.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		F92D9D411F52495500A37BB2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 6CZ5X85785;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = Halloween/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jadegame.halloween;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		F92D9D421F52495500A37BB2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 6CZ5X85785;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = Halloween/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jadegame.halloween;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 		F98EDB911F518C2D009A518F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -824,7 +1079,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx10.13;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -872,57 +1127,27 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = macosx10.13;
-			};
-			name = Release;
-		};
-		F98EDB941F518C2D009A518F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6CZ5X85785;
-				HEADER_SEARCH_PATHS = (
-					../,
-					../misc/,
-				);
-				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
-				LIBRARY_SEARCH_PATHS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		F98EDB951F518C2D009A518F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6CZ5X85785;
-				HEADER_SEARCH_PATHS = (
-					../,
-					../misc/,
-				);
-				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
-				LIBRARY_SEARCH_PATHS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		F92D9D401F52495500A37BB2 /* Build configuration list for PBXNativeTarget "Halloween" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F92D9D411F52495500A37BB2 /* Debug */,
+				F92D9D421F52495500A37BB2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		F98EDB871F518C2D009A518F /* Build configuration list for PBXProject "Halloween3D" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F98EDB911F518C2D009A518F /* Debug */,
 				F98EDB921F518C2D009A518F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F98EDB931F518C2D009A518F /* Build configuration list for PBXNativeTarget "Halloween3D" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F98EDB941F518C2D009A518F /* Debug */,
-				F98EDB951F518C2D009A518F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
