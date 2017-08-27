@@ -195,10 +195,10 @@
 		F92D9E261F52554E00A37BB2 /* vectorUtil.h in Sources */ = {isa = PBXBuildFile; fileRef = F92D9D641F524B9400A37BB2 /* vectorUtil.h */; };
 		F943A7DC1F52DC4300CF7E7B /* MainControler.mm in Sources */ = {isa = PBXBuildFile; fileRef = F943A7D71F52DC4200CF7E7B /* MainControler.mm */; };
 		F943A7DD1F52DC4300CF7E7B /* Scene.mm in Sources */ = {isa = PBXBuildFile; fileRef = F943A7D81F52DC4200CF7E7B /* Scene.mm */; };
-		F943A7DE1F52DC4300CF7E7B /* MyOpenGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = F943A7DA1F52DC4200CF7E7B /* MyOpenGLView.m */; };
-		F943A7E11F52DECF00CF7E7B /* HalloweenWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = F943A7E01F52DECE00CF7E7B /* HalloweenWindowController.m */; };
+		F943A7DE1F52DC4300CF7E7B /* MyOpenGLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = F943A7DA1F52DC4200CF7E7B /* MyOpenGLView.mm */; };
+		F943A7E11F52DECF00CF7E7B /* HalloweenWindowController.mm in Sources */ = {isa = PBXBuildFile; fileRef = F943A7E01F52DECE00CF7E7B /* HalloweenWindowController.mm */; };
 		F943A7E41F52DF2300CF7E7B /* HalloweenFullscreenWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = F943A7E31F52DF2300CF7E7B /* HalloweenFullscreenWindow.m */; };
-		F943A7E71F52E01D00CF7E7B /* HalloweenGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = F943A7E51F52E01D00CF7E7B /* HalloweenGLView.m */; };
+		F943A7E71F52E01D00CF7E7B /* HalloweenGLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = F943A7E51F52E01D00CF7E7B /* HalloweenGLView.mm */; };
 		F943A7EA1F52E1BD00CF7E7B /* OpenGLRenderer.mm in Sources */ = {isa = PBXBuildFile; fileRef = F943A7E91F52E1BD00CF7E7B /* OpenGLRenderer.mm */; };
 		F9A3EA751F5258D900315CAF /* system in Resources */ = {isa = PBXBuildFile; fileRef = F9A3EA741F5258CD00315CAF /* system */; };
 /* End PBXBuildFile section */
@@ -241,13 +241,13 @@
 		F943A7D71F52DC4200CF7E7B /* MainControler.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = MainControler.mm; sourceTree = "<group>"; };
 		F943A7D81F52DC4200CF7E7B /* Scene.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = Scene.mm; sourceTree = "<group>"; };
 		F943A7D91F52DC4200CF7E7B /* Scene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Scene.h; sourceTree = "<group>"; };
-		F943A7DA1F52DC4200CF7E7B /* MyOpenGLView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyOpenGLView.m; sourceTree = "<group>"; };
+		F943A7DA1F52DC4200CF7E7B /* MyOpenGLView.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = MyOpenGLView.mm; sourceTree = "<group>"; };
 		F943A7DB1F52DC4200CF7E7B /* MainController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainController.h; sourceTree = "<group>"; };
 		F943A7DF1F52DECE00CF7E7B /* HalloweenWindowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HalloweenWindowController.h; sourceTree = "<group>"; };
-		F943A7E01F52DECE00CF7E7B /* HalloweenWindowController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HalloweenWindowController.m; sourceTree = "<group>"; };
+		F943A7E01F52DECE00CF7E7B /* HalloweenWindowController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = HalloweenWindowController.mm; sourceTree = "<group>"; };
 		F943A7E21F52DF2200CF7E7B /* HalloweenFullscreenWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HalloweenFullscreenWindow.h; sourceTree = "<group>"; };
 		F943A7E31F52DF2300CF7E7B /* HalloweenFullscreenWindow.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HalloweenFullscreenWindow.m; sourceTree = "<group>"; };
-		F943A7E51F52E01D00CF7E7B /* HalloweenGLView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HalloweenGLView.m; sourceTree = "<group>"; };
+		F943A7E51F52E01D00CF7E7B /* HalloweenGLView.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = HalloweenGLView.mm; sourceTree = "<group>"; };
 		F943A7E61F52E01D00CF7E7B /* HalloweenGLView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HalloweenGLView.h; sourceTree = "<group>"; };
 		F943A7E81F52E1BD00CF7E7B /* OpenGLRenderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenGLRenderer.h; sourceTree = "<group>"; };
 		F943A7E91F52E1BD00CF7E7B /* OpenGLRenderer.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenGLRenderer.mm; sourceTree = "<group>"; };
@@ -447,17 +447,17 @@
 				F92D9D6C1F524DF900A37BB2 /* halloweenbridge.h */,
 				F92D9D6D1F524DF900A37BB2 /* halloweenbridge.mm */,
 				F943A7DF1F52DECE00CF7E7B /* HalloweenWindowController.h */,
-				F943A7E01F52DECE00CF7E7B /* HalloweenWindowController.m */,
+				F943A7E01F52DECE00CF7E7B /* HalloweenWindowController.mm */,
 				F943A7E21F52DF2200CF7E7B /* HalloweenFullscreenWindow.h */,
 				F943A7E31F52DF2300CF7E7B /* HalloweenFullscreenWindow.m */,
 				F943A7E61F52E01D00CF7E7B /* HalloweenGLView.h */,
-				F943A7E51F52E01D00CF7E7B /* HalloweenGLView.m */,
+				F943A7E51F52E01D00CF7E7B /* HalloweenGLView.mm */,
 				F943A7E81F52E1BD00CF7E7B /* OpenGLRenderer.h */,
 				F943A7E91F52E1BD00CF7E7B /* OpenGLRenderer.mm */,
 				F943A7D71F52DC4200CF7E7B /* MainControler.mm */,
 				F943A7DB1F52DC4200CF7E7B /* MainController.h */,
 				F943A7D61F52DC4200CF7E7B /* MyOpenGLView.h */,
-				F943A7DA1F52DC4200CF7E7B /* MyOpenGLView.m */,
+				F943A7DA1F52DC4200CF7E7B /* MyOpenGLView.mm */,
 				F943A7D91F52DC4200CF7E7B /* Scene.h */,
 				F943A7D81F52DC4200CF7E7B /* Scene.mm */,
 				F92D9D341F52495500A37BB2 /* Supporting Files */,
@@ -889,14 +889,14 @@
 				F943A7E41F52DF2300CF7E7B /* HalloweenFullscreenWindow.m in Sources */,
 				F92D9DD31F52544700A37BB2 /* KWindow.h in Sources */,
 				F92D9DD41F52544700A37BB2 /* GLTextureHelper.mm in Sources */,
-				F943A7E11F52DECF00CF7E7B /* HalloweenWindowController.m in Sources */,
+				F943A7E11F52DECF00CF7E7B /* HalloweenWindowController.mm in Sources */,
 				F92D9DD51F52544700A37BB2 /* KBatchGL.cpp in Sources */,
 				F92D9DD61F52544700A37BB2 /* KGraphicGL.cpp in Sources */,
 				F92D9DD71F52544700A37BB2 /* KGraphicGLLandscape.cpp in Sources */,
 				F92D9DD81F52544700A37BB2 /* KInput.mm in Sources */,
 				F92D9DD91F52544700A37BB2 /* KJoypad.mm in Sources */,
 				F92D9DDA1F52544700A37BB2 /* KLogFile.cpp in Sources */,
-				F943A7E71F52E01D00CF7E7B /* HalloweenGLView.m in Sources */,
+				F943A7E71F52E01D00CF7E7B /* HalloweenGLView.mm in Sources */,
 				F92D9DDB1F52544700A37BB2 /* KMiscTools.mm in Sources */,
 				F92D9DDC1F52544700A37BB2 /* KMusic.mm in Sources */,
 				F92D9DDD1F52544700A37BB2 /* KPTK.cpp in Sources */,
@@ -933,7 +933,7 @@
 				F92D9D881F52542800A37BB2 /* display.cpp in Sources */,
 				F92D9D891F52542800A37BB2 /* display.h in Sources */,
 				F92D9D8A1F52542800A37BB2 /* ellipsoide.cpp in Sources */,
-				F943A7DE1F52DC4300CF7E7B /* MyOpenGLView.m in Sources */,
+				F943A7DE1F52DC4300CF7E7B /* MyOpenGLView.mm in Sources */,
 				F92D9D8B1F52542800A37BB2 /* ellipsoide.h in Sources */,
 				F92D9D8C1F52542800A37BB2 /* enveffect.cpp in Sources */,
 				F92D9D8D1F52542800A37BB2 /* enveffect.h in Sources */,

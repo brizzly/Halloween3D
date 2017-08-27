@@ -205,10 +205,10 @@ hBool IN_Init()
 		KeysInput[i].key = 0;
 		strcpy(KeysInput[i].keyname, "");
 	}
-        for(i=0 ; i<KEY_BUFFER_MAX ; i++)
-        {
-            KeyBuffer[i] = -1;
-        }
+	for(i=0 ; i<KEY_BUFFER_MAX ; i++)
+	{
+		KeyBuffer[i] = -1;
+	}
 	IN_LoadKeys();
 
 	return true;
@@ -224,6 +224,7 @@ void IN_UnInit()
 
 void IN_SetCursorPos(int x, int y)
 {
+	return;
 #ifdef H_MAC
 	KInput::mousePointerTo(x, y);
 #endif
@@ -237,6 +238,9 @@ void IN_SetCursorPos(int x, int y)
 
 void IN_HideMouse()
 {
+	return;
+	
+	
 	if(gIsServer && net_dedicated.value)
 		return;
 	IsMouseCursor = false;
@@ -421,15 +425,33 @@ void IN_WarpMouse()
 
 long IN_ReadMouse()
 {
+	//return 0;
+	
 	float		midX = (float)(ScreenX[(int)videomode.value]/2);
 	float		midY = (float)(ScreenY[(int)videomode.value]/2);
 	
+	float 		msx = (float)(KInput::getMouseX());
+	float 		msy = (float)(KInput::getMouseY());
+	
+	//printf("msx=%f ; msy=%f\n",msx,msy);
+	
 	// seulement en fullscreen
-	msoffsetX = (float)KInput::getMouseX() - midX;
-	msoffsetY = (float)KInput::getMouseY() - midY;
+//	msoffsetX = msx - midX;
+//	msoffsetY = msy - midY;
+
+	MouseX = msx;
+	MouseY = msy;
+
+	msoffsetX = msx - (float)Last_MouseX;
+	msoffsetY = msy - (float)Last_MouseY;
+	Last_MouseX = (int)msx;
+	Last_MouseY = (int)msy;
+	
+	//printf("msoffsetX=%f ; msoffsetY=%f\n",msoffsetX,msoffsetY);
 	
 	
-	if(/*fullscreen.value == false || */ ProgramState != PS_GAME)
+	/*
+	if(fullscreen.value == false || ProgramState != PS_GAME)
 	{
 		MouseX += msoffsetX;
 		MouseY -= msoffsetY;
@@ -441,13 +463,16 @@ long IN_ReadMouse()
 	}
 	else
 	{               
-	//	MouseX += 2.0f * msx;// * player_rvel.value;
-	//	MouseY += 2.0f * msy;// * player_rvel.value;
+		MouseX += 2.0f * msx;// * player_rvel.value;
+		MouseY += 2.0f * msy;// * player_rvel.value;
 	}
+	*/
+	
+	//printf("MouseX=%d ; MouseY=%d\n",MouseX,MouseY);
         
 
 
-	IN_SetCursorPos((int)midX, (int)midY);
+//	IN_SetCursorPos((int)midX, (int)midY);
 
 
 	if( KInput::getLeftButtonState() == ISDOWN )
@@ -525,12 +550,17 @@ void IN_GetMouse(hMOUSEINPUT *Mouse)
 {
 	if(gIsServer && net_dedicated.value)
 		return;
+	
+	//printf("msoffsetX=%f ; msoffsetY=%f\n", msoffsetX, msoffsetY);
 
 	Mouse->offset_X = 2.0f * msoffsetX * player_rvel.value;
 	Mouse->offset_Y = 2.0f * msoffsetY * player_rvel.value;
 	msoffsetX = 0;
 	msoffsetY = 0;
 
+	//printf("Mouse->offset_X=%f ; Mouse->offset_Y=%f\n", Mouse->offset_X, Mouse->offset_Y);
+
+	
 	if(ProgramState == PS_GAME)
 	if(invert_mouse.value != 0)
 		Mouse->offset_Y = -Mouse->offset_Y;

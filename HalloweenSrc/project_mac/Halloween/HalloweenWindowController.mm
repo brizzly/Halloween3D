@@ -8,6 +8,7 @@
 
 #import "HalloweenWindowController.h"
 #import "HalloweenFullscreenWindow.h"
+#import "KInput.h"
 
 @interface HalloweenWindowController ()
 {
@@ -31,11 +32,17 @@
 		_fullscreenWindow = nil;
 		
 		
+//			trackingArea = [[NSTrackingArea alloc] initWithRect:[self.window bounds]
+//														options: (NSTrackingMouseEnteredAndExited | NSTrackingMouseMoved | NSTrackingActiveInKeyWindow )
+//														  owner:self userInfo:nil];
+//			[self.window addTrackingArea:trackingArea];
 		
     }
 
 	return self;
 }
+
+
 
 - (void) goFullscreen
 {
@@ -104,6 +111,67 @@
 }
 
 
+- (void) keyUp:(NSEvent *)event
+{
+	unichar c = [[event charactersIgnoringModifiers] characterAtIndex:0];
+	printf("keyup: %c %d\n", c, (int)c);
+	switch (c)
+	{
+		case NSUpArrowFunctionKey:
+			//NSLog(@"NSUpArrowFunctionKey");
+			KInput::setKeyUnPressed(K_VK_UP);
+			break;
+			
+		case NSDownArrowFunctionKey:
+			//NSLog(@"NSDownArrowFunctionKey");
+			KInput::setKeyUnPressed(K_VK_DOWN);
+			break;
+			
+		case NSLeftArrowFunctionKey:
+			//NSLog(@"NSLeftArrowFunctionKey");
+			KInput::setKeyUnPressed(K_VK_LEFT);
+			break;
+			
+		case NSRightArrowFunctionKey:
+			//NSLog(@"NSRightArrowFunctionKey");
+			KInput::setKeyUnPressed(K_VK_RIGHT);
+			break;
+			
+		case 13:
+			KInput::setKeyUnPressed(K_VK_RETURN);
+			break;
+			
+		case 27:
+			KInput::setKeyUnPressed(K_VK_ESCAPE);
+			break;
+			
+		case 32:
+			KInput::setKeyUnPressed(K_VK_SPACE);
+			break;
+			
+		case 127:
+			KInput::setKeyUnPressed(K_VK_BACK);
+			break;
+			
+		default:
+		{
+			if('a' <= c && c <= 'z') {
+				KInput::setKeyUnPressed(K_VK_A + c - 'a');
+			}
+			else if('A' <= c && c <= 'Z') {
+				KInput::setKeyUnPressed(K_VK_A + c - 'A');
+			}
+			else if('0' <= c && c <= '9') {
+				KInput::setKeyUnPressed(K_VK_0 + c - '0');
+			}
+		}
+		break;
+			
+	}
+	//[super keyDown:event];
+}
+
+/*
 - (void) keyDown:(NSEvent *)event
 {
 	unichar c = [[event charactersIgnoringModifiers] characterAtIndex:0];
@@ -133,5 +201,21 @@
 	// Allow other character to be handled (or not and beep)
 	[super keyDown:event];
 }
+*/
+
+/*
+- (void) mouseMoved:(NSEvent *)event
+{
+	NSLog(@"mouseMoved");
+
+}
+*/
+
+- (void) mouseDown:(NSEvent *)theEvent
+{
+	NSLog(@"mouseDown");
+	KInput::setScreenPressed(1, KInput::getMouseX(), KInput::getMouseY());
+}
+
 
 @end

@@ -8,6 +8,7 @@
 
 //extern void MACStarter();
 
+bool _init = false;
 bool _ended = false;
 
 
@@ -15,11 +16,14 @@ void initGame()
 {
 	printf("initGame\n");
 	MACStarter();
-	//m_ConsPrint("lol\n");
+	_init = true;
 }
 
 void loopGame()
 {
+	if(!_init) {
+		return;
+	}
 	if(_ended) {
 		return;
 	}

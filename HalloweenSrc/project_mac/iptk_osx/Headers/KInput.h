@@ -176,7 +176,7 @@ private:
 	
 	static int		midX, midY;
 	static			bool	_btPressed ;
-	static			long	_mx,_my ;
+	static			float	_mx,_my ;
 	
 public:
 	
@@ -194,6 +194,9 @@ public:
 	static void		setKeyUnPressed(int keycode);
 	static bool		isPressed(int keyCode);
 	static void		mousePointerTo(int x, int y);
+	static void 	setMousePos(float valX, float valY);
+	static void 	setMouseX(float val);
+	static void 	setMouseY(float val);
 	static int		getMouseX();
 	static int		getMouseY();		
 	static bool		getLeftButtonState();

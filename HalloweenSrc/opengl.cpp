@@ -887,17 +887,17 @@ int gl_InitGL()
 #ifdef H_MAC
 	GlobalTextureBind = -1;
 	glClearColor(0,0,0,0);
-glColor3f(WorldColorR,WorldColorG,WorldColorB);
+	glColor3f(WorldColorR,WorldColorG,WorldColorB);
 	glClearDepth(1.0);
 	glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
-glShadeModel(GL_FLAT);
+	glShadeModel(GL_FLAT);
 	glBlendFunc(GL_SRC_ALPHA,GL_ONE_MINUS_SRC_ALPHA);
 	glEnable(GL_TEXTURE_2D);
 	glDisable(GL_DEPTH_TEST);
 	glDisable(GL_BLEND);
 	glClear(GL_DEPTH_BUFFER_BIT);
 	glClear(GL_COLOR_BUFFER_BIT);
-gl_ChangeFOV(fov.value);
+	gl_ChangeFOV(fov.value);
 	gMultiTexturing = gl_initMultitexture();
 #else
 	GlobalTextureBind = -1;

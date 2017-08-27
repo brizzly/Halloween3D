@@ -17,8 +17,12 @@
 {
 	CVDisplayLinkRef displayLink;
 	
-	//NSOpenGLContext *openGLContext;
-	//NSOpenGLPixelFormat *pixelFormat;
+	NSTrackingArea * trackingArea;
+	NSRect			_hitRect;
+	NSWindowController * controller;
 }
+
+- (void) setMainController:(NSWindowController*)theController;
+
 
 @end

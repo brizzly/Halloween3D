@@ -8,11 +8,12 @@
 
 
 #import <Cocoa/Cocoa.h>
-//#import "GLEssentialsGLView.h"
 
 @interface HalloweenWindowController : NSWindowController
 {
-	
+	NSTrackingArea * trackingArea;
+	NSRect			_hitRect;
+	NSWindowController * controller;
 }
 
 @end

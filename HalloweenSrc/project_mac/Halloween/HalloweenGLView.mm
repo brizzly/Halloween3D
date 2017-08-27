@@ -8,6 +8,7 @@
 
 #import "HalloweenGLView.h"
 #import "OpenGLRenderer.h"
+#import "KInput.h"
 
 #define SUPPORT_RETINA_RESOLUTION 1
 
@@ -45,6 +46,8 @@ static CVReturn MyDisplayLinkCallback(CVDisplayLinkRef displayLink,
 
 - (void) awakeFromNib
 {
+	trackingArea = nil;
+	
 	NSOpenGLPixelFormatAttribute attrs[] =
 	{
 		kCGLPFAAccelerated,
@@ -155,9 +158,110 @@ static CVReturn MyDisplayLinkCallback(CVDisplayLinkRef displayLink,
 	// Init our renderer.  Use 0 for the defaultFBO which is appropriate for
 	// OSX (but not iOS since iOS apps must create their own FBO)
 	_renderer = [[OpenGLRenderer alloc] initWithDefaultFBO:0];
+	
+	
+	
+	if(trackingArea == nil)
+	{
+		//NSRect r = [self bounds];
+		//NSLog(@"debug", r);
+		
+		trackingArea = [[NSTrackingArea alloc] initWithRect:[self bounds]
+													options: (NSTrackingMouseEnteredAndExited | NSTrackingMouseMoved | NSTrackingActiveInKeyWindow )
+													  owner:self userInfo:nil];
+		[self addTrackingArea:trackingArea];
+	}
+	
+	
 }
 
-- (void)reshape
+- (void) updateTrackingAreas
+{
+	NSLog(@"updateTrackingAreas");
+	if(trackingArea)
+	{
+		[self removeTrackingArea:trackingArea];
+		[trackingArea release];
+	}
+	_hitRect = [self bounds];
+	NSLog(@"updateTrackingAreas bounds %f %f %f %f", _hitRect.origin.x, _hitRect.origin.y, _hitRect.size.width, _hitRect.size.height);
+	
+	trackingArea = [[NSTrackingArea alloc] initWithRect:[self bounds]
+												options: (NSTrackingMouseEnteredAndExited | NSTrackingMouseMoved | NSTrackingActiveInKeyWindow)
+												  owner:self userInfo:nil];
+	[self addTrackingArea:trackingArea];
+}
+
+- (BOOL) acceptsMouseMovedEvents
+{
+	return YES;
+}
+
+- (void) setMainController:(NSWindowController*)theController;
+{
+	controller = theController;
+}
+
+- (void) mouseEntered:(NSEvent *)theEvent
+{
+	NSLog(@"mouse entered");
+	//[controller enterWindow];
+}
+
+- (void) mouseMoved:(NSEvent *)theEvent
+{
+	NSPoint eyeCenter;
+	if(0/*_fullscreen == YES*/)
+	{
+		eyeCenter = [NSEvent mouseLocation];
+	}
+	else
+	{
+		eyeCenter = [self convertPoint:[theEvent locationInWindow] fromView:nil];
+		//NSLog(@"mouseMoved bounds %f %f %f %f - %f %f", _hitRect.origin.x, _hitRect.origin.y, _hitRect.size.width, _hitRect.size.height, eyeCenter.x, eyeCenter.y);
+		if(eyeCenter.x < _hitRect.origin.x || eyeCenter.x > _hitRect.origin.x+_hitRect.size.width ||
+		   eyeCenter.y < _hitRect.origin.y || eyeCenter.y > _hitRect.origin.y+_hitRect.size.height)
+		{
+			return;
+		}
+	}
+	
+	
+//	NSLog(@"mouse mouseMoved %f %f", eyeCenter.x, eyeCenter.y);
+	
+	if(0/*isInFullScreenMode*/)
+	{
+		NSRect mainDisplayRect = [[NSScreen mainScreen] frame];
+		int sw = KInput::getScreenWidth();
+		int sh = KInput::getScreenHeight();
+		float rx = (float)sw / mainDisplayRect.size.width;
+		float ry = (float)sh / mainDisplayRect.size.height;
+		eyeCenter.x *= rx;
+		eyeCenter.y *= ry;
+	}
+//	eyeCenter.y = KInput::getScreenHeight() - eyeCenter.y;
+	//KInput::setScreenMoving((int)eyeCenter.x, (int)eyeCenter.y);
+	
+//	NSLog(@"mouse mouseMoved %f %f", eyeCenter.x, eyeCenter.y);
+
+	KInput::setMousePos((float)(eyeCenter.x), (float)(eyeCenter.y));
+}
+
+- (void) mouseExited:(NSEvent *)theEvent
+{
+	NSLog(@"mouse exited");
+	//[controller exitWindow];
+}
+
+
+- (void) lockFocus
+{
+	[super lockFocus];
+	if ([[self openGLContext] view] != self)
+		[[self openGLContext] setView:self];
+}
+
+- (void) reshape
 {	
 	[super reshape];
 	
@@ -205,7 +309,7 @@ static CVReturn MyDisplayLinkCallback(CVDisplayLinkRef displayLink,
 }
 
 
-- (void)renewGState
+- (void) renewGState
 {	
 	// Called whenever graphics state updated (such as window resize)
 	
@@ -251,5 +355,8 @@ static CVReturn MyDisplayLinkCallback(CVDisplayLinkRef displayLink,
 	CVDisplayLinkStop(displayLink);
 
 	CVDisplayLinkRelease(displayLink);
+	
+	[super dealloc];
 }
+
 @end

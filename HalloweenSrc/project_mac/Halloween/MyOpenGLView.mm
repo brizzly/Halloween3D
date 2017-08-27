@@ -2,9 +2,12 @@
 #import "MyOpenGLView.h"
 #import "MainController.h"
 #import "Scene.h"
-
+#import "KInput.h"
 
 @implementation MyOpenGLView
+
+
+
 
 - (NSOpenGLContext*) openGLContext
 {
@@ -221,7 +224,10 @@ static CVReturn MyDisplayLinkCallback(CVDisplayLinkRef displayLink, const CVTime
 		{
 			return;
 		}
-	}	
+	}
+	
+	KInput::setScreenMoving((int)eyeCenter.x, (int)eyeCenter.y);
+	
 	[controller setMouseMoved:eyeCenter];
 }
 

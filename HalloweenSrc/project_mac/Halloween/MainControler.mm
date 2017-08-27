@@ -487,7 +487,7 @@
 		lastWindowPoint = [theEvent locationInWindow];
 	}
 	
-	KInput::setScreenPressed(1, KInput::getMouseX(), KInput::getMouseY());
+	//KInput::setScreenPressed(1, KInput::getMouseX(), KInput::getMouseY());
 	
 	//NSLog(@"Type %d", [theEvent type]);
     while (dragging)

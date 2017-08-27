@@ -44,7 +44,7 @@ float	KInput::_zAcc = 0;
 int		KInput::_screen_width = 0;
 int		KInput::_screen_height = 0;
 bool	KInput::_btPressed = ISUP;
-long	KInput::_mx=0,KInput::_my =0;
+float	KInput::_mx=0,KInput::_my=0;
 sFinger	KInput::finger[2] = { 0,0,false ,0,0,false};
 
 
@@ -198,40 +198,30 @@ void KInput::mousePointerTo(int x, int y)
  */
 }
 
+void KInput::setMousePos(float valX, float valY)
+{
+	_mx = valX;
+	_my = valY;
+}
+
+void KInput::setMouseX(float val)
+{
+	_mx = val;
+}
+
+void KInput::setMouseY(float val)
+{
+	_my = val;
+}
+
 int KInput::getMouseX()
 {
-	if( KPTK::_screenOrientation == K_320x480 || KPTK::_screenOrientation == K_768x1024 )
-	{
-	   return (int)_xScreenHit;// - midX;
-	}
-	else if( KPTK::_screenOrientation == K_480x320) {
-		return (int)480-_yScreenHit;// - midX;		
-	}
-	else if( KPTK::_screenOrientation == K_1024x768) {
-		return (int)1024-_yScreenHit;// - midX;		
-	}
-	else if( KPTK::_screenOrientation == K_MAC) {
-		return _xScreenHit;
-	}
-	return 0;
+	return (int)_mx;
 }
 
 int KInput::getMouseY()
 {
-	if( KPTK::_screenOrientation == K_320x480 || KPTK::_screenOrientation == K_768x1024 )
-	{
-		return (int)_yScreenHit;// - midX;
-	}
-	else if( KPTK::_screenOrientation == K_480x320) {
-		return (int)_xScreenHit;		
-	}
-	else if( KPTK::_screenOrientation == K_1024x768) {
-		return (int)_xScreenHit;		
-	}
-	else if( KPTK::_screenOrientation == K_MAC) {
-		return _yScreenHit;
-	}
-	return 0;
+	return (int)_my;
 }
 
 bool KInput::getLeftButtonState()

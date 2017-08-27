@@ -385,11 +385,10 @@ int sys_setVID()
 		soundsys.value = false;
 	}
 	ds_LoadSounds();
-        
-        ds_AdjustSoundVolumes();
-        ds_AdjustMusicVolumes();
+	ds_AdjustSoundVolumes();
+	ds_AdjustMusicVolumes();
 	
-        sys_setGamma(gamma_.value);
+	sys_setGamma(gamma_.value);
 	return true;
 }
 
@@ -688,7 +687,6 @@ void MACStarter()
 	//main_Alternate(0, NULL);
 	
 	m_ConsPrint("Start game Halloween()\n");
-	
 
 #ifdef H_LINUX
 	SDL_Init(SDL_INIT_TIMER);
@@ -721,12 +719,12 @@ void MACStarter()
 	{
 	}
 	
-	 if(!sys_setVID())
-	 {
-		 m_ConsPrint("Failed to set the video mode\n");
-		 //goto ending;
-		 return;
-	 }
+	if(!sys_setVID())
+	{
+		m_ConsPrint("Failed to set the video mode\n");
+		//goto ending;
+		return;
+	}
 	
 	if(!im_Init())
 	{

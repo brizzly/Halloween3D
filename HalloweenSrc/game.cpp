@@ -1102,6 +1102,8 @@ hBool GameProcess()
 	{
 		PlayerEnt = o_FindEntity(PERSO);
 	}
+	
+	IN_Process(MouseInput,PlayerEnt);
 
 	switch(ProgramState)
 	{
