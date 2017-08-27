@@ -14,6 +14,8 @@
 	NSTrackingArea * trackingArea;
 	NSRect			_hitRect;
 	NSWindowController * controller;
+	NSEvent * mouseEventMonitor;
+
 }
 
 @end

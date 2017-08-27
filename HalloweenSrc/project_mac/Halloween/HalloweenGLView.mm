@@ -129,6 +129,15 @@ static CVReturn MyDisplayLinkCallback(CVDisplayLinkRef displayLink,
 											   object:[self window]];
 	
 	[_renderer readyRenderer];
+	
+	
+//	NSEvent *event;
+//	while ((event = [NSApp nextEventMatchingMask:NSEventMaskAny untilDate:[NSDate distantPast] inMode:NSDefaultRunLoopMode dequeue:YES]))
+//	{
+//		NSLog(@"Event = %lu", (unsigned long)[event type]);
+//		//switch ([event type])
+//	}
+	
 }
 
 - (void) windowWillClose:(NSNotification*)notification
@@ -187,7 +196,7 @@ static CVReturn MyDisplayLinkCallback(CVDisplayLinkRef displayLink,
 	NSLog(@"updateTrackingAreas bounds %f %f %f %f", _hitRect.origin.x, _hitRect.origin.y, _hitRect.size.width, _hitRect.size.height);
 	
 	trackingArea = [[NSTrackingArea alloc] initWithRect:[self bounds]
-												options: (NSTrackingMouseEnteredAndExited | NSTrackingMouseMoved | NSTrackingActiveInKeyWindow)
+												options: (NSTrackingMouseEnteredAndExited | NSTrackingMouseMoved  | NSTrackingActiveInKeyWindow)
 												  owner:self userInfo:nil];
 	[self addTrackingArea:trackingArea];
 }
@@ -250,6 +259,17 @@ static CVReturn MyDisplayLinkCallback(CVDisplayLinkRef displayLink,
 {
 	NSLog(@"mouse exited");
 	//[controller exitWindow];
+}
+
+- (void) rightMouseUp:(NSEvent *)event
+{
+	NSLog(@"R mouseUp (BIS)");
+	KInput::setRightButtonState(false);
+}
+- (void) rightMouseDown:(NSEvent *)event
+{
+	NSLog(@"R mouseDown (BIS)");
+	KInput::setRightButtonState(true);
 }
 
 
@@ -344,6 +364,9 @@ static CVReturn MyDisplayLinkCallback(CVDisplayLinkRef displayLink,
 
 	CGLFlushDrawable([[self openGLContext] CGLContextObj]);
 	CGLUnlockContext([[self openGLContext] CGLContextObj]);
+	
+	
+
 }
 
 - (void) dealloc

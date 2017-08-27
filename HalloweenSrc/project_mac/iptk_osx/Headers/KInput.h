@@ -176,6 +176,9 @@ private:
 	
 	static int		midX, midY;
 	static			bool	_btPressed ;
+	static			bool	_leftMousePressed;
+	static			bool	_rightMousePressed;
+
 	static			float	_mx,_my ;
 	
 public:
@@ -202,6 +205,8 @@ public:
 	static bool		getLeftButtonState();
 	static	bool	getRightButtonState();
 	static	bool	getMiddleButtonState();
+	static void 	setLeftButtonState(bool value);
+	static void 	setRightButtonState(bool value);
 	
 	// iPhone specific 
 	static float	getAccelerationX();

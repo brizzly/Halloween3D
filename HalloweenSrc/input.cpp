@@ -199,7 +199,7 @@ hBool IN_Init()
 	msoffsetY = 0;
 	//if(fullscreen.value == true)
 	IN_HideMouse();
-   	IN_SetCursorPos(320, 240);
+   	//IN_SetCursorPos(320, 240);
 	for(i=0 ; i<K_MAXKEYS ; i++)
 	{
 		KeysInput[i].key = 0;
@@ -224,7 +224,6 @@ void IN_UnInit()
 
 void IN_SetCursorPos(int x, int y)
 {
-	return;
 #ifdef H_MAC
 	KInput::mousePointerTo(x, y);
 #endif
@@ -232,6 +231,7 @@ void IN_SetCursorPos(int x, int y)
 #ifdef H_LINUX
 	SDL_WarpMouse(x, y);
 #endif
+	
 	Last_MouseX = x;
 	Last_MouseY = y;
 }
@@ -404,6 +404,8 @@ void IN_SetMouseButons(int bstate)
 
 void IN_WarpMouse()
 {
+	return;
+	
 	// wrap mouse, sauf quand on joue pas, en mode fenetre
 	if(fullscreen.value == true || ProgramState == PS_GAME)
 	{
@@ -425,30 +427,58 @@ void IN_WarpMouse()
 
 long IN_ReadMouse()
 {
-	//return 0;
-	
-	float		midX = (float)(ScreenX[(int)videomode.value]/2);
-	float		midY = (float)(ScreenY[(int)videomode.value]/2);
-	
 	float 		msx = (float)(KInput::getMouseX());
 	float 		msy = (float)(KInput::getMouseY());
 	
+	
 	//printf("msx=%f ; msy=%f\n",msx,msy);
 	
-	// seulement en fullscreen
-//	msoffsetX = msx - midX;
-//	msoffsetY = msy - midY;
 
-	MouseX = msx;
-	MouseY = msy;
+	if(ProgramState != PS_GAME)
+	{
+		MouseX = msx;
+		MouseY = msy;
 
-	msoffsetX = msx - (float)Last_MouseX;
-	msoffsetY = msy - (float)Last_MouseY;
-	Last_MouseX = (int)msx;
-	Last_MouseY = (int)msy;
-	
-	//printf("msoffsetX=%f ; msoffsetY=%f\n",msoffsetX,msoffsetY);
-	
+		if(MouseX > 640) 	MouseX = 640;
+		if(MouseX < 0) 		MouseX = 0;
+		if(MouseY > 480) 	MouseY = 480;
+		if(MouseY < 0) 		MouseY = 0;
+
+		msoffsetX = msx - (float)Last_MouseX;
+		msoffsetY = msy - (float)Last_MouseY;
+		Last_MouseX = (int)msx;
+		Last_MouseY = (int)msy;
+		
+		//printf("msoffsetX=%f ; msoffsetY=%f\n",msoffsetX,msoffsetY);
+	}
+	else
+	{
+		if(Last_MouseX == 666) Last_MouseX = msx;
+		if(Last_MouseY == 666) Last_MouseY = msy;
+		
+		msoffsetX = msx - Last_MouseX;
+		msoffsetY = msy - Last_MouseY;
+		
+		Last_MouseX = msx;
+		Last_MouseY = msy;
+		
+		MouseX += 2.0f * msx;// * player_rvel.value;
+		MouseY += 2.0f * msy;// * player_rvel.value;
+		
+		
+		//IN_SetCursorPos(320, 240);
+		
+		
+	//	float		midX = (float)(ScreenX[(int)videomode.value]/2);
+	//	float		midY = (float)(ScreenY[(int)videomode.value]/2);
+
+	//	msoffsetX = msx - midX;
+	//	msoffsetY = msy - midY;
+
+
+//		IN_SetCursorPos((int)midX, (int)midY);
+		
+	}
 	
 	/*
 	if(fullscreen.value == false || ProgramState != PS_GAME)
@@ -469,11 +499,7 @@ long IN_ReadMouse()
 	*/
 	
 	//printf("MouseX=%d ; MouseY=%d\n",MouseX,MouseY);
-        
-
-
-//	IN_SetCursorPos((int)midX, (int)midY);
-
+	
 
 	if( KInput::getLeftButtonState() == ISDOWN )
 	{
@@ -528,7 +554,7 @@ void IN_MouseGetOffet(int x, int y, int relx, int rely)
 	if(fullscreen.value == false || ProgramState != PS_GAME)
 	{
 		MouseX = x * (640.0f / ScreenX[(int)videomode.value]);
-                MouseY = 480 - (y * (480.0f / ScreenY[(int)videomode.value]));
+		MouseY = 480 - (y * (480.0f / ScreenY[(int)videomode.value]));
                 
         #ifdef H_MAC
             if(fullscreen.value == false)
@@ -543,7 +569,7 @@ void IN_MouseGetOffet(int x, int y, int relx, int rely)
 	{               
 		MouseX += 2.0f * msoffsetX * player_rvel.value;
 		MouseY += 2.0f * msoffsetY * player_rvel.value;
-        }
+	}
 }
 
 void IN_GetMouse(hMOUSEINPUT *Mouse)

@@ -36,12 +36,36 @@
 //														options: (NSTrackingMouseEnteredAndExited | NSTrackingMouseMoved | NSTrackingActiveInKeyWindow )
 //														  owner:self userInfo:nil];
 //			[self.window addTrackingArea:trackingArea];
-		
+	
+/*
+		mouseEventMonitor = [NSEvent addLocalMonitorForEventsMatchingMask:(NSLeftMouseDownMask | NSRightMouseDownMask | NSOtherMouseDownMask) handler:^NSEvent *(NSEvent *event) {
+		//	if (event.window != self.panelWindow)
+		//		[self dismissPanel];
+			
+			return event;
+		}];
+*/
     }
 
 	return self;
 }
 
+- (BOOL)becomesKeyOnlyIfNeeded
+{
+	return YES;
+}
+
+- (void)becomeMainWindow
+{
+	NSLog(@"becomeMainWindow");
+	[super becomeMainWindow];
+}
+
+- (void)becomeKeyWindow
+{
+	NSLog(@"becomeKeyWindow");
+	[super becomeKeyWindow];
+}
 
 
 - (void) goFullscreen
@@ -214,14 +238,72 @@
 - (void) mouseUp:(NSEvent *)theEvent
 {
 	NSLog(@"mouseUp");
+	BOOL keepOn = YES;
+	BOOL isInside = YES;
+	NSPoint mouseLoc;
+	
+//	while (keepOn) {
+//		theEvent = [[self window] nextEventMatchingMask: NSLeftMouseUpMask | NSRightMouseUpMask];
+		// mouseLoc = [self convertPoint:[theEvent locationInWindow] fromView:nil];
+		//	isInside = [self mouse:mouseLoc inRect:[self bounds]];
+		
+		switch ([theEvent type]) {
+			case NSLeftMouseUp:
+				//if (isInside) [self doSomethingSignificant];
+				KInput::setLeftButtonState(false);
+				keepOn = NO;
+				break;
+			case NSRightMouseUp:
+				KInput::setRightButtonState(false);
+				break;
+			default:
+				/* Ignore any other kind of event. */
+				break;
+		}
+//	};
 	KInput::setScreenReleased();
 }
+
+/*
+- (void) rightMouseUp:(NSEvent *)event
+{
+	NSLog(@"R mouseUp");
+	KInput::setRightButtonState(false);
+}
+
+- (void) rightMouseDown:(NSEvent *)event
+{
+	NSLog(@"R mouseDown");
+	KInput::setRightButtonState(true);
+}
+*/
 
 - (void) mouseDown:(NSEvent *)theEvent
 {
 	NSLog(@"mouseDown");
-	KInput::setScreenPressed(1, KInput::getMouseX(), KInput::getMouseY());
+	BOOL keepOn = YES;
+	BOOL isInside = YES;
+	NSPoint mouseLoc;
+	
+//	while (keepOn) {
+//		theEvent = [[self window] nextEventMatchingMask: NSLeftMouseDownMask | NSRightMouseDownMask];
+	// mouseLoc = [self convertPoint:[theEvent locationInWindow] fromView:nil];
+	//	isInside = [self mouse:mouseLoc inRect:[self bounds]];
+		
+		switch ([theEvent type]) {
+			case NSLeftMouseDown:
+				//if (isInside) [self doSomethingSignificant];
+				KInput::setLeftButtonState(true);
+				keepOn = NO;
+				break;
+			case NSRightMouseDown:
+				KInput::setRightButtonState(true);
+				break;
+			default:
+				/* Ignore any other kind of event. */
+				break;
+		}
+//	};
 }
-
 
 @end

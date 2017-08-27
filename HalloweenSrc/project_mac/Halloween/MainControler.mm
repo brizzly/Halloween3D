@@ -468,6 +468,7 @@
 	oldFlags = newFlags;
 }	
 
+/*
 - (void) mouseUp:(NSEvent *)theEvent
 {
 	KInput::setScreenReleased();
@@ -539,6 +540,7 @@
 	
 	[self mouseUp:theEvent];
 }
+*/
 
 - (void) setMouseMoved:(NSPoint)pos
 {

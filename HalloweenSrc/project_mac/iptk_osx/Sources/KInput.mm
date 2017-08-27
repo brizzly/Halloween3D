@@ -44,6 +44,9 @@ float	KInput::_zAcc = 0;
 int		KInput::_screen_width = 0;
 int		KInput::_screen_height = 0;
 bool	KInput::_btPressed = ISUP;
+bool	KInput::_leftMousePressed = ISUP;
+bool	KInput::_rightMousePressed = ISUP;
+
 float	KInput::_mx=0,KInput::_my=0;
 sFinger	KInput::finger[2] = { 0,0,false ,0,0,false};
 
@@ -184,6 +187,9 @@ void KInput::mousePointerTo(int x, int y)
 	midX = x;
 	midY = y;
 	
+	_mx = x;
+	_my = y;
+	
 	CGPoint pt;
 	pt.x = ( float )x;
 	pt.y = ( float )y;
@@ -226,12 +232,22 @@ int KInput::getMouseY()
 
 bool KInput::getLeftButtonState()
 {
-	return _btPressed;
+	return _leftMousePressed;
 }
 
 bool KInput::getRightButtonState()
 {
-	return false;
+	return _rightMousePressed;
+}
+
+void KInput::setLeftButtonState(bool value)
+{
+	_leftMousePressed = value;
+}
+
+void KInput::setRightButtonState(bool value)
+{
+	_rightMousePressed = value;
 }
 
 bool KInput::getMiddleButtonState()
