@@ -9,9 +9,9 @@
   This class is not part of the NIB and entirely managed in code by the window controller.
  */
 
-#import "GLEssentialsFullscreenWindow.h"
+#import "HalloweenFullscreenWindow.h"
 
-@implementation GLEssentialsFullscreenWindow
+@implementation HalloweenFullscreenWindow
 
 -(instancetype)init
 {

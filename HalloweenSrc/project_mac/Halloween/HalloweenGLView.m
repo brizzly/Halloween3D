@@ -6,18 +6,18 @@
  OpenGL view subclass.
  */
 
-#import "GLEssentialsGLView.h"
+#import "HalloweenGLView.h"
 #import "OpenGLRenderer.h"
 
 #define SUPPORT_RETINA_RESOLUTION 1
 
-@interface GLEssentialsGLView ()
+@interface HalloweenGLView ()
 {
     OpenGLRenderer* _renderer;
 }
 @end
 
-@implementation GLEssentialsGLView
+@implementation HalloweenGLView
 
 
 - (CVReturn) getFrameForTime:(const CVTimeStamp*)outputTime
@@ -39,12 +39,22 @@ static CVReturn MyDisplayLinkCallback(CVDisplayLinkRef displayLink,
 									  CVOptionFlags* flagsOut, 
 									  void* displayLinkContext)
 {
-    CVReturn result = [(__bridge GLEssentialsGLView*)displayLinkContext getFrameForTime:outputTime];
+    CVReturn result = [(__bridge HalloweenGLView*)displayLinkContext getFrameForTime:outputTime];
     return result;
 }
 
 - (void) awakeFromNib
 {
+	NSOpenGLPixelFormatAttribute attrs[] =
+	{
+		kCGLPFAAccelerated,
+		kCGLPFANoRecovery,
+		kCGLPFADoubleBuffer,
+		//	kCGLPFAColorSize, 24,
+		kCGLPFADepthSize, 24,
+		0
+	};
+	/*
     NSOpenGLPixelFormatAttribute attrs[] =
 	{
 		NSOpenGLPFADoubleBuffer,
@@ -56,6 +66,7 @@ static CVReturn MyDisplayLinkCallback(CVDisplayLinkRef displayLink,
 #endif
 		0
 	};
+	*/
 	
 	NSOpenGLPixelFormat *pf = [[NSOpenGLPixelFormat alloc] initWithAttributes:attrs];
 	
@@ -65,7 +76,7 @@ static CVReturn MyDisplayLinkCallback(CVDisplayLinkRef displayLink,
 	}
 	   
     NSOpenGLContext* context = [[NSOpenGLContext alloc] initWithFormat:pf shareContext:nil];
-    
+    /*
 #if ESSENTIAL_GL_PRACTICES_SUPPORT_GL3 && defined(DEBUG)
 	// When we're using a CoreProfile context, crash if we call a legacy OpenGL function
 	// This will make it much more obvious where and when such a function call is made so
@@ -74,6 +85,7 @@ static CVReturn MyDisplayLinkCallback(CVDisplayLinkRef displayLink,
 	// but it would be more difficult to see where that function was called.
 	CGLEnable([context CGLContextObj], kCGLCECrashOnRemovedFunctions);
 #endif
+	*/
 	
     [self setPixelFormat:pf];
     

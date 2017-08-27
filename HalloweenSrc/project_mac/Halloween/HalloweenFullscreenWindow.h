@@ -10,6 +10,6 @@
  */
 #import <Cocoa/Cocoa.h>
 
-@interface GLEssentialsFullscreenWindow : NSWindow
+@interface HalloweenFullscreenWindow : NSWindow
 
 @end

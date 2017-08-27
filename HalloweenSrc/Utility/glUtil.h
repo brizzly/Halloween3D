@@ -20,6 +20,10 @@
 
 #import <OpenGL/OpenGL.h>
 
+#define ESSENTIAL_GL_PRACTICES_SUPPORT_GL3 0
+#import <OpenGL/gl.h>
+
+/*
 // OpenGL 3.2 is only supported on MacOS X Lion and later
 // CGL_VERSION_1_3 is defined as 1 on MacOS X Lion and later
 #if CGL_VERSION_1_3
@@ -34,6 +38,7 @@
 #else
 #import <OpenGL/gl.h>
 #endif //!ESSENTIAL_GL_PRACTICES_SUPPORT_GL3
+*/
 
 #endif // !TARGET_IOS
 

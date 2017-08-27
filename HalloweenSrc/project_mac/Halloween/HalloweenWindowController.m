@@ -6,20 +6,20 @@
  Window controller subclass.
  */
 
-#import "GLEssentialsWindowController.h"
-#import "GLEssentialsFullscreenWindow.h"
+#import "HalloweenWindowController.h"
+#import "HalloweenFullscreenWindow.h"
 
-@interface GLEssentialsWindowController ()
+@interface HalloweenWindowController ()
 {
     // Fullscreen window
-    GLEssentialsFullscreenWindow *_fullscreenWindow;
+    HalloweenFullscreenWindow *_fullscreenWindow;
 
     // Non-Fullscreen window (also the initial window)
     NSWindow* _standardWindow;
 }
 @end
 
-@implementation GLEssentialsWindowController
+@implementation HalloweenWindowController
 
 - (instancetype)initWithWindow:(NSWindow *)window
 {
@@ -47,7 +47,7 @@
 	}
 
 	// Allocate a new fullscreen window
-	_fullscreenWindow = [[GLEssentialsFullscreenWindow alloc] init];
+	_fullscreenWindow = [[HalloweenFullscreenWindow alloc] init];
 
 	// Resize the view to screensize
 	NSRect viewRect = [_fullscreenWindow frame];

@@ -13,8 +13,12 @@
 #import "modelUtil.h"
 #import "imageUtil.h"
 
-@interface GLEssentialsGLView : NSOpenGLView {
+@interface HalloweenGLView : NSOpenGLView
+{
 	CVDisplayLinkRef displayLink;
+	
+	//NSOpenGLContext *openGLContext;
+	//NSOpenGLPixelFormat *pixelFormat;
 }
 
 @end

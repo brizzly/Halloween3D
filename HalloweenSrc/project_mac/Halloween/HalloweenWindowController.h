@@ -8,9 +8,9 @@
 
 
 #import <Cocoa/Cocoa.h>
-#import "GLEssentialsGLView.h"
+//#import "GLEssentialsGLView.h"
 
-@interface GLEssentialsWindowController : NSWindowController
+@interface HalloweenWindowController : NSWindowController
 {
 	
 }
