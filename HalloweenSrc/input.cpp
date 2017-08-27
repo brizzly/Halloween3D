@@ -29,7 +29,7 @@ hBool		gClientJumpKey;
 KEYSINPUT	KeysInput[K_MAXKEYS+4];
 hMOUSEINPUT	MouseInput;
 dword		Touche;
-int		gGameIdKeys[MAX_GAMEKEY+4];
+int			gGameIdKeys[MAX_GAMEKEY+4];
 hBool		IsMouseCursor = true;
 hBool 		msclic_A;
 hBool 		msclic_B;
@@ -151,6 +151,14 @@ int NomDeTouches[] = {
 0, //"OEM_5"     ,     
 0, //"OEM_6",      
 0, //"OEM_7"
+0, //K_VK_END
+0, //K_VK_HOME
+0, //K_VK_DEL
+0, //K_VK_INSERT
+0, //K_VK_SNAPSHOT
+0, //K_VK_PRIOR
+0, //K_VK_NEXT
+0, //K_VK_ERROR
 };
 
 char *NomDeTouches2[] = 
@@ -166,7 +174,8 @@ char *NomDeTouches2[] =
 	"NUM0" ,"NUM1" ,"NUM2" ,"NUM3", "NUM4", "NUM5","NUM6","NUM7","NUM8","NUM9",
 	"MULTIPLY" , "ADD" , "SUBTRACT", "DECIMAL", "DIVIDE", "CLEAR", "MENU", "LWIN", "RWIN", 
 	"NUMLOCK" , "SCROLL" , "OEM_1", "OEM_PLUS", "OEM_COMMA", "OEM_MINUS", "OEM_PERIOD", 
-	"OEM_2", "OEM_3", "OEM_4", "OEM_5", "OEM_6", "OEM_7"
+	"OEM_2", "OEM_3", "OEM_4", "OEM_5", "OEM_6", "OEM_7", "END", "HOME","DEL", "INSERT",
+	"SNAPSHOT", "PRIOR", "NEXT", "ERROR"
 };
 
 #endif
@@ -271,12 +280,12 @@ void IN_ShowMouse()
 
 hBool IN_IsPressed(unsigned short keyCode)
 {
-	if(gIsServer && net_dedicated.value)
+	if(gIsServer && net_dedicated.value) {
 		return false;
-
-	if(KeysInput[keyCode].key != 0)
+	}
+	if(KeysInput[keyCode].key != 0) {
 		return true;
-
+	}
 	return false;
 }
 
@@ -326,7 +335,7 @@ void IN_ReadKeyboard()
 	int i;
 	
 	gKeyHasBeenPressed = false;
-	for(i=0 ; i<93 ; i++)
+	for(i=0 ; i<93+8 ; i++)
 	{
 		if(KInput::isPressed( (EKeyboardLayout)i))
 		{
@@ -687,53 +696,54 @@ int ReadKey()
 	{
 		if(KeysInput[index].key != 0)
 		{
-	        	if(index == DIK_GRAVE)
-	            		continue;
-	           	if(index == DIK_LSHIFT)
-	           	{
-	           		IsCaps = true;
-	           		continue;
-	           	}
-				if(index == DIK_LSHIFT)
-				{
-					IsCaps = true;
+			if(index == DIK_GRAVE) {
+				continue;
+			}
+			if(index == DIK_LSHIFT)
+			{
+				IsCaps = true;
+				continue;
+			}
+			if(index == DIK_LSHIFT)
+			{
+				IsCaps = true;
+				continue;
+			}
+	
+			if(KeyMask[index])
 					continue;
+			KeyMask[index] = true;
+			ds_PlaySound(15);
+			KeyHasBeenPressed = true;
+			#ifdef H_MAC
+			Key = NomDeTouches[index];
+			if(Key)
+			if(IsCaps)
+			{
+				if(Key == ',')
+					Key = '.';
+				else
+				{
+					Key -= 'a';
+					Key += 'A';
 				}
-		
-	        	if(KeyMask[index])
-	            		continue;
-	       		KeyMask[index] = true;
-              	ds_PlaySound(15);
-             	KeyHasBeenPressed = true;
-             	#ifdef H_MAC
-             	Key = NomDeTouches[index];
-             	if(Key)
-             	if(IsCaps)
-             	{
-             		if(Key == ',')
-             			Key = '.';
-             		else
-             		{
-             			Key -= 'a';
-             			Key += 'A';
-             		}
-             	}
-             	#else
-	    		Key = index;
-	    		#endif
-            	KeyPos = 0;
-           		while( KeyBuffer[KeyPos] >= 0 && KeyPos < KEY_BUFFER_MAX )
-               	  		KeyPos++;
-       			if(KeyPos>=KEY_BUFFER_MAX)
-        	           	break;
-        		for(index2=0 ; index2<KEY_BUFFER_MAX ; index2++)
-        	    if(KeyBuffer[index2] == Key)
-        	     	break;
-        		KeyBuffer[KeyPos] = Key;
+			}
+			#else
+			Key = index;
+			#endif
+			KeyPos = 0;
+			while( KeyBuffer[KeyPos] >= 0 && KeyPos < KEY_BUFFER_MAX )
+					KeyPos++;
+			if(KeyPos>=KEY_BUFFER_MAX)
+					break;
+			for(index2=0 ; index2<KEY_BUFFER_MAX ; index2++)
+			if(KeyBuffer[index2] == Key)
+				break;
+			KeyBuffer[KeyPos] = Key;
         }
 	    else
 		{
-        		KeyMask[index] = false;
+			KeyMask[index] = false;
 		}
 	}
 

@@ -145,22 +145,23 @@ void KInput::swapFingerPosition(int fingerid1, int fingerid2)
 
 void KInput::setKeyPressed(int keycode)
 {
-	if(keycode < 0 || keycode >= LAYOUTSIZE) 
-	{
+	if(keycode < 0 || keycode >= LAYOUTSIZE)  {
 		return;
 	}
 	KeyboardLayout[keycode] = 1;
+	printf("KeyboardLayout[%d] = 1;\n", keycode);
+
 //	KeyStroke ks = KeyboardLayout[keycode];
 //	ks.KeyCode = keycode;
 }
 
 void KInput::setKeyUnPressed(int keycode)
 {
-	if(keycode < 0 || keycode >= LAYOUTSIZE) 
-	{
+	if(keycode < 0 || keycode >= LAYOUTSIZE) {
 		return;
 	}
 	KeyboardLayout[keycode] = 0;
+	printf("KeyboardLayout[%d] = 0;\n", keycode);
 }
 
 

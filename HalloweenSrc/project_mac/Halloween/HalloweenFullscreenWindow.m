@@ -49,4 +49,9 @@
 	[[self windowController] keyDown:event];
 }
 
+- (void) mouseMoved:(NSEvent *)theEvent
+{
+	[[self windowController] mouseMoved:theEvent];
+}
+
 @end

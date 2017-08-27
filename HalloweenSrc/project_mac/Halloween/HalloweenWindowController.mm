@@ -22,51 +22,31 @@
 
 @implementation HalloweenWindowController
 
-- (instancetype)initWithWindow:(NSWindow *)window
+/*
+- (instancetype) initWithWindow:(NSWindow *)window
 {
-    self = [super initWithWindow:window];
-
-	if (self)
+	if (self = [super initWithWindow:window])
 	{
 		// Initialize to nil since it indicates app is not fullscreen
 		_fullscreenWindow = nil;
 		
 		
-//			trackingArea = [[NSTrackingArea alloc] initWithRect:[self.window bounds]
-//														options: (NSTrackingMouseEnteredAndExited | NSTrackingMouseMoved | NSTrackingActiveInKeyWindow )
-//														  owner:self userInfo:nil];
-//			[self.window addTrackingArea:trackingArea];
-	
-/*
-		mouseEventMonitor = [NSEvent addLocalMonitorForEventsMatchingMask:(NSLeftMouseDownMask | NSRightMouseDownMask | NSOtherMouseDownMask) handler:^NSEvent *(NSEvent *event) {
-		//	if (event.window != self.panelWindow)
-		//		[self dismissPanel];
-			
-			return event;
-		}];
-*/
+		[self performSelector:@selector(goFullscreen) withObject:nil afterDelay:1.0f];
     }
 
 	return self;
 }
+*/
 
-- (BOOL)becomesKeyOnlyIfNeeded
+- (void) windowDidLoad
 {
-	return YES;
+	[super windowDidLoad];
+	
+	_standardWindow = nil;
+	_fullscreenWindow = nil;
+	
+	[self performSelector:@selector(goFullscreen) withObject:nil afterDelay:1];
 }
-
-- (void)becomeMainWindow
-{
-	NSLog(@"becomeMainWindow");
-	[super becomeMainWindow];
-}
-
-- (void)becomeKeyWindow
-{
-	NSLog(@"becomeKeyWindow");
-	[super becomeKeyWindow];
-}
-
 
 - (void) goFullscreen
 {
@@ -161,6 +141,10 @@
 			KInput::setKeyUnPressed(K_VK_RIGHT);
 			break;
 			
+		case 9:
+			KInput::setKeyUnPressed(K_VK_TAB);
+			break;
+
 		case 13:
 			KInput::setKeyUnPressed(K_VK_RETURN);
 			break;
@@ -173,12 +157,16 @@
 			KInput::setKeyUnPressed(K_VK_SPACE);
 			break;
 			
+		case 96:
+			KInput::setKeyUnPressed(K_VK_INSERT);
+			break;
+			
 		case 127:
 			KInput::setKeyUnPressed(K_VK_BACK);
 			break;
 			
 		default:
-		{
+		{			
 			if('a' <= c && c <= 'z') {
 				KInput::setKeyUnPressed(K_VK_A + c - 'a');
 			}
@@ -190,16 +178,97 @@
 			}
 		}
 		break;
-			
 	}
 	//[super keyDown:event];
 }
 
-/*
+
 - (void) keyDown:(NSEvent *)event
 {
 	unichar c = [[event charactersIgnoringModifiers] characterAtIndex:0];
+	printf("keyDown: %c %d\n", c, (int)c);
+	switch (c)
+	{
+			// Handle [ESC] key
+		case 27:
+			if(_fullscreenWindow != nil)
+			{
+				[self goWindow];
+			}
+			return;
+			// Have f key toggle fullscreen
+		case 'f':
+			if(_fullscreenWindow == nil)
+			{
+				[self goFullscreen];
+			}
+			else
+			{
+				[self goWindow];
+			}
+			return;
+			
+			
+		case NSUpArrowFunctionKey:
+			//NSLog(@"NSUpArrowFunctionKey");
+			KInput::setKeyPressed(K_VK_UP);
+			break;
+			
+		case NSDownArrowFunctionKey:
+			//NSLog(@"NSDownArrowFunctionKey");
+			KInput::setKeyPressed(K_VK_DOWN);
+			break;
+			
+		case NSLeftArrowFunctionKey:
+			//NSLog(@"NSLeftArrowFunctionKey");
+			KInput::setKeyPressed(K_VK_LEFT);
+			break;
+			
+		case NSRightArrowFunctionKey:
+			//NSLog(@"NSRightArrowFunctionKey");
+			KInput::setKeyPressed(K_VK_RIGHT);
+			break;
+			
+		case 9:
+			KInput::setKeyPressed(K_VK_TAB);
+			break;
 
+		case 13:
+			KInput::setKeyPressed(K_VK_RETURN);
+			break;
+			
+	//	case 27:
+	//		KInput::setKeyPressed(K_VK_ESCAPE);
+	//		break;
+			
+		case 32:
+			KInput::setKeyPressed(K_VK_SPACE);
+			break;
+			
+		case 96:
+			KInput::setKeyPressed(K_VK_INSERT);
+			break;
+			
+		case 127:
+			KInput::setKeyPressed(K_VK_BACK);
+			break;
+			
+		default:
+		{
+			if('a' <= c && c <= 'z') {
+				KInput::setKeyPressed(K_VK_A + c - 'a');
+			}
+			else if('A' <= c && c <= 'Z') {
+				KInput::setKeyPressed(K_VK_A + c - 'A');
+			}
+			else if('0' <= c && c <= '9') {
+				KInput::setKeyPressed(K_VK_0 + c - '0');
+			}
+		}
+		break;
+	}
+
+	/*
 	switch (c)
 	{
 		// Handle [ESC] key
@@ -220,20 +289,61 @@
 				[self goWindow];
 			}
 			return;
-	}
+	}*/
 
 	// Allow other character to be handled (or not and beep)
-	[super keyDown:event];
+	//[super keyDown:event];
 }
-*/
 
-/*
-- (void) mouseMoved:(NSEvent *)event
+
+- (void) flagsChanged:(NSEvent *)theEvent
 {
-	NSLog(@"mouseMoved");
-
+	static unsigned int oldFlags = 0;
+	unsigned int newFlags = [theEvent modifierFlags];
+	if(newFlags & NSAlphaShiftKeyMask)
+	{
+		NSLog(@"Alpha");
+	}
+	else if(newFlags & NSShiftKeyMask)
+	{
+		NSLog(@"Shift");
+		KInput::setKeyPressed(K_VK_R_SHIFT);
+		KInput::setKeyPressed(K_VK_L_SHIFT);
+	}
+	else if(newFlags & NSControlKeyMask)
+	{
+		NSLog(@"Control");
+		KInput::setKeyPressed(K_VK_R_CONTROL);
+		KInput::setKeyPressed(K_VK_L_CONTROL);
+	}
+	else if(newFlags & NSAlternateKeyMask)
+	{
+		NSLog(@"Alt");
+	}
+	else if(newFlags & NSCommandKeyMask)
+	{
+		NSLog(@"Command");
+	}
+	else if(oldFlags)
+	{
+		NSLog(@"unpressed flag ");
+		if(oldFlags & NSShiftKeyMask)
+		{
+			NSLog(@"Shift");
+			KInput::setKeyUnPressed(K_VK_R_SHIFT);
+			KInput::setKeyUnPressed(K_VK_L_SHIFT);
+		}
+		else if(oldFlags & NSControlKeyMask)
+		{
+			NSLog(@"Control");
+			KInput::setKeyUnPressed(K_VK_R_CONTROL);
+			KInput::setKeyUnPressed(K_VK_L_CONTROL);
+		}
+		newFlags = 0;
+	}
+	oldFlags = newFlags;
 }
-*/
+
 
 - (void) mouseUp:(NSEvent *)theEvent
 {
@@ -263,20 +373,6 @@
 //	};
 	KInput::setScreenReleased();
 }
-
-/*
-- (void) rightMouseUp:(NSEvent *)event
-{
-	NSLog(@"R mouseUp");
-	KInput::setRightButtonState(false);
-}
-
-- (void) rightMouseDown:(NSEvent *)event
-{
-	NSLog(@"R mouseDown");
-	KInput::setRightButtonState(true);
-}
-*/
 
 - (void) mouseDown:(NSEvent *)theEvent
 {

@@ -5,7 +5,7 @@
 #include "objet.h"
 
 #ifdef H_MAC
-#define		K_MAXKEYS	93
+#define		K_MAXKEYS	101 // 93
 #else
 #define		K_MAXKEYS	256
 #endif
@@ -157,7 +157,7 @@ void	DI_ReadKeyboard();
 #define	DIK_LEFT	K_VK_LEFT
 #define	DIK_RIGHT	K_VK_RIGHT
 #define	DIK_TAB		K_VK_TAB		// completion
-#define	DIK_GRAVE	K_VK_F1			// console key // 10
+#define	DIK_GRAVE	K_VK_INSERT		// console key
 #define	DIK_LSHIFT	K_VK_L_SHIFT	// ?
 #define	DIK_RSHIFT	K_VK_R_SHIFT	// ?
 

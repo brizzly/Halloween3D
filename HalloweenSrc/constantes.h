@@ -12,7 +12,7 @@
 #define	FULL_GAME
 
 
-#define GAMEVERSION_LITE        "Htnn V2005"
+#define GAMEVERSION_LITE        "Halloween3D"
 
 #ifdef H_WINDOWS
 #ifdef DEMO_GAME
@@ -32,9 +32,9 @@
 
 #ifdef H_MAC
 #ifdef DEMO_GAME
-#define GAMEVERSION             "HALLOWEEN 1.0b-Mac DEMO (C) Copyright 2003~2017 Jadeware"
+#define GAMEVERSION             "HALLOWEEN 1.0b-Mac DEMO (C) Copyright 2001~2017 Jadeware"
 #else
-#define GAMEVERSION             "HALLOWEEN 1.0b-Mac (C) Copyright 2003~2017 Jadeware"
+#define GAMEVERSION             "HALLOWEEN 1.0b-Mac (C) Copyright 2001~2017 Jadeware"
 #endif
 #endif
 
