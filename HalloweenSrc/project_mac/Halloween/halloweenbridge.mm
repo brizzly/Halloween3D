@@ -1,12 +1,8 @@
 
 
+#include <AppKit/NSApplication.h>
 #include "alloween.h"
-//#include "console.h"
 #include "halloween_linux.h"
-
-
-
-//extern void MACStarter();
 
 bool _init = false;
 bool _ended = false;
@@ -27,8 +23,10 @@ void loopGame()
 	if(_ended) {
 		return;
 	}
-	MACLoop();
-	//printf("loopGame\n");
+	if(!MACLoop()) {
+		_ended = true;
+		[NSApp terminate:nil];
+	}
 }
 
 void cleanupGame()

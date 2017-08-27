@@ -52,7 +52,6 @@ enum
 	PS_SHOWSHINFO,
 	PS_ENDSCORE,
 	PS_QUIT
-
 };
 
 //int		ProgramState;

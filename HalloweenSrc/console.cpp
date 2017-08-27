@@ -256,8 +256,9 @@ hBool m_InitConsole()
 hBool m_InitConsoleBuffer()
 {
 	KeyMask = (hBool*)s_malloc(KEYMASK_SIZE*sizeof(hBool));
-	if(KeyMask==NULL)
+	if(KeyMask==NULL) {
 		return false;
+	}
 	memset(KeyMask,0,KEYMASK_SIZE*sizeof(hBool));
 	
 	ConsoleBuffer = (char*)s_malloc(CONSOLE_NB_CHAR*sizeof(char));
@@ -278,6 +279,7 @@ void cons_UninitConsole()
 	{
 		m_FreeConsoleCmd();
 		s_free(KeyMask);
+		KeyMask = NULL;
 
 		sprintf(path,"%s%s",SYSDIR,"console.log");
 			
@@ -290,12 +292,17 @@ void cons_UninitConsole()
 		fwrite(ConsoleBuffer,strlen(ConsoleBuffer),1,file);
 		fclose(file);
 		s_free(ConsoleBuffer);
+		ConsoleBuffer = NULL;
 	}
 	else
 	{
 		m_FreeConsoleCmd();
+		
 		s_free(KeyMask);
+		KeyMask = NULL;
+		
 		s_free(ConsoleBuffer);
+		ConsoleBuffer = NULL;
 	}
 }
 

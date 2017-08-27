@@ -3,7 +3,7 @@
 #define HALLOW_HAHA_INC
 
 void MACStarter();
-void MACLoop();
+bool MACLoop();
 void MACend();
 int main_Alternate(int argc, char **argv);
 

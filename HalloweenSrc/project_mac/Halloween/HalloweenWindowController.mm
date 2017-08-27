@@ -7,55 +7,32 @@
  */
 
 #import "HalloweenWindowController.h"
-#import "HalloweenFullscreenWindow.h"
-#import "KInput.h"
 
-@interface HalloweenWindowController ()
-{
-    // Fullscreen window
-    HalloweenFullscreenWindow *_fullscreenWindow;
-
-    // Non-Fullscreen window (also the initial window)
-    NSWindow* _standardWindow;
-}
-@end
 
 @implementation HalloweenWindowController
 
-/*
-- (instancetype) initWithWindow:(NSWindow *)window
-{
-	if (self = [super initWithWindow:window])
-	{
-		// Initialize to nil since it indicates app is not fullscreen
-		_fullscreenWindow = nil;
-		
-		
-		[self performSelector:@selector(goFullscreen) withObject:nil afterDelay:1.0f];
-    }
 
-	return self;
-}
-*/
 
 - (void) windowDidLoad
 {
 	[super windowDidLoad];
 	
-	_standardWindow = nil;
+	_fullscreen = NO;
+	
+	_standardWindow = [[HalloweenNormalscreenWindow alloc] init];
 	_fullscreenWindow = nil;
 	
-	[self performSelector:@selector(goFullscreen) withObject:nil afterDelay:1];
+	[self setWindow:_standardWindow];
+	
+	//[self performSelector:@selector(goFullscreen) withObject:nil afterDelay:1];
 }
 
 - (void) goFullscreen
 {
-	// If app is already fullscreen...
-	if(_fullscreenWindow)
-	{
-		//...don't do anything
+	if(_fullscreen) {
 		return;
 	}
+	_fullscreen = YES;
 
 	// Allocate a new fullscreen window
 	_fullscreenWindow = [[HalloweenFullscreenWindow alloc] init];
@@ -69,7 +46,8 @@
 	// Set the view in the fullscreen window
 	[_fullscreenWindow setContentView:self.window.contentView];
 
-	_standardWindow = [self window];
+	//_standardWindow = [self window];
+	_standardRect = [_standardWindow frame];
 
 	// Hide non-fullscreen window so it doesn't show up when switching out
 	// of this app (i.e. with CMD-TAB)
@@ -86,22 +64,21 @@
 
 - (void) goWindow
 {
-	// If controller doesn't have a full screen window...
-	if(_fullscreenWindow == nil)
-	{
-		//...app is already windowed so don't do anything
+	if(!_fullscreen) {
 		return;
 	}
+	_fullscreen = NO;
 
-	// Get the rectangle of the original window
-	NSRect viewRect = [_standardWindow frame];
+	// Set controller to the standard window so that all input will go to this controller (self)
+	//_standardWindow = [self window];
+	[self setWindow:_standardWindow];
+
 	
-	// Set the view rect to the new size
+	// Get the rectangle of the original window
+	NSRect viewRect = _standardRect; // [_standardWindow frame];
+//	NSRect viewRect = [_standardWindow frame];
 	[self.window.contentView setFrame:viewRect];
 
-	// Set controller to the standard window so that all input will go to
-	// this controller (self)
-	[self setWindow:_standardWindow];
 
 	// Set the content of the orginal window to the view
 	[[self window] setContentView:_fullscreenWindow.contentView];
@@ -111,6 +88,9 @@
 
 	// Ensure we set fullscreen Window to nil so our checks for 
 	// windowed vs. fullscreen mode elsewhere are correct
+	//_fullscreenWindow = nil;
+	
+	[_fullscreenWindow release];
 	_fullscreenWindow = nil;
 }
 

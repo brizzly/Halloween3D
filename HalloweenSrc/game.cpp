@@ -893,7 +893,7 @@ void QuitGame()
 	char	path[255];
 
 	//if(gIsMultiplayer)
-		//net_UnInit();
+	//net_UnInit();
 
 	sprintf(path,"%s%s",SYSDIR,CONFIG);
 	cons_SaveConfig(path);
@@ -1500,6 +1500,7 @@ hBool GameProcess()
 
 		case PS_QUIT:
 		QuitGame();
+		ProgramState = PS_DEBUG;
 		return true;
 
 		default:

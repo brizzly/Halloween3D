@@ -3,24 +3,24 @@
  See LICENSE.txt for this sample’s licensing information
  
  Abstract:
- Fullscreen window class.
+ Normalscreen window class.
   All logic here could have been done in the window controller except that, by default, borderless windows cannot be made key and input cannot go to them.
   Therefore, this class exists to override canBecomeKeyWindow allowing this borderless window to accept inputs.
   This class is not part of the NIB and entirely managed in code by the window controller.
  */
 
-#import "HalloweenFullscreenWindow.h"
+#import "HalloweenNormalscreenWindow.h"
 
-@implementation HalloweenFullscreenWindow
+@implementation HalloweenNormalscreenWindow
 
--(instancetype)init
+-(instancetype) init
 {
 	// Create a screen-sized window on the display you want to take over
 	NSRect screenRect = [[NSScreen mainScreen] frame];
 
 	// Initialize the window making it size of the screen and borderless
 	self = [super initWithContentRect:screenRect
-							styleMask:NSBorderlessWindowMask
+							styleMask:NSTitledWindowMask | NSClosableWindowMask
 							  backing:NSBackingStoreBuffered
 								defer:YES];
 
@@ -36,13 +36,13 @@
 	return self;
 }
 
--(BOOL)canBecomeKeyWindow
+-(BOOL) canBecomeKeyWindow
 {
 	// Return yes so that this borderless window can receive input
 	return YES;
 }
 
-- (void)keyDown:(NSEvent *)event
+- (void) keyDown:(NSEvent *)event
 {
 	// Implement keyDown since controller will not get [ESC] key event which
 	// the controller uses to kill fullscreen

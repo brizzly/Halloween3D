@@ -116,29 +116,34 @@ void im_ReloadTextures()
 void im_UnloadTextures()
 {
 	int	i;
-        GLuint	tid;
+	GLuint	tid;
 
-        for(i=0 ; i<TEXTURELOADED ; i++)
-	if(TextureList[i].name)
+	for(i=0 ; i<TEXTURELOADED ; i++)
 	{
-                tid = (GLuint)TextureList[i].id;
-		glDeleteTextures(1, &tid);
+		if(TextureList && TextureList[i].name)
+		{
+			tid = (GLuint)TextureList[i].id;
+			glDeleteTextures(1, &tid);
+		}
 	}
 }
 
 void im_UnloadMapTextures()
 {
 	int	i;
-        GLuint	tid;
+	GLuint	tid;
 
 	for(i=0 ; i<TEXTURELOADED ; i++)
-	if(TextureList[i].name)
-	if(TextureList[i].map_tex)
 	{
-                tid = (GLuint)TextureList[i].id;
-		glDeleteTextures(1, &tid);
-		TextureList[i].used = false;
-		TextureList[i].id = -1;
+		if(TextureList)
+		if(TextureList[i].name)
+		if(TextureList[i].map_tex)
+		{
+			tid = (GLuint)TextureList[i].id;
+			glDeleteTextures(1, &tid);
+			TextureList[i].used = false;
+			TextureList[i].id = -1;
+		}
 	}
 }
 

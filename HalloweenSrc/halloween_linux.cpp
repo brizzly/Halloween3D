@@ -438,15 +438,16 @@ void sys_end()
 	IN_UnInit();
 	cons_UninitConsole();
 
-	if(ErrorMessage[0] != '\0')
+	if(ErrorMessage[0] != '\0') {
 		printf(ErrorMessage);
+	}
 
 #ifdef H_MAC
-
+	return; // no exit(0); on MacOS
 #else
 	SDL_Quit();
 #endif
-
+	
 	exit(0);
 }
 
@@ -735,21 +736,20 @@ void MACStarter()
 	ProgramState = PS_LOADING;
 }
 
-void MACLoop()
+bool MACLoop()
 {
 	if(GameProcess())
 	{
-		MACend();
-		return;
+		return false;
 	}
 	if(sys_GameEvent() == false)
 	{
 		GameProcess();
-		MACend();
-		return;
+		return false;
 	}
 	gl_SwapBuffer();
 	ds_PlayBuffer();
+	return true;
 }
 
 void MACend()

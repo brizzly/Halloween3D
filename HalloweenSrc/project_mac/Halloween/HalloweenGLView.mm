@@ -57,6 +57,7 @@ static CVReturn MyDisplayLinkCallback(CVDisplayLinkRef displayLink,
 		kCGLPFADepthSize, 24,
 		0
 	};
+
 	/*
     NSOpenGLPixelFormatAttribute attrs[] =
 	{
@@ -71,41 +72,27 @@ static CVReturn MyDisplayLinkCallback(CVDisplayLinkRef displayLink,
 	};
 	*/
 	
-	NSOpenGLPixelFormat *pf = [[NSOpenGLPixelFormat alloc] initWithAttributes:attrs];
-	
-	if (!pf)
-	{
+	NSOpenGLPixelFormat * pf = [[NSOpenGLPixelFormat alloc] initWithAttributes:attrs];
+	if (!pf) {
 		NSLog(@"No OpenGL pixel format");
 	}
+	[self setPixelFormat:pf];
 	   
-    NSOpenGLContext* context = [[NSOpenGLContext alloc] initWithFormat:pf shareContext:nil];
-    /*
-#if ESSENTIAL_GL_PRACTICES_SUPPORT_GL3 && defined(DEBUG)
-	// When we're using a CoreProfile context, crash if we call a legacy OpenGL function
-	// This will make it much more obvious where and when such a function call is made so
-	// that we can remove such calls.
-	// Without this we'd simply get GL_INVALID_OPERATION error for calling legacy functions
-	// but it would be more difficult to see where that function was called.
-	CGLEnable([context CGLContextObj], kCGLCECrashOnRemovedFunctions);
-#endif
-	*/
-	
-    [self setPixelFormat:pf];
-    
+    NSOpenGLContext * context = [[NSOpenGLContext alloc] initWithFormat:pf shareContext:nil];
     [self setOpenGLContext:context];
     
 #if SUPPORT_RETINA_RESOLUTION
     // Opt-In to Retina resolution
     [self setWantsBestResolutionOpenGLSurface:YES];
-#endif // SUPPORT_RETINA_RESOLUTION
+#endif
+	
 }
 
 - (void) prepareOpenGL
 {
 	[super prepareOpenGL];
 	
-	// Make all the OpenGL calls to setup rendering  
-	//  and build the necessary rendering objects
+	// Make all the OpenGL calls to setup rendering and build the necessary rendering objects
 	[self initGL];
 	
 	// Create a display link capable of being used with all active displays
@@ -129,15 +116,6 @@ static CVReturn MyDisplayLinkCallback(CVDisplayLinkRef displayLink,
 											   object:[self window]];
 	
 	[_renderer readyRenderer];
-	
-	
-//	NSEvent *event;
-//	while ((event = [NSApp nextEventMatchingMask:NSEventMaskAny untilDate:[NSDate distantPast] inMode:NSDefaultRunLoopMode dequeue:YES]))
-//	{
-//		NSLog(@"Event = %lu", (unsigned long)[event type]);
-//		//switch ([event type])
-//	}
-	
 }
 
 - (void) windowWillClose:(NSNotification*)notification
@@ -168,20 +146,18 @@ static CVReturn MyDisplayLinkCallback(CVDisplayLinkRef displayLink,
 	// OSX (but not iOS since iOS apps must create their own FBO)
 	_renderer = [[OpenGLRenderer alloc] initWithDefaultFBO:0];
 	
-	
-	
+
 	if(trackingArea == nil)
 	{
-		//NSRect r = [self bounds];
-		//NSLog(@"debug", r);
-		
 		trackingArea = [[NSTrackingArea alloc] initWithRect:[self bounds]
 													options: (NSTrackingMouseEnteredAndExited | NSTrackingMouseMoved | NSTrackingActiveInKeyWindow )
 													  owner:self userInfo:nil];
 		[self addTrackingArea:trackingArea];
 	}
-	
-	
+	else
+	{
+		[self updateTrackingAreas];
+	}
 }
 
 - (void) updateTrackingAreas
@@ -364,9 +340,6 @@ static CVReturn MyDisplayLinkCallback(CVDisplayLinkRef displayLink,
 
 	CGLFlushDrawable([[self openGLContext] CGLContextObj]);
 	CGLUnlockContext([[self openGLContext] CGLContextObj]);
-	
-	
-
 }
 
 - (void) dealloc
@@ -375,7 +348,6 @@ static CVReturn MyDisplayLinkCallback(CVDisplayLinkRef displayLink,
     // otherwise the display link thread may call into the view and crash
     // when it encounters something that has been release
 	CVDisplayLinkStop(displayLink);
-
 	CVDisplayLinkRelease(displayLink);
 	
 	[super dealloc];

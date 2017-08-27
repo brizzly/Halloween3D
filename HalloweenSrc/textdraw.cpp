@@ -170,9 +170,14 @@ void g_UnloadTextureStruct()
 	m_ConsPrint("g_UnloadTextureStruct\n");
 
 	for(i=0 ; i<TEXTURELOADED ; i++)
-	if(TextureList[i].name)
-		s_free(TextureList[i].name);
+	{
+		if(TextureList && TextureList[i].name) {
+			s_free(TextureList[i].name);
+			TextureList[i].name = NULL;
+		}
+	}
 	s_free(TextureList);
+	TextureList = NULL;
 
 	m_ConsPrint("g_UnloadTextureStruct done.\n");
 }
