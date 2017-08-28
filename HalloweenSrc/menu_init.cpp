@@ -120,7 +120,12 @@ void menu_InitConfig_VIDEO()
 	new_fullscreen = (int)fullscreen.value;
 	new_videomode = (int)videomode.value;
 	new_colordepth = (int)colordepth.value;
-
+	
+#ifdef H_MAC
+	menu_InitSlot(7,385,138,20,20,20,20,txid_BUTTON_M,0);
+	menu_InitSlot(8,425,138,20,20,20,20,txid_BUTTON_P,0);
+	menu_InitSlot(9,0,20,120,60,120,60,txid_BUTTONBACK,0);
+#else
 	menu_InitSlot(0,425,238,20,20,20,20,txid_BUTTON,0);
 	menu_InitSlot(1,385,218,20,20,20,20,txid_BUTTON_M,0);
 	menu_InitSlot(2,425,218,20,20,20,20,txid_BUTTON_P,0);
@@ -132,7 +137,8 @@ void menu_InitConfig_VIDEO()
 	menu_InitSlot(8,425,138,20,20,20,20,txid_BUTTON_P,0);
 	menu_InitSlot(15,490,90,120,35,120,35,txid_BUTTON,0);
 	menu_InitSlot(9,0,20,120,60,120,60,txid_BUTTONBACK,0);
-
+#endif
+	
 	menu_InitSlot(10,142,208,256,128,140,60,txid_STARTGAME_G,1);
 	menu_InitSlot(11,172,142,256,128,140,60,txid_HELPORDER_G,1);
 	menu_InitSlot(12,136,74,256,128,140,60,txid_CONFIG,1);

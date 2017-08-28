@@ -361,12 +361,30 @@ void DrawGameConfig_VIDEO()
 	int_DrawBackground();
 	int_DrawTitle();
 	//disp_DrawSprite_2(txid_COPY,192,0,256,32,true);
-
+	
+#ifdef H_MAC
+	menu_drawslot(7);
+	menu_drawslot(8);
+	menu_drawslot(9);
+	
+	menu_drawslot(10);
+	menu_drawslot(11);
+	menu_drawslot(12);
+	menu_drawslot(13);
+	menu_drawslot(14);
+	
+#else
 	for(i=0 ; i<16 ; i++)
 		menu_drawslot(i);
+	
+#endif
 
+
+#ifdef H_MAC
+	
+#else
 	g_Disp(16,24,26,"Apply");
-
+	
 	if(new_fullscreen)
 		g_Disp(16,17,23,"Full screen ON");
 	else
@@ -379,8 +397,11 @@ void DrawGameConfig_VIDEO()
 		g_Disp(16,20,23,"Lightmap");
 	else
 		g_Disp(16,20,23,"Vertex");
-
+	
 	g_Disp(16,21,23,"Texture quality %d", 100-(((int)picmip.value-1)*20));
+
+#endif
+	
 	g_Disp(16,22,23,"Display Brigthness");
 
 	disp_DrawSprite(txid_CURSOR,(int)cursor_x-16,(int)cursor_y-16,32,32,true);

@@ -251,24 +251,45 @@ void menu_SelectProcess_CONFIG_VIDEO()
 	int		id3;
 
 	id3 = int_GetButonId(&anim_option,13,0);
+	
+	int slotId = 0;
+	
+#ifdef H_MAC
+	slotId = 7;
+	menu_SlotProcess(slotId++,txid_BUTTON_M,txid_BUTTON_M_SEL,"Decrease brightness",39,12);
+	menu_SlotProcess(slotId++,txid_BUTTON_P,txid_BUTTON_P_SEL,"Increase brightness",39,12);
+	menu_SlotProcess(slotId++,txid_BUTTONBACK,txid_BUTTONBACK2,NULL,0,0);
+	
+	menu_SlotProcess(slotId++,txid_STARTGAME_G,txid_STARTGAME_G,NULL,0,0);
+	menu_SlotProcess(slotId++,txid_HELPORDER_G,txid_HELPORDER_G,NULL,0,0);
+	menu_SlotProcess(slotId++,txid_OPTIONANIM[id3],txid_OPTIONANIM[id3],NULL,0,0);
+	menu_SlotProcess(slotId++,txid_ORDERGAME_G,txid_ORDERGAME_G,NULL,0,0);
+	menu_SlotProcess(slotId++,txid_QUITGAME_G,txid_QUITGAME_G,NULL,0,0);
 
-	menu_SlotProcess(0,txid_BUTTON,txid_BUTTON_P_SEL,"Toggle Fullscreen/windowed video mode",39,12);
-	menu_SlotProcess(1,txid_BUTTON_M,txid_BUTTON_M_SEL,"Change video mode",39,12);
-	menu_SlotProcess(2,txid_BUTTON_P,txid_BUTTON_P_SEL,"Change video mode",39,12);
-	menu_SlotProcess(3,txid_BUTTON,txid_BUTTON_P_SEL,"Change color depth",39,12);
-	menu_SlotProcess(4,txid_BUTTON,txid_BUTTON_P_SEL,"Change lightning mode",39,12);
-	menu_SlotProcess(5,txid_BUTTON_M,txid_BUTTON_M_SEL,"Decrease texture quality",39,12);
-	menu_SlotProcess(6,txid_BUTTON_P,txid_BUTTON_P_SEL,"Increase texture quality",39,12);
-	menu_SlotProcess(7,txid_BUTTON_M,txid_BUTTON_M_SEL,"Decrease brightness",39,12);
-	menu_SlotProcess(8,txid_BUTTON_P,txid_BUTTON_P_SEL,"Increase brightness",39,12);
-	menu_SlotProcess(9,txid_BUTTONBACK,txid_BUTTONBACK2,NULL,0,0);
-	menu_SlotProcess(15,txid_BUTTON,txid_BUTTON_P_SEL,"Apply new settings (be patient)",39,12);
+#else
+	
+	menu_SlotProcess(slotId++,txid_BUTTON,txid_BUTTON_P_SEL,"Toggle Fullscreen/windowed video mode",39,12);
+	menu_SlotProcess(slotId++,txid_BUTTON_M,txid_BUTTON_M_SEL,"Change video mode",39,12);
+	menu_SlotProcess(slotId++,txid_BUTTON_P,txid_BUTTON_P_SEL,"Change video mode",39,12);
+	menu_SlotProcess(slotId++,txid_BUTTON,txid_BUTTON_P_SEL,"Change color depth",39,12);
 
-	menu_SlotProcess(10,txid_STARTGAME_G,txid_STARTGAME_G,NULL,0,0);
-	menu_SlotProcess(11,txid_HELPORDER_G,txid_HELPORDER_G,NULL,0,0);
-	menu_SlotProcess(12,txid_OPTIONANIM[id3],txid_OPTIONANIM[id3],NULL,0,0);
-	menu_SlotProcess(13,txid_ORDERGAME_G,txid_ORDERGAME_G,NULL,0,0);
-	menu_SlotProcess(14,txid_QUITGAME_G,txid_QUITGAME_G,NULL,0,0);
+	
+	menu_SlotProcess(slotId++,txid_BUTTON,txid_BUTTON_P_SEL,"Change lightning mode",39,12);
+	menu_SlotProcess(slotId++,txid_BUTTON_M,txid_BUTTON_M_SEL,"Decrease texture quality",39,12);
+	menu_SlotProcess(slotId++,txid_BUTTON_P,txid_BUTTON_P_SEL,"Increase texture quality",39,12);
+	menu_SlotProcess(slotId++,txid_BUTTON_M,txid_BUTTON_M_SEL,"Decrease brightness",39,12);
+	menu_SlotProcess(slotId++,txid_BUTTON_P,txid_BUTTON_P_SEL,"Increase brightness",39,12);
+	menu_SlotProcess(slotId++,txid_BUTTONBACK,txid_BUTTONBACK2,NULL,0,0);
+
+	menu_SlotProcess(slotId++,txid_STARTGAME_G,txid_STARTGAME_G,NULL,0,0);
+	menu_SlotProcess(slotId++,txid_HELPORDER_G,txid_HELPORDER_G,NULL,0,0);
+	menu_SlotProcess(slotId++,txid_OPTIONANIM[id3],txid_OPTIONANIM[id3],NULL,0,0);
+	menu_SlotProcess(slotId++,txid_ORDERGAME_G,txid_ORDERGAME_G,NULL,0,0);
+	menu_SlotProcess(slotId++,txid_QUITGAME_G,txid_QUITGAME_G,NULL,0,0);
+
+	
+	menu_SlotProcess(slotId++,txid_BUTTON,txid_BUTTON_P_SEL,"Apply new settings (be patient)",39,12);
+#endif
 }
 
 void menu_SelectProcess_CONFIG_GAMEOPTION()
