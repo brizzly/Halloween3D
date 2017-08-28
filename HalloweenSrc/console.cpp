@@ -1988,9 +1988,15 @@ hBool cons_SaveConfig(char *path)
 	char	*p;
 	
 #ifdef H_MAC
-	p = KMiscTools::makeFilePath(path);
-	m_ConsPrint("#### cons_SaveConfig file: %s\n", p);
-	file = fopen(p, "wb");
+	// SANDBOXED --------------------------------
+	char * pDoc = KMiscTools::currentDocHomePath;
+	char fullpath[255];
+	sprintf(fullpath, "%s/%s", pDoc, CONFIG);
+	m_ConsPrint("#### cons_SaveConfig file: %s\n", fullpath);
+	file = fopen(fullpath, "wb");
+	//p = KMiscTools::makeFilePath(path);
+	//m_ConsPrint("#### cons_SaveConfig file: %s\n", p);
+	//file = fopen(p, "w");
 #else
 	file = fopen(path,"wb");
 #endif
@@ -2051,9 +2057,22 @@ hBool cons_LoadConfig(char *path)
 	
 	
 #ifdef H_MAC
-	p = KMiscTools::makeFilePath(path);
-	m_ConsPrint("#### cons_LoadConfig file: %s\n", p);
-	file = fopen(p, "rb");
+	// SANDBOXED --------------------------------
+	char * pDoc = KMiscTools::currentDocHomePath;
+	char fullpath[255];
+	sprintf(fullpath, "%s/%s", pDoc, CONFIG);
+	m_ConsPrint("#### cons_LoadConfig file: %s\n", fullpath);
+	file = fopen(fullpath, "rb");
+	if(file == NULL)
+	{
+		p = KMiscTools::makeFilePath(path);
+		m_ConsPrint("#### cons_LoadConfig file: %s\n", p);
+		file = fopen(p, "rb");
+	}
+	
+	//p = KMiscTools::makeFilePath(path);
+	//m_ConsPrint("#### cons_LoadConfig file: %s\n", p);
+	//file = fopen(p, "rb");
 #else
 	file = fopen(path,"rb");
 #endif

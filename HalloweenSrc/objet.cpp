@@ -1163,8 +1163,9 @@ hBool o_LoadEntityToStruct(char *path, int id)
 	file = fopen(fullpath,"r");
 #endif
 	
-	if(file==NULL)
+	if(file==NULL) {
 		return false;
+	}
 
 	m_ConsPrint("Loading: %s\n",fullpath);
 	

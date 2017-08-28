@@ -225,7 +225,7 @@ int tga_Load(char *name, int id, int picmip, hBool map_tex)
 
 #ifdef H_MAC
 	char * fullpath = KMiscTools::makeFilePath(fullname);
-	s = fopen(fullpath, "r+b"); // r+bt
+	s = fopen(fullpath, "r"); // r+bt
 #else
 	s = fopen(fullname, "r+b"); // r+bt
 #endif
@@ -256,17 +256,16 @@ int tga_Load(char *name, int id, int picmip, hBool map_tex)
 	if(!checkSize (imageWidth) || !checkSize (imageHeight))
 	{
 		fclose(s);
-                m_ConsPrint("TGA_BAD_DIMENSION( %d %d)\n", imageWidth, imageHeight);
+		m_ConsPrint("TGA_BAD_DIMENSION( %d %d)\n", imageWidth, imageHeight);
 		return -1;
 	}
 
 	if(imageBits != 32 && imageBits != 24)
 	{
 		fclose(s);
-                m_ConsPrint("TGA_BAD_BITS\n");
+		m_ConsPrint("TGA_BAD_BITS\n");
 		return -1;
 	}
-
 
 	if(picmip == -1)
 	{

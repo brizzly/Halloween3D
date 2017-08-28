@@ -51,13 +51,13 @@
     {
       "size" : "512x512",
       "idiom" : "mac",
-      "filename" : "halloween_icon-2.png",
+      "filename" : "H-1.png",
       "scale" : "1x"
     },
     {
       "size" : "512x512",
       "idiom" : "mac",
-      "filename" : "halloween_icon-3.png",
+      "filename" : "H.png",
       "scale" : "2x"
     }
   ],

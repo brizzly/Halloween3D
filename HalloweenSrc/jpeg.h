@@ -5,6 +5,12 @@
 
 #include "alloween.h"
 
+extern "C" {
+#include "jpeglib.h"
+#include <setjmp.h>
+}
+
+
 /*
 #include <ijl.h>
 #include <stdio.h>
@@ -24,6 +30,7 @@
 
 int jpeg_Load(char *Name, int id, int picmip, hBool map_tex);
 
+int LoadFromJPEG(char *Name, char *filename, int text_id, hBool map_tex);
 
 
 #endif // JPEG_INCLUDED

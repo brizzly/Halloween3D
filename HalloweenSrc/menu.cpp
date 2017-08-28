@@ -1193,6 +1193,7 @@ void menu_ClickedA_BEGINGAME()
 		sprintf(fullpath,"%s%sgame%d.svg",SYSDIR,SVGDIR,gGameSlotToProcess);
 		
 		#ifdef H_MAC
+		sprintf(fullpath, "%s/game%d.svg", KMiscTools::currentDocHomePath, gGameSlotToProcess);
 		p = KMiscTools::makeFilePath(fullpath);
 		file = fopen(p,"w");
 		#else
@@ -1213,6 +1214,7 @@ void menu_ClickedA_BEGINGAME()
 		sprintf(fullpath,"%s%sgame%d.svg",SYSDIR,SVGDIR,gGameSlotToProcess);
 		
 		#ifdef H_MAC
+		sprintf(fullpath, "%s/game%d.svg", KMiscTools::currentDocHomePath, gGameSlotToProcess);
 		p = KMiscTools::makeFilePath(fullpath);
 		file = fopen(p,"w");
 		#else
@@ -1233,6 +1235,7 @@ void menu_ClickedA_BEGINGAME()
 		sprintf(fullpath,"%s%sgame%d.svg",SYSDIR,SVGDIR,gGameSlotToProcess);
 		
 		#ifdef H_MAC
+		sprintf(fullpath, "%s/game%d.svg", KMiscTools::currentDocHomePath, gGameSlotToProcess);
 		p = KMiscTools::makeFilePath(fullpath);
 		file = fopen(p,"w");
 		#else
@@ -1251,6 +1254,10 @@ void menu_ClickedA_BEGINGAME()
 	{
 		ds_PlaySound(4);
 		sprintf(fullpath,"%s%sgame%d.svg",SYSDIR,SVGDIR,gGameSlotToProcess);
+		#ifdef H_MAC
+		sprintf(fullpath, "%s/game%d.svg", KMiscTools::currentDocHomePath, gGameSlotToProcess);
+		file = fopen(p,"w");
+		#endif
 		remove(fullpath);
 		menu_InitPresentation();
 		ProgramState = PS_PRES;
@@ -1263,6 +1270,9 @@ void menu_ClickedB_BEGINGAME()
 
 	ds_PlaySound(4);
 	sprintf(fullpath,"%s%sgame%d.svg",SYSDIR,SVGDIR,gGameSlotToProcess);
+	#ifdef H_MAC
+	sprintf(fullpath, "%s/game%d.svg", KMiscTools::currentDocHomePath, gGameSlotToProcess);
+	#endif
 	remove(fullpath);
 	menu_InitPresentation();
 	ProgramState = PS_PRES;
@@ -1308,6 +1318,7 @@ void menu_ClickedA_YESNO()
 		sprintf(fullpath,"%s%sgame%d.svg",SYSDIR,SVGDIR,gGameSlotToProcess);
 		
 		#ifdef H_MAC
+		sprintf(fullpath, "%s/game%d.svg", KMiscTools::currentDocHomePath, gGameSlotToProcess);
 		p = KMiscTools::makeFilePath(fullpath);
 		remove(p);
 		#else
@@ -1359,6 +1370,7 @@ void menu_ClickedA_SETSLOTGAME()
 		sprintf(fullpath,"%s%sgame1.svg",SYSDIR,SVGDIR);
 		
 		#ifdef H_MAC
+		sprintf(fullpath, "%s/game1.svg", KMiscTools::currentDocHomePath);
 		p = KMiscTools::makeFilePath(fullpath);
 		file = fopen(p,"r");
 		#else
@@ -1398,6 +1410,7 @@ void menu_ClickedA_SETSLOTGAME()
 		sprintf(fullpath,"%s%sgame2.svg",SYSDIR,SVGDIR);
 		
 		#ifdef H_MAC
+		sprintf(fullpath, "%s/game2.svg", KMiscTools::currentDocHomePath);
 		p = KMiscTools::makeFilePath(fullpath);
 		file = fopen(p,"r");
 		#else
@@ -1437,6 +1450,7 @@ void menu_ClickedA_SETSLOTGAME()
 		sprintf(fullpath,"%s%sgame3.svg",SYSDIR,SVGDIR);
 		
 		#ifdef H_MAC
+		sprintf(fullpath, "%s/game3.svg", KMiscTools::currentDocHomePath);
 		p = KMiscTools::makeFilePath(fullpath);
 		file = fopen(p,"r");
 		#else
@@ -1476,6 +1490,7 @@ void menu_ClickedA_SETSLOTGAME()
 		sprintf(fullpath,"%s%sgame4.svg",SYSDIR,SVGDIR);
 		
 		#ifdef H_MAC
+		sprintf(fullpath, "%s/game4.svg", KMiscTools::currentDocHomePath);
 		p = KMiscTools::makeFilePath(fullpath);
 		file = fopen(p,"r");
 		#else
@@ -1514,6 +1529,7 @@ void menu_ClickedA_SETSLOTGAME()
 		sprintf(fullpath,"%s%sgame1.svg",SYSDIR,SVGDIR);
 
 		#ifdef H_MAC
+		sprintf(fullpath, "%s/game1.svg", KMiscTools::currentDocHomePath);
 		p = KMiscTools::makeFilePath(fullpath);
 		file = fopen(p,"r");
 		#else
@@ -1534,6 +1550,7 @@ void menu_ClickedA_SETSLOTGAME()
 		sprintf(fullpath,"%s%sgame2.svg",SYSDIR,SVGDIR);
 		
 		#ifdef H_MAC
+		sprintf(fullpath, "%s/game2.svg", KMiscTools::currentDocHomePath);
 		p = KMiscTools::makeFilePath(fullpath);
 		file = fopen(p,"r");
 		#else
@@ -1554,6 +1571,7 @@ void menu_ClickedA_SETSLOTGAME()
 		sprintf(fullpath,"%s%sgame3.svg",SYSDIR,SVGDIR);
 
 		#ifdef H_MAC
+		sprintf(fullpath, "%s/game3.svg", KMiscTools::currentDocHomePath);
 		p = KMiscTools::makeFilePath(fullpath);
 		file = fopen(p,"r");
 		#else
@@ -1574,6 +1592,7 @@ void menu_ClickedA_SETSLOTGAME()
 		sprintf(fullpath,"%s%sgame4.svg",SYSDIR,SVGDIR);
 		
 		#ifdef H_MAC
+		sprintf(fullpath, "%s/game4.svg", KMiscTools::currentDocHomePath);
 		p = KMiscTools::makeFilePath(fullpath);
 		file = fopen(p,"r");
 		#else

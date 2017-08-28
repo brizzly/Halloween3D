@@ -357,7 +357,11 @@ void menu_SelectProcess_SETSLOTGAME()
 
 	for(i=0 ; i<4 ; i++)
 	{
+#ifdef H_MAC
+		sprintf(fullpath, "%s/game%d.svg", KMiscTools::currentDocHomePath, i+1);
+#else
 		sprintf(fullpath,"%s%sgame%d.svg",SYSDIR,SVGDIR,i+1);
+#endif
 		
 #ifdef H_MAC
 		p = KMiscTools::makeFilePath(fullpath);

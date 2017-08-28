@@ -41,11 +41,16 @@ private:
 	static	char	currentAppPath[MAX_PATH];
 	static	char	currentFilePath[MAX_PATH];
 	static	char	currentTempPath[MAX_PATH];
-	static	char	currentDocHomePath[MAX_PATH];
+//	static	char	currentDocHomePath[MAX_PATH];
 	
 	static	bool	_inPackage;
 	
 	static char		currentPath[MAX_PATH*2];
+
+
+public :
+	
+	static	char	currentDocHomePath[MAX_PATH];
 
 
 	

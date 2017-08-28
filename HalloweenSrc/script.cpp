@@ -1065,14 +1065,14 @@ hBool ProcessScriptFile(char *path)
 #ifdef H_MAC
 	p = KMiscTools::makeFilePath(path);
 	m_ConsPrint("### Load script: %s\n", p);
-	file = fopen(p, "r+b");
+	file = fopen(p, "r"); // r+b
 #else
 	file = fopen(path,"r+b");
 #endif
 	
-	if(!file)
+	if(!file) {
 		return false;
-
+	}
 	memset(instruction,0,MAX_LEXEME_SIZE);
 
 	i = 0;

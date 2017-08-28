@@ -2100,7 +2100,13 @@ void game_UpdateSlot_all()
 
 	sprintf(fullpath,"%s%sgame%d.svg",SYSDIR,SVGDIR,(int)gameslot.value);
 	#ifdef H_MAC
-	file=fopen(KMiscTools::makeFilePath(fullpath),"w");
+	
+	// SANDBOXED --------------------------------
+	char * pDoc = KMiscTools::currentDocHomePath;
+	//char fullpath[255];
+	sprintf(fullpath, "%s/game%d.svg", pDoc, (int)gameslot.value);
+	file = fopen(fullpath, "w");
+	//file=fopen(KMiscTools::makeFilePath(fullpath),"w");
 	#else
 	file=fopen(fullpath,"w");
 	#endif
@@ -2175,6 +2181,18 @@ void game_LoadSlot(FILE *file)
 void game_DeleteAllSlots()
 {
 	char	fullpath[255];
+	
+#ifdef H_MAC
+	char * pDoc = KMiscTools::currentDocHomePath;
+	sprintf(fullpath, "%s/game%d.svg", pDoc, 1);
+	remove(fullpath);
+	sprintf(fullpath, "%s/game%d.svg", pDoc, 2);
+	remove(fullpath);
+	sprintf(fullpath, "%s/game%d.svg", pDoc, 3);
+	remove(fullpath);
+	sprintf(fullpath, "%s/game%d.svg", pDoc, 4);
+	remove(fullpath);
+#else
 
 	sprintf(fullpath,"%s%sgame%d.svg",SYSDIR,SVGDIR,1);
 	remove(fullpath);
@@ -2184,6 +2202,7 @@ void game_DeleteAllSlots()
 	remove(fullpath);
 	sprintf(fullpath,"%s%sgame%d.svg",SYSDIR,SVGDIR,4);
 	remove(fullpath);
+#endif
 }
 
 int game_GetSlotDifficulty(FILE *file)

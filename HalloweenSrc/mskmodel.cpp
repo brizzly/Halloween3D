@@ -137,7 +137,7 @@ hBool msk_LoadModel(Model *MilkshapeModel, char *filename, hBool LoadMesh)
 	MS3DMaterial	*pMaterial;
 	int		maID;
 	int		AnimINDEX;
-        int		loopvar, loopvar1, loopvar2;
+	int		loopvar, loopvar1, loopvar2;
 
 	m_ConsPrint("Load ModelData: %s\n",filename);
 
@@ -147,9 +147,11 @@ hBool msk_LoadModel(Model *MilkshapeModel, char *filename, hBool LoadMesh)
 
 #ifdef H_MAC
 	filename = KMiscTools::makeFilePath(filename);
+	file = fopen(filename,"r");
+#else
+	file = fopen(filename,"r+b");
 #endif
 
-	file = fopen(filename,"r+b");
 	if(file==NULL)
 	{
 		return false;

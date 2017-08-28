@@ -43,7 +43,7 @@ int im_Load(char *name, int id, int picmip, hBool map_tex)
 	
 	
 #ifdef H_MAC
-		file = fopen(KMiscTools::makeFilePath(path), "rb");
+		file = fopen(KMiscTools::makeFilePath(path), "r"); // rb
 #else
 		file = fopen(path,"rb");
 #endif	
@@ -213,7 +213,7 @@ void im_ScreenShotTGA()
 	}
 
 	#ifdef H_MAC
-	file = fopen(ptr,"w+b");
+	file = fopen(ptr,"w");
 	#else
 	file = fopen(filename,"w+b");
 	#endif
