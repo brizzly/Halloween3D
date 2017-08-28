@@ -144,7 +144,7 @@ int NomDeTouches[] = {
 0, //"OEM_PLUS" ,      
 ',', //"OEM_COMMA" ,  
 0, //"OEM_MINUS"   ,  
-0, //"OEM_PERIOD" , 
+'.', //"OEM_PERIOD" ,
 0, //"OEM_2"     ,     
 0, //"OEM_3"     ,     
 0, //"OEM_4"      ,    
@@ -478,8 +478,16 @@ long IN_ReadMouse()
 		//Last_MouseY = 240;
 		//IN_WarpMouse();
 		
-		MouseX += 2.0f * msoffsetX;// * player_rvel.value;
-		MouseY -= 2.0f * msoffsetY;// * player_rvel.value;
+		MouseX += 5.0f * msoffsetX * player_rvel.value;
+		MouseY -= 5.0f * msoffsetY * player_rvel.value;
+		
+		if(ProgramState != PS_GAME)
+		{
+			if(MouseX > 640) 	MouseX = 640;
+			if(MouseX < 0) 		MouseX = 0;
+			if(MouseY > 480) 	MouseY = 480;
+			if(MouseY < 0) 		MouseY = 0;
+		}
 		
 //		m_ConsPrint("msoffsetX=%f ; msoffsetY=%f\n",msx,msy);
 
@@ -711,7 +719,7 @@ int ReadKey()
 			KeyMask[index] = true;
 			ds_PlaySound(15);
 			KeyHasBeenPressed = true;
-			#ifdef H_MAC
+		#ifdef H_MAC
 			Key = NomDeTouches[index];
 			if(Key)
 			if(IsCaps)
@@ -724,9 +732,9 @@ int ReadKey()
 					Key += 'A';
 				}
 			}
-			#else
+		#else
 			Key = index;
-			#endif
+		#endif
 			KeyPos = 0;
 			while( KeyBuffer[KeyPos] >= 0 && KeyPos < KEY_BUFFER_MAX )
 					KeyPos++;

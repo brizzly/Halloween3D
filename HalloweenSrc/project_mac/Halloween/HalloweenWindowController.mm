@@ -23,7 +23,7 @@
 	_fullscreenWindow = nil;
 	
 	[self setWindow:_standardWindow];
-	
+
 	[self goFullscreen];
 	
 	//[self performSelector:@selector(goFullscreen) withObject:nil afterDelay:1];
@@ -138,6 +138,10 @@
 		case 32:
 			KInput::setKeyUnPressed(K_VK_SPACE);
 			break;
+		
+		case 46:
+			KInput::setKeyUnPressed(K_VK_OEM_PERIOD);
+			break;
 			
 		case 96:
 			KInput::setKeyUnPressed(K_VK_INSERT);
@@ -226,6 +230,10 @@
 			
 		case 32:
 			KInput::setKeyPressed(K_VK_SPACE);
+			break;
+			
+		case 46:
+			KInput::setKeyPressed(K_VK_OEM_PERIOD);
 			break;
 			
 		case 96:
