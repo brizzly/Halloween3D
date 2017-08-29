@@ -192,7 +192,7 @@
 		F92D9E241F52554E00A37BB2 /* modelUtil.h in Sources */ = {isa = PBXBuildFile; fileRef = F92D9D601F524B9400A37BB2 /* modelUtil.h */; };
 		F92D9E251F52554E00A37BB2 /* sourceUtil.h in Sources */ = {isa = PBXBuildFile; fileRef = F92D9D621F524B9400A37BB2 /* sourceUtil.h */; };
 		F92D9E261F52554E00A37BB2 /* vectorUtil.h in Sources */ = {isa = PBXBuildFile; fileRef = F92D9D641F524B9400A37BB2 /* vectorUtil.h */; };
-		F938B9301F54FED3009E95A3 /* H_1024.icns in Resources */ = {isa = PBXBuildFile; fileRef = F938B92F1F54FED3009E95A3 /* H_1024.icns */; };
+		F938B9341F5507E9009E95A3 /* halloween.icns in Resources */ = {isa = PBXBuildFile; fileRef = F938B9331F5507E9009E95A3 /* halloween.icns */; };
 		F938C8941F537DC0007DCF45 /* HalloweenNormalscreenWindow.mm in Sources */ = {isa = PBXBuildFile; fileRef = F938C8931F537DC0007DCF45 /* HalloweenNormalscreenWindow.mm */; };
 		F943A7E11F52DECF00CF7E7B /* HalloweenWindowController.mm in Sources */ = {isa = PBXBuildFile; fileRef = F943A7E01F52DECE00CF7E7B /* HalloweenWindowController.mm */; };
 		F943A7E41F52DF2300CF7E7B /* HalloweenFullscreenWindow.mm in Sources */ = {isa = PBXBuildFile; fileRef = F943A7E31F52DF2300CF7E7B /* HalloweenFullscreenWindow.mm */; };
@@ -302,7 +302,7 @@
 		F92D9E1A1F5254DD00A37BB2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		F92D9E1C1F5254E600A37BB2 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		F92D9E1E1F5254EC00A37BB2 /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/ApplicationServices.framework; sourceTree = DEVELOPER_DIR; };
-		F938B92F1F54FED3009E95A3 /* H_1024.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = H_1024.icns; path = ../misc/H_1024.icns; sourceTree = "<group>"; };
+		F938B9331F5507E9009E95A3 /* halloween.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = halloween.icns; path = ../misc/halloween.icns; sourceTree = "<group>"; };
 		F938C8921F537DBF007DCF45 /* HalloweenNormalscreenWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HalloweenNormalscreenWindow.h; sourceTree = "<group>"; };
 		F938C8931F537DC0007DCF45 /* HalloweenNormalscreenWindow.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = HalloweenNormalscreenWindow.mm; sourceTree = "<group>"; };
 		F943A7DF1F52DECE00CF7E7B /* HalloweenWindowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HalloweenWindowController.h; sourceTree = "<group>"; };
@@ -554,7 +554,6 @@
 		F99009841F51D5B9007F7D1B /* CAXException.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CAXException.cpp; sourceTree = "<group>"; };
 		F99009851F51D5B9007F7D1B /* CAXException.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAXException.h; sourceTree = "<group>"; };
 		F99009B21F51D6FA007F7D1B /* CAComponentDescription.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CAComponentDescription.cpp; sourceTree = "<group>"; };
-		F99009B51F51D8D3007F7D1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		F99009B71F51DB82007F7D1B /* assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = assets.xcassets; sourceTree = "<group>"; };
 		F9A3EA741F5258CD00315CAF /* system */ = {isa = PBXFileReference; lastKnownFileType = folder; name = system; path = ../../../distrib/system; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -728,9 +727,8 @@
 		F98EDB831F518C2D009A518F = {
 			isa = PBXGroup;
 			children = (
-				F938B92F1F54FED3009E95A3 /* H_1024.icns */,
+				F938B9331F5507E9009E95A3 /* halloween.icns */,
 				F99009B71F51DB82007F7D1B /* assets.xcassets */,
-				F99009B51F51D8D3007F7D1B /* Info.plist */,
 				F976DC2D1F54C47D00762B2E /* jpeg-6b */,
 				F92D9D591F524B9400A37BB2 /* Utility */,
 				F99009121F51D5B9007F7D1B /* PublicUtility */,
@@ -1046,6 +1044,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F938B9341F5507E9009E95A3 /* halloween.icns in Resources */,
 				F976DC8D1F54C47D00762B2E /* jconfig.manx in Resources */,
 				F976DC921F54C47D00762B2E /* jconfig.vms in Resources */,
 				F976DC911F54C47D00762B2E /* jconfig.vc in Resources */,
@@ -1054,7 +1053,6 @@
 				F976DC8F1F54C47D00762B2E /* jconfig.sas in Resources */,
 				F92D9D581F524B3400A37BB2 /* Main.storyboard in Resources */,
 				F976DC8C1F54C47D00762B2E /* jconfig.mac in Resources */,
-				F938B9301F54FED3009E95A3 /* H_1024.icns in Resources */,
 				F976DC931F54C47D00762B2E /* jconfig.wat in Resources */,
 				F976DC901F54C47D00762B2E /* jconfig.st in Resources */,
 			);
@@ -1313,6 +1311,7 @@
 		F92D9D411F52495500A37BB2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1336,6 +1335,7 @@
 		F92D9D421F52495500A37BB2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
