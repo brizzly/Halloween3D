@@ -9,6 +9,11 @@ static int	anim_order = -1;
 
 void menu_drawslot(int idslot)
 {
+#ifdef H_MAC
+	if(MenuType[idslot].TextureID == txid_ORDERGAME_G) {
+		return;
+	}
+#endif
 	if(gMenu_InitFirstSel)
 		return;
 	disp_DrawSprite2Aplha(	MenuType[idslot].TextureID,
@@ -98,6 +103,7 @@ void menu_SlotProcess(int slot, int txid_NOTSEL, int txid_SEL, char *text, int l
 {
 	float	cursor2_x;
 	float	cursor2_y;
+
 
 	if(slot<0)
 		return;

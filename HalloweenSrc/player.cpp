@@ -683,15 +683,15 @@ void ply_Movedir(int entid, int dir)
 		break;
 
 		case DIR_STRAFLEFT:
-		acceleration.X = Cos_i(AngleY) * AccFactor;
+		acceleration.X = Cos_i(AngleY) * AccFactor * 0.7f;
 		acceleration.Y = 0;
-		acceleration.Z = -Sin_i(AngleY) * AccFactor;
+		acceleration.Z = -Sin_i(AngleY) * AccFactor * 0.7;
 		break;
 
 		case DIR_STRAFRIGHT:
-		acceleration.X = -Cos_i(AngleY) * AccFactor;
+		acceleration.X = -Cos_i(AngleY) * AccFactor * 0.7;
 		acceleration.Y = 0;
-		acceleration.Z = Sin_i(AngleY) * AccFactor;
+		acceleration.Z = Sin_i(AngleY) * AccFactor * 0.7;
 		break;
 
 		default:

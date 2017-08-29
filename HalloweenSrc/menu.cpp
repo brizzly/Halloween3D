@@ -136,8 +136,14 @@ void DrawGameTitle()
 
 	int_DrawTitle();
 
-	for(i=0 ; i<5 ; i++)
+	for(i=0 ; i<5 ; i++) {
+#ifdef H_MAC
+		if(i == 3) {
+			continue;
+		}
+#endif
 		menu_drawslot(i);
+	}
 
 	disp_DrawSprite(txid_CURSOR,(int)cursor_x-16,(int)cursor_y-16,32,32,true);
 }

@@ -1312,6 +1312,8 @@ void m_ReadInputs(hMOUSEINPUT *Mouse)
 					game_InjuryMode = 2000.0f;
 					ds_PlaySound(76+randInt(0,9));
 				}
+				
+				Story_NextText();
 			}
 		}
 	}

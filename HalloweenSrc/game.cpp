@@ -195,6 +195,8 @@ void game_Load2Dicons()
 	txid_CITROUILLE=game_Load2D("citrouille.tga");
 	txid_GRIS=game_Load2D("gris.tga");
 	txid_ORDER=game_Load2D("order.tga");
+	txid_HELPORDER = tga_Load("interface/tombz/help.tga",-1,-1,false);
+	txid_HELPORDER2 = tga_Load("interface/tombz/help_sel.tga",-1,-1,false);
 	txid_HELP=game_Load2D("help.tga");
 	txid_BONUS1=game_Load2D("bonus1_logo.tga");
 	txid_CREDIT=game_Load2D("credit.tga");
@@ -205,8 +207,6 @@ void game_Load2Dicons()
 	txid_TNN[1] = tga_Load("interface/title/tnn_2.tga",-1,-1,false);
 	txid_STARTGAME = tga_Load("interface/tombz/game.tga",-1,-1,false);
 	txid_STARTGAME2 = tga_Load("interface/tombz/game_sel.tga",-1,-1,false);
-	txid_HELPORDER = tga_Load("interface/tombz/help.tga",-1,-1,false);
-	txid_HELPORDER2 = tga_Load("interface/tombz/help_sel.tga",-1,-1,false);
 	txid_CONFIG = tga_Load("interface/tombz/option.tga",-1,-1,false);
 	txid_CONFIG2 = tga_Load("interface/tombz/option_sel.tga",-1,-1,false);
 	txid_CONFIG3 = game_Load2D("config.tga");
