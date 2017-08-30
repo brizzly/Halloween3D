@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>Halloween</ProjectName>
+    <ProjectGuid>{D2DAB44F-EAD4-47EE-A3E6-700DB42F9E91}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>15.0.26730.3</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>./</OutDir>
+    <IntDir>.\temp_obj\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>../coldet/;../misc/;../jpeg-6b/;$(IncludePath)</IncludePath>
+    <LibraryPath>../misc/;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>./</OutDir>
+    <IntDir>.\temp_obj\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>../coldet/;../misc/;$(IncludePath)</IncludePath>
+    <LibraryPath>../misc/;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\../../../projet_vc6.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeaderOutputFile>.\temp_obj/projet_vc6.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\temp_obj/</AssemblerListingLocation>
+      <ObjectFileName>.\temp_obj/</ObjectFileName>
+      <ProgramDataBaseFileName>.\temp_obj/</ProgramDataBaseFileName>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;dxguid.lib;dinput8.lib;bass.lib;winmm.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>Halloween.exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <IgnoreSpecificDefaultLibraries>libc.lib;libcmt.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>.\../Halloween999.pdb</ProgramDatabaseFile>
+      <SubSystem>Console</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>projet_vc6.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\../../../projet_vc6.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeaderOutputFile>.\temp_obj/projet_vc6.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\temp_obj/</AssemblerListingLocation>
+      <ObjectFileName>.\temp_obj/</ObjectFileName>
+      <ProgramDataBaseFileName>.\temp_obj/</ProgramDataBaseFileName>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;dxguid.lib;dinput8.lib;bass.lib;winmm.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>Halloween.exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <ProgramDatabaseFile>.\../../../Halloween999.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\../../../projet_vc6.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\alloween.cpp" />
+    <ClCompile Include="..\bspfile.cpp" />
+    <ClCompile Include="..\bsptree.cpp" />
+    <ClCompile Include="..\camera.cpp" />
+    <ClCompile Include="..\collision.cpp" />
+    <ClCompile Include="..\console.cpp" />
+    <ClCompile Include="..\demo.cpp" />
+    <ClCompile Include="..\display.cpp" />
+    <ClCompile Include="..\dsound.cpp" />
+    <ClCompile Include="..\ellipsoide.cpp" />
+    <ClCompile Include="..\enveffect.cpp" />
+    <ClCompile Include="..\filesys.cpp" />
+    <ClCompile Include="..\frustrum.cpp" />
+    <ClCompile Include="..\game.cpp" />
+    <ClCompile Include="..\gameover.cpp" />
+    <ClCompile Include="..\halloween.cpp" />
+    <ClCompile Include="..\image.cpp" />
+    <ClCompile Include="..\imageloader_win.cpp" />
+    <ClCompile Include="..\input_win.cpp" />
+    <ClCompile Include="..\interface.cpp" />
+    <ClCompile Include="..\jpeg.cpp" />
+    <ClCompile Include="..\libbass.cpp" />
+    <ClCompile Include="..\liste.cpp" />
+    <ClCompile Include="..\maths.cpp" />
+    <ClCompile Include="..\menu.cpp" />
+    <ClCompile Include="..\menu_init.cpp" />
+    <ClCompile Include="..\menu_sel.cpp" />
+    <ClCompile Include="..\monster.cpp" />
+    <ClCompile Include="..\mskmodel.cpp" />
+    <ClCompile Include="..\objet.cpp" />
+    <ClCompile Include="..\objet_proc.cpp" />
+    <ClCompile Include="..\opengl.cpp" />
+    <ClCompile Include="..\physic.cpp" />
+    <ClCompile Include="..\player.cpp" />
+    <ClCompile Include="..\script.cpp" />
+    <ClCompile Include="..\shader.cpp" />
+    <ClCompile Include="..\sorting.cpp" />
+    <ClCompile Include="..\story.cpp" />
+    <ClCompile Include="..\textdraw.cpp" />
+    <ClCompile Include="..\tga.cpp" />
+    <ClCompile Include="..\timer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Halloween.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\alloween.h" />
+    <ClInclude Include="..\bspfile.h" />
+    <ClInclude Include="..\bsptree.h" />
+    <ClInclude Include="..\camera.h" />
+    <ClInclude Include="..\collision.h" />
+    <ClInclude Include="..\console.h" />
+    <ClInclude Include="..\demo.h" />
+    <ClInclude Include="..\dirlib.h" />
+    <ClInclude Include="..\display.h" />
+    <ClInclude Include="..\dsound.h" />
+    <ClInclude Include="..\ellipsoide.h" />
+    <ClInclude Include="..\enveffect.h" />
+    <ClInclude Include="..\filesys.h" />
+    <ClInclude Include="..\frustrum.h" />
+    <ClInclude Include="..\game.h" />
+    <ClInclude Include="..\gameover.h" />
+    <ClInclude Include="..\halloween.h" />
+    <ClInclude Include="..\image.h" />
+    <ClInclude Include="..\imageloader_win.h" />
+    <ClInclude Include="..\input_win.h" />
+    <ClInclude Include="..\interface.h" />
+    <ClInclude Include="..\jpeg.h" />
+    <ClInclude Include="..\libbass.h" />
+    <ClInclude Include="..\liste.h" />
+    <ClInclude Include="..\maths.h" />
+    <ClInclude Include="..\menu.h" />
+    <ClInclude Include="..\menu_init.h" />
+    <ClInclude Include="..\menu_sel.h" />
+    <ClInclude Include="..\monster.h" />
+    <ClInclude Include="..\mskmodel.h" />
+    <ClInclude Include="..\net_client.h" />
+    <ClInclude Include="..\net_common.h" />
+    <ClInclude Include="..\net_dcomp.h" />
+    <ClInclude Include="..\net_server.h" />
+    <ClInclude Include="..\objet.h" />
+    <ClInclude Include="..\objet_proc.h" />
+    <ClInclude Include="..\opengl.h" />
+    <ClInclude Include="..\physic.h" />
+    <ClInclude Include="..\player.h" />
+    <ClInclude Include="..\resource.h" />
+    <ClInclude Include="..\script.h" />
+    <ClInclude Include="..\shader.h" />
+    <ClInclude Include="..\sorting.h" />
+    <ClInclude Include="..\story.h" />
+    <ClInclude Include="..\textdraw.h" />
+    <ClInclude Include="..\tga.h" />
+    <ClInclude Include="..\timer.h" />
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\misc\h1.2_icon.ico" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

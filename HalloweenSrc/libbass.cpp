@@ -49,6 +49,10 @@ hBool lb_LoadSound(char *name, int nChannel, hBool sound3D)
 	{
 		smp = BASS_SampleLoad(false,name,0,0,nChannel,BASS_SAMPLE_OVER_POS); // VOL
 	}
+	if (smp == 0) {
+		int errorBass = BASS_ErrorGetCode();
+		m_ConsPrint("[%s]err Bass %d\n", name, errorBass);
+	}
 	gSoundObjet[SoundID].bass_sample = smp;
 	if(!gSoundObjet[SoundID].bass_sample)
 		return false;
@@ -142,15 +146,14 @@ void lb_PlaySound3D(int SoundID, vect_t pos, int volume)
 	}
 
 	HCHANNEL channel = BASS_SampleGetChannel(gSoundObjet[SoundID].bass_sample, false);
-	//BASS_ChannelSet3DAttributes(channel,
-	//	&gSoundObjet[SoundID].bass_3Dpos
-	BASS_ChannelSet3DPosition(channel,
-		&gSoundObjet[SoundID].bass_3Dpos,
-		NULL, NULL);
-	BASS_ChannelPlay(channel, true);
+	//BASS_ChannelSet3DAttributes(channel, &gSoundObjet[SoundID].bass_3Dpos
+	BOOL res = BASS_ChannelSet3DPosition(channel, &gSoundObjet[SoundID].bass_3Dpos, NULL, NULL);
+	if (res == FALSE) {
+		m_ConsPrint("err 3D sound\n");
+	}
+	res = BASS_ChannelPlay(channel, true);
 
-
-//	gSoundObjet[SoundID].channel3D[sound_pos] = BASS_SamplePlay3D(gSoundObjet[SoundID].bass_sample,&gSoundObjet[SoundID].bass_3Dpos,NULL,NULL);
+	gSoundObjet[SoundID].channel3D[sound_pos] = channel; //  BASS_SamplePlay3D(gSoundObjet[SoundID].bass_sample, &gSoundObjet[SoundID].bass_3Dpos, NULL, NULL);
 	
 	if(gCheatMode_son)
 	{
@@ -169,16 +172,34 @@ void lb_PlaySound3D(int SoundID, vect_t pos, int volume)
 	}
 	//BASS_ChannelSetAttributes(gSoundObjet[SoundID].channel3D[sound_pos],freq,0/*volume*/,-101);
 
-	BASS_ChannelSetAttribute(gSoundObjet[SoundID].channel3D[sound_pos],
-		BASS_ATTRIB_FREQ,
-		(float)freq);
+	if (freq != -1)
+	{
+		res = BASS_ChannelSetAttribute(gSoundObjet[SoundID].channel3D[sound_pos],
+			BASS_ATTRIB_FREQ,
+			(float)freq);
+		if (res == FALSE) {
+			m_ConsPrint("err 3D sound\n");
+		}
+	}
+
+	res = BASS_ChannelSetAttribute(gSoundObjet[SoundID].channel3D[sound_pos],
+		BASS_ATTRIB_VOL,
+ 		volume);
+	if (res == FALSE) {
+		m_ConsPrint("err 3D sound\n");
+	}
+
 }
 
 void lb_StopChannel3D(int idsound, int idchan)
 {
 //	int	last_sound;
 
-	BASS_ChannelStop(gSoundObjet[idsound].channel3D[idchan]);
+	BOOL res = BASS_ChannelStop(gSoundObjet[idsound].channel3D[idchan]);
+	if (res == FALSE) {
+		//m_ConsPrint("err 3D sound\n");
+	}
+
 //	BASS_Apply3D();
 /*	last_sound = gSoundObjet[idsound].nChannel - 1;
 	if(last_sound < 0)
@@ -298,8 +319,8 @@ void lb_StopSound3D()
 	{
 		for(sound_pos=0 ; sound_pos<gSoundObjet[SoundID].nChannel ; sound_pos++)
 		{
-		//	BASS_ChannelStop(gSoundObjet[SoundID].channel3D[sound_pos]);
-		//	gSoundObjet[SoundID].channel3D[sound_pos] = 0;
+			//BASS_ChannelStop(gSoundObjet[SoundID].channel3D[sound_pos]);
+			//gSoundObjet[SoundID].channel3D[sound_pos] = 0;
 			lb_StopChannel3D(SoundID, sound_pos);
 		}
 		gSoundObjet[SoundID].sound3D = false;

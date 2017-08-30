@@ -2,16 +2,18 @@
 #define ALLOWEEN__
 
 
-#define H_MAC
+//#define H_MAC
 //#define H_LINUX
-//#define H_WINDOWS
+#define H_WINDOWS
 
 
 
 
 typedef int		hBool;
+#ifndef H_WINDOWS
 #define true	1
 #define false	0
+#endif
 
 typedef unsigned char	byte;
 typedef unsigned short	word;

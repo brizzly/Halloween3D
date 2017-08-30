@@ -104,6 +104,8 @@ int jpeg_Load(char *Name, int id, int picmip, hBool map_tex)
 
 // JPEG ----------------------------------------------------------
 
+#ifdef H_MAC
+
 struct my_error_mgr
 {
 	struct jpeg_error_mgr pub;
@@ -125,6 +127,7 @@ METHODDEF(void)my_error_exit (j_common_ptr cinfo)
 	/* Return control to the setjmp point */
 	longjmp(myerr->setjmp_buffer, 1);
 }
+
 
 int LoadFromJPEG(char *Name, char *filename, int text_id, hBool map_tex)
 {
@@ -310,6 +313,9 @@ int LoadFromJPEG(char *Name, char *filename, int text_id, hBool map_tex)
 	//s_free(jpeg_buffer);
 	return k;
 }
+
+#endif
+
 
 
 

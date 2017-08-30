@@ -1,0 +1,298 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="1- Source Files">
+      <UniqueIdentifier>{ff4f35bd-1dab-4672-8a60-98d0f16c37f7}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="2- Header Files">
+      <UniqueIdentifier>{ac9a08a5-8567-4360-88fb-c6960e941c49}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="3- Resource Files">
+      <UniqueIdentifier>{0aa7b38e-37af-4926-bc44-0eade7080003}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\alloween.cpp">
+      <Filter>1- Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bspfile.cpp">
+      <Filter>1- Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bsptree.cpp">
+      <Filter>1- Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\camera.cpp">
+      <Filter>1- Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\collision.cpp">
+      <Filter>1- Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\console.cpp">
+      <Filter>1- Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\demo.cpp">
+      <Filter>1- Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\display.cpp">
+      <Filter>1- Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\dsound.cpp">
+      <Filter>1- Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ellipsoide.cpp">
+      <Filter>1- Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\enveffect.cpp">
+      <Filter>1- Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\filesys.cpp">
+      <Filter>1- Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\frustrum.cpp">
+      <Filter>1- Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\game.cpp">
+      <Filter>1- Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\gameover.cpp">
+      <Filter>1- Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\halloween.cpp">
+      <Filter>1- Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\image.cpp">
+      <Filter>1- Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\imageloader_win.cpp">
+      <Filter>1- Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\input_win.cpp">
+      <Filter>1- Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\interface.cpp">
+      <Filter>1- Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libbass.cpp">
+      <Filter>1- Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\liste.cpp">
+      <Filter>1- Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\maths.cpp">
+      <Filter>1- Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\menu.cpp">
+      <Filter>1- Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\menu_init.cpp">
+      <Filter>1- Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\menu_sel.cpp">
+      <Filter>1- Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\monster.cpp">
+      <Filter>1- Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mskmodel.cpp">
+      <Filter>1- Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\objet.cpp">
+      <Filter>1- Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\objet_proc.cpp">
+      <Filter>1- Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\opengl.cpp">
+      <Filter>1- Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\physic.cpp">
+      <Filter>1- Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\player.cpp">
+      <Filter>1- Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\script.cpp">
+      <Filter>1- Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\shader.cpp">
+      <Filter>1- Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sorting.cpp">
+      <Filter>1- Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\story.cpp">
+      <Filter>1- Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\textdraw.cpp">
+      <Filter>1- Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tga.cpp">
+      <Filter>1- Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\timer.cpp">
+      <Filter>1- Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\jpeg.cpp">
+      <Filter>1- Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Halloween.rc">
+      <Filter>1- Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\alloween.h">
+      <Filter>2- Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bspfile.h">
+      <Filter>2- Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bsptree.h">
+      <Filter>2- Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\camera.h">
+      <Filter>2- Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\collision.h">
+      <Filter>2- Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\console.h">
+      <Filter>2- Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\demo.h">
+      <Filter>2- Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dirlib.h">
+      <Filter>2- Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\display.h">
+      <Filter>2- Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dsound.h">
+      <Filter>2- Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ellipsoide.h">
+      <Filter>2- Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\enveffect.h">
+      <Filter>2- Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\filesys.h">
+      <Filter>2- Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\frustrum.h">
+      <Filter>2- Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\game.h">
+      <Filter>2- Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\gameover.h">
+      <Filter>2- Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\halloween.h">
+      <Filter>2- Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\image.h">
+      <Filter>2- Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\imageloader_win.h">
+      <Filter>2- Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\input_win.h">
+      <Filter>2- Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\interface.h">
+      <Filter>2- Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libbass.h">
+      <Filter>2- Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\liste.h">
+      <Filter>2- Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\maths.h">
+      <Filter>2- Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\menu.h">
+      <Filter>2- Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\menu_init.h">
+      <Filter>2- Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\menu_sel.h">
+      <Filter>2- Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\monster.h">
+      <Filter>2- Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mskmodel.h">
+      <Filter>2- Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\net_client.h">
+      <Filter>2- Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\net_common.h">
+      <Filter>2- Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\net_dcomp.h">
+      <Filter>2- Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\net_server.h">
+      <Filter>2- Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\objet.h">
+      <Filter>2- Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\objet_proc.h">
+      <Filter>2- Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\opengl.h">
+      <Filter>2- Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\physic.h">
+      <Filter>2- Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\player.h">
+      <Filter>2- Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>2- Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\script.h">
+      <Filter>2- Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\shader.h">
+      <Filter>2- Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sorting.h">
+      <Filter>2- Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\story.h">
+      <Filter>2- Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\textdraw.h">
+      <Filter>2- Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\tga.h">
+      <Filter>2- Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\timer.h">
+      <Filter>2- Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\resource.h">
+      <Filter>3- Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\jpeg.h">
+      <Filter>2- Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\misc\h1.2_icon.ico">
+      <Filter>3- Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+</Project>
