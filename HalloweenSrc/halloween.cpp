@@ -18,7 +18,7 @@ HINSTANCE	ghInstance;
 
 char	ErrorMessage[255];
 hBool	done;
-hBool	gIsDemo;
+//hBool	gIsDemo;
 int		window;
 char	NameText[260];
 char	KeyText[260];
@@ -742,8 +742,8 @@ hBool sys_CreateWindow(char* title, int width, int height, int bits)
 			m_ConsPrint("ChangeResolution FAILED\n");
 			if (MessageBox(NULL,"The Requested Fullscreen Mode Is Not Supported By\nYour Video Card. Default video settings loaded",title,MB_OK|MB_ICONEXCLAMATION)==IDOK)
 			{
-				colordepth.value = new_colordepth = 16;
-				videomode.value = new_videomode = 2;
+				colordepth.value = new_colordepth = 32; // 16;
+				videomode.value = new_videomode = 5; // 2;
 
 				width = ScreenX[(int)videomode.value];
 				height = ScreenY[(int)videomode.value];

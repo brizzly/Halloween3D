@@ -36,102 +36,102 @@ hBool ds_LoadSounds()
 	gNb_Sounds = 0;
 	sprintf(FolderPath,"%s%s",SYSDIR,SNDDIR);
 	
-	ds_LoadWAVE(FolderPath,"gun_pickup.ogg", 4,false);		// 0
-	ds_LoadWAVE(FolderPath,"amo_pickup.ogg",4,false);		// 1
-	ds_LoadWAVE(FolderPath,"fleches.ogg",4,false);			// 2
-	ds_LoadWAVE(FolderPath,"rollover.ogg",1,false);	//4//	// 3
-	ds_LoadWAVE(FolderPath,"click.ogg",4,false);			// 4
-	ds_LoadWAVE(FolderPath,"noammo.ogg",1,false);			// 5
-	ds_LoadWAVE(FolderPath,"change.ogg",2,false);			// 6
-	ds_LoadWAVE(FolderPath,"rollover_fire.ogg",1,false); 	// 7
-	ds_LoadWAVE(FolderPath,"hit.ogg",3,false);				// 8
-	ds_LoadWAVE(FolderPath,"jump1.ogg",3,false);			// 9
-	ds_LoadWAVE(FolderPath,"fry.ogg",1,false);				// 10
-	ds_LoadWAVE(FolderPath,"pain.ogg",1,false);				// 11
-	ds_LoadWAVE(FolderPath,"bombbounce.ogg",6,true);		// 12
-	ds_LoadWAVE(FolderPath,"shot3.ogg",4,false);			// 13
-	ds_LoadWAVE(FolderPath,"explode.ogg",4,true);			// 14
-	ds_LoadWAVE(FolderPath,"toucheclavier.ogg",4,true);		// 15
-	ds_LoadWAVE(FolderPath,"welcome.ogg",1,false);			// 16
-	ds_LoadWAVE(FolderPath,"youdienow1.ogg",1,false);		// 17
-	ds_LoadWAVE(FolderPath,"fleche_c.ogg",3,true);			// 18
-	ds_LoadWAVE(FolderPath,"thunder1.ogg",1,false); 		// 19
-	ds_LoadWAVE(FolderPath,"fermeture_porte.ogg",4,true);	// 20
-	ds_LoadWAVE(FolderPath,"gameover.ogg",1,false);			// 21
-	ds_LoadWAVE(FolderPath,"thunder2.ogg",1,false); 		// 22
-	ds_LoadWAVE(FolderPath,"coup_dans_le_vent_1.ogg",2,false);	// 23
-	ds_LoadWAVE(FolderPath,"coup_dans_le_vent_2.ogg",2,false);	// 24
-	ds_LoadWAVE(FolderPath,"coup_dans_le_vent_3.ogg",2,false);	// 25
-	ds_LoadWAVE(FolderPath,"gourdin_aouch_1.ogg",2,false);	// 26
-	ds_LoadWAVE(FolderPath,"gourdin_aouch_2.ogg",2,false);	// 27
-	ds_LoadWAVE(FolderPath,"tromblon.ogg",1,false);			// 28
-	ds_LoadWAVE(FolderPath,"tromblon_shot.ogg",4,false);	// 29
-	ds_LoadWAVE(FolderPath,"thunder3.ogg",1,false); 		// 30
-	ds_LoadWAVE(FolderPath,"rire_diabolique5.ogg",1,false);	// 31
-	ds_LoadWAVE(FolderPath,"rire_diabolique7.ogg",1,false);	// 32
-	ds_LoadWAVE(FolderPath,"hahaha.ogg",1,false);			// 33
-	ds_LoadWAVE(FolderPath,"fire1.ogg",1,true);				// 34
-	ds_LoadWAVE(FolderPath,"rire_diabolique1.ogg",1,false); // 35
-	ds_LoadWAVE(FolderPath,"rire_diabolique2.ogg",1,false);	// 36
-	ds_LoadWAVE(FolderPath,"rire_diabolique3.ogg",1,false);	// 37
-	ds_LoadWAVE(FolderPath,"subzerat_death.ogg",2,false);	// 38
-	ds_LoadWAVE(FolderPath,"sound1.ogg",1,false);			// 39 //
-	ds_LoadWAVE(FolderPath,"uwin.ogg",1,false);				// 40
-	ds_LoadWAVE(FolderPath,"prepare.ogg",1,false);			// 41
-	ds_LoadWAVE(FolderPath,"usuck.ogg",1,false);			// 42
-	ds_LoadWAVE(FolderPath,"killdepla.ogg",1,false);		// 43
-	ds_LoadWAVE(FolderPath,"killmorbak.ogg",1,false);		// 44
-	ds_LoadWAVE(FolderPath,"deepla_cri.ogg",2,true);		// 45
-	ds_LoadWAVE(FolderPath,"deepla_normal.ogg",2,true);		// 46
-	ds_LoadWAVE(FolderPath,"deepla_normal2.ogg",2,true);	// 47
-	ds_LoadWAVE(FolderPath,"deepla_death.ogg",6,true);		// 48
-	ds_LoadWAVE(FolderPath,"deepla_grognement1.ogg",6,true);// 49
-	ds_LoadWAVE(FolderPath,"zeubat.ogg",1,false);			// 50
-	ds_LoadWAVE(FolderPath,"zebat_attack1.ogg",2,true);		// 51
-	ds_LoadWAVE(FolderPath,"zemummy_death.ogg",1,false);	// 52
-	ds_LoadWAVE(FolderPath,"gibs.ogg",6,true);				// 53
-	ds_LoadWAVE(FolderPath,"gibounce.ogg",6,true);			// 54
-	ds_LoadWAVE(FolderPath,"momie_attaque1.ogg",2,true);	// 55
-	ds_LoadWAVE(FolderPath,"momie_attaque2.ogg",2,true);	// 56
-	ds_LoadWAVE(FolderPath,"momie_death.ogg",6,true);		// 57
-	ds_LoadWAVE(FolderPath,"momie_grognement1.ogg",6,true);	// 58
-	ds_LoadWAVE(FolderPath,"momie_grognement2.ogg",6,true);	// 59
-	ds_LoadWAVE(FolderPath,"momie_grognement3.ogg",6,true);	// 60
-	ds_LoadWAVE(FolderPath,"impact_fleche1.ogg",3,true); 	// 61
-	ds_LoadWAVE(FolderPath,"impact_fleche2.ogg",3,true);	// 62
-	ds_LoadWAVE(FolderPath,"deepla_grognement2.ogg",6,true);// 63
-	ds_LoadWAVE(FolderPath,"deepla_grognement3.ogg",6,true);// 64
-	ds_LoadWAVE(FolderPath,"morbak_attack1.ogg",2,true);	// 65
-	ds_LoadWAVE(FolderPath,"morbak_attack2.ogg",2,true);	// 66
-	ds_LoadWAVE(FolderPath,"morbak_death.ogg",5,true);		// 67
-	ds_LoadWAVE(FolderPath,"morbak_grognement1.ogg",6,true);// 68
-	ds_LoadWAVE(FolderPath,"morbak_grognement2.ogg",6,true);// 69
-	ds_LoadWAVE(FolderPath,"zebat_attack2.ogg",3,true);		// 70
-	ds_LoadWAVE(FolderPath,"zebat_grognement1.ogg",6,true);	// 71
-	ds_LoadWAVE(FolderPath,"zebat_grognement2.ogg",6,true);	// 72
-	ds_LoadWAVE(FolderPath,"subzerat_attack.ogg",2,true);	// 73
-	ds_LoadWAVE(FolderPath,"subzerat_grognement1.ogg",5,true);	// 74
-	ds_LoadWAVE(FolderPath,"subzerat_grognement2.ogg",5,true);	// 75
-	ds_LoadWAVE(FolderPath,"sound1.ogg",1,false);	// 76
-	ds_LoadWAVE(FolderPath,"sound2.ogg",1,false);	// 77
-	ds_LoadWAVE(FolderPath,"sound3.ogg",1,false);	// 78
-	ds_LoadWAVE(FolderPath,"sound4.ogg",1,false);	// 79
-	ds_LoadWAVE(FolderPath,"sound5.ogg",1,false);	// 80
-	ds_LoadWAVE(FolderPath,"sound6.ogg",1,false);	// 81
-	ds_LoadWAVE(FolderPath,"sound7.ogg",1,false);	// 82
-	ds_LoadWAVE(FolderPath,"sound8.ogg",1,false);	// 83
-	ds_LoadWAVE(FolderPath,"sound9.ogg",1,false);	// 84
-	ds_LoadWAVE(FolderPath,"fal1.ogg",1,false);	// 85
-	ds_LoadWAVE(FolderPath,"fal2.ogg",1,false);	// 86
-	ds_LoadWAVE(FolderPath,"fal3.ogg",1,false);	// 87
-	ds_LoadWAVE(FolderPath,"fal4.ogg",1,false);	// 88
-	ds_LoadWAVE(FolderPath,"fal5.ogg",1,false);	// 89
-	ds_LoadWAVE(FolderPath,"fal6.ogg",1,false);	// 90
-	ds_LoadWAVE(FolderPath,"fal7.ogg",1,false);	// 91
-	ds_LoadWAVE(FolderPath,"fal8.ogg",1,false);	// 92
-	ds_LoadWAVE(FolderPath,"fal9.ogg",1,false);	// 93
-	ds_LoadWAVE(FolderPath,"fal10.ogg",1,false);	// 94
-	ds_LoadWAVE(FolderPath,"fal11.ogg",1,false);	// 95
+	ds_LoadWAVE(FolderPath,"gun_pickup.wav", 4,false);		// 0
+	ds_LoadWAVE(FolderPath,"amo_pickup.wav",4,false);		// 1
+	ds_LoadWAVE(FolderPath,"fleches.wav",4,false);			// 2
+	ds_LoadWAVE(FolderPath,"rollover.wav",1,false);	//4//	// 3
+	ds_LoadWAVE(FolderPath,"click.wav",4,false);			// 4
+	ds_LoadWAVE(FolderPath,"noammo.wav",1,false);			// 5
+	ds_LoadWAVE(FolderPath,"change.wav",2,false);			// 6
+	ds_LoadWAVE(FolderPath,"rollover_fire.wav",1,false); 	// 7
+	ds_LoadWAVE(FolderPath,"hit.wav",3,false);				// 8
+	ds_LoadWAVE(FolderPath,"jump1.wav",3,false);			// 9
+	ds_LoadWAVE(FolderPath,"fry.wav",1,false);				// 10
+	ds_LoadWAVE(FolderPath,"pain.wav",1,false);				// 11
+	ds_LoadWAVE(FolderPath,"bombbounce.wav",6,true);		// 12
+	ds_LoadWAVE(FolderPath,"shot3.wav",4,false);			// 13
+	ds_LoadWAVE(FolderPath,"explode.wav",4,true);			// 14
+	ds_LoadWAVE(FolderPath,"toucheclavier.wav",4,true);		// 15
+	ds_LoadWAVE(FolderPath,"welcome.wav",1,false);			// 16
+	ds_LoadWAVE(FolderPath,"youdienow1.wav",1,false);		// 17
+	ds_LoadWAVE(FolderPath,"fleche_c.wav",3,true);			// 18
+	ds_LoadWAVE(FolderPath,"thunder1.wav",1,false); 		// 19
+	ds_LoadWAVE(FolderPath,"fermeture_porte.wav",4,true);	// 20
+	ds_LoadWAVE(FolderPath,"gameover.wav",1,false);			// 21
+	ds_LoadWAVE(FolderPath,"thunder2.wav",1,false); 		// 22
+	ds_LoadWAVE(FolderPath,"coup_dans_le_vent_1.wav",2,false);	// 23
+	ds_LoadWAVE(FolderPath,"coup_dans_le_vent_2.wav",2,false);	// 24
+	ds_LoadWAVE(FolderPath,"coup_dans_le_vent_3.wav",2,false);	// 25
+	ds_LoadWAVE(FolderPath,"gourdin_aouch_1.wav",2,false);	// 26
+	ds_LoadWAVE(FolderPath,"gourdin_aouch_2.wav",2,false);	// 27
+	ds_LoadWAVE(FolderPath,"tromblon.wav",1,false);			// 28
+	ds_LoadWAVE(FolderPath,"tromblon_shot.wav",4,false);	// 29
+	ds_LoadWAVE(FolderPath,"thunder3.wav",1,false); 		// 30
+	ds_LoadWAVE(FolderPath,"rire_diabolique5.wav",1,false);	// 31
+	ds_LoadWAVE(FolderPath,"rire_diabolique7.wav",1,false);	// 32
+	ds_LoadWAVE(FolderPath,"hahaha.wav",1,false);			// 33
+	ds_LoadWAVE(FolderPath,"fire1.wav",1,true);				// 34
+	ds_LoadWAVE(FolderPath,"rire_diabolique1.wav",1,false); // 35
+	ds_LoadWAVE(FolderPath,"rire_diabolique2.wav",1,false);	// 36
+	ds_LoadWAVE(FolderPath,"rire_diabolique3.wav",1,false);	// 37
+	ds_LoadWAVE(FolderPath,"subzerat_death.wav",2,false);	// 38
+	ds_LoadWAVE(FolderPath,"sound1.wav",1,false);			// 39 //
+	ds_LoadWAVE(FolderPath,"uwin.wav",1,false);				// 40
+	ds_LoadWAVE(FolderPath,"prepare.wav",1,false);			// 41
+	ds_LoadWAVE(FolderPath,"usuck.wav",1,false);			// 42
+	ds_LoadWAVE(FolderPath,"killdepla.wav",1,false);		// 43
+	ds_LoadWAVE(FolderPath,"killmorbak.wav",1,false);		// 44
+	ds_LoadWAVE(FolderPath,"deepla_cri.wav",2,true);		// 45
+	ds_LoadWAVE(FolderPath,"deepla_normal.wav",2,true);		// 46
+	ds_LoadWAVE(FolderPath,"deepla_normal2.wav",2,true);	// 47
+	ds_LoadWAVE(FolderPath,"deepla_death.wav",6,true);		// 48
+	ds_LoadWAVE(FolderPath,"deepla_grognement1.wav",6,true);// 49
+	ds_LoadWAVE(FolderPath,"zeubat.wav",1,false);			// 50
+	ds_LoadWAVE(FolderPath,"zebat_attack1.wav",2,true);		// 51
+	ds_LoadWAVE(FolderPath,"zemummy_death.wav",1,false);	// 52
+	ds_LoadWAVE(FolderPath,"gibs.wav",6,true);				// 53
+	ds_LoadWAVE(FolderPath,"gibounce.wav",6,true);			// 54
+	ds_LoadWAVE(FolderPath,"momie_attaque1.wav",2,true);	// 55
+	ds_LoadWAVE(FolderPath,"momie_attaque2.wav",2,true);	// 56
+	ds_LoadWAVE(FolderPath,"momie_death.wav",6,true);		// 57
+	ds_LoadWAVE(FolderPath,"momie_grognement1.wav",6,true);	// 58
+	ds_LoadWAVE(FolderPath,"momie_grognement2.wav",6,true);	// 59
+	ds_LoadWAVE(FolderPath,"momie_grognement3.wav",6,true);	// 60
+	ds_LoadWAVE(FolderPath,"impact_fleche1.wav",3,true); 	// 61
+	ds_LoadWAVE(FolderPath,"impact_fleche2.wav",3,true);	// 62
+	ds_LoadWAVE(FolderPath,"deepla_grognement2.wav",6,true);// 63
+	ds_LoadWAVE(FolderPath,"deepla_grognement3.wav",6,true);// 64
+	ds_LoadWAVE(FolderPath,"morbak_attack1.wav",2,true);	// 65
+	ds_LoadWAVE(FolderPath,"morbak_attack2.wav",2,true);	// 66
+	ds_LoadWAVE(FolderPath,"morbak_death.wav",5,true);		// 67
+	ds_LoadWAVE(FolderPath,"morbak_grognement1.wav",6,true);// 68
+	ds_LoadWAVE(FolderPath,"morbak_grognement2.wav",6,true);// 69
+	ds_LoadWAVE(FolderPath,"zebat_attack2.wav",3,true);		// 70
+	ds_LoadWAVE(FolderPath,"zebat_grognement1.wav",6,true);	// 71
+	ds_LoadWAVE(FolderPath,"zebat_grognement2.wav",6,true);	// 72
+	ds_LoadWAVE(FolderPath,"subzerat_attack.wav",2,true);	// 73
+	ds_LoadWAVE(FolderPath,"subzerat_grognement1.wav",5,true);	// 74
+	ds_LoadWAVE(FolderPath,"subzerat_grognement2.wav",5,true);	// 75
+	ds_LoadWAVE(FolderPath,"sound1.wav",1,false);	// 76
+	ds_LoadWAVE(FolderPath,"sound2.wav",1,false);	// 77
+	ds_LoadWAVE(FolderPath,"sound3.wav",1,false);	// 78
+	ds_LoadWAVE(FolderPath,"sound4.wav",1,false);	// 79
+	ds_LoadWAVE(FolderPath,"sound5.wav",1,false);	// 80
+	ds_LoadWAVE(FolderPath,"sound6.wav",1,false);	// 81
+	ds_LoadWAVE(FolderPath,"sound7.wav",1,false);	// 82
+	ds_LoadWAVE(FolderPath,"sound8.wav",1,false);	// 83
+	ds_LoadWAVE(FolderPath,"sound9.wav",1,false);	// 84
+	ds_LoadWAVE(FolderPath,"fal1.wav",1,false);	// 85
+	ds_LoadWAVE(FolderPath,"fal2.wav",1,false);	// 86
+	ds_LoadWAVE(FolderPath,"fal3.wav",1,false);	// 87
+	ds_LoadWAVE(FolderPath,"fal4.wav",1,false);	// 88
+	ds_LoadWAVE(FolderPath,"fal5.wav",1,false);	// 89
+	ds_LoadWAVE(FolderPath,"fal6.wav",1,false);	// 90
+	ds_LoadWAVE(FolderPath,"fal7.wav",1,false);	// 91
+	ds_LoadWAVE(FolderPath,"fal8.wav",1,false);	// 92
+	ds_LoadWAVE(FolderPath,"fal9.wav",1,false);	// 93
+	ds_LoadWAVE(FolderPath,"fal10.wav",1,false);	// 94
+	ds_LoadWAVE(FolderPath,"fal11.wav",1,false);	// 95
 	
 	ds_AdjustSoundVolumes();
 	ds_AdjustMusicVolumes();

@@ -667,7 +667,7 @@ void game_UnloadModels()
 
 hBool game_Load()
 {
-	srand(time(NULL));
+	srand((unsigned int)time(NULL));
 
 	if(!game_Load2Dstuff())
 		return false;
@@ -1103,7 +1103,9 @@ hBool GameProcess()
 		PlayerEnt = o_FindEntity(PERSO);
 	}
 	
+#ifdef H_MAC
 	IN_Process(MouseInput,PlayerEnt);
+#endif
 
 	switch(ProgramState)
 	{

@@ -5,11 +5,18 @@
 
 #include "alloween.h"
 
+#ifdef H_WINDOWS
+//#define XMD_H
+//#define HAVE_BOOLEAN
+//#define NEED_FAR_POINTERS
+#endif
+
+#ifdef H_MAC
 extern "C" {
 #include "jpeglib.h"
 #include <setjmp.h>
 }
-
+#endif
 
 /*
 #include <ijl.h>
