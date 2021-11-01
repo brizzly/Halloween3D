@@ -5,8 +5,10 @@
 #include "alloween.h"
 #include "bspfile.h"
 
+#ifdef H_MAC
 #include "KSound.h"
 #include "KMusic.h"
+#endif
 //#include "SDL_mixer.h"
 
 
@@ -20,7 +22,9 @@ typedef struct SNDOBJTAG
    	dword		channel3D[MAX_CLONESAMPLE];
     vect_t		pos[MAX_CLONESAMPLE];
     float		time_chan3D[MAX_CLONESAMPLE];
+    #ifdef H_MAC
 	KSound 		*snd_chunk;
+    #endif
 
 } SNDOBJ;
 

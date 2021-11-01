@@ -1,15 +1,17 @@
 
 #include "alloween.h"
+#ifdef H_MAC
 #include "KSound.h"
 #include "KMusic.h"
-
+#endif
 
 
 int		gNb_Sounds;
 SNDOBJ	gSoundObjet[MAX_SAMPLE];
 int		gNbTrack;
+#ifdef H_MAC
 KMusic *gMusic = NULL;
-
+#endif
 
 
 hBool ds_Init()
@@ -34,11 +36,13 @@ void ds_Cleanup( void )
                 
 	lb_StopMusic();
 
+    #ifdef H_MAC
 	if(gMusic)
 	{
 		delete gMusic;
 		gMusic = NULL;
 	}
+    #endif
 
 	ds_UnloadSounds();
 	//lb_UnInit();
@@ -306,10 +310,12 @@ void ds_AdjustMusicVolumes()
 
 void lb_SetChannelVol(int volume)
 {
+    #ifdef H_MAC
 	if(gMusic)
 	{
 		gMusic->setVolume( volume );
 	}
+    #endif
 }
 
 hBool ds_PlaySound(int SoundID)
@@ -352,7 +358,9 @@ hBool ds_PlayBuffer( void )
 hBool lb_LoadSound(char *name, int nChannel, hBool sound3D)
 {
 	int		SoundID;
+    #ifdef H_MAC
 	KSound	*smp = NULL;
+    #endif
 	char	*p;
 	
 	if(gNb_Sounds >= MAX_SAMPLE)

@@ -292,6 +292,24 @@ hBool ds_PlayBuffer( void )
 	return true;
 }
 
+#ifdef H_LINUX
+hBool ds_Init()
+{
+	if(gIsServer && net_dedicated.value)
+		return true;
+                
+	if(!lb_Init())
+	{
+		m_ConsPrint("sound system ini FAILED\n");
+		return false;
+	}
+	else
+	{
+		m_ConsPrint("sound system ini OK\n");
+		return true;
+	}
+}
+#else
 hBool ds_Init(HWND hWnd, HINSTANCE hInstance)
 {
 	if(gIsServer && net_dedicated.value)
@@ -308,6 +326,7 @@ hBool ds_Init(HWND hWnd, HINSTANCE hInstance)
 		return true;
 	}
 }
+#endif
 
 void ds_Cleanup( void )
 {

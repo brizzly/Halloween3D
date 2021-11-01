@@ -5,7 +5,8 @@
 #include "bspfile.h"
 
 //#include <windows.h>
-#include <bass.h>
+//#include <bass.h>
+#include "misc/bass.h"
 
 typedef struct SNDOBJTAG
 {
@@ -19,8 +20,11 @@ typedef struct SNDOBJTAG
 
 } SNDOBJ;
 
-
+#ifdef H_LINUX
+hBool ds_Init();
+#else
 hBool	ds_Init(HWND hWnd, HINSTANCE hInstance);
+#endif
 hBool	ds_LoadSounds();
 void	ds_UnloadSounds();
 hBool	ds_LoadWAVE(char *FolderPath, char *lpzFileName, int nChannel,  hBool sound3D);

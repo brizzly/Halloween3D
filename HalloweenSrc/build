@@ -1,0 +1,6 @@
+./clean_tmp
+
+gcc -Wno-write-strings -Wno-endif-labels -fuse-ld=gold -I/usr/include/SDL/ -I/usr/include -c alloween.cpp loadjpeg_linux.cpp bspfile.cpp camera.cpp halloween_linux.cpp player.cpp physic.cpp collision.cpp maths.cpp ellipsoide.cpp console.cpp bsptree.cpp opengl.cpp demo.cpp display.cpp enveffect.cpp filesys.cpp frustrum.cpp game.cpp gameover.cpp image.cpp input.cpp interface.cpp jpeg.cpp dsound.cpp libbass.cpp liste.cpp menu.cpp menu_init.cpp menu_sel.cpp monster.cpp mskmodel.cpp objet_proc.cpp script.cpp shader.cpp sorting.cpp story.cpp textdraw.cpp tga.cpp timer.cpp objet.cpp net_temp_linux.cpp
+
+g++ -fuse-ld=gold -L/usr/X11R6/lib/ -o  ../Hallow999 alloween.o loadjpeg_linux.o bspfile.o camera.o halloween_linux.o player.o physic.o collision.o maths.o ellipsoide.o console.o bsptree.o opengl.o demo.o display.o enveffect.o filesys.o frustrum.o game.o gameover.o image.o input.o interface.o jpeg.o dsound.o libbass.o liste.o menu.o menu_init.o menu_sel.o monster.o mskmodel.o objet_proc.o script.o shader.o sorting.o story.o textdraw.o tga.o timer.o objet.o net_temp_linux.o -L/usr/X11R6/lib -lGL -lGLU -ljpeg -lm `sdl-config --cflags --libs` ./libbass.so
+
