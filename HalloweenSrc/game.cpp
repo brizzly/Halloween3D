@@ -1103,7 +1103,7 @@ hBool GameProcess()
 		PlayerEnt = o_FindEntity(PERSO);
 	}
 	
-#ifdef H_MAC
+#if defined(H_MAC) || defined(H_LINUX)
 	IN_Process(MouseInput,PlayerEnt);
 #endif
 
