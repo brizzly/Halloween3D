@@ -1023,11 +1023,12 @@ void gl_SwapBuffer()
 	//KWindow::flipBackBuffer();
 #endif
 
-//#ifdef H_LINUX
+#ifdef H_LINUX
 	//glutSwapBuffers();
 //	sys_SwapBufferGLX();
-	
-//#endif
+
+	SDL_GL_SwapBuffers();
+#endif
 
 }
 
