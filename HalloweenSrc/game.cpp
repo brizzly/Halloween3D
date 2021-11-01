@@ -787,7 +787,7 @@ void game_Init()
 	gIsEclair = 0;
 	gAlphaFont = 1;
 
-#ifdef H_LINUX // beta 1 HACK
+#if 0 //def H_LINUX // beta 1 HACK
 	ProgramState = PS_PRES;
 	return;
 #endif
