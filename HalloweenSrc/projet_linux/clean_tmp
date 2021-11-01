@@ -1,4 +1,6 @@
-rm *.*~
-rm *~
+#rm *.*~
+#rm *~
+
 rm *.o
-clear
+
+#clear
