@@ -15,7 +15,10 @@
 
 int 			videoFlags;
 //const SDL_VideoInfo 	*videoInfo;
-//SDL_Surface 		*surface;
+//enabled by farox
+#ifdef H_LINUX
+SDL_Surface 		*surface;
+#endif
 
 
 #ifdef H_MAC
@@ -583,7 +586,7 @@ bool sys_GameEvent()
 			break;
 
 			case SDL_KEYUP:
-			IN_SetKeyboard(event.key.keysym, false);
+			IN_SetKeyboard(event.key.keysym.sym, false);
 			break;
 
 			case SDL_KEYDOWN:
@@ -593,7 +596,7 @@ bool sys_GameEvent()
 		//	 (int)event.key.keysym.scancode,
 		//	  SDL_GetKeyName( event.key.keysym.sym ));
 
-			IN_SetKeyboard(event.key.keysym, true);
+			IN_SetKeyboard(event.key.keysym.sym, true);
 			break;
 
 			case SDL_MOUSEBUTTONDOWN:
@@ -758,7 +761,9 @@ void MACend()
 }
 
 
-int main_Alternate(int argc, char **argv)
+//by farox
+//int main_Alternate(int argc, char **argv)
+int main(int argc, char **argv)
 {
 	m_ConsPrint("main()\n");
 	
@@ -859,3 +864,4 @@ ending:
 	sys_end();
 	return 0;
 }
+

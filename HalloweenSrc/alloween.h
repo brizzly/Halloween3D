@@ -3,8 +3,8 @@
 
 
 //#define H_MAC
-//#define H_LINUX
-#define H_WINDOWS
+#define H_LINUX
+//#define H_WINDOWS
 
 
 
@@ -154,7 +154,9 @@ static int		ScreenY[] = { 384, 480, 600, 768, 864, 960, 1200 };
 
 
 #ifdef H_LINUX
-#include "libsound_linux.h"
+//#include "libsound_linux.h"
+#include "libbass.h"
+#include "dsound.h"
 #include "loadjpeg_linux.h"
 #include "net_temp_linux.h"
 #endif

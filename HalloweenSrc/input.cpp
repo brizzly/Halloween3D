@@ -333,11 +333,13 @@ void IN_SaveKey(int nKey, int KeyId, char *KeyName)
 void IN_ReadKeyboard()
 {
 	int i;
-	
+	#ifdef H_MAC //todo...farox
 	gKeyHasBeenPressed = false;
 	for(i=0 ; i<93+8 ; i++)
 	{
-		if(KInput::isPressed( (EKeyboardLayout)i))
+        //#ifdef H_MAC		
+        if(KInput::isPressed( (EKeyboardLayout)i))
+        //#endif
 		{
 			gKeyHasBeenPressed = true;
 			KeysInput[i].key = true;
@@ -347,6 +349,7 @@ void IN_ReadKeyboard()
 			KeysInput[i].key = false;
 		} 
 	}
+    #endif
 }
 
 void IN_SetKeyboard(int keysym, hBool keydir)
@@ -355,7 +358,7 @@ void IN_SetKeyboard(int keysym, hBool keydir)
 
 #ifdef H_MAC
 
-#else
+////#else  //farox
 	key = keysym.scancode;
 
 	if(keydir)
@@ -437,6 +440,7 @@ void IN_WarpMouse()
 
 long IN_ReadMouse()
 {
+#ifdef H_MAC
 	float 		msx = (float)(KInput::getMouseX());
 	float 		msy = (float)(KInput::getMouseY());
 	
@@ -532,6 +536,7 @@ long IN_ReadMouse()
 		IN_SetMouseButons(-3);
 	}
 	return 0;
+#endif
 }
 
 void IN_MouseGetOffsetFromAbs(int x, int y)
@@ -800,8 +805,8 @@ char *IN_GetKeyChar(int IdScannedKey)
 #ifdef H_MAC
 	return (char*)IdScannedKey;
 #else
-	unicode = KeysInput[IdScannedKey].keysym.unicode;
-	sprintf(label, "%c", (char)unicode);
+	//unicode = KeysInput[IdScannedKey].keysym.unicode;
+	//sprintf(label, "%c", (char)unicode);
 	return label;
 #endif
 }

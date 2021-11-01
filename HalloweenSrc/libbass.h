@@ -6,11 +6,16 @@
 #include "alloween.h"
 
 #include "bspfile.h"
-#include <bass.h>
+//#include <bass.h>
+#include "bass.h"
 
 
-
+//hBool	lb_Init(HWND hwnd);
+#ifdef H_LINUX
+hBool lb_Init();
+#else
 hBool	lb_Init(HWND hwnd);
+#endif
 void	lb_UnInit();
 hBool	lb_LoadSound(char *name, int nChannel, hBool sound3D);
 void	lb_FreeSound(int SoundID);

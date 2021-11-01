@@ -1,18 +1,28 @@
 
 #include "alloween.cpp"
-#include <bass.h>
+//#include <bass.h>
+#include "bass.h"
 
 HSTREAM		gHstream = 0;
 
 
-hBool lb_Init(HWND hwnd)
+//hBool lb_Init(HWND hwnd)
+#ifdef H_LINUX
+hBool lb_Init()
+#else
+hBool	lb_Init(HWND hwnd)
+#endif
 {
 	long ver = BASS_GetVersion();
 //	if(ver!=MAKELONG(2,0))
 //		return false;
 
 	//if(!BASS_Init(1, 44100, BASS_DEVICE_3D, hwnd, NULL))
+    #ifdef H_LINUX
+    if(!BASS_Init(-1,44100,BASS_DEVICE_3D,NULL, NULL))
+    #else
 	if(!BASS_Init(-1,44100,BASS_DEVICE_3D,hwnd, NULL))
+    #endif
 		return false;
 
 	BASS_Set3DFactors(0.00001f,0.015f,0);

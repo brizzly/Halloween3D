@@ -1,5 +1,5 @@
 
-#include "alloween.cpp"
+#include "alloween.h" //was .cpp ?? by farox
 
 int		ProgramState;
 int		NextProgramState;
@@ -1165,7 +1165,7 @@ hBool GameProcess()
 		if((gMultiNbEntsMax != -1) && (gMultiNbEnts >= gMultiNbEntsMax))
 		{
 			//	if(developer.value)
-			m_ConsPrint("Le client a reçu les entitees dans la map en cours du serveur\n");		
+			m_ConsPrint("Le client a re\E7u les entitees dans la map en cours du serveur\n");		
 			m_ConsPrint("client envoi une demande de point d'apparition\n");
 #ifdef H_WINDOWS // hack
 			//cl_Send("erf", PacketType_AskSpawnPos, true, true);
@@ -1668,7 +1668,7 @@ void DrawGameStatutBar()
 	if(!player_view.value)
 		return;
 
-	if(gMapIntro && game_IsMapOpened(1) == false) // map training pas debloqué
+	if(gMapIntro && game_IsMapOpened(1) == false) // map training pas debloqu\E9
 		return;
 
 	Ri = (int)(WorldColorR * 255.0f);
@@ -1937,7 +1937,7 @@ void game_CheckMapCompleted()
 
 	// map goals completed so unlock next map
 	m_ConsPrint("Map Complete!\n");
-//	game_TimeLimit = false; // plus de limite de temps pour cette map débloquée
+//	game_TimeLimit = false; // plus de limite de temps pour cette map d\E9bloqu\E9e
 	game_MatrixMode = 0;	// on stop les conneries de l'effet marix car le level est fini
 
 	value = (int)map_complete.value;
@@ -2382,7 +2382,7 @@ void game_LoadMap(int map_id)
 
 	gl_StopFog();
 
-	// on met que 1/*3*/ map dans la démo du jeu halloween
+	// on met que 1/*3*/ map dans la d\E9mo du jeu halloween
 	if(shareware || gIsDemo)
 	{
 		if(map_id > 0) // 2
