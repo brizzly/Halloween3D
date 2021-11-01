@@ -810,13 +810,13 @@ int main(int argc, char **argv)
 	else
 	{
 	}
-/*
+
 	if(!sys_setVID())
 	{
 		m_ConsPrint("Failed to set the video mode\n");
 		goto ending;
 	}
-*/
+
 	if(!im_Init())
 	{
 		LoadingError("im_Init FAILED!!");
