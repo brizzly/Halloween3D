@@ -16,6 +16,7 @@ int jpeg_VidLoad(byte *data, int w, int h, int text_id, char *Name, hBool map_te
 	      if(!strncmp(TextureList[k].name,Name,strlen(Name)))
 	      {
 	        m_ConsPrint("Already loaded ! (id:%d)\n",TextureList[k].id);
+	        s_free(data);
 		 return TextureList[k].id;
 		 }
 		 k++;
