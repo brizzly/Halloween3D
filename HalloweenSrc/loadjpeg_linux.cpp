@@ -1,4 +1,77 @@
 
+#include <turbojpeg.h>
+#include <sys/mman.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <unistd.h>
+
+#include "alloween.h"
+
+const unsigned char * mmap_file(const char *filename, long int &length)
+{
+	unsigned char * ptr;
+	int fd;
+	struct stat st;
+	fd = open(filename, O_RDONLY);
+	if (fd == -1)
+	{
+		return nullptr;
+	}
+	if (fstat(fd, &st))
+	{
+		return nullptr;
+	}
+	length = st.st_size;
+	ptr = (unsigned char *)mmap(nullptr, length, PROT_READ, MAP_PRIVATE, fd, 0); //  | MAP_POPULATE
+	close(fd);
+	if (ptr == MAP_FAILED)
+	{
+		return nullptr;
+	}
+	madvise(ptr, length, MADV_SEQUENTIAL);
+	return ptr;
+}
+
+unsigned char * jpg_read(char * filename, int *w, int *h)
+{
+	const unsigned char * data;
+	long int length;
+	data = mmap_file(filename, length);
+	if(!data )
+	{
+		return nullptr;
+	}
+	tjhandle tjh = tjInitDecompress();
+	int width, height, subsamp, colorspace, ret;
+	ret = tjDecompressHeader3(tjh, data, length, &width, &height, &subsamp, &colorspace);
+	if (ret)
+	{
+		m_ConsPrint("jpeg header error in file %s -- %s\n", filename, tjGetErrorStr2(tjh));
+		tjDestroy(tjh);
+		munmap( (void*)data, length);
+		return nullptr;
+	}
+	unsigned char *pixels = (unsigned char *)s_malloc(4 * width * height);
+	ret = tjDecompress2(tjh, data, length, pixels, width, 4*width, height, TJPF_BGRA, 0);
+	if (ret)
+	{
+		m_ConsPrint("jpeg error in file %s -- %s\n", filename, tjGetErrorStr2(tjh));
+		s_free(pixels);
+		tjDestroy(tjh);
+		munmap((void*)data, length);
+		return nullptr;
+	}
+	tjDestroy(tjh);
+	munmap((void*)data, length);
+	*w = width;
+	*h = height;
+	return pixels;
+}
+
+
+
+
+
 #if 0
 
 #include <stdio.h>
