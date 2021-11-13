@@ -178,7 +178,7 @@ void UnloadMap()
 	if(shareware2-4 != -3)
 		shareware = true;
 
-	im_UnloadMapTextures();
+//	im_UnloadMapTextures();
 //	game_UnloadModels();
 }
 

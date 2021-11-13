@@ -14,7 +14,7 @@ void	LoadingError(char *message);
 void	key_CheckGame();
 
 
-bool 	sys_GameEvent();
+bool 	sys_GameEvent(bool filtermouse=false);
 void 	sys_SwapBufferGLX();
 void	sys_RestartVID();
 int	sys_setVID();

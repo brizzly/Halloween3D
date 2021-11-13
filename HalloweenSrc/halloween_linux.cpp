@@ -224,11 +224,11 @@ hBool sys_CreateGL(int width, int height, int bits)
 	    return false;
 	}
         
-        SDL_GL_SetAttribute( SDL_GL_DEPTH_SIZE, (int)(colordepth.value) ); // 16
+        SDL_GL_SetAttribute( SDL_GL_DEPTH_SIZE, 24 ); // 16
         SDL_GL_SetAttribute( SDL_GL_DOUBLEBUFFER, 1 );
         SDL_GL_SetAttribute( SDL_GL_STENCIL_SIZE, 0 );
         SDL_GL_SetAttribute( SDL_GL_ALPHA_SIZE, 0 );
-        SDL_GL_SetAttribute( SDL_GL_BUFFER_SIZE, 16 ); // 24
+        SDL_GL_SetAttribute( SDL_GL_BUFFER_SIZE, (int)(colordepth.value) );
         
     	videoFlags  = SDL_OPENGL;          
     //	videoFlags |= SDL_GL_DOUBLEBUFFER; 
@@ -533,7 +533,11 @@ void sys_setGamma(float gamma)
 	m_ConsPrint("Gamma set to : %f\n",(float)gamma);
 }
 
-bool sys_GameEvent()
+
+bool warpmouse = false;
+bool grabbing = false;
+
+bool sys_GameEvent(bool filtermouse)
 {
 #ifdef H_MAC
 	
@@ -640,7 +644,15 @@ bool sys_GameEvent()
 		//				event.motion.xrel,
 		//				event.motion.yrel);
 
+#ifdef H_LINUX
+				if (!filtermouse)
+				{
+					warpmouse = true;
+					IN_MouseGetOffet(event.motion.x, event.motion.y, event.motion.xrel, event.motion.yrel);
+				}
+#else
 			IN_MouseGetOffet(event.motion.x, event.motion.y, event.motion.xrel, event.motion.yrel);
+#endif
 			break;
 
 			case SDL_QUIT:
@@ -810,13 +822,13 @@ int main(int argc, char **argv)
 	else
 	{
 	}
-/*
+
 	if(!sys_setVID())
 	{
 		m_ConsPrint("Failed to set the video mode\n");
 		goto ending;
 	}
-*/
+
 	if(!im_Init())
 	{
 		LoadingError("im_Init FAILED!!");
@@ -849,11 +861,33 @@ int main(int argc, char **argv)
 		{
 			break;
 		}
-        if(sys_GameEvent() == false)
+		if(sys_GameEvent(false) == false)
 		{
 			GameProcess();
 			break;
-		}                
+		}
+#ifdef H_LINUX
+		if(ProgramState == PS_GAME && !grabbing)
+		{
+			grabbing = SDL_WM_GrabInput(SDL_GRAB_ON) == SDL_GRAB_ON;
+		}
+		if(ProgramState != PS_GAME && grabbing)
+		{
+			grabbing = SDL_WM_GrabInput(SDL_GRAB_OFF) == SDL_GRAB_ON;
+		}
+		if(warpmouse && ProgramState == PS_GAME)
+		{
+			int centerx = ScreenX[(int)videomode.value] / 2;
+			int centery = ScreenY[(int)videomode.value] / 2;
+			SDL_WarpMouse(centerx, centery);
+			if(sys_GameEvent(true) == false)
+			{
+				GameProcess();
+				break;
+			}
+			warpmouse = false;
+		}
+#endif
 		gl_SwapBuffer();
 		ds_PlayBuffer();
 	}

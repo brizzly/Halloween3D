@@ -554,7 +554,7 @@ extern	int	gGameIdKeys[MAX_GAMEKEY+4];
 extern	hBool	gPlayerCrouch;
 extern	float	gPlayerCrouchStep;
 extern	hBool	gPlayerRun;
-extern	char	HalloLetters[9];
+extern	char	HalloLetters[10];
 extern	float	HLetter_Time;
 extern	float	KillDepla_Time;
 extern	float	KillMorbak_Time;
