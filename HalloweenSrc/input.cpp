@@ -566,6 +566,11 @@ void IN_MouseGetOffet(int x, int y, int relx, int rely)
 	msoffsetX = x - Last_MouseX;
 	msoffsetY = y - Last_MouseY;
 
+#ifdef H_LINUX
+	msoffsetX = relx;
+	msoffsetY = rely;
+#endif
+
 	Last_MouseX = x;
 	Last_MouseY = y;
 

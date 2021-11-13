@@ -533,7 +533,10 @@ void sys_setGamma(float gamma)
 	m_ConsPrint("Gamma set to : %f\n",(float)gamma);
 }
 
-bool sys_GameEvent()
+
+bool warpmouse = false;
+
+bool sys_GameEvent(bool filtermouse)
 {
 #ifdef H_MAC
 	
@@ -640,7 +643,15 @@ bool sys_GameEvent()
 		//				event.motion.xrel,
 		//				event.motion.yrel);
 
+#ifdef H_LINUX
+				if (!filtermouse)
+				{
+					warpmouse = true;
+					IN_MouseGetOffet(event.motion.x, event.motion.y, event.motion.xrel, event.motion.yrel);
+				}
+#else
 			IN_MouseGetOffet(event.motion.x, event.motion.y, event.motion.xrel, event.motion.yrel);
+#endif
 			break;
 
 			case SDL_QUIT:
@@ -849,11 +860,25 @@ int main(int argc, char **argv)
 		{
 			break;
 		}
-        if(sys_GameEvent() == false)
+		if(sys_GameEvent(false) == false)
 		{
 			GameProcess();
 			break;
-		}                
+		}
+#ifdef H_LINUX
+		if(warpmouse && ProgramState == PS_GAME)
+		{
+			int centerx = ScreenX[(int)videomode.value] / 2;
+			int centery = ScreenY[(int)videomode.value] / 2;
+			SDL_WarpMouse(centerx, centery);
+			if(sys_GameEvent(true) == false)
+			{
+				GameProcess();
+				break;
+			}
+			warpmouse = false;
+		}
+#endif
 		gl_SwapBuffer();
 		ds_PlayBuffer();
 	}
