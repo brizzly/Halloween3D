@@ -535,6 +535,7 @@ void sys_setGamma(float gamma)
 
 
 bool warpmouse = false;
+bool grabbing = false;
 
 bool sys_GameEvent(bool filtermouse)
 {
@@ -866,6 +867,14 @@ int main(int argc, char **argv)
 			break;
 		}
 #ifdef H_LINUX
+		if(ProgramState == PS_GAME && !grabbing)
+		{
+			grabbing = SDL_WM_GrabInput(SDL_GRAB_ON) == SDL_GRAB_ON;
+		}
+		if(ProgramState != PS_GAME && grabbing)
+		{
+			grabbing = SDL_WM_GrabInput(SDL_GRAB_OFF) == SDL_GRAB_ON;
+		}
 		if(warpmouse && ProgramState == PS_GAME)
 		{
 			int centerx = ScreenX[(int)videomode.value] / 2;
