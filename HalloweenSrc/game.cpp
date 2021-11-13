@@ -16,7 +16,7 @@ hBool	game_isover;
 hBool	game_weapon1;
 hBool	game_weapon2;
 hBool	game_weapon3;
-char	HalloLetters[9]; // = "_________";	// "HALLOWEEN" letters to find and pick up
+char	HalloLetters[10]; // = "_________";	// "HALLOWEEN" letters to find and pick up
 float	HLetter_Time = 0;
 float	KillDepla_Time = 0;
 float	KillMorbak_Time = 0;
