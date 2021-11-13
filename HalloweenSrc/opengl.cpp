@@ -1040,6 +1040,7 @@ void gl_LoadSurfaceTexture(byte *surf, uint sformat, uint scolor_format1, uint s
 	glBindTexture(GL_TEXTURE_2D, tid);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_NEAREST);
+	glTexParameteri(GL_TEXTURE_2D, GL_GENERATE_MIPMAP, GL_TRUE);
 	
 //	gluBuild2DMipmaps(GL_TEXTURE_2D, scolor_format1, w, h, scolor_format2, sformat, surf);
 	glTexImage2D( GL_TEXTURE_2D,0, scolor_format1, w, h, 0, scolor_format2, sformat, surf );
