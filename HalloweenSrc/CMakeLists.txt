@@ -70,7 +70,7 @@ add_executable(halloween
 )
 
 
-configure_deps(halloween gl glu sdl libturbojpeg)
+configure_deps(halloween gl sdl libturbojpeg)
 
 target_link_directories(halloween PRIVATE ${CMAKE_SOURCE_DIR})  # for libbass.so
 
