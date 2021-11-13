@@ -224,11 +224,11 @@ hBool sys_CreateGL(int width, int height, int bits)
 	    return false;
 	}
         
-        SDL_GL_SetAttribute( SDL_GL_DEPTH_SIZE, (int)(colordepth.value) ); // 16
+        SDL_GL_SetAttribute( SDL_GL_DEPTH_SIZE, 24 ); // 16
         SDL_GL_SetAttribute( SDL_GL_DOUBLEBUFFER, 1 );
         SDL_GL_SetAttribute( SDL_GL_STENCIL_SIZE, 0 );
         SDL_GL_SetAttribute( SDL_GL_ALPHA_SIZE, 0 );
-        SDL_GL_SetAttribute( SDL_GL_BUFFER_SIZE, 16 ); // 24
+        SDL_GL_SetAttribute( SDL_GL_BUFFER_SIZE, (int)(colordepth.value) );
         
     	videoFlags  = SDL_OPENGL;          
     //	videoFlags |= SDL_GL_DOUBLEBUFFER; 
