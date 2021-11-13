@@ -17,6 +17,8 @@ Load mesh : OBJ, ASE (Textures, Camera, Lights, Brush)
 Load Textures : PNG, JPEG, TGA
 
 
-Enjoy all our Great Jadeware Free Games : https://jadegame.com
+Homepage : https://jadegame.com/games/halloween/
 
 Collision detection lib by Amir Geva : https://github.com/amirgeva/coldet
+
+Audio lib : https://www.un4seen.com/
