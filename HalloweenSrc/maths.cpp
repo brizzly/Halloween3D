@@ -428,7 +428,7 @@ float Sin_Rad(float alpha)
 
 	return Sin_i(Angle_Deg);
 	*/
-	return (float)sin(alpha);
+	return (float)sinf(alpha);
 }
 
 float Cos_Rad(float alpha)
@@ -445,17 +445,19 @@ float Cos_Rad(float alpha)
 
 	return Cos_i(Angle_Deg);
 	*/
-	return (float)cos(alpha);
+	return (float)cosf(alpha);
 }
 
 float Sin(float alpha)
 {
-	return Sin_i((int)alpha);
+	return sinf(alpha*PIOVER180);
+//	return Sin_i((int)alpha);
 }
 
 float Cos(float alpha)
 {
-	return Cos_i((int)alpha);
+	//return Cos_i((int)alpha);
+	return cosf(alpha*PIOVER180);
 }
 
 float Sin_i(int alpha)

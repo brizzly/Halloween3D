@@ -767,6 +767,9 @@ void msk_unloadModelData(Model *MilkshapeModel)
 			MilkshapeModel->BoneAnim[0][k]->m_pJoints[i].m_pTranslationKeyframes = NULL;
 		}
 
+		s_free(MilkshapeModel->BoneAnim[0][k]->m_pTimer);
+		MilkshapeModel->BoneAnim[0][k]->m_pTimer = NULL;
+
 		s_free(MilkshapeModel->BoneAnim[0][k]->m_pJoints);
 		MilkshapeModel->BoneAnim[0][k]->m_pJoints = NULL;
 

@@ -621,20 +621,19 @@ void DrawGameConfig_INPUT()
 #endif
 
 #ifdef H_LINUX
-// disabled by farox....todo
-	//g_Disp(16,14,25,"Walk Forward [%s]", SDL_GetKeyName( KeysInput[gGameIdKeys[0]].keysym.sym ) );
-	//g_Disp(16,15,25,"Walk Backward [%s]", SDL_GetKeyName( KeysInput[gGameIdKeys[1]].keysym.sym ));
-	//g_Disp(16,16,25,"Step Left [%s]", SDL_GetKeyName( KeysInput[gGameIdKeys[2]].keysym.sym ));
-	//g_Disp(16,17,25,"Step Right [%s]", SDL_GetKeyName( KeysInput[gGameIdKeys[3]].keysym.sym ));
-	//g_Disp(16,18,25,"Jump [%s]", SDL_GetKeyName( KeysInput[gGameIdKeys[4]].keysym.sym ));
-	//g_Disp(16,19,25,"Crouch [%s]", SDL_GetKeyName( KeysInput[gGameIdKeys[5]].keysym.sym ));
-	//g_Disp(16,20,25,"Attack [%s]", SDL_GetKeyName( KeysInput[gGameIdKeys[6]].keysym.sym ));
-	//g_Disp(16,21,25,"Axe [%s]", SDL_GetKeyName( KeysInput[gGameIdKeys[7]].keysym.sym ));
-	//g_Disp(16,22,25,"Crossbow [%s]", SDL_GetKeyName( KeysInput[gGameIdKeys[8]].keysym.sym ));
-	//g_Disp(16,23,25,"BombGun [%s]", SDL_GetKeyName( KeysInput[gGameIdKeys[9]].keysym.sym ));
-	//g_Disp(16,24,25,"Tromblon [%s]", SDL_GetKeyName( KeysInput[gGameIdKeys[10]].keysym.sym ));
-	//g_Disp(16,25,25,"Action [%s]", SDL_GetKeyName( KeysInput[gGameIdKeys[11]].keysym.sym ));
-	//g_Disp(16,26,25,"Run [%s]", SDL_GetKeyName( KeysInput[gGameIdKeys[12]].keysym.sym ));
+	g_Disp(16,14,25,"Walk Forward [%s]", SDL_GetKeyName((SDLKey) KeysInput[gGameIdKeys[0]].keysym ) );
+	g_Disp(16,15,25,"Walk Backward [%s]", SDL_GetKeyName((SDLKey) KeysInput[gGameIdKeys[1]].keysym ));
+	g_Disp(16,16,25,"Step Left [%s]", SDL_GetKeyName((SDLKey) KeysInput[gGameIdKeys[2]].keysym ));
+	g_Disp(16,17,25,"Step Right [%s]", SDL_GetKeyName((SDLKey) KeysInput[gGameIdKeys[3]].keysym ));
+	g_Disp(16,18,25,"Jump [%s]", SDL_GetKeyName((SDLKey) KeysInput[gGameIdKeys[4]].keysym ));
+	g_Disp(16,19,25,"Crouch [%s]", SDL_GetKeyName((SDLKey) KeysInput[gGameIdKeys[5]].keysym ));
+	g_Disp(16,20,25,"Attack [%s]", SDL_GetKeyName((SDLKey) KeysInput[gGameIdKeys[6]].keysym ));
+	g_Disp(16,21,25,"Axe [%s]", SDL_GetKeyName((SDLKey) KeysInput[gGameIdKeys[7]].keysym ));
+	g_Disp(16,22,25,"Crossbow [%s]", SDL_GetKeyName((SDLKey) KeysInput[gGameIdKeys[8]].keysym ));
+	g_Disp(16,23,25,"BombGun [%s]", SDL_GetKeyName((SDLKey) KeysInput[gGameIdKeys[9]].keysym ));
+	g_Disp(16,24,25,"Tromblon [%s]", SDL_GetKeyName((SDLKey) KeysInput[gGameIdKeys[10]].keysym ));
+	g_Disp(16,25,25,"Action [%s]", SDL_GetKeyName((SDLKey) KeysInput[gGameIdKeys[11]].keysym ));
+	g_Disp(16,26,25,"Run [%s]", SDL_GetKeyName((SDLKey) KeysInput[gGameIdKeys[12]].keysym ));
 #endif	
 
 //	g_Disp(16,27,25,"+ Insult monsters [NUMPAD_2]");

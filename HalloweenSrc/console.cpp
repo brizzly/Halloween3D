@@ -17,7 +17,6 @@ char		*CmdLineArg;
 char		ConsoleBufferLine[CONSOLE_WIDTH];
 char		ConsoleBufferLine_save[CONSOLE_WIDTH];
 int			key_tab_pressed;
-char		buffer[CONSOLE_MAXDISPCHAR];
 
 
 cmd_function_t	*cmd_functions = NULL;
@@ -427,7 +426,8 @@ void m_ConsPrint(char *Text, ...)
 		return;
 
 	va_start(msg, Text);
-	vsprintf(buffer, Text, msg);
+	char *buffer;
+	vasprintf(&buffer, Text, msg);
 	va_end(msg);
 
 	while(ConsoleBuffer[str]!='\0')
@@ -437,8 +437,8 @@ void m_ConsPrint(char *Text, ...)
 		str++;
 	}
 
-	if(strlen(buffer)+str < CONSOLE_NB_CHAR-1)
-		memcpy(&ConsoleBuffer[str],buffer,strlen(buffer));
+	if(strlen( buffer )+str < CONSOLE_NB_CHAR-1)
+		memcpy(&ConsoleBuffer[str],buffer,strlen( buffer ));
 
 #ifdef H_WINDOWS
 	if(hWndDialog)
@@ -468,7 +468,7 @@ void m_ConsPrint(char *Text, ...)
 #endif
 
 #ifdef H_LINUX
-	printf(buffer);
+	printf("%s", buffer );
 #endif
 
 #ifdef H_MAC
@@ -479,6 +479,7 @@ void m_ConsPrint(char *Text, ...)
 	printf(buffer);
 #endif
 
+	free( buffer );
 }
 
 /*

@@ -7,7 +7,7 @@
 #ifdef H_MAC
 #define		K_MAXKEYS	101 // 93
 #else
-#define		K_MAXKEYS	256
+#define		K_MAXKEYS	SDLK_LAST
 #endif
 #define		KEYMASK_SIZE	K_MAXKEYS
 #define		KEY_NAME_MAX	32
@@ -129,19 +129,19 @@ void	DI_ReadKeyboard();
 
 #ifdef H_LINUX
 
-#define	DIK_ESCAPE	9	// echap
-#define DIK_RETURN	36	// return
-#define	DIK_NUMPADENTER	108	// numpad return
-#define	DIK_NUMPAD5	84	// screenshot
-#define	DIK_BACK	22	// back
-#define	DIK_UP		98
-#define	DIK_DOWN	104
-#define	DIK_LEFT	100
-#define	DIK_RIGHT	102
-#define	DIK_TAB		23	// completion
-#define	DIK_GRAVE	49	// console key
-#define	DIK_LSHIFT	50
-#define	DIK_RSHIFT	62
+#define	DIK_ESCAPE	SDLK_ESCAPE	// echap
+#define DIK_RETURN	SDLK_RETURN	// return
+#define	DIK_NUMPADENTER	SDLK_KP_ENTER	// numpad return
+#define	DIK_NUMPAD5	SDLK_KP5	// screenshot
+#define	DIK_BACK	SDLK_BACKSPACE	// back
+#define	DIK_UP		SDLK_UP
+#define	DIK_DOWN	SDLK_DOWN
+#define	DIK_LEFT	SDLK_LEFT
+#define	DIK_RIGHT	SDLK_RIGHT
+#define	DIK_TAB		SDLK_TAB	// completion
+#define	DIK_GRAVE	SDLK_BACKQUOTE	// console key
+#define	DIK_LSHIFT	SDLK_LSHIFT
+#define	DIK_RSHIFT	SDLK_RSHIFT
 
 #endif
 

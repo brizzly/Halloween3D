@@ -358,8 +358,8 @@ void IN_SetKeyboard(int keysym, hBool keydir)
 
 #ifdef H_MAC
 
-////#else  //farox
-	key = keysym.scancode;
+#else
+	key = keysym;//.scancode;
 
 	if(keydir)
 	{
@@ -367,7 +367,7 @@ void IN_SetKeyboard(int keysym, hBool keydir)
 		//m_ConsPrint("key: %d\n", (int)key); //
 			KeysInput[key].key = true;
 			KeysInput[key].keysym = keysym;
-			strncpy(KeysInput[key].keyname, SDL_GetKeyName(keysym.sym), 32); //
+			strncpy(KeysInput[key].keyname, SDL_GetKeyName((SDLKey)keysym), 32); //
 	//	}
 	}
 	else
@@ -565,6 +565,11 @@ void IN_MouseGetOffet(int x, int y, int relx, int rely)
         
 	msoffsetX = x - Last_MouseX;
 	msoffsetY = y - Last_MouseY;
+
+#ifdef H_LINUX
+	msoffsetX = relx;
+	msoffsetY = rely;
+#endif
 
 	Last_MouseX = x;
 	Last_MouseY = y;

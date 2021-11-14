@@ -16,7 +16,7 @@ hBool	game_isover;
 hBool	game_weapon1;
 hBool	game_weapon2;
 hBool	game_weapon3;
-char	HalloLetters[9]; // = "_________";	// "HALLOWEEN" letters to find and pick up
+char	HalloLetters[10]; // = "_________";	// "HALLOWEEN" letters to find and pick up
 float	HLetter_Time = 0;
 float	KillDepla_Time = 0;
 float	KillMorbak_Time = 0;
@@ -787,7 +787,7 @@ void game_Init()
 	gIsEclair = 0;
 	gAlphaFont = 1;
 
-#ifdef H_LINUX // beta 1 HACK
+#if 0 //def H_LINUX // beta 1 HACK
 	ProgramState = PS_PRES;
 	return;
 #endif
@@ -1103,7 +1103,7 @@ hBool GameProcess()
 		PlayerEnt = o_FindEntity(PERSO);
 	}
 	
-#ifdef H_MAC
+#if defined(H_MAC) || defined(H_LINUX)
 	IN_Process(MouseInput,PlayerEnt);
 #endif
 

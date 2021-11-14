@@ -16,6 +16,7 @@ int jpeg_VidLoad(byte *data, int w, int h, int text_id, char *Name, hBool map_te
 	      if(!strncmp(TextureList[k].name,Name,strlen(Name)))
 	      {
 	        m_ConsPrint("Already loaded ! (id:%d)\n",TextureList[k].id);
+	        s_free(data);
 		 return TextureList[k].id;
 		 }
 		 k++;
@@ -72,11 +73,6 @@ int jpeg_Load(char *Name, int id, int picmip, hBool map_tex)
 #endif
 	
 #ifdef H_LINUX
-	// hack :
-	//m_ConsPrint("charge TGA #######################\n");
-	Name = fs_RenameFileExtension(Name, "tga");
-	return tga_Load(Name, id, picmip, map_tex);
-
 	img_data = jpg_read(fullname, &w, &h);
 	if(img_data == NULL)
 	{
