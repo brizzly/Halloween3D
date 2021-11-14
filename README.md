@@ -21,4 +21,4 @@ Homepage : https://jadegame.com/games/halloween/
 
 Collision detection lib by Amir Geva : https://github.com/amirgeva/coldet
 
-Audio lib : https://www.un4seen.com/
+Audio lib by un4seen : https://www.un4seen.com/
