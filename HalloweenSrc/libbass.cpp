@@ -194,7 +194,7 @@ void lb_PlaySound3D(int SoundID, vect_t pos, int volume)
 
 	res = BASS_ChannelSetAttribute(gSoundObjet[SoundID].channel3D[sound_pos],
 		BASS_ATTRIB_VOL,
- 		volume);
+ 		volume / 100.f);
 	if (res == FALSE) {
 		m_ConsPrint("err 3D sound\n");
 	}
@@ -309,7 +309,7 @@ void lb_UpdateSound3D(int volume)
 
 			BASS_ChannelSetAttribute(gSoundObjet[SoundID].channel3D[sound_pos],
 				BASS_ATTRIB_VOL,
-				(float)volume);
+				(float)volume / 100.f);
 
 		}
 	}
@@ -391,7 +391,7 @@ void lb_SetChannelVol(int volume)
 		//BASS_ChannelSetAttributes(gHstream, -1, volume, -101);
 		BASS_ChannelSetAttribute(gHstream,
 			BASS_ATTRIB_VOL,
-			(float)volume);
+			(float)volume / 100.f);
 	}
 }
 
