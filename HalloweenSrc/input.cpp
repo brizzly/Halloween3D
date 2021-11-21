@@ -651,12 +651,12 @@ int IN_GetIdKey()
 		{
 			if(msclic_A)
 			{
-				n_mouse = 256;
+				n_mouse = K_MAXKEYS;
 				clicked = true;
 			}
 			else if(msclic_B)
 			{
-				n_mouse = 258;
+				n_mouse = K_MAXKEYS+2;
 				clicked = true;
 			}
 		}
@@ -771,10 +771,10 @@ int ReadKey()
 
 hBool di_IsKeyActivated(int id, hMOUSEINPUT Mouse)
 {
-	if(id<0 || id>258)
+	if(id<0 || id>K_MAXKEYS+3)
 		return false;
 
-	if(id < 256)
+	if(id < K_MAXKEYS)
 	{
 		if(KeysInput[id].key != 0)
 			return true;
@@ -783,17 +783,17 @@ hBool di_IsKeyActivated(int id, hMOUSEINPUT Mouse)
 	{
 		switch(id)
 		{
-			case 256:
+			case K_MAXKEYS:
 			if(Mouse.button_A)
 				return true;
 			break;
 
-			case 258:
+			case K_MAXKEYS+2:
 			if(Mouse.button_B)
 				return true;
 			break;
 
-			case 257:
+			case K_MAXKEYS+1:
 		//	if(Mouse.button_C)
 		//		return true;
 			break;
