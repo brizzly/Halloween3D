@@ -641,7 +641,7 @@ int IN_GetIdKey()
 	gl_SwapBuffer();
 	gDrawCursor = true;
 	clicked = false;
-        n_mouse = 0;
+    n_mouse = 0;
 	IsWaitKey = true;
 	while(1)
 	{
@@ -725,10 +725,11 @@ int ReadKey()
 			}
 	
 			if(KeyMask[index])
-					continue;
+				continue;
 			KeyMask[index] = true;
 			ds_PlaySound(15);
 			KeyHasBeenPressed = true;
+
 		#ifdef H_MAC
 			Key = NomDeTouches[index];
 			if(Key)
@@ -742,14 +743,34 @@ int ReadKey()
 					Key += 'A';
 				}
 			}
+		#elif defined(H_LINUX)
+
+			char * KeyName = KeysInput[index].keyname;
+
+			if(strlen(KeyName) == 1)
+			{
+				Key = (int)KeyName[0];
+				//m_ConsPrint("%c\n", Key);
+			}
+			else if(strlen(KeyName) == 3 && KeyName[0] == '[' && KeyName[2] == ']')
+			{
+				Key = (int)KeyName[1];
+				//m_ConsPrint("%c\n", Key);
+			}
+			else
+			{
+				m_ConsPrint("unknow keyname: %s index: %d\n", KeyName, index);
+			}
+
 		#else
 			Key = index;
 		#endif
+
 			KeyPos = 0;
 			while( KeyBuffer[KeyPos] >= 0 && KeyPos < KEY_BUFFER_MAX )
-					KeyPos++;
+				KeyPos++;
 			if(KeyPos>=KEY_BUFFER_MAX)
-					break;
+				break;
 			for(index2=0 ; index2<KEY_BUFFER_MAX ; index2++)
 			if(KeyBuffer[index2] == Key)
 				break;
@@ -1277,7 +1298,7 @@ void m_ReadInputs(hMOUSEINPUT *Mouse)
 		IsScreenShot=false;
 	
 	// CONSOLE KEY
-	if(IN_IsPressed(DIK_GRAVE))
+	if(IN_IsPressed(DIK_GRAVE) || IN_IsPressed(DIK_RSHIFT))
 	{
 		if(ProgramState != PS_INTRO && ProgramState != PS_OUTRO && ProgramState != PS_CREDIT)
 		if(!gKey_Console)

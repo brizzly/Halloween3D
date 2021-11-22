@@ -982,8 +982,11 @@ void gl_ClearScreen()
 	if(gIsServer && net_dedicated.value)
 		return;
 
-	if(gMenu_InitFirstSel)
-		return;
+	if(ProgramState != PS_LOGO)
+	{
+		if(gMenu_InitFirstSel)
+			return;
+	}
 
 	if(draw_tris.value)
 	{

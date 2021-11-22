@@ -419,7 +419,7 @@ void sys_RestartVID()
 
 void sys_end()
 {
-	// le gamma de l'ecran par defaut est rétablit
+	// le gamma de l'ecran par defaut est rï¿½tablit
 	//SetDeviceGammaRamp(hDC,gGammaRamp);
 //	m_cons_SaveConfigToFile();
 	
@@ -596,9 +596,14 @@ bool sys_GameEvent(bool filtermouse)
 			case SDL_KEYDOWN:
 			//SDL_EnableUNICODE(1);
 
-		//	m_ConsPrint("key: %d Name: %s\n",
-		//	 (int)event.key.keysym.scancode,
-		//	  SDL_GetKeyName( event.key.keysym.sym ));
+/*
+			m_ConsPrint("key code: %d Unicode: %d Symbol: %d  Name: %s\n", 
+					(int)event.key.keysym.scancode, 
+					(int)event.key.keysym.unicode, 
+					(int)event.key.keysym.sym, 
+					SDL_GetKeyName( event.key.keysym.sym )
+					);
+*/
 
 			IN_SetKeyboard(event.key.keysym.sym, true);
 			break;

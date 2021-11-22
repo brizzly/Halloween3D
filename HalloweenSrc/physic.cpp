@@ -104,7 +104,7 @@ pEntity Gravity(pEntity CreatureEnt, float factor)
 							// HACK
 							if(!gMultiPodium && gIsMultiplayer && gIsServer && ProgramState == PS_DIE && gConnectedPlayer > 1)
 							{
-								// le serveur s'est suicidé, -1 au score
+								// le serveur s'est suicidï¿½, -1 au score
 								//gSV_score--;
 								//net_SendServerScores();
 							}
@@ -120,7 +120,7 @@ pEntity Gravity(pEntity CreatureEnt, float factor)
 					CreatureEnt->entity_id == SUBZERAT	||
 					CreatureEnt->entity_id == ZEMUMMY)
 			{
-				// en mode multi les monstres sont pas dirigé par une IA donc pas de probleme de lave
+				// en mode multi les monstres sont pas dirigï¿½ par une IA donc pas de probleme de lave
 				if(gIsMultiplayer)
 				{
 					if(gIsServer)
@@ -727,7 +727,7 @@ void Launch(pEntity CreatureEnt, int id, float Speed)
 	//	CreatureEnt->ent_anim.Pos_Acc.X -= ProjectileStartVel.X * 5.0f;
 	//	CreatureEnt->ent_anim.Pos_Acc.Z -= ProjectileStartVel.Z * 5.0f;
 
-		// fumée de l'explosion du tromblon
+		// fumï¿½e de l'explosion du tromblon
 		if(game_MatrixMode == false)
 		{
 			o_ClearAnimFields(&anim2);
@@ -975,6 +975,9 @@ int IsGround_UnderCreature(pEntity CreatureEnt, float factor)
 
 		Dest = Pos;
 		Dest.Y = Pos.Y - 5.0f; // 10
+
+	//	Dest.Y = Pos.Y + (CreatureEnt->ent_anim.Pos_Vel.Y * gFrameTime_msec);
+
 
 		ctrace.Response = false;
 		ctrace.NoRadius = false;
