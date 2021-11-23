@@ -362,9 +362,9 @@ void game_Eclair()
 {
 	if(gMapIntro == false)
 		return;
-	if(gIsFog == false)
-		return;
-	gl_StopFog();
+	//if(gIsFog == false)
+	//	return;
+	//gl_StopFog();
 	gIsEclair = (rand()%160) + 100.0f; // 35.0f;
 }
 
@@ -384,7 +384,7 @@ void game_PlayThunderSound()
 		if(gIsEclair <= 0)
 		{
 			gIsEclair = 0;
-			gl_SetFog();
+			//gl_SetFog();
 		}
 	}
 

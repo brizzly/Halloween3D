@@ -126,7 +126,8 @@ void gl_SetFog()
 {
 	GLuint fogMode[]= { GL_EXP, GL_EXP2, GL_LINEAR }; // Storage For Three Types Of Fog 
 	GLuint fogfilter; // Which Fog To Use 
-	GLfloat fogColor[4]= {0.0f, 0.0f, 0.0f, 1.0f}; // Fog Color
+	//GLfloat fogColor[4]= {0.0f, 0.0f, 0.0f, 1.0f}; // Fog Color
+	GLfloat fogColor[4]= {1.0f, 0.25f, 0.0f, 1.0f}; // Fog Color
 	
 	fogfilter = (int)fogmode.value % 3;
 
