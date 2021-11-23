@@ -1,5 +1,9 @@
 
-#include "coldet\src\coldet.h"
+#include "coldet/src/coldet.h"
+
+#ifndef COLLISION2_INCLUDED
+#define COLLISION2_INCLUDED
+
 
 void col2_init_World();
 void col2_AddFace_Word(float x1,	float y1, float z1,
@@ -7,3 +11,5 @@ void col2_AddFace_Word(float x1,	float y1, float z1,
 					   float x3,	float y3, float z3 );
 void col2_FinalizeWorld();
 void col2_Process(float x, float y, float z);
+
+#endif

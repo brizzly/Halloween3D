@@ -13,6 +13,11 @@ void col_Handle(vect_t *pos, vect_t nextpos, CTRACE *trace)
 	float	MaxRadius;
 	int		ent_leaf;
 
+	#ifdef NEW_COLLISION_DETECT
+	//	*pos = nextpos;
+	//	return;
+	#endif
+
 	if(noclip_wall.value)
 	{
 		*pos = nextpos;
@@ -36,11 +41,14 @@ void col_Handle(vect_t *pos, vect_t nextpos, CTRACE *trace)
 	dir.Y = nextpos.Y - pos->Y;
 	dir.Z = nextpos.Z - pos->Z;
 
+	//m_ConsPrint("radius %f %f %f\n", collision.eRadius.X, collision.eRadius.Y, collision.eRadius.Z);
+
 	if(MapDataFormat == MAP_BSP)
 	{
 		if(!trace->NoRadius)
 		{
 			MaxRadius = o_GetMaxRadius(trace->ellipsoid) + (float)Norme(dir);
+			//m_ConsPrint(">MaxRadius: %f\n", MaxRadius);
 			ent_leaf = 	bsp_FindCamera(*pos);
 			if(ent_leaf < 0)
 			{
@@ -175,6 +183,18 @@ vect_t collideWithWorld(TCollisionPacket *collision, vect_t position, vect_t vel
 	int		SaveStuckInfo;
 	float	dist;
 //	float	l;
+
+/*
+destinationPoint = m_Vector_Add(position, velocity);
+collision->velocity = velocity;
+collision->sourcePoint = position;
+collision->foundCollision = false;
+collision->nearestDistance = -1;
+trace->col = false;
+return destinationPoint; //
+*/
+
+	//m_ConsPrint("collideWithWorld\n");
 
 
 //	if(lengthOfVector(velocity) < EPSILON_COL)
@@ -313,12 +333,16 @@ vect_t collideWithWorld(TCollisionPacket *collision, vect_t position, vect_t vel
 		
 		if(collision->nearestDistance >= 0.05f) //0.10   0.05f )
 		{
+			m_ConsPrint("A");
 			V = velocity;
 			setLength(&V, (float)collision->nearestDistance-0.05f); // 0.10   0.05f
 			newSourcePoint = m_Vector_Add(collision->sourcePoint,V);
 		}
 		else
+		{
+			m_ConsPrint("B");
 			newSourcePoint = collision->sourcePoint;
+		}
 
 		slidePlaneOrigin = collision->nearestPolygonIntersectionPoint;
 		slidePlaneNormal = m_Vector_Sub(newSourcePoint,collision->nearestPolygonIntersectionPoint);
@@ -404,8 +428,11 @@ void CheckCollision(TCollisionPacket* colPackage, pFace FaceList, vect_t *pos_of
 		pNormal = m_GetFaceNormal_vect(p1,p2,p3);
 		pOrigin = p1;
 
-		if(dot(pNormal, normalizedVelocity) > 0)
+		float dotValue = dot(pNormal, normalizedVelocity);
+		if(dotValue >= 0)
 		{
+			//m_ConsPrint("IGNORE CheckCollision dot %f\n", dotValue);
+
 			/*
 			if(Face->Type == TRANS)
 			{
@@ -419,6 +446,11 @@ void CheckCollision(TCollisionPacket* colPackage, pFace FaceList, vect_t *pos_of
 			{
 				continue;
 			}
+			
+		}
+		else
+		{
+			//m_ConsPrint("CheckCollision dot %f\n", dotValue);
 		}
 		
    		// calculate sphere intersection point
@@ -715,7 +747,7 @@ double intersectRaySphere(vect_t rO, vect_t rV, vect_t sO, double sR)
 // -----------------------------------------------------------------------  
 vect_t closestPointOnLine(vect_t a, vect_t b, vect_t p)
 {
-   // Determine t (the length of the vector from ‘a’ to ‘p’)
+   // Determine t (the length of the vector from ï¿½aï¿½ to ï¿½pï¿½)
 	vect_t	c;
 	vect_t	V; 
 	double	d;
@@ -727,11 +759,11 @@ vect_t closestPointOnLine(vect_t a, vect_t b, vect_t p)
 	normalizeVector(&V);  
 	t = dot(V,c);
    
-	// Check to see if ‘t’ is beyond the extents of the line segment
+	// Check to see if ï¿½tï¿½ is beyond the extents of the line segment
 	if (t < 0.0f) return (a);
 	if (t > d) return (b);
   
-	// Return the point between ‘a’ and ‘b’
+	// Return the point between ï¿½aï¿½ and ï¿½bï¿½
 	//set length of V to t. V is normalized so this is easy
 	V.X = V.X * (float)t;
 	V.Y = V.Y * (float)t;

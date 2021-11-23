@@ -6,6 +6,7 @@
 #define H_LINUX
 //#define H_WINDOWS
 
+//#define NEW_COLLISION_DETECT
 
 
 
@@ -173,7 +174,7 @@ static int		ScreenY[] = { 384, 480, 600, 768, 864, 960, 1200 };
 #include "enveffect.h"
 #include "sorting.h"
 #include "collision.h"
-//#include "collision2.h"
+#include "collision2.h"
 #include "bsptree.h"
 #include "script.h"
 #include "player.h"

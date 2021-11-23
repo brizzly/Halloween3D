@@ -28,6 +28,7 @@ add_executable(halloween
         bsptree.cpp
         camera.cpp
         collision.cpp
+#        collision2.cpp
         console.cpp
         demo.cpp
         display.cpp
@@ -66,7 +67,7 @@ add_executable(halloween
         timer.cpp
         dsound.cpp
         libbass.cpp
-#        collision2.cpp  net_server.cpp  net_dcomp.cpp   net_client.cpp  net_common.cpp
+#       net_server.cpp  net_dcomp.cpp   net_client.cpp  net_common.cpp
 )
 
 
@@ -76,6 +77,7 @@ target_link_directories(halloween PRIVATE ${CMAKE_SOURCE_DIR})  # for libbass.so
 
 #install(TARGETS halloween RUNTIME DESTINATION bin)
 target_link_libraries(halloween bass)
+#target_link_libraries(halloween bass coldet)
 set_target_properties(halloween PROPERTIES COMPILE_FLAGS "-Wall -Wextra -Wno-write-strings -Wno-unused-parameter")
 #target_compile_options(halloween PRIVATE "-fsanitize=undefined")
 #target_link_options(halloween PRIVATE "-fsanitize=undefined")

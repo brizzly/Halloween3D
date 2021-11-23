@@ -757,6 +757,10 @@ int ReadKey()
 				Key = (int)KeyName[1];
 				//m_ConsPrint("%c\n", Key);
 			}
+			else if(!strcmp(KeyName, "space"))
+			{
+				Key = ' ';
+			}
 			else
 			{
 				m_ConsPrint("unknow keyname: %s index: %d\n", KeyName, index);

@@ -1,8 +1,8 @@
 
 #include "alloween.h"
-
-//#include "collision2.h"
-
+#ifdef NEW_COLLISION_DETECT
+#include "collision2.h"
+#endif
 
 
 float	gPlayerGunRecul;
@@ -36,8 +36,9 @@ void UpdatePlayer()
 
 
 	// DEBUG
-//	col2_Process(PlayerEnt->ent_anim.Pos.X, PlayerEnt->ent_anim.Pos.Y, PlayerEnt->ent_anim.Pos.Z);
-
+#ifdef NEW_COLLISION_DETECT
+	col2_Process(PlayerEnt->ent_anim.Pos.X, PlayerEnt->ent_anim.Pos.Y, PlayerEnt->ent_anim.Pos.Z);
+#endif
 
 	// found a stop
 	dist = m_Distance(PlayerEnt->ent_anim.Pos, gStopPos);
@@ -124,7 +125,7 @@ void PlayerHurt(pEntity Entity, int dammage)
 				break;
 			}
 
-			// le client s'est suicidé, -1 au score
+			// le client s'est suicidï¿½, -1 au score
 			if(!gMultiPodium && gConnectedPlayer > 1)
 			{
 				//gCL_score--;
@@ -172,7 +173,7 @@ void PlayerHurt(pEntity Entity, int dammage)
 		{
 			if(gConnectedPlayer > 1)
 			{
-				// le serveur s'est suicidé, -1 au score
+				// le serveur s'est suicidï¿½, -1 au score
 				gSV_score--;
 				net_SendServerScores();
 			}
@@ -299,7 +300,7 @@ void EnnemyDammage(pEntity PlayerEnt)
 	// HACK
 	if(!gMultiPodium && gIsMultiplayer && gIsServer && ProgramState == PS_DIE)
 	{
-		// le serveur s'est fait butté
+		// le serveur s'est fait buttï¿½
 		//gCL_score++;
 		//net_SendServerScores();
 	}
@@ -764,7 +765,7 @@ void PlayerResetStartPos(int ent_id)
 		anim->Pos.Z = gStart.Z;
 		anim->Rot.Y = (float)gAngleView_player;
 
-		anim->Pos_Vel.Y = 0.1f;
+		anim->Pos_Vel.Y = 0;//0.1f;
 
 		if(player_view.value)
 			gCamera.Pos = anim->Pos;

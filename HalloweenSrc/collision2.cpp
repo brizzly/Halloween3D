@@ -1,11 +1,5 @@
 
-#include <windows.h>
-#include "collision2.h"
-
-#include "console.h"
-//#include "bspfile.h"
-//#include "objet.h"
-
+#include "alloween.cpp"
 
 CollisionModel3D * world_ColDetModel = NULL;
 
@@ -17,7 +11,7 @@ void col2_init_World()
 		delete world_ColDetModel;
 		world_ColDetModel = NULL;
 	}
-	world_ColDetModel = newCollisionModel3D();
+	world_ColDetModel = newCollisionModel3D(false);
 }
 
 void col2_AddFace_Word(float x1,	float y1, float z1,
@@ -49,7 +43,19 @@ void col2_Process(float x, float y, float z)
 		bool colres = world_ColDetModel->sphereCollision(origin, radius);
 		if(colres)
 		{
-			m_ConsPrint("ColDet TRUE\n");
+			//m_ConsPrint("ColDet TRUE\n");
+			float colpoint[3];
+			bool colres2 = world_ColDetModel->getCollisionPoint(colpoint);
+			if(colres2)
+			{
+				//m_ConsPrint("%f %f %f\n", colpoint[0], colpoint[1], colpoint[2]);
+			}
+
 		}
+		else
+		{
+			//m_ConsPrint("ColDet FALSE\n");
+		}
+		
 	}
 }

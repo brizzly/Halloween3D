@@ -1,7 +1,8 @@
 
 #include "alloween.h"
-//#include "collision2.h"
-
+#ifdef NEW_COLLISION_DETECT
+#include "collision2.h"
+#endif
 
 Face_t		*PolyList=NULL;
 Face_t		*FaceArray=NULL;
@@ -205,7 +206,7 @@ void bsp_InitStartPosition(vect_t pos, int AngleView)
 			anim.Pos.Y = gCamera.Pos.Y;
 			anim.Pos.Z = gCamera.Pos.Z;
 			anim.Rot.Y = (float)AngleView;
-			anim.Pos_Vel.Y = 0.1f;
+			anim.Pos_Vel.Y = 0; // 0.1f;
 			o_AddEntityToList(PERSO,-1,anim,false);
 		}
 		else
@@ -261,7 +262,7 @@ int bsp_LoadEntity(FILE *file)
 		o_ClearAnimFields(&anim);
 		fscanf(file,"%d %d %f %f %f\n",&Entity_ID,&Entity_RotY,&anim.Pos.X,&anim.Pos.Y,&anim.Pos.Z);
 		
-		// aucune entité en mode multiplayer, par contre on spawn sur les pos des monstres
+		// aucune entitï¿½ en mode multiplayer, par contre on spawn sur les pos des monstres
 		// sauf celle de la mommy (HACK)
 		if(gIsMultiplayer)
 		{
@@ -839,8 +840,9 @@ hBool bsp_Load_MAPFILE(char *name)
 	}
 
 
-
-//	col2_init_World();
+#ifdef NEW_COLLISION_DETECT
+	col2_init_World();
+#endif
 
 	fscanf(file,"<FACES> %d\n",&gNb_faces);
 	m_ConsPrint("<FACES> %d\n",gNb_faces); //
@@ -875,9 +877,11 @@ hBool bsp_Load_MAPFILE(char *name)
 			}
 		}
 
-	//	col2_AddFace_Word(	Face.Vertice[0].X, Face.Vertice[0].Y, Face.Vertice[0].Z,
-	//						Face.Vertice[1].X, Face.Vertice[1].Y, Face.Vertice[1].Z,
-	//						Face.Vertice[2].X, Face.Vertice[2].Y, Face.Vertice[2].Z);
+#ifdef NEW_COLLISION_DETECT
+		col2_AddFace_Word(	Face.Vertice[0].X, Face.Vertice[0].Y, Face.Vertice[0].Z,
+							Face.Vertice[1].X, Face.Vertice[1].Y, Face.Vertice[1].Z,
+							Face.Vertice[2].X, Face.Vertice[2].Y, Face.Vertice[2].Z);
+#endif
 
 		Face.Plan.VecteurNormal = GetFaceNormal(Face.Vertice[0],Face.Vertice[1],Face.Vertice[2]);		
 		Face.Plan.PointOnPlane.X = Face.Vertice[0].X;
@@ -888,8 +892,9 @@ hBool bsp_Load_MAPFILE(char *name)
 		FaceArray[k] = Face;
 	}
 
-//	col2_FinalizeWorld();
-
+#ifdef NEW_COLLISION_DETECT
+	col2_FinalizeWorld();
+#endif
 
 
 	fscanf(file,"<LEAFS> %d\n",&gNb_Leafs);
