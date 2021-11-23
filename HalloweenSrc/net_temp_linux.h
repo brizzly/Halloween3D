@@ -3,6 +3,7 @@
 
 
 
+
 void    net_SendServerScores();
 void    net_SendClientHurt(int health);
 void    net_NetLaunchEnt(int entid, int launcherid, vect_t startpos, vect_t rot, vect_t vel, short IsServer);

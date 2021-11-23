@@ -32,7 +32,6 @@ cvar_t		epsilon = {EPSILON,"0.001"};
 cvar_t		draw_fps = {DRAWFPS,"0"};
 cvar_t		player_vel = {PVEL,"1.0"};
 cvar_t		camera_vel = {CVEL,"0.2"};
-cvar_t		player_rvel = {PRVEL,"0.10"};
 cvar_t		player_look_ud = {PLOOKUD,"90.0"};
 cvar_t		draw_face = {DRAWFACE,"1"};
 cvar_t		draw_tris = {DRAWTRIS,"0"};
@@ -76,21 +75,24 @@ cvar_t		stoprecord = {STOPRECORD,"0"};
 cvar_t		play = {PLAY,"0"};
 cvar_t		stopplay = {STOPPLAY,"0"};
 cvar_t		noscript = {NOSCRIPT,"0"};
+cvar_t		fogmode = {C_FOGMODE,"2"};
+cvar_t		fogdensity = {C_FOGDENSITY,"0.0002f"};
 
 #ifdef H_MAC
-cvar_t		gamekey_up = {GAMEKEY_UP,"1"};
-cvar_t		gamekey_down = {GAMEKEY_DOWN,"2"};
-cvar_t		gamekey_left = {GAMEKEY_LEFT,"0"};
-cvar_t		gamekey_right = {GAMEKEY_RIGHT,"3"};
-cvar_t		gamekey_jump = {GAMEKEY_JUMP,"61"};
-cvar_t		gamekey_attack = {GAMEKEY_ATTACK,"256"};
+cvar_t		gamekey_up = {GAMEKEY_UP,"50"};
+cvar_t		gamekey_down = {GAMEKEY_DOWN,"43"};
+cvar_t		gamekey_left = {GAMEKEY_LEFT,"41"};
+cvar_t		gamekey_right = {GAMEKEY_RIGHT,"28"};
+cvar_t		gamekey_jump = {GAMEKEY_JUMP,"102"};
+cvar_t		gamekey_attack = {GAMEKEY_ATTACK,"101"};
 cvar_t		gamekey_axe = {GAMEKEY_AXE,"52"};
 cvar_t		gamekey_arbalet = {GAMEKEY_ARBALET,"53"};
 cvar_t		gamekey_bombgun = {GAMEKEY_BOMBGUN,"54"};
 cvar_t		gamekey_tromblon = {GAMEKEY_TROMBLON,"55"};
-cvar_t		gamekey_crouch = {GAMEKEY_CROUCH,"9"};
-cvar_t		gamekey_action = {GAMEKEY_ACTION,"7"};
+cvar_t		gamekey_crouch = {GAMEKEY_CROUCH,"25"};
+cvar_t		gamekey_action = {GAMEKEY_ACTION,"42"};
 cvar_t		gamekey_run = {GAMEKEY_RUN,"4"};
+cvar_t		player_rvel = {PRVEL,"0.05"};
 #else
 cvar_t		gamekey_up = {GAMEKEY_UP,"200"};
 cvar_t		gamekey_down = {GAMEKEY_DOWN,"208"};
@@ -105,6 +107,7 @@ cvar_t		gamekey_tromblon = {GAMEKEY_TROMBLON,"5"};
 cvar_t		gamekey_crouch = {GAMEKEY_CROUCH,"54"}; // 157
 cvar_t		gamekey_action = {GAMEKEY_ACTION,"28"};
 cvar_t		gamekey_run = {GAMEKEY_RUN,"54"};
+cvar_t		player_rvel = {PRVEL,"0.10"};
 #endif
 
 cvar_t		map_letter = {"mapletter","0"};
@@ -142,8 +145,7 @@ cvar_t		bestscore6 = {C_BESTSCORE6,"0"};
 cvar_t		bestscore7 = {C_BESTSCORE7,"0"};
 cvar_t		bestscore8 = {C_BESTSCORE8,"0"};
 cvar_t		bestscore9 = {C_BESTSCORE9,"0"};
-cvar_t		fogmode = {C_FOGMODE,"0"};
-cvar_t		fogdensity = {C_FOGDENSITY,"0.001f"};
+
 
 
 cvar_t	*	cvarArray[1000];
@@ -2113,48 +2115,6 @@ hBool cons_SaveConfig(char *path)
 	fprintf(file, "%s %s %f\r\n", noscript.name, noscript.string, noscript.value);
 	fprintf(file, "%s %s %f\r\n", noscript.name, noscript.string, noscript.value);
 	fprintf(file, "%s %s %f\r\n", noscript.name, noscript.string, noscript.value);
-
-
-
-	/*
-	cvar_t		map_letter = { "mapletter","0" };
-	cvar_t		kill_depla = { "killdepla","0" };
-	cvar_t		kill_morbak = { "killmorba","0" };
-	cvar_t		kill_zeubat = { "killzeubat","0" };
-	cvar_t		kill_subzerat = { "killsubzerat","0" };
-	cvar_t		kill_zemummy = { "killzemummy","0" };
-	cvar_t		map_complete = { "mapcomplete","0" };
-	cvar_t		music_track = { "musictrack","0" };
-	cvar_t		pres_track = { "prestrack","0" };
-	cvar_t		resetgame = { RESETGAME,"0" };
-	cvar_t		picmip = { PICMIP,"1" };
-	cvar_t		difficulty = { "difficulty","1" };
-	cvar_t		gameslot = { "gameslot","1" };
-	cvar_t		gamma_ = { GAMMA,"1" };
-	cvar_t		tflame = { TFLAME,"0.035" };
-	cvar_t		ghost = { GHOST,"0" };
-	cvar_t		terminator = { TERMINATOR,"0" };
-	cvar_t		net_port = { C_NETPORT, "24650" };
-	cvar_t		net_ip = { C_NETIP, "localhost" };
-	cvar_t		net_mapid = { C_NETMAPID, "1" };
-	cvar_t		net_clname = { C_NETCLIENTNAME, "UnnamedPlayer" };
-	cvar_t		net_svname = { C_NETSERVERNAME, "HalloweenServer" };
-	cvar_t		net_password = { C_NETPASSWORD, "SALEDEP" };
-	cvar_t		net_gametype = { C_NETGAMETYPE, "0" };
-	cvar_t		net_dedicated = { C_NETDEDICATED, "0" };
-	cvar_t		notextures = { C_NOTEXTURES,"0" };
-	cvar_t		bestscore1 = { C_BESTSCORE1,"0" };
-	cvar_t		bestscore2 = { C_BESTSCORE2,"0" };
-	cvar_t		bestscore3 = { C_BESTSCORE3,"0" };
-	cvar_t		bestscore4 = { C_BESTSCORE4,"0" };
-	cvar_t		bestscore5 = { C_BESTSCORE5,"0" };
-	cvar_t		bestscore6 = { C_BESTSCORE6,"0" };
-	cvar_t		bestscore7 = { C_BESTSCORE7,"0" };
-	cvar_t		bestscore8 = { C_BESTSCORE8,"0" };
-	cvar_t		bestscore9 = { C_BESTSCORE9,"0" };
-	cvar_t		fogmode = { C_FOGMODE,"0" };
-	cvar_t		fogdensity = { C_FOGDENSITY,"0.001f" };
-	*/
 
 
 #else

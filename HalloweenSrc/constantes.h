@@ -101,7 +101,7 @@
 
 #ifdef H_MAC
 
-#define	CONFIG				"hconfig.cfg"
+#define	CONFIG				"hconfig_mac.cfg"
 #define	SYSDIR				"system\\"
 #define	SYSTEX				"systex\\"
 #define	MAPDIR				"maps\\"

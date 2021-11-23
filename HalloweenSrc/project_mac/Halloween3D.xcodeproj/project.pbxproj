@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8457B15E274DAF5D00E4C356 /* libturbojpeg.0.2.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8457B157274DAD3E00E4C356 /* libturbojpeg.0.2.0.dylib */; };
+		8457B15F274DAF5D00E4C356 /* libturbojpeg.0.2.0.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 8457B157274DAD3E00E4C356 /* libturbojpeg.0.2.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		8457B166274DAF5E00E4C356 /* libturbojpeg.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8457B163274DAF5E00E4C356 /* libturbojpeg.0.dylib */; };
+		8457B167274DAF5E00E4C356 /* libturbojpeg.0.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 8457B163274DAF5E00E4C356 /* libturbojpeg.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		84AD3880274D6A8800A32A25 /* halloween_linux.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84AD387E274D6A8800A32A25 /* halloween_linux.cpp */; };
+		84AD3885274D6AF900A32A25 /* libsound_linux.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84AD3881274D6AF800A32A25 /* libsound_linux.cpp */; };
+		84AD3886274D6AF900A32A25 /* loadjpeg_linux.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84AD3884274D6AF800A32A25 /* loadjpeg_linux.cpp */; };
+		84AD3889274D6B8E00A32A25 /* net_temp_linux.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84AD3887274D6B8E00A32A25 /* net_temp_linux.cpp */; };
 		F92D9D331F52495500A37BB2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F92D9D321F52495500A37BB2 /* AppDelegate.m */; };
 		F92D9D361F52495500A37BB2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F92D9D351F52495500A37BB2 /* main.m */; };
 		F92D9D441F52496900A37BB2 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F92D9D431F52496900A37BB2 /* OpenGL.framework */; };
@@ -24,14 +32,6 @@
 		F92D9D701F52542800A37BB2 /* constantes.h in Sources */ = {isa = PBXBuildFile; fileRef = F98EDCFE1F51B7B6009A518F /* constantes.h */; };
 		F92D9D711F52542800A37BB2 /* alloween.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBE61F518DBA009A518F /* alloween.cpp */; };
 		F92D9D721F52542800A37BB2 /* alloween.h in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBE71F518DBA009A518F /* alloween.h */; };
-		F92D9D731F52542800A37BB2 /* halloween_linux.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDCF21F518F15009A518F /* halloween_linux.cpp */; };
-		F92D9D741F52542800A37BB2 /* halloween_linux.h in Sources */ = {isa = PBXBuildFile; fileRef = F98EDCF31F518F15009A518F /* halloween_linux.h */; };
-		F92D9D751F52542800A37BB2 /* libsound_linux.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDCF81F518F43009A518F /* libsound_linux.cpp */; };
-		F92D9D761F52542800A37BB2 /* libsound_linux.h in Sources */ = {isa = PBXBuildFile; fileRef = F98EDCF51F518F42009A518F /* libsound_linux.h */; };
-		F92D9D771F52542800A37BB2 /* loadjpeg_linux.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDCF71F518F43009A518F /* loadjpeg_linux.cpp */; };
-		F92D9D781F52542800A37BB2 /* loadjpeg_linux.h in Sources */ = {isa = PBXBuildFile; fileRef = F98EDCF61F518F42009A518F /* loadjpeg_linux.h */; };
-		F92D9D791F52542800A37BB2 /* net_temp_linux.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDCFC1F518F4D009A518F /* net_temp_linux.cpp */; };
-		F92D9D7A1F52542800A37BB2 /* net_temp_linux.h in Sources */ = {isa = PBXBuildFile; fileRef = F98EDCFB1F518F4D009A518F /* net_temp_linux.h */; };
 		F92D9D7B1F52542800A37BB2 /* bspfile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBDB1F518DB8009A518F /* bspfile.cpp */; };
 		F92D9D7C1F52542800A37BB2 /* bspfile.h in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBD51F518DB7009A518F /* bspfile.h */; };
 		F92D9D7D1F52542800A37BB2 /* bsptree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F98EDBAF1F518DB2009A518F /* bsptree.cpp */; };
@@ -259,7 +259,6 @@
 		F995F6C61F55D759009F50E3 /* DDHidMouse.m in Sources */ = {isa = PBXBuildFile; fileRef = F995F6A71F55D73C009F50E3 /* DDHidMouse.m */; };
 		F995F6C71F55D759009F50E3 /* DDHidQueue.h in Sources */ = {isa = PBXBuildFile; fileRef = F995F6A81F55D73C009F50E3 /* DDHidQueue.h */; };
 		F995F6C81F55D759009F50E3 /* DDHidQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = F995F6A91F55D73C009F50E3 /* DDHidQueue.m */; };
-		F995F6C91F55D759009F50E3 /* DDHidStandardUsages.plist in Sources */ = {isa = PBXBuildFile; fileRef = F995F6AA1F55D73C009F50E3 /* DDHidStandardUsages.plist */; };
 		F995F6CA1F55D759009F50E3 /* DDHidUsage.h in Sources */ = {isa = PBXBuildFile; fileRef = F995F6AB1F55D73C009F50E3 /* DDHidUsage.h */; };
 		F995F6CB1F55D759009F50E3 /* DDHidUsage.m in Sources */ = {isa = PBXBuildFile; fileRef = F995F6AC1F55D73C009F50E3 /* DDHidUsage.m */; };
 		F995F6CC1F55D759009F50E3 /* DDHidUsageTables.h in Sources */ = {isa = PBXBuildFile; fileRef = F995F6AD1F55D73C009F50E3 /* DDHidUsageTables.h */; };
@@ -271,7 +270,38 @@
 		F9A3EA751F5258D900315CAF /* system in Resources */ = {isa = PBXBuildFile; fileRef = F9A3EA741F5258CD00315CAF /* system */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		8457B161274DAF5E00E4C356 /* Embed Libraries */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8457B15F274DAF5D00E4C356 /* libturbojpeg.0.2.0.dylib in Embed Libraries */,
+				8457B167274DAF5E00E4C356 /* libturbojpeg.0.dylib in Embed Libraries */,
+			);
+			name = "Embed Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		8457B14F274DA9F600E4C356 /* libturbojpeg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libturbojpeg.a; path = "../../../../../../../opt/libjpeg-turbo-ios/lib/libturbojpeg.a"; sourceTree = "<group>"; };
+		8457B151274DAA1600E4C356 /* libjpeg.62.3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libjpeg.62.3.0.dylib; path = "../../../../../../../opt/libjpeg-turbo-ios/lib/libjpeg.62.3.0.dylib"; sourceTree = "<group>"; };
+		8457B155274DAB4A00E4C356 /* libturbojpeg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libturbojpeg.a; path = "../../../../../../../opt/libjpeg-turbo/lib/libturbojpeg.a"; sourceTree = "<group>"; };
+		8457B157274DAD3E00E4C356 /* libturbojpeg.0.2.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libturbojpeg.0.2.0.dylib; path = "../../../../../../../opt/libjpeg-turbo/lib/libturbojpeg.0.2.0.dylib"; sourceTree = "<group>"; };
+		8457B15C274DAF1D00E4C356 /* libjpeg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libjpeg.a; path = "../../../../../../../opt/libjpeg-turbo/lib/libjpeg.a"; sourceTree = "<group>"; };
+		8457B162274DAF5E00E4C356 /* libturbojpeg.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libturbojpeg.dylib; path = "../../../../../../../opt/libjpeg-turbo/lib/libturbojpeg.dylib"; sourceTree = "<group>"; };
+		8457B163274DAF5E00E4C356 /* libturbojpeg.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libturbojpeg.0.dylib; path = "../../../../../../../opt/libjpeg-turbo/lib/libturbojpeg.0.dylib"; sourceTree = "<group>"; };
+		84AD387E274D6A8800A32A25 /* halloween_linux.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = halloween_linux.cpp; path = ../../halloween_linux.cpp; sourceTree = "<group>"; };
+		84AD387F274D6A8800A32A25 /* halloween_linux.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = halloween_linux.h; path = ../../halloween_linux.h; sourceTree = "<group>"; };
+		84AD3881274D6AF800A32A25 /* libsound_linux.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = libsound_linux.cpp; path = ../../libsound_linux.cpp; sourceTree = "<group>"; };
+		84AD3882274D6AF800A32A25 /* libsound_linux.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = libsound_linux.h; path = ../../libsound_linux.h; sourceTree = "<group>"; };
+		84AD3883274D6AF800A32A25 /* loadjpeg_linux.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = loadjpeg_linux.h; path = ../../loadjpeg_linux.h; sourceTree = "<group>"; };
+		84AD3884274D6AF800A32A25 /* loadjpeg_linux.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = loadjpeg_linux.cpp; path = ../../loadjpeg_linux.cpp; sourceTree = "<group>"; };
+		84AD3887274D6B8E00A32A25 /* net_temp_linux.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = net_temp_linux.cpp; path = ../../net_temp_linux.cpp; sourceTree = "<group>"; };
+		84AD3888274D6B8E00A32A25 /* net_temp_linux.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = net_temp_linux.h; path = ../../net_temp_linux.h; sourceTree = "<group>"; };
+		84AD388A274D73DD00A32A25 /* libturbojpeg.0.2.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libturbojpeg.0.2.0.dylib; path = "../../../../../../../usr/local/Cellar/jpeg-turbo/2.1.2/lib/libturbojpeg.0.2.0.dylib"; sourceTree = "<group>"; };
 		F92D9D2F1F52495500A37BB2 /* Halloween 3D.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Halloween 3D.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F92D9D311F52495500A37BB2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F92D9D321F52495500A37BB2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -475,14 +505,6 @@
 		F98EDC9A1F518DBF009A518F /* enveffect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = enveffect.h; path = ../../enveffect.h; sourceTree = "<group>"; };
 		F98EDC9B1F518DBF009A518F /* demo.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = demo.cpp; path = ../../demo.cpp; sourceTree = "<group>"; };
 		F98EDC9E1F518DBF009A518F /* liste.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = liste.cpp; path = ../../liste.cpp; sourceTree = "<group>"; };
-		F98EDCF21F518F15009A518F /* halloween_linux.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = halloween_linux.cpp; path = ../../halloween_linux.cpp; sourceTree = "<group>"; };
-		F98EDCF31F518F15009A518F /* halloween_linux.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = halloween_linux.h; path = ../../halloween_linux.h; sourceTree = "<group>"; };
-		F98EDCF51F518F42009A518F /* libsound_linux.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = libsound_linux.h; path = ../../libsound_linux.h; sourceTree = "<group>"; };
-		F98EDCF61F518F42009A518F /* loadjpeg_linux.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = loadjpeg_linux.h; path = ../../loadjpeg_linux.h; sourceTree = "<group>"; };
-		F98EDCF71F518F43009A518F /* loadjpeg_linux.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = loadjpeg_linux.cpp; path = ../../loadjpeg_linux.cpp; sourceTree = "<group>"; };
-		F98EDCF81F518F43009A518F /* libsound_linux.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = libsound_linux.cpp; path = ../../libsound_linux.cpp; sourceTree = "<group>"; };
-		F98EDCFB1F518F4D009A518F /* net_temp_linux.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = net_temp_linux.h; path = ../../net_temp_linux.h; sourceTree = "<group>"; };
-		F98EDCFC1F518F4D009A518F /* net_temp_linux.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = net_temp_linux.cpp; path = ../../net_temp_linux.cpp; sourceTree = "<group>"; };
 		F98EDCFE1F51B7B6009A518F /* constantes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = constantes.h; path = ../../constantes.h; sourceTree = "<group>"; };
 		F99008041F51CE7D007F7D1B /* GLTextureHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GLTextureHelper.h; sourceTree = "<group>"; };
 		F99008051F51CE7D007F7D1B /* KBatch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KBatch.h; sourceTree = "<group>"; };
@@ -575,9 +597,11 @@
 				F92D9E151F5254BF00A37BB2 /* AppKit.framework in Frameworks */,
 				F92D9E101F52548200A37BB2 /* AudioUnit.framework in Frameworks */,
 				F92D9E0E1F52547500A37BB2 /* OpenAL.framework in Frameworks */,
+				8457B15E274DAF5D00E4C356 /* libturbojpeg.0.2.0.dylib in Frameworks */,
 				F92D9D4A1F52497B00A37BB2 /* CoreAudio.framework in Frameworks */,
 				F92D9D481F52497300A37BB2 /* GLUT.framework in Frameworks */,
 				F92D9D461F52496E00A37BB2 /* GLKit.framework in Frameworks */,
+				8457B166274DAF5E00E4C356 /* libturbojpeg.0.dylib in Frameworks */,
 				F92D9D441F52496900A37BB2 /* OpenGL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -756,6 +780,14 @@
 		F98EDB961F518C73009A518F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8457B163274DAF5E00E4C356 /* libturbojpeg.0.dylib */,
+				8457B162274DAF5E00E4C356 /* libturbojpeg.dylib */,
+				8457B15C274DAF1D00E4C356 /* libjpeg.a */,
+				8457B157274DAD3E00E4C356 /* libturbojpeg.0.2.0.dylib */,
+				8457B155274DAB4A00E4C356 /* libturbojpeg.a */,
+				8457B151274DAA1600E4C356 /* libjpeg.62.3.0.dylib */,
+				8457B14F274DA9F600E4C356 /* libturbojpeg.a */,
+				84AD388A274D73DD00A32A25 /* libturbojpeg.0.2.0.dylib */,
 				F92D9E1E1F5254EC00A37BB2 /* ApplicationServices.framework */,
 				F92D9E1C1F5254E600A37BB2 /* Cocoa.framework */,
 				F92D9E1A1F5254DD00A37BB2 /* QuartzCore.framework */,
@@ -778,16 +810,16 @@
 			children = (
 				F98EDB9B1F518CC3009A518F /* main.cpp */,
 				F98EDCFE1F51B7B6009A518F /* constantes.h */,
+				84AD387E274D6A8800A32A25 /* halloween_linux.cpp */,
+				84AD387F274D6A8800A32A25 /* halloween_linux.h */,
+				84AD3881274D6AF800A32A25 /* libsound_linux.cpp */,
+				84AD3882274D6AF800A32A25 /* libsound_linux.h */,
+				84AD3884274D6AF800A32A25 /* loadjpeg_linux.cpp */,
+				84AD3883274D6AF800A32A25 /* loadjpeg_linux.h */,
+				84AD3887274D6B8E00A32A25 /* net_temp_linux.cpp */,
+				84AD3888274D6B8E00A32A25 /* net_temp_linux.h */,
 				F98EDBE61F518DBA009A518F /* alloween.cpp */,
 				F98EDBE71F518DBA009A518F /* alloween.h */,
-				F98EDCF21F518F15009A518F /* halloween_linux.cpp */,
-				F98EDCF31F518F15009A518F /* halloween_linux.h */,
-				F98EDCF81F518F43009A518F /* libsound_linux.cpp */,
-				F98EDCF51F518F42009A518F /* libsound_linux.h */,
-				F98EDCF71F518F43009A518F /* loadjpeg_linux.cpp */,
-				F98EDCF61F518F42009A518F /* loadjpeg_linux.h */,
-				F98EDCFC1F518F4D009A518F /* net_temp_linux.cpp */,
-				F98EDCFB1F518F4D009A518F /* net_temp_linux.h */,
 				F98EDBDB1F518DB8009A518F /* bspfile.cpp */,
 				F98EDBD51F518DB7009A518F /* bspfile.h */,
 				F98EDBAF1F518DB2009A518F /* bsptree.cpp */,
@@ -1004,6 +1036,7 @@
 				F92D9D2B1F52495500A37BB2 /* Sources */,
 				F92D9D2C1F52495500A37BB2 /* Frameworks */,
 				F92D9D2D1F52495500A37BB2 /* Resources */,
+				8457B161274DAF5E00E4C356 /* Embed Libraries */,
 			);
 			buildRules = (
 			);
@@ -1020,12 +1053,12 @@
 		F98EDB841F518C2D009A518F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 1310;
 				ORGANIZATIONNAME = Jadegame;
 				TargetAttributes = {
 					F92D9D2E1F52495500A37BB2 = {
 						CreatedOnToolsVersion = 8.3.3;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Sandbox = {
 								enabled = 1;
@@ -1099,7 +1132,6 @@
 				F995F6C61F55D759009F50E3 /* DDHidMouse.m in Sources */,
 				F995F6C71F55D759009F50E3 /* DDHidQueue.h in Sources */,
 				F995F6C81F55D759009F50E3 /* DDHidQueue.m in Sources */,
-				F995F6C91F55D759009F50E3 /* DDHidStandardUsages.plist in Sources */,
 				F995F6CA1F55D759009F50E3 /* DDHidUsage.h in Sources */,
 				F995F6CB1F55D759009F50E3 /* DDHidUsage.m in Sources */,
 				F995F6CC1F55D759009F50E3 /* DDHidUsageTables.h in Sources */,
@@ -1112,6 +1144,8 @@
 				F92D9E221F52554E00A37BB2 /* imageUtil.h in Sources */,
 				F92D9E231F52554E00A37BB2 /* matrixUtil.h in Sources */,
 				F976DC9C1F54C47D00762B2E /* jdatasrc.c in Sources */,
+				84AD3885274D6AF900A32A25 /* libsound_linux.cpp in Sources */,
+				84AD3880274D6A8800A32A25 /* halloween_linux.cpp in Sources */,
 				F976DC951F54C47D00762B2E /* jcphuff.c in Sources */,
 				F92D9E241F52554E00A37BB2 /* modelUtil.h in Sources */,
 				F976DCB41F54C47D00762B2E /* jquant1.c in Sources */,
@@ -1124,6 +1158,7 @@
 				F92D9DE41F52545B00A37BB2 /* CAStreamBasicDescription.cpp in Sources */,
 				F92D9DE51F52545B00A37BB2 /* CAStreamBasicDescription.h in Sources */,
 				F92D9DE61F52545B00A37BB2 /* CAAudioChannelLayout.cpp in Sources */,
+				84AD3886274D6AF900A32A25 /* loadjpeg_linux.cpp in Sources */,
 				F92D9DE71F52545B00A37BB2 /* CAAudioChannelLayout.h in Sources */,
 				F92D9DE81F52545B00A37BB2 /* CAAudioChannelLayoutObject.cpp in Sources */,
 				F976DCA61F54C47D00762B2E /* jdphuff.c in Sources */,
@@ -1201,14 +1236,6 @@
 				F92D9D701F52542800A37BB2 /* constantes.h in Sources */,
 				F92D9D711F52542800A37BB2 /* alloween.cpp in Sources */,
 				F92D9D721F52542800A37BB2 /* alloween.h in Sources */,
-				F92D9D731F52542800A37BB2 /* halloween_linux.cpp in Sources */,
-				F92D9D741F52542800A37BB2 /* halloween_linux.h in Sources */,
-				F92D9D751F52542800A37BB2 /* libsound_linux.cpp in Sources */,
-				F92D9D761F52542800A37BB2 /* libsound_linux.h in Sources */,
-				F92D9D771F52542800A37BB2 /* loadjpeg_linux.cpp in Sources */,
-				F92D9D781F52542800A37BB2 /* loadjpeg_linux.h in Sources */,
-				F92D9D791F52542800A37BB2 /* net_temp_linux.cpp in Sources */,
-				F92D9D7A1F52542800A37BB2 /* net_temp_linux.h in Sources */,
 				F92D9D7B1F52542800A37BB2 /* bspfile.cpp in Sources */,
 				F976DCAE1F54C47D00762B2E /* jidctflt.c in Sources */,
 				F976DCBE1F54C47D00762B2E /* transupp.c in Sources */,
@@ -1308,6 +1335,7 @@
 				F92D9DC41F52542800A37BB2 /* timer.h in Sources */,
 				F976DCAD1F54C47D00762B2E /* jfdctint.c in Sources */,
 				F92D9D361F52495500A37BB2 /* main.m in Sources */,
+				84AD3889274D6B8E00A32A25 /* net_temp_linux.cpp in Sources */,
 				F92D9D661F524B9400A37BB2 /* matrixUtil.c in Sources */,
 				F976DC871F54C47D00762B2E /* jcinit.c in Sources */,
 				F92D9D671F524B9400A37BB2 /* modelUtil.c in Sources */,
@@ -1328,21 +1356,28 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CODE_SIGN_ENTITLEMENTS = Halloween/Halloween.entitlements;
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 6CZ5X85785;
+				FRAMEWORK_SEARCH_PATHS = "/opt/libjpeg-turbo/include/";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
+				HEADER_SEARCH_PATHS = "/opt/libjpeg-turbo/include/";
 				INFOPLIST_FILE = Halloween/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = "/opt/libjpeg-turbo/lib/";
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jadegame.halloween;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "8adc5ba6-7eba-4ff8-b554-f9f4d20ee2ca";
-				PROVISIONING_PROFILE_SPECIFIER = HallowDev1;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -1352,21 +1387,27 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CODE_SIGN_ENTITLEMENTS = Halloween/Halloween.entitlements;
-				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 6CZ5X85785;
+				FRAMEWORK_SEARCH_PATHS = "/opt/libjpeg-turbo/include/";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
+				HEADER_SEARCH_PATHS = "/opt/libjpeg-turbo/include/";
 				INFOPLIST_FILE = Halloween/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = "/opt/libjpeg-turbo/lib/";
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jadegame.halloween;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "7a403eba-d1d2-467f-b2c3-6217899bf707";
-				PROVISIONING_PROFILE_SPECIFIER = HallowDistrib1;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -1385,6 +1426,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -1392,8 +1434,10 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1419,7 +1463,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -1440,6 +1484,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -1447,8 +1492,10 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1468,7 +1515,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 			};

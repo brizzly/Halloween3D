@@ -779,6 +779,7 @@ void MACend()
 
 
 //by farox
+#ifdef H_LINUX
 //int main_Alternate(int argc, char **argv)
 int main(int argc, char **argv)
 {
@@ -904,3 +905,4 @@ ending:
 	return 0;
 }
 
+#endif

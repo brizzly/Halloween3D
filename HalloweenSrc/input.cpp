@@ -175,7 +175,7 @@ char *NomDeTouches2[] =
 	"MULTIPLY" , "ADD" , "SUBTRACT", "DECIMAL", "DIVIDE", "CLEAR", "MENU", "LWIN", "RWIN", 
 	"NUMLOCK" , "SCROLL" , "OEM_1", "OEM_PLUS", "OEM_COMMA", "OEM_MINUS", "OEM_PERIOD", 
 	"OEM_2", "OEM_3", "OEM_4", "OEM_5", "OEM_6", "OEM_7", "END", "HOME","DEL", "INSERT",
-	"SNAPSHOT", "PRIOR", "NEXT", "ERROR"
+	"SNAPSHOT", "PRIOR", "NEXT", "ERROR", "LEFTMOUSE", "RIGHTMOUSE", "ERR2", "ERR3", "ERR4"
 };
 
 #endif
@@ -656,7 +656,7 @@ int IN_GetIdKey()
 			}
 			else if(msclic_B)
 			{
-				n_mouse = K_MAXKEYS+2;
+				n_mouse = K_MAXKEYS+1; // +2
 				clicked = true;
 			}
 		}
@@ -813,12 +813,12 @@ hBool di_IsKeyActivated(int id, hMOUSEINPUT Mouse)
 				return true;
 			break;
 
-			case K_MAXKEYS+2:
+			case K_MAXKEYS+1:
 			if(Mouse.button_B)
 				return true;
 			break;
 
-			case K_MAXKEYS+1:
+			case K_MAXKEYS+2:
 		//	if(Mouse.button_C)
 		//		return true;
 			break;
@@ -857,10 +857,11 @@ char *IN_GetKeyStringName(int IdScannedKey)
         
     #ifdef H_MAC
         if(IdScannedKey < 0) IdScannedKey = 0;
-        if(IdScannedKey > K_MAXKEYS) IdScannedKey = 0;
+        if(IdScannedKey > K_MAXKEYS+1) IdScannedKey = 0;
+	printf("IdScannedKey %d\n", IdScannedKey);
         return NomDeTouches2[IdScannedKey];
     #else
-	return (char*)KeyToStringName[IdScannedKey-8];
+		return (char*)KeyToStringName[IdScannedKey-8];
     #endif
 }
 

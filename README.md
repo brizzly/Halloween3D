@@ -33,15 +33,33 @@ for the impressive work on Linux/Pyra version of the game
 HOW TO BUILD
 ============
 
-Linux : 
+### *Linux :* 
+
+```
+In alloween.h :
+
+//#define H_MAC
+#define H_LINUX
+//#define H_WINDOWS
+```
 
 cd Halloween3D/HalloweenSrc
-
 mkdir Build
-
 cd Build
-
 cmake ..
-
 make
+
+### *macOS :*
+
+```
+In alloween.h :
+
+#define H_MAC
+//#define H_LINUX
+//#define H_WINDOWS
+```
+
+Install lipjepg-turbo for Mac (non iOS) (arm64) binary dmg https://sourceforge.net/projects/libjpeg-turbo/files/2.1.2/libjpeg-turbo-2.1.2.dmg/download
+Add Include path : /opt/libjpeg-turbo/include**/**
+Add Lib path : /opt/libjpeg-turbo/include**/**
 
