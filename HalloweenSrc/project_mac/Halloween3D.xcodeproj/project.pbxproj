@@ -7,10 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8457B15E274DAF5D00E4C356 /* libturbojpeg.0.2.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8457B157274DAD3E00E4C356 /* libturbojpeg.0.2.0.dylib */; };
-		8457B15F274DAF5D00E4C356 /* libturbojpeg.0.2.0.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 8457B157274DAD3E00E4C356 /* libturbojpeg.0.2.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		8457B166274DAF5E00E4C356 /* libturbojpeg.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8457B163274DAF5E00E4C356 /* libturbojpeg.0.dylib */; };
-		8457B167274DAF5E00E4C356 /* libturbojpeg.0.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 8457B163274DAF5E00E4C356 /* libturbojpeg.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		84956586274DC8C500681710 /* libturbojpeg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8457B155274DAB4A00E4C356 /* libturbojpeg.a */; };
 		84AD3880274D6A8800A32A25 /* halloween_linux.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84AD387E274D6A8800A32A25 /* halloween_linux.cpp */; };
 		84AD3885274D6AF900A32A25 /* libsound_linux.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84AD3881274D6AF800A32A25 /* libsound_linux.cpp */; };
 		84AD3886274D6AF900A32A25 /* loadjpeg_linux.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84AD3884274D6AF800A32A25 /* loadjpeg_linux.cpp */; };
@@ -269,21 +266,6 @@
 		F995F6D11F55D759009F50E3 /* NSXReturnThrowError.m in Sources */ = {isa = PBXBuildFile; fileRef = F995F6B31F55D73C009F50E3 /* NSXReturnThrowError.m */; };
 		F9A3EA751F5258D900315CAF /* system in Resources */ = {isa = PBXBuildFile; fileRef = F9A3EA741F5258CD00315CAF /* system */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		8457B161274DAF5E00E4C356 /* Embed Libraries */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				8457B15F274DAF5D00E4C356 /* libturbojpeg.0.2.0.dylib in Embed Libraries */,
-				8457B167274DAF5E00E4C356 /* libturbojpeg.0.dylib in Embed Libraries */,
-			);
-			name = "Embed Libraries";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		8457B14F274DA9F600E4C356 /* libturbojpeg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libturbojpeg.a; path = "../../../../../../../opt/libjpeg-turbo-ios/lib/libturbojpeg.a"; sourceTree = "<group>"; };
@@ -594,14 +576,13 @@
 				F92D9E1D1F5254E600A37BB2 /* Cocoa.framework in Frameworks */,
 				F92D9E191F5254D900A37BB2 /* Foundation.framework in Frameworks */,
 				F92D9E171F5254C300A37BB2 /* IOKit.framework in Frameworks */,
+				84956586274DC8C500681710 /* libturbojpeg.a in Frameworks */,
 				F92D9E151F5254BF00A37BB2 /* AppKit.framework in Frameworks */,
 				F92D9E101F52548200A37BB2 /* AudioUnit.framework in Frameworks */,
 				F92D9E0E1F52547500A37BB2 /* OpenAL.framework in Frameworks */,
-				8457B15E274DAF5D00E4C356 /* libturbojpeg.0.2.0.dylib in Frameworks */,
 				F92D9D4A1F52497B00A37BB2 /* CoreAudio.framework in Frameworks */,
 				F92D9D481F52497300A37BB2 /* GLUT.framework in Frameworks */,
 				F92D9D461F52496E00A37BB2 /* GLKit.framework in Frameworks */,
-				8457B166274DAF5E00E4C356 /* libturbojpeg.0.dylib in Frameworks */,
 				F92D9D441F52496900A37BB2 /* OpenGL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1036,7 +1017,6 @@
 				F92D9D2B1F52495500A37BB2 /* Sources */,
 				F92D9D2C1F52495500A37BB2 /* Frameworks */,
 				F92D9D2D1F52495500A37BB2 /* Resources */,
-				8457B161274DAF5E00E4C356 /* Embed Libraries */,
 			);
 			buildRules = (
 			);
@@ -1363,7 +1343,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 6CZ5X85785;
 				FRAMEWORK_SEARCH_PATHS = "/opt/libjpeg-turbo/include/";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1371,7 +1351,10 @@
 				HEADER_SEARCH_PATHS = "/opt/libjpeg-turbo/include/";
 				INFOPLIST_FILE = Halloween/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				LIBRARY_SEARCH_PATHS = "/opt/libjpeg-turbo/lib/";
+				LIBRARY_SEARCH_PATHS = (
+					"/opt/libjpeg-turbo/lib/",
+					"/opt/libjpeg-turbo/lib",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jadegame.halloween;
@@ -1394,7 +1377,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 6CZ5X85785;
 				FRAMEWORK_SEARCH_PATHS = "/opt/libjpeg-turbo/include/";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1402,7 +1385,10 @@
 				HEADER_SEARCH_PATHS = "/opt/libjpeg-turbo/include/";
 				INFOPLIST_FILE = Halloween/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				LIBRARY_SEARCH_PATHS = "/opt/libjpeg-turbo/lib/";
+				LIBRARY_SEARCH_PATHS = (
+					"/opt/libjpeg-turbo/lib/",
+					"/opt/libjpeg-turbo/lib",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jadegame.halloween;
