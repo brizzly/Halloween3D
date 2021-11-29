@@ -16,7 +16,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <direct.h>
+#ifdef LINUX_H
+#include <unistd.h> //added by farox
+#else
+#include <direct.h> 
+#endif
 #include <time.h>
 
 typedef unsigned char byte;

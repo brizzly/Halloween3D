@@ -67,7 +67,12 @@ void main(int argvc, char **argv)
 		break;
 	}
 	sprintf(gLighMapDir,"../textures/systex/%s/",temp);
+
+    #ifdef LINUX_H  //added by farox
+    mkdir(gLighMapDir);
+    #else
 	_mkdir(gLighMapDir);
+    #endif
 
 	printf("Remove old lightmaps files\n");
 	remove(DEBUGFILE);

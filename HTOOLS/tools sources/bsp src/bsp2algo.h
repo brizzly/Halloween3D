@@ -32,7 +32,9 @@ BOUNDINGBOX	WorldBox;
 extern	int		Nb_Brush;
 extern	int		Nb_ActionBrush;
 extern	int		Nb_Cube;
-extern	int		menu_visibility;
+
+//extern	int		menu_visibility; //commented out by farox
+
 //extern	Brush_t	BrushTab[MAX_BRUSH];
 
 

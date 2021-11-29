@@ -1,0 +1,1 @@
+gcc -DLINUX_H -o rad radcomp.c patch.c maths.c -lm

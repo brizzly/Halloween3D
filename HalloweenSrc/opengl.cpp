@@ -1041,7 +1041,7 @@ void gl_LoadSurfaceTexture(byte *surf, uint sformat, uint scolor_format1, uint s
 	GLuint	tid;
     
 	tid = (GLuint)id;
-	glGenTextures(1, &tid);
+	//glGenTextures(1, &tid);
 	glBindTexture(GL_TEXTURE_2D, tid);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_NEAREST);

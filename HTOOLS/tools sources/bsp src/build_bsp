@@ -1,0 +1,4 @@
+gcc -o bsp bsp2.c bsp2algo.c bsp2file.c bsp2geo.c bsp2list.c bsp2math.c bsp2portal.c bsp2solid.c -lm
+
+#debug
+#gcc -ggdb -o bsp bsp2.c bsp2algo.c bsp2file.c bsp2geo.c bsp2list.c bsp2math.c bsp2portal.c bsp2solid.c -lm
