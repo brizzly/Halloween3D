@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+<<<<<<< HEAD
+=======
+		846FE0452756F98F00F596B5 /* libturbojpeg.0.2.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 846FE0412756F97900F596B5 /* libturbojpeg.0.2.0.dylib */; settings = {ATTRIBUTES = (Required, ); }; };
+		846FE04827583D2600F596B5 /* libturbojpeg.0.2.0.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 846FE0412756F97900F596B5 /* libturbojpeg.0.2.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+>>>>>>> 5f174d7621dd83a2a5cc906162d87dfc58bb8620
 		84AD3880274D6A8800A32A25 /* halloween_linux.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84AD387E274D6A8800A32A25 /* halloween_linux.cpp */; };
 		84AD3885274D6AF900A32A25 /* libsound_linux.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84AD3881274D6AF800A32A25 /* libsound_linux.cpp */; };
 		84AD3889274D6B8E00A32A25 /* net_temp_linux.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84AD3887274D6B8E00A32A25 /* net_temp_linux.cpp */; };
@@ -197,7 +202,24 @@
 		F9A3EA751F5258D900315CAF /* system in Resources */ = {isa = PBXBuildFile; fileRef = F9A3EA741F5258CD00315CAF /* system */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		846FE04727583D0900F596B5 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				846FE04827583D2600F596B5 /* libturbojpeg.0.2.0.dylib in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+<<<<<<< HEAD
+=======
+		846FE0412756F97900F596B5 /* libturbojpeg.0.2.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libturbojpeg.0.2.0.dylib; path = ../jpegturbo/lib/libturbojpeg.0.2.0.dylib; sourceTree = "<group>"; };
+>>>>>>> 5f174d7621dd83a2a5cc906162d87dfc58bb8620
 		84AD387E274D6A8800A32A25 /* halloween_linux.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = halloween_linux.cpp; path = ../../halloween_linux.cpp; sourceTree = "<group>"; };
 		84AD387F274D6A8800A32A25 /* halloween_linux.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = halloween_linux.h; path = ../../halloween_linux.h; sourceTree = "<group>"; };
 		84AD3881274D6AF800A32A25 /* libsound_linux.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = libsound_linux.cpp; path = ../../libsound_linux.cpp; sourceTree = "<group>"; };
@@ -415,6 +437,10 @@
 				F92D9E1D1F5254E600A37BB2 /* Cocoa.framework in Frameworks */,
 				F92D9E191F5254D900A37BB2 /* Foundation.framework in Frameworks */,
 				F92D9E171F5254C300A37BB2 /* IOKit.framework in Frameworks */,
+<<<<<<< HEAD
+=======
+				846FE0452756F98F00F596B5 /* libturbojpeg.0.2.0.dylib in Frameworks */,
+>>>>>>> 5f174d7621dd83a2a5cc906162d87dfc58bb8620
 				F92D9E151F5254BF00A37BB2 /* AppKit.framework in Frameworks */,
 				F92D9E101F52548200A37BB2 /* AudioUnit.framework in Frameworks */,
 				F92D9E0E1F52547500A37BB2 /* OpenAL.framework in Frameworks */,
@@ -508,7 +534,11 @@
 		F98EDB961F518C73009A518F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
 				F97D1780275A54CE00FCC0D1 /* libturbojpeg.a */,
+=======
+				846FE0412756F97900F596B5 /* libturbojpeg.0.2.0.dylib */,
+>>>>>>> 5f174d7621dd83a2a5cc906162d87dfc58bb8620
 				F92D9E1E1F5254EC00A37BB2 /* ApplicationServices.framework */,
 				F92D9E1C1F5254E600A37BB2 /* Cocoa.framework */,
 				F92D9E1A1F5254DD00A37BB2 /* QuartzCore.framework */,
@@ -755,6 +785,7 @@
 				F92D9D2B1F52495500A37BB2 /* Sources */,
 				F92D9D2C1F52495500A37BB2 /* Frameworks */,
 				F92D9D2D1F52495500A37BB2 /* Resources */,
+				846FE04727583D0900F596B5 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -1012,7 +1043,11 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+<<<<<<< HEAD
 				CURRENT_PROJECT_VERSION = 10;
+=======
+				CURRENT_PROJECT_VERSION = 8;
+>>>>>>> 5f174d7621dd83a2a5cc906162d87dfc58bb8620
 				DEVELOPMENT_TEAM = 6CZ5X85785;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1040,7 +1075,11 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+<<<<<<< HEAD
 				CURRENT_PROJECT_VERSION = 10;
+=======
+				CURRENT_PROJECT_VERSION = 8;
+>>>>>>> 5f174d7621dd83a2a5cc906162d87dfc58bb8620
 				DEVELOPMENT_TEAM = 6CZ5X85785;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
