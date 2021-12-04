@@ -12,10 +12,14 @@
 #endif
 
 #ifdef H_MAC
+
+
+
+/*
 extern "C" {
 #include "jpeglib.h"
 #include <setjmp.h>
-}
+}*/
 #endif
 
 /*

@@ -158,14 +158,12 @@ static int		ScreenY[] = { 384, 480, 600, 768, 864, 960, 1200 };
 //#include "libsound_linux.h"
 #include "libbass.h"
 #include "dsound.h"
-#include "loadjpeg_linux.h"
 #include "net_temp_linux.h"
 #endif
 
 
 #ifdef H_MAC
 #include "libsound_linux.h"
-#include "loadjpeg_linux.h"
 #include "net_temp_linux.h"
 #endif
 
