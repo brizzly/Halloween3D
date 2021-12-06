@@ -45,7 +45,6 @@ add_executable(halloween
         jpeg.cpp
 #        libsound_linux.cpp
         liste.cpp
-        loadjpeg_linux.cpp
         maths.cpp
         menu.cpp
         menu_init.cpp
@@ -71,7 +70,7 @@ add_executable(halloween
 )
 
 
-configure_deps(halloween gl sdl libturbojpeg)
+configure_deps(halloween gl sdl)
 
 target_link_directories(halloween PRIVATE ${CMAKE_SOURCE_DIR})  # for libbass.so
 

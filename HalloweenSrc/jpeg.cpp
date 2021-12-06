@@ -69,7 +69,10 @@ int jpeg_Load(char *Name, int id, int picmip, hBool map_tex)
 		return 1;
 	sprintf(fullname,"%s%s%s",SYSDIR,TEXDIR,Name);
 
-	return LoadFromJPEG(Name, KMiscTools::makeFilePath(fullname), id, map_tex);
+//#ifdef H_LINUX
+   	return LoadFromJPEG(Name, fullname, id, map_tex);
+//#endif
+//	return LoadFromJPEG(Name, KMiscTools::makeFilePath(fullname), id, map_tex);
 	
 #ifdef H_WINDOWS
 	data = LoadPictureFromFile(fullname);
