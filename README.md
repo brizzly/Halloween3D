@@ -29,6 +29,8 @@ Thanks to : gbudny, Farox, pocak100
 
 for the impressive work on Linux/Pyra version of the game
 
+Additional assets here : https://github.com/brizzly/Halloween3D_Assets
+
 
 HOW TO BUILD
 ============
