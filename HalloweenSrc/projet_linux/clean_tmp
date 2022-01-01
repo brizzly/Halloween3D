@@ -1,6 +1,9 @@
 #rm *.*~
 #rm *~
 
+echo "clearing all..."
+
 rm *.o
+rm Hallow999
 
 #clear
