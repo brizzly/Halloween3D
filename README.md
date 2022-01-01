@@ -15,6 +15,7 @@ Camera
 Maths
 Load mesh : OBJ, ASE (Textures, Camera, Lights, Brush)
 Load Textures : PNG, JPEG, TGA
+Load and compute BSP tree, Lightmaps from 3DS max / OBJ map object
 
 
 Homepage : https://jadegame.com/games/halloween/
@@ -60,8 +61,19 @@ In alloween.h :
 //#define H_LINUX
 //#define H_WINDOWS
 ```
+open project_mac/ xcode project
 
-Install lipjepg-turbo for Mac (non iOS) (arm64) binary dmg https://sourceforge.net/projects/libjpeg-turbo/files/2.1.2/libjpeg-turbo-2.1.2.dmg/download
-Add Include path : /opt/libjpeg-turbo/include**/**
-Add Lib path : /opt/libjpeg-turbo/include**/**
+### *windows :*
+
+```
+In alloween.h :
+
+//#define H_MAC
+//#define H_LINUX
+#define H_WINDOWS
+```
+open project_vc15/ visual C++ project
+
+
+
 
