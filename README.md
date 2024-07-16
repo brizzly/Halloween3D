@@ -1,6 +1,8 @@
 # Halloween 3D 🎃
 Halloween 3D Shooter OpenSource Game Engine
 
+[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-yellow?style=for-the-badge&logo=buy-me-a-coffee)](https://www.buymeacoffee.com/jmapp)
+
 Work in progess !
 
 Features :
