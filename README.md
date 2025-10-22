@@ -20,7 +20,7 @@ Load Textures : PNG, JPEG, TGA
 Load and compute BSP tree, Lightmaps from 3DS max / OBJ map object
 
 
-Game video : [https://jadegame.com/games/halloween/](https://www.youtube.com/watch?v=NV0X2O-RyTU)
+[Game video](https://www.youtube.com/watch?v=NV0X2O-RyTU)
 
 Collision detection lib by Amir Geva : https://github.com/amirgeva/coldet
 
